@@ -1,0 +1,59 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+For our sensor model to work i.e. assign weights to our particles
+we need some sort of reference. Some examples are Landmarks, Maps
+etc. Austin and ELizar used static maps as a reference. We have a
+side sonar on our AUVs and image generated can be used as a reference.
+The side sonar outputs pings which can be used to generate images.
+Andrew Vardy explains on how to generate images and in our algorithm
+we use it as a black box. The final image that is generated is shown
+below. 
+
+\begin{figure}
+
+
+\caption{Side Sonar Image}
+
+
+\includegraphics{\lyxdot \lyxdot /visual_sonar/sonar_59/18}
+
+\end{figure}
+
+
+We run feature extraction such as SURF on the image to detect interest
+points. The circle in the image shown below are the interest points. 
+
+\begin{figure}
+
+
+\caption{SURF Keypoints}
+
+
+\includegraphics{\lyxdot \lyxdot /visual_sonar/surf_working}
+
+\end{figure}
+
+
+These interest points can be treated as landmarks. We use a high Hessian
+threshold so that we have a maximum of 4 landmarks. We can measure
+the distance of the robot and the particles from the landmark. Based
+on the measurements we assign weights to the particle. This method
+allows us independence from a static map as well as helps in learning
+the motion model on the fly in a new environment. 
+\end{document}

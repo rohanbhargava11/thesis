@@ -1,0 +1,140 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The core of human environment interaction is the ability of the person to
+ know its position in the surrounding environment.
+ Similarly for robots the need to know its state in the world is an important
+ task and it is termed as localization.
+ To interact with the environment we need some sort of understanding of
+ it.Primarily mapping the environment and localizing the robot in it i.e.
+ Simultaneous Localization and Mapping (SLAM) has been a way to interact
+ with the world.
+ The integral part of SLAM is the way the robot moves and senses the world.
+ The characteristics of movement and sensing the world are captured in the
+ motion and sensor models.
+ However infrequently discussed but essential input are the parameters to
+ these models.
+ Most of the models are considered to be static which is a wrong assumption
+ to make.
+ For example the movement of the robot on carpet is very different compared
+ to tiles.
+ Another example would be the models can change from general wear and tear
+ on the robot.
+ Generally the motion and sensor models are hand tuned by experts based
+ on their experience.
+ The whole can be tedious and we propose a way to automate it.
+ As we are moving head in our goal of making robots a ubiquitous part our
+ everyday life they need to adapt our dynamic surroundings.
+ The algorithm that we are proposing not only will help automate the process
+ but also help us adapt the models to our environment.
+\end_layout
+
+\begin_layout Standard
+Water environments like oceans,rivers are highly dynamic and change in a
+ matter of seconds which affects the movement of the vehicles.For example
+ in Autonomous Underwater Vehicle(AUV) the density and the temperature of
+ the water can lead to changes in the motion model.
+ For my thesis we will specifically deal with underwater environments and
+ propose an online system for an AUV to adapt its motion model.
+ We specifically dealt with AUV that are equipped with side sonar sensor.
+ 
+\end_layout
+
+\begin_layout Standard
+Sound Navigation and Ranging (SONAR) is a technique based on sound propagation
+ used for communication,detecting objects underwater.
+ The SONAR sensor is the only imaging tool which can work at high depth.
+ The side sonar images can be used to gather information for our sensor
+ model.
+ By matching features on consecutive side sonar images we can get an estimate
+ of the movement for the AUV.
+ We use Speeded Up Robust Features(SURF) to extract interest points from
+ the images.
+ 
+\end_layout
+
+\begin_layout Standard
+To learn the right parameters of the model we use Expectation Maximization(EM).
+ It is an unsupervised machine learning technique primarily used to estimate
+ parameters.
+ It alternates between the Expectation Step which creates an expectation
+ of the log-likelihood using the current estimate of the parameters and
+ the Maximization Step which computes parameters maximizing the expected
+ log-likelihood found in the E step.
+ 
+\end_layout
+
+\begin_layout Standard
+To summarize I am proposing an algorithm to learn the right parameters of
+ the model specifically to deal with changes underwater.
+ We are learning these parameters on the fly without having a prior map
+ or revisiting places.
+ We also put forward an idea to estimate the movement of AUV from side sonar
+ images.
+ Results of simulated experiments with environment changes are presented
+ to show the effectiveness of the algorithm.
+ Real mission datasets are used to validate our motion estimation algorithm.
+ 
+\end_layout
+
+\end_body
+\end_document

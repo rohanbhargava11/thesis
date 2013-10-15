@@ -1,0 +1,299 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  16 SEP 2013 15:16
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**results.tex
+(./results.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin9.def
+File: latin9.def 2008/03/30 v1.1d Input encoding file
+)) (./graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen105
+)
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) (./results.aux)
+\openout1 = `results.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen106
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen107
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks18
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 26.
+
+<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=1, 1734.48pt x 
+894.7026pt>
+File: ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png Graphic file (
+type png)
+ <use ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1
+.png used on input line 65.
+(pdftex.def)             Requested size: 1734.47578pt x 894.70042pt.
+
+Overfull \hbox (1389.47578pt too wide) in paragraph at lines 65--66
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 366.40308pt on input line 66.
+
+
+<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=3, 1734.48pt x 
+894.7026pt>
+File: ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png Graphic file (
+type png)
+ <use ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1
+.png used on input line 73.
+(pdftex.def)             Requested size: 1734.47578pt x 894.70042pt.
+
+Overfull \hbox (1389.47578pt too wide) in paragraph at lines 73--74
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 366.40308pt on input line 75.
+
+
+<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=4, 1555.2504pt x 
+888.921pt>
+File: ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png Graphic file (ty
+pe png)
+ <use ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.p
+ng used on input line 90.
+(pdftex.def)             Requested size: 1555.24661pt x 888.91884pt.
+
+Overfull \hbox (1210.24661pt too wide) in paragraph at lines 90--91
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 360.62149pt on input line 92.
+
+
+<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=5, 1541.5191pt 
+x 442.2924pt>
+File: ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png Graphic file (
+type png)
+ <use ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1
+.png used on input line 99.
+(pdftex.def)             Requested size: 1541.51535pt x 442.29132pt.
+
+Overfull \hbox (1196.51535pt too wide) in paragraph at lines 99--100
+[][] 
+ []
+
+
+<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=6, 586.832
+4pt x 442.2924pt>
+File: ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png Graphic f
+ile (type png)
+
+<use ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_
+model.png used on input line 115.
+(pdftex.def)             Requested size: 586.83096pt x 442.29132pt.
+
+Overfull \hbox (241.83096pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=7, 1734.48
+pt x 894.7026pt>
+File: ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png Graphic f
+ile (type png)
+
+<use ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_
+model.png used on input line 126.
+(pdftex.def)             Requested size: 1734.47578pt x 894.70042pt.
+
+Overfull \hbox (1389.47578pt too wide) in paragraph at lines 126--127
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 366.34196pt on input line 128.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <../plot_motion_model/1
+00_0.05_0.2_1_2.0_motion_model_1.png>] [3 <../plot_motion_model/100_0.05_0.2_1_
+5.0_motion_model_1.png>] [4 <../plot_motion_model/100_0.05_0.5_1_2.0_motion_mod
+el.png>] [5 <../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png>]
+[6 <../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png>] [7 <../pl
+ot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>] (./results.aux) ) 
+Here is how much of TeX's memory you used:
+ 2044 strings out of 495059
+ 28410 string characters out of 3182030
+ 86578 words of memory out of 3000000
+ 5218 multiletter control sequences out of 15000+200000
+ 5171 words of font info for 16 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,9n,23p,233b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 
+</home/rohan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/roha
+n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb>
+Output written on results.pdf (7 pages, 624311 bytes).
+PDF statistics:
+ 126 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

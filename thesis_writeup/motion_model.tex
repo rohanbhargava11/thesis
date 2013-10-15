@@ -1,0 +1,31 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+The robot can be reperesented by $x_{t}=(x_{t,},y_{t,}\theta_{t})^{T}$
+where $x_{t}$ and $y_{t}$are the robot's two dimensional coordinates
+and $\theta_{t}$ is the robot's orientation. 
+
+For our algorithm we adopt our motion model of Teddy N. Yap and Christian
+R. Shelton. 
+
+$x_{t}=x_{t-1}+D_{t}cos(\theta_{t-1}+\frac{T_{t}}{2})$
+
+$y_{t}=y_{t-1}+D_{t}sin(\theta_{t-1}+\frac{T_{t}}{2})$
+
+The noise model is described below
+
+$D_{t}\sim\mathcal{{N}}(d_{t},d_{t}^{2}\sigma_{D_{d}}^{2}+r_{t}^{2}\sigma_{D_{r}}^{2}+\sigma_{D_{1}}^{2})$
+
+$T_{t}\sim\mathcal{{N}}(r_{t},d_{t}^{2}\sigma_{T_{d}}^{2}+r_{t}^{2}\sigma_{T_{r}}^{2}+\sigma_{T_{1}}^{2})$
+
+$d_{t}$ and $r_{t}$ are the translational and rotation of the robot.
+$\sigma_{A_{b}}$ decribes the contribution of odometry term b to
+the variance of the distribution over A. $\sigma_{D_{1}}$ and $\sigma_{T_{1}}$are
+used to take into account the independent errors that are not proportional
+to translation and rotation of the robot. Our algroithm intends to
+learn the following parameters $\sigma_{D_{d}}^{2}$,$\sigma_{T_{d}}^{2}$,$\sigma_{D_{r}}^{2}$,$\sigma_{T_{r}}^{2}$,$\sigma_{D_{1}}^{2}$,$\sigma_{T_{1}}^{2}$.
+\end{document}

@@ -1,0 +1,40 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+$\epsilon_{T_{t}}^{[j]}=(\theta_{t_{+1}}^{'[j]}-\theta_{t}^{'[j]}-r_{t}^{''})mod2\pi$ 
+
+$\epsilon_{D_{t}}^{[j]}=(x_{t+1}^{'[j]}-x_{t}^{'[j]})cos(\theta_{t}^{'[j]}+\frac{r_{t}^{''}+\epsilon_{T_{t}}^{[j]}}{2}+(y_{t+1}^{'[j]}-y_{t}^{'[j]})sin(\theta_{t}^{'[j]}+\frac{r_{t}^{''}+\epsilon_{T_{t}}^{[j]}}{2})-d_{t}^{''}$
+
+$\epsilon_{T_{t}}^{[j]}$ and $\epsilon_{D_{t}}^{[j]}$ are rotational
+and translational errors for t=0,1...T-1 for $j^{th}$ sampled trajectory.
+$r_{t}^{''}$ and $d_{t}^{''}$ are the reported odometry values. 
+
+Based on the motion model described 
+
+$\epsilon_{D_{t}}^{[j]}\sim\mathcal{{N}}(0,d_{t}^{''2}\sigma_{D_{d^{''}}}^{2}+r_{t}^{''2}\sigma_{D_{r^{''}}}^{2}+\sigma_{D_{1}}^{2})$
+
+$\epsilon_{T_{t}}^{[j]}\sim\mathcal{{N}}(0,d_{t}^{''2}\sigma_{T_{d^{''}}}^{2}+r_{t}^{''2}\sigma_{T_{r^{''}}}^{2}+\sigma_{T_{1}}^{2})$
+
+The log likelihood functions are
+
+$\mathcal{{L}}(\sigma_{D_{d}}^{2},\sigma_{D_{r}}^{2},\sigma_{D_{1}}^{2})=-\frac{1}{2}\sum_{j}\sum_{t=0}^{T-1}[\log2\pi+\log(d_{t}^{''2}\sigma_{D_{d}}^{2}+r_{t}^{''2}\sigma_{D_{r}}^{2}+\sigma_{D_{1}}^{2})+\frac{(\epsilon_{D_{t}}^{[j]})^{2}}{d_{t}^{''2}\sigma_{D_{d}}^{2}+r_{t}^{''2}\sigma_{D_{r}}^{2}+\sigma_{D_{1}}^{2}}$
+
+$\mathcal{{L}}(\sigma_{T_{d}}^{2},\sigma_{T_{r}}^{2},\sigma_{T_{1}}^{2})=-\frac{1}{2}\sum_{j}\sum_{t=0}^{T-1}[\log2\pi+\log(d_{t}^{''2}\sigma_{T_{d}}^{2}+r_{t}^{''2}\sigma_{T_{r}}^{2}+\sigma_{T_{1}}^{2})+\frac{(\epsilon_{T_{t}}^{[j]})^{2}}{d_{t}^{''2}\sigma_{T_{d}}^{2}+r_{t}^{''2}\sigma_{T_{r}}^{2}+\sigma_{T_{1}}^{2}}$
+
+In the Maximization Step we minimize the likelihood function. In this
+case we maximize the log likelihood function because of the minus
+sign with respect to the motion parameters. We use newton conjugate
+gradient ascent for finding the local maximum of the function. The
+gradient of the function is the taken as the first search direction
+while the next search direction are choosen in such a way that they
+are orthogonal to all previous search directions.
+
+The output of the step described above is a set of parameters that
+maximize the function. We substitute these values in our motion model
+at everytime step and the process is repeated thorought the robot's
+misson. 
+\end{document}

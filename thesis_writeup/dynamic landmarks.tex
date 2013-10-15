@@ -1,0 +1,20 @@
+In our particle filtering algorithm the sensor model is responsible to assign weights to the particles. It is generally done by using some sort of references in the world aka landmarks. Austin and Elizar used static maps as reference for their algorithm. The liberty of having static maps for underwater environments isn't there. To create some reference points underwater we use side sonar images.
+\begin{figure}[hbtp]
+\caption{Side Sonar Image}
+\centering
+\includegraphics[scale=0.5]{../visual_sonar/sonar_59/18.jpg}
+\end{figure}
+
+As you can see in the image there are lot of horizontal lines which we can treat as noise. In order to get rid of  these we use a median filter on the image. In order to generate some landmarks we run feature extractions techniques such as SURF. This algorithm helps us in detecting interest points in the image and are shown below in circles. 
+\begin{figure}[hbtp]
+\caption{SURF Keypoints}
+\centering
+\includegraphics[scale=0.4]{../visual_sonar/surf_working.jpeg}
+\end{figure}
+
+These interest points can be treated as landmarks. We use a high Hessian
+threshold so that we have a maximum of 4 landmarks. We can measure
+the distance of the robot and the particles from the landmark. Based
+on the measurements we assign weights to the particle. This method
+allows us independence from a static map as well as helps in learning
+the motion model on the fly in a new environment. 

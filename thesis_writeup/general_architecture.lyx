@@ -1,0 +1,149 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+General Architecture of the System
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+General Architecure of the system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagram1.jpeg
+	scale 50
+	BoundingBox 0bp 0bp 500bp 497bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above figure is a block diagram descrubing the whole system.
+ The first step is to initalize the motion model with a set of parameters.
+ Then the motion model is used to perform partcile filtering which is described
+ in detail in the next chapter.
+ The output of this step is a set of particles with their importance weights.Part
+icle smoothing is performed on these set of particles.
+ This gives us a collection of trajectories and completes the Expectation
+ step.
+ 
+\end_layout
+
+\begin_layout Standard
+Based on the trajectories and the reported translational and rotational
+ motion we calcualte errors at each time step.
+ We perfom newton conjugate gradient on the errors to give us the best estimate
+ of the paramters.
+ This compeletes the Maximization Step.
+\end_layout
+
+\begin_layout Standard
+The learned paramters are assigned to the motion model and the whole process
+ is repeated at each timestep.
+ The whole algorithm gives us a model which can adapt to dynamic envrioment.
+ The adaptive motion model perfoms better than the static and the results
+ are shown in the later chapters.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,41 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+In AUV the motion estimation is generally done through dead-reckoning.
+It is a process of calculating the current position based upon the
+previous position and the speed of vessel. The velocity of the AUV
+can be estimated by the acceleration measurement supplied by an Inertial
+Measurement Unit. Another way is to use a Doppler Velocity Log that
+measures velocity in water by measuring the Doppler effect on scattered
+sound waves. Dead reckoning may have significant errors as the velocity
+and direction must be accurately known at every time step. As the
+next estimate is based on the previous estimate the error accumulates. 
+
+In this algorithm we propose to get motion estimates using side sonar
+images. As stated before we run SURF on the images and generate some
+key points. These key points are matched in the next image using a
+knn based matcher. The matched key points gives us an estimate on
+the movement of the vehicle. In the figure we show two consecutive
+images and in the first image we have the key points marked in circle.
+In the next image we have the matched key points marked in green circles. 
+
+This estimate can be coupled with the previous estimate to calculate
+the current position. The visual input to the dead reckoning algorithm
+has its pros and cons.The main advantage of using a visual estimate
+is that it doesn't suffer from drift which is concern for underwater
+vehicles. The disadvantage lies in the fact that we don't have side
+sonar images available every time. We can solve the problem by combining
+the visual input with the velocity estimates. We can pass the visual
+motion estimate and the DVL estimate to a Kalman Filter and use the
+output as an input to our dead-reckoning estimate. The second disadvantage
+is the computation power available on AUV. To specifically deal with
+the problems we use a high Hessian threshold to extract maximum of
+4 landmarks so that feature matching is not computationally expensive. 
+
+We validate our algorithm on datasets consisting of side sonar images
+and the total distance the AUV moves. 
+\end{document}
