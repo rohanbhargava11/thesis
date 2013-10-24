@@ -51,13 +51,15 @@ Thanks to all the little people who make me look tall.
 
 
 \section{Motivation}
-The core of human environment interaction is the ability of the person to know its position in the surrounding environment. Similarly for robots the need to know its state in the world is an important task and it is termed as localization. To interact with the environment we need some sort of understanding of it.Primarily mapping the environment and localizing the robot in it i.e. Simultaneous Localization and Mapping (SLAM) has been a way to interact with the world. The integral part of SLAM is the way the robot moves and senses the world. The characteristics of movement and sensing the world are captured in the motion and sensor models. However infrequently discussed but essential input are the parameters to these models. Most of the models are considered to be static which is a wrong assumption to make. For example the movement of the robot on carpet is very different compared to tiles. Another example would be the models can change from general wear and tear on the robot. Generally the motion and sensor models are hand tuned by experts based on their experience. The whole process can be tedious and we propose a way to automate it. As we are moving ahead in our goal of making robots a ubiquitous part our everyday life they need to adapt to our dynamic surroundings. The algorithm that we are proposing not only will help automate the process but also help us adapt the models to our environment.
+The core of human environment interaction is the ability of the person to know its position in the surrounding environment. Similarly for robots the need to know its state in the world is an important task and it is termed as localization. To interact with the environment we need some sort of understanding of it.Primarily mapping the environment and localizing the robot in it i.e. Simultaneous Localization and Mapping (SLAM) has been a way to interact with the world. The integral part of SLAM is the way the robot moves and senses the world. These characteristics are captured in the motion and sensor models. However infrequently discussed but essential input are the parameters to these models. Most of the models are considered to be static which is a wrong assumption to make. For example the movement of the robot on carpet is very different compared to tiles. Another example would be the models can change from general wear and tear on the robot. Generally the motion and sensor models are hand tuned by experts based on their experience. The whole process can be tedious and we propose a way to automate it. As we are moving ahead in our goal of making robots a ubiquitous part our everyday life they need to adapt to our dynamic surroundings. The algorithm that we are proposing not only will help automate the process but also help us adapt the models to our environment.
 
 Water environments like oceans,rivers are highly dynamic and change in a matter of seconds which affects the movement of the vehicles.For example in Autonomous Underwater Vehicle(AUV) the density and the temperature of the water can lead to changes in the motion model. For my thesis we will specifically deal with underwater environments and propose an online system for an AUV to adapt its motion model. We specifically dealt with AUV that are equipped with side sonar sensor. 
 
-Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for communication,detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. The side sonar images in my thesis is used for two applications. In the first application the side sonar images can be used to gather information for our sensor model. In second application by matching features on consecutive side sonar images we can get an estimate of the movement for the AUV. We use Speeded Up Robust Features(SURF) to extract interest points from the images. 
+Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for communication,detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. The side sonar images in my thesis is used for two applications. In the first application the side sonar images can be used to gather information for our sensor model. In second application by matching features on consecutive side sonar images we can get an estimate of the movement for the AUV. 
 
 To learn the right parameters of the model we use Expectation Maximization(EM). It is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
+
+For visual motion estimate we use Speeded Up Robust Features(SURF) to extract interest points in a side sonar image. There are robust local feature detector and is used in computer vision tasks like object recognition or 3D reconstructions.We extract key points and match them in subsequent images to estimate motion of the AUV.
 
 To summarize I am proposing a algorithm to learn the right parameters of the model specifically to deal with changes underwater. We are learning these parameters on the fly without having a prior map or revisiting places. We also put forward an idea to estimate the movement of AUV from side sonar images. Results of simulated experiments with environment changes are presented to show the effectiveness of the algorithm. Real mission datasets are used to validate our motion estimation algorithm. 
 \section{Calibration and Localization}
@@ -69,35 +71,7 @@ In our framework we use particle filters to localize the robot. We define a moti
 
 As stated earlier underwater environment is highly dynamic.Therefore we use the same framework to estimate the motion models for underwater vehicles. We use side sonar images to extract landmarks and use it as our sensor data. Particle smoothing is performed to get us a set of trajectories. We perform maximum likelihood estimate of the parameters given the trajectories and actual data. 
 
-\section{General Architecture}
 
-
-\begin{figure}[hbtp]
-\caption{Block Diagram of the framework}
-\centering
-\includegraphics[scale=0.5]{Diagram1.jpeg}
-\end{figure}
-
-
-
-Figure 1.1 is a block diagram describing the whole system. The
-first step is to initialize the motion model with a set of parameters.
-Then the motion model is used to perform particle filtering which
-is described in detail in the next chapter. The output of this step
-is a set of particles with their importance weights.Particle smoothing
-is performed on these set of particles. This gives us a collection
-of trajectories and completes the Expectation step. 
-
-Based on the trajectories and the reported translational and rotational
-motion we calculate errors at each time step. We perform newton conjugate
-gradient on the errors to give us the best estimate of the parameters.
-This completes the Maximization Step.
-
-The learned parameters are assigned to the motion model and the whole
-process is repeated at each time step. The whole algorithm gives us
-a model which can adapt to dynamic environment. The adaptive motion
-model performs better than the static and the results are shown in
-the later chapters.
 
 \section{Motion Estimation}
 In mobile robots the position and orientation is determined through wheel encoders and velocity estimates. These techniques do not generalize well as they cannot be applied to every robot. On top of that the wheels tend to slip on the floor and also the estimates drift over time. As the errors accumulate, the motion estimation becomes unreliable. 
@@ -271,6 +245,32 @@ are the motion parameters that our algorithm intends to learn.
 Still have to write about it
 
 \chapter{Learning the motion model}
+\section{General Architecture}
+
+
+\begin{figure}[hbtp]
+\caption{Block Diagram of the framework}
+\centering
+\includegraphics[scale=0.5]{Diagram1.jpeg}
+\end{figure}
+
+
+
+Figure 1.1 is a block diagram describing the whole system. The
+first step is to initialize the motion model with a set of parameters.
+Then the motion model is used to perform particle filtering and the output is a set of particles with their importance weights.Particle smoothing is performed on these set of particles. This gives us a collection
+of trajectories and completes the Expectation step. 
+
+Based on the trajectories and the reported translational and rotational
+motion we calculate errors at each time step. We perform newton conjugate
+gradient on the errors to give us the best estimate of the parameters.
+This completes the Maximization Step.
+
+The learned parameters are assigned to the motion model and the whole
+process is repeated at each time step. The whole algorithm gives us
+a model which can adapt to dynamic environment. The adaptive motion
+model performs better than the static and the results are shown in
+the later chapters.
 \section{Particle smoothing}
 The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. It is defined as the computing the posterior distribution of the past states given all the evidence upto the present.
 Mathematically it can be represented as $p(x _{t}|u _{1:T},z _{1:T})$ for some t with $ 0 \leq t \leq T$.Russel and Norving showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering.
@@ -292,7 +292,7 @@ $x ^{'} _{T} \leftarrow x^{[i]}_{T}$
 
 The particle filter process gives us a set of particles with their corresponding weights at the present time step. In particle smoothing we move backwards to get trajectories which are treated as ground truth. In the first step we choose a particle with the probability proportional to the weight of the particles. Then we move the a time step back and calculate the new smoothed weights for every particle. They are calculated by the product of the forward probability and the weight of the particle. 
 \\
-$ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T}=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})$
+$ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})$
 \\
 The particles are drawn according to the new smoothed weights. At every time step we pick a particle and call it is as trajectory. We can repeat the same process to get several trajectories. These trajectories are used in estimating the parameters of the motion model.
  
@@ -306,13 +306,13 @@ In our particle filtering algorithm the sensor model is responsible to assign we
 \begin{figure}[hbtp]
 \caption{Side Sonar Image}
 \centering
-\includegraphics[scale=0.5]{../visual_sonar/sonar_59/18.jpg}
+\includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg}
 \end{figure}
 As you can see in the image there are lot of horizontal lines which we can treat as noise. In order to get rid of  these we use a median filter on the image. In order to generate some landmarks we run feature extractions techniques such as SURF. This algorithm helps us in detecting interest points in the image and are shown below in circles. 
 \begin{figure}[hbtp]
 \caption{SURF Keypoints}
 \centering
-\includegraphics[scale=0.4]{../visual_sonar/landmarks.png}
+\includegraphics[scale=0.4]{/home/rohan/Documents/thesis_work/visual_sonar/landmarks.png}
 \end{figure}
 
 These interest points can be treated as landmarks. We use a high Hessian
@@ -382,20 +382,19 @@ can be estimated by the acceleration measurement supplied by an Inertial
 Measurement Unit. Another way is to use a Doppler Velocity Log(DVL) that
 measures velocity in water by measuring the Doppler effect on scattered
 sound waves. Dead reckoning may have significant errors as the velocity
-and direction must be accurately known at every time step. As the
-next estimate is based on the previous estimate the error accumulates. 
+and direction must be accurately known at every time step. 
 
 In this algorithm we propose to get motion estimates using side sonar
 images. As stated before we run SURF on the images and generate some
 key points. These key points are matched in the next image using a
-knn based matcher. The matched key points gives us an estimate on
+KNN based matcher. The matched key points gives us an estimate on
 the movement of the vehicle. In the figure we show two consecutive
 images and in the first image we have the key points marked in circle.
 In the next image we have the matched key points marked in green circles. 
 \begin{figure}[hbtp]
 \caption{SURF Keypoints}
 \centering
-\includegraphics[scale=0.4]{../visual_sonar/surf_working.jpeg}
+\includegraphics[scale=0.4]{/home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg}
 \end{figure}
 This estimate can be coupled with the previous estimate to calculate
 the current position. The visual input to the dead reckoning algorithm

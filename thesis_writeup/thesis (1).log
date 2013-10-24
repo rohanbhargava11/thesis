@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  8 OCT 2013 15:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  16 OCT 2013 11:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -254,10 +254,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 Dalthesis preface pages completed.
 Chapter 1.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+[1
 
 ]
 Missing character: There is no ‚ in font cmr12!
@@ -266,102 +263,103 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-
-[2] <Diagram1.jpeg, id=32, 980.66376pt x 507.8975pt>
-File: Diagram1.jpeg Graphic file (type jpg)
- <use Diagram1.jpeg>
-Package pdftex.def Info: Diagram1.jpeg used on input line 78.
-(pdftex.def)             Requested size: 490.33067pt x 253.94814pt.
-
-Overfull \hbox (56.71066pt too wide) in paragraph at lines 78--79
- [][] 
- []
-
-[3] [4 <./Diagram1.jpeg>] [5]
+ [2] [3] [4]
 Chapter 2.
 
-Overfull \hbox (11.33095pt too wide) in paragraph at lines 123--124
+Overfull \hbox (11.33095pt too wide) in paragraph at lines 97--98
 []\OT1/cmr/m/n/12 Particle Fil-ters are used to cal-cu-late the ap-prox-i-mate 
 of a state in Markov chains.[Put
  []
 
-[6
+[5
 
 ]
-</home/rohan/Documents/thesis_work/uav_diagram.png, id=49, 450.18187pt x 175.40
+</home/rohan/Documents/thesis_work/uav_diagram.png, id=45, 450.18187pt x 175.40
 532pt>
 File: /home/rohan/Documents/thesis_work/uav_diagram.png Graphic file (type png)
 
  <use /home/rohan/Documents/thesis_work/uav_diagram.png>
 Package pdftex.def Info: /home/rohan/Documents/thesis_work/uav_diagram.png used
- on input line 161.
+ on input line 135.
 (pdftex.def)             Requested size: 225.09038pt x 87.70244pt.
- [7 </home/rohan/Documents/thesis_work/uav_diagram.png>]
-Overfull \hbox (24.4248pt too wide) in paragraph at lines 192--193
+ [6 </home/rohan/Documents/thesis_work/uav_diagram.png>]
+Overfull \hbox (24.4248pt too wide) in paragraph at lines 166--167
 [][] 
  []
 
-[8] [9]
+[7] [8]
 Chapter 3.
-[10
+<Diagram1.jpeg, id=59, 980.66376pt x 507.8975pt>
+File: Diagram1.jpeg Graphic file (type jpg)
+ <use Diagram1.jpeg>
+Package pdftex.def Info: Diagram1.jpeg used on input line 254.
+(pdftex.def)             Requested size: 490.33067pt x 253.94814pt.
 
-] <../visual_sonar/sonar_59/18.jpg, id=67, 984.67876pt x 368.1253pt>
-File: ../visual_sonar/sonar_59/18.jpg Graphic file (type jpg)
+Overfull \hbox (56.71066pt too wide) in paragraph at lines 254--255
+ [][] 
+ []
 
-<use ../visual_sonar/sonar_59/18.jpg>
-Package pdftex.def Info: ../visual_sonar/sonar_59/18.jpg used on input line 309
-.
+[9
+
+ <./Diagram1.jpeg>] [10]
+</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=67, 984.678
+76pt x 368.1253pt>
+File: /home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg Graphic fi
+le (type jpg)
+
+<use /home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/visual_sonar/sonar_5
+9/18.jpg used on input line 309.
 (pdftex.def)             Requested size: 492.33817pt x 184.0622pt.
 
 Overfull \hbox (58.71815pt too wide) in paragraph at lines 309--310
  [][] 
  []
 
-<../visual_sonar/landmarks.png, id=68, 993.7125pt x 383.18156pt>
-File: ../visual_sonar/landmarks.png Graphic file (type png)
 
-<use ../visual_sonar/landmarks.png>
-Package pdftex.def Info: ../visual_sonar/landmarks.png used on input line 315.
+</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=68, 993.7125p
+t x 383.18156pt>
+File: /home/rohan/Documents/thesis_work/visual_sonar/landmarks.png Graphic file
+ (type png)
+
+<use /home/rohan/Documents/thesis_work/visual_sonar/landmarks.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/visual_sonar/landmar
+ks.png used on input line 315.
 (pdftex.def)             Requested size: 397.47795pt x 153.2699pt.
- [11 <../visual_sonar/sonar_59/18.jpg>]
-[12 <../visual_sonar/landmarks.png>]
+ [11 </home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg>] [12 </ho
+me/rohan/Documents/thesis_work/visual_sonar/landmarks.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 344--372
 
  []
 
+[13]
+</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=82, 1445.
+4pt x 813.0375pt>
+File: /home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg Graphic 
+file (type jpg)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-<../visual_sonar/surf_working.jpeg, id=82, 1445.4pt x 813.0375pt>
-File: ../visual_sonar/surf_working.jpeg Graphic file (type jpg)
-
-<use ../visual_sonar/surf_working.jpeg>
-Package pdftex.def Info: ../visual_sonar/surf_working.jpeg used on input line 3
-98.
+<use /home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/visual_sonar/surf_wo
+rking.jpeg used on input line 397.
 (pdftex.def)             Requested size: 578.14977pt x 325.20924pt.
 
-Overfull \hbox (144.52975pt too wide) in paragraph at lines 398--399
+Overfull \hbox (144.52975pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-[15 <../visual_sonar/surf_working.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 430--449
+[14 </home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 429--448
 
  []
 
-
+[15]
 <../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=89, 1734.48pt x
  894.7026pt>
 File: ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png Graphic file (
 type png)
  <use ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png>
 Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1
-.png used on input line 462.
+.png used on input line 461.
 (pdftex.def)             Requested size: 433.61894pt x 223.6751pt.
 
 <../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=90, 1734.48pt x
@@ -370,7 +368,7 @@ File: ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png Graphic file (
 type png)
  <use ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png>
 Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1
-.png used on input line 470.
+.png used on input line 469.
 (pdftex.def)             Requested size: 433.61894pt x 223.6751pt.
 
 <../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=91, 1555.2504pt x
@@ -379,7 +377,7 @@ File: ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png Graphic file (ty
 pe png)
  <use ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png>
 Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.p
-ng used on input line 487.
+ng used on input line 486.
 (pdftex.def)             Requested size: 388.81165pt x 222.2297pt.
 
 <../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=92, 1541.5191pt
@@ -389,51 +387,52 @@ type png)
 
 <use ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png>
 Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1
-.png used on input line 496.
+.png used on input line 495.
 (pdftex.def)             Requested size: 385.37883pt x 110.57283pt.
- [16] [17 <../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png> <../plot
-_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png>] [18 <../plot_motion_model
-/100_0.05_0.5_1_2.0_motion_model.png> <../plot_motion_model/100_0.05_0.5_1_5.0_
-motion_model_1.png>]
-<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=106, 586.8
-324pt x 442.2924pt>
+
+<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=93, 586.83
+24pt x 442.2924pt>
 File: ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png Graphic f
 ile (type png)
 
 <use ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png>
 Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_
-model.png used on input line 512.
+model.png used on input line 511.
 (pdftex.def)             Requested size: 440.12321pt x 331.71849pt.
 
-Overfull \hbox (6.5032pt too wide) in paragraph at lines 512--513
+Overfull \hbox (6.5032pt too wide) in paragraph at lines 511--512
 [][] 
  []
 
 
-<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=107, 1734.
-48pt x 894.7026pt>
+<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=94, 1734.4
+8pt x 894.7026pt>
 File: ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png Graphic f
 ile (type png)
 
 <use ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>
 Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_
-model.png used on input line 521.
+model.png used on input line 520.
 (pdftex.def)             Requested size: 433.61894pt x 223.6751pt.
- [19 <../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png>] [20 <..
-/plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>]
+ [16 <../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png>] [17 <../plot
+_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png> <../plot_motion_model/100_
+0.05_0.5_1_2.0_motion_model.png>] [18 <../plot_motion_model/100_0.05_0.5_1_5.0_
+motion_model_1.png> <../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_mode
+l.png>]
+[19 <../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>]
 Chapter 4.
 No file "thesis (1)".bbl.
-[21
+[20
 
 ] (./thesis (1).aux) ) 
 Here is how much of TeX's memory you used:
  2976 strings out of 495059
- 42898 string characters out of 3182030
- 123331 words of memory out of 3000000
+ 43332 string characters out of 3182030
+ 122331 words of memory out of 3000000
  6124 multiletter control sequences out of 15000+200000
  8287 words of font info for 29 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,18n,23p,1437b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,18n,23p,1405b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
@@ -447,10 +446,10 @@ e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on "thesis (1).pdf" (27 pages, 1947267 bytes).
+Output written on "thesis (1).pdf" (26 pages, 1947328 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 159 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
