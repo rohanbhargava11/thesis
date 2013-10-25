@@ -222,20 +222,11 @@ and $\tau$ are the environmental and propulsion forces and moments.
 
 The control is the input to a motion model and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model $u_{r}=f(n_{s})$ to get a velocity estimate.$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and propeller rotation rate. This can be implemented as a table look-up based on experimental data.
 The same control input won't product the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
-
-The velocity based motion model is used for underwater vehicles. The
-net force is used to calculate the velocity which in turn is used
-to calculate the position of the AUV. As described above the net force
-is treated as Gaussian therefore velocity is also described by a Gaussian
-distribution. The algorithm proposed is used to estimate the right
-parameters for this distribution. For my master's thesis we reduce
-the degrees of freedom and represent the pose of the AUV is three
-dimensional. 
+For my master's thesis we reduce the degrees of freedom and represent the pose of the AUV is two dimensional with orientation. 
 
 In the algorithm the robot can be represented by $s_{t}=(x_{t},y_{t},\theta_{t})$
 where $x_{t},y,\theta_{t}$ are the robot's coordinates in x and y
-plane and orientation at time $t$.We use Teddy N. Yap motion model
-equations to update the pose of the robot.
+plane and orientation at time $t$. We base our motion model equations on Teddy N. Yap motion model which specifically dealt with odometry to update the pose of the robot. In the set of equations for our model we replace the odometry with velocity. 
 
 $x_{t}=x_{t-1}+D_{t}cos(\theta_{t-1}+\frac{T_{t}}{2})$
 
