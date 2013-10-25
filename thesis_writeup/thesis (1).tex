@@ -91,17 +91,38 @@ The main contributions of the algorithm are-:
 
 \section{Particle Filter}
 
-Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. It also can be called as a sequential Monte Carlo algorithm. It was first proposed by MK. Pitt and N Shephard[refer the paper]. The use of them in robotics was first seen for localization in mobile robots[refer the paper by thrun].Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models, they are easy to implement and they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF). They are used in robotics[refer the papers],navigation [refer the papers] and econometrics.The robot kidnap problems in which the robot needs to recover it pose and the global localization problem were solved by particle filters. 
+Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. It is an alternative non-parametric implementation of the Bayes filter. It also can be called as a sequential Monte Carlo algorithm. It was first proposed by MK. Pitt and N Shephard[refer the paper]. 
+
+Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle and they can model non linear transformations of random variables. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF). 
 
 
-Particle Filters are used to calculate the approximate of a state in Markov chains.[Put the figure of Markov chain].The state at t is only dependent upon the state at t-1 and not the events preceding it.Furthermore the state $ x _{t}=p(x_{t}|x_{t-1},u _{t})$ is dependant upon $ x _{t-1}$ as well as the control input $u _{t}$. The observations are introduced in the system in the form of measurements.The $p(z_{t}/x_{t})$ are used to assign weights to the particles and give survival of the fittest mentality to the algorithm.  
+Particle Filters are used to calculate the approximate of a state in Markov chain.[Put the figure of Markov chain].The key idea behind the particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior.The state $ x _{t}=p(x_{t}|x_{t-1},u _{t})$ is dependant upon $ x _{t-1}$ as well as the control input $u _{t}$. The observations are introduced in the system in the form of measurements.The $p(z_{t}/x_{t})$ are used to assign weights to the particles and give survival of the fittest mentality to the algorithm.  
 
-The algorithm for the most basic version of particle filters consist of two steps Initialization and Recursion.
+The algorithm for particle filters is described below-:
 
-\textbf{Initialization}: At time t=0, draw M particles according to $p(~x _{0})$. Call this set of particles $X _{0}$
+\begin{algorithm}[H]
+ \SetAlgoLined
+  		 
+ \KwIn{$ X _{t-1}$: particle set
+ $u_{t}$: most recent control
+ $z{t}$: most recent measurement
+\\
+}
+ \KwOut{ $X_{t}$:particle set }
+\Begin{
+\For{ m=1 to M do 
+sample $x_{t}^{m}~p(x_{t}|u_{t},x_{t-1}^m)$
+$w_{t}^{m}=p(z_{t}|x_{t}^{m})$
+$X_{t}^{-}=X_{t}^{-}+(x_{t}^{m},w_{t}^m)$}
+\For{m=1 to M do
+draw $i$ with probability $\propto$ $w_{t}^{[i]}$
+add $x_{t}^{[i]}$ to $X_{t}$}
+return $X_{t}$
+\end{algorithm}
 
-\textbf{Recursion}: At time t>0, generate a particle $x _{t} ^{[i]}$ for each particle $x _{t-1} ^{[i]} \epsilon X _{t-1}$ by drawing from the motion model $p(x_{t}|x_{t-1} ^{[i]},u _{t})$. Call this resulting set $X ^{-} _{t}$. Subsequently, draw M particles from $X ^{-} _{t}$, so that each $x _{t} ^{[i]} \epsilon X ^{-} _{t}$ is drawn (with replacement) with a probability  proportional to $p(z_{t}/x_{t} ^{[i]})$. Call the resulting set of particles $X ^{-} _{t}$. 
+The importance factor for each particle $x_{t}^{m}$ is calculated denoted $w_{t}^{m}$. Importance is the probability of the measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurement into the particle set.
 
+The key part of the algorithm is the re-sampling step which are line 8 through 11 in the particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor.The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
 
 \section{Motion Model}
 A motion model is responsible for capturing the relationship between
@@ -197,11 +218,10 @@ forces listed above
 $\tau_{RB}=\tau_{H}+\tau_{E}+\tau$
 
 Here $\tau_{H}$ is the radiation induced forces and moments, $\tau_{E}$
-and $\tau$ are the environmental and propulsion forces and moments.The
-individual forces such as restoring and environmental change over
-time. The restoring forces is dependent upon weight and buoyancy of
-water. The ocean currents are also not static. Therefore we describe
-$\tau_{RB}$ as a Gaussian distribution. 
+and $\tau$ are the environmental and propulsion forces and moments.
+
+The control is the input to a motion model and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model $u_{r}=f(n_{s})$ to get a velocity estimate.$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and propeller rotation rate. This can be implemented as a table look-up based on experimental data.
+The same control input won't product the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
 
 The velocity based motion model is used for underwater vehicles. The
 net force is used to calculate the velocity which in turn is used

@@ -32,6 +32,6 @@
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {3.5}Visual Motion Estimates}{13}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.6}Results}{15}
-\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{20}
+\contentsline {section}{\numberline {3.6}Results}{14}
+\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{17}
 \addvspace {10\p@ }
