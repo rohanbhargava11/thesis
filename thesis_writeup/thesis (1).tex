@@ -88,42 +88,6 @@ The main contributions of the algorithm are-:
 
 2) \textbf{Motion Estimation from Side Sonar Images}-: We present an approach to estimate the movement from side sonar images which can be coupled with existing motion model and can improve localization. It can be easily be performed on-board as we use only a limited amount of interest points which lead to lesser computation and memory usage. 
 \chapter{Background}
-
-\section{Particle Filter}
-
-Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. It is an alternative non-parametric implementation of the Bayes filter. It also can be called as a sequential Monte Carlo algorithm. It was first proposed by MK. Pitt and N Shephard[refer the paper]. 
-
-Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle and they can model non linear transformations of random variables. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF). 
-
-
-Particle Filters are used to calculate the approximate of a state in Markov chain.[Put the figure of Markov chain].The key idea behind the particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior.The state $ x _{t}=p(x_{t}|x_{t-1},u _{t})$ is dependant upon $ x _{t-1}$ as well as the control input $u _{t}$. The observations are introduced in the system in the form of measurements.The $p(z_{t}/x_{t})$ are used to assign weights to the particles and give survival of the fittest mentality to the algorithm.  
-
-The algorithm for particle filters is described below-:
-
-\begin{algorithm}[H]
- \SetAlgoLined
-  		 
- \KwIn{$ X _{t-1}$: particle set
- $u_{t}$: most recent control
- $z{t}$: most recent measurement
-\\
-}
- \KwOut{ $X_{t}$:particle set }
-\Begin{
-\For{ m=1 to M do 
-sample $x_{t}^{m}~p(x_{t}|u_{t},x_{t-1}^m)$
-$w_{t}^{m}=p(z_{t}|x_{t}^{m})$
-$X_{t}^{-}=X_{t}^{-}+(x_{t}^{m},w_{t}^m)$}
-\For{m=1 to M do
-draw $i$ with probability $\propto$ $w_{t}^{[i]}$
-add $x_{t}^{[i]}$ to $X_{t}$}
-return $X_{t}$
-\end{algorithm}
-
-The importance factor for each particle $x_{t}^{m}$ is calculated denoted $w_{t}^{m}$. Importance is the probability of the measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurement into the particle set.
-
-The key part of the algorithm is the re-sampling step which are line 8 through 11 in the particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor.The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
-
 \section{Motion Model}
 A motion model is responsible for capturing the relationship between
 the control input and the change in robot's configuration. Our approach
@@ -133,14 +97,19 @@ model will capture the errors such as drift that are encountered during
 the motion of the robot. The motion model is an integral part of algorithms
 such as localization,mapping etc. 
 
-Let $s=(x,y,\theta)$ be the initial pose of the robot in x-y space.
-Mathematically the motion model can be described as $P(s^{'}|s,u)$,
-where $s^{'}$ is the pose after executing the motion command $u$.
+Let $X=(x,y,\theta)$ be the initial pose of the robot in x-y space.
+Mathematically the motion model can be described as $P(X^{'}|X,u)$,
+where $X^{'}$ is the pose after executing the motion command $u$.
 Based on the control input we can divide the motion model in two classes
 1) Odometry based motion model 2) Velocity based motion model. The
 first class of motion models are used for robots equipped with wheel
 encoders. Velocity based models calculate their new position based
 on velocities and time elapsed.
+\begin{figure}[hbtp]
+\caption{Markov Chain}
+\centering
+\includegraphics[scale=1.0]{../../thesis_work/Motion_model_thrun.png}
+\end{figure}
 
 For Autonomous Underwater Vehicle(AUV) the pose is represented in
 6 Degrees Of Freedom(DOF). The pose can be represented as $s=(x,y,z,\theta,\phi,\psi)$.
@@ -224,32 +193,103 @@ The control is the input to a motion model and in our case it is the velocity of
 The same control input won't product the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
 For my master's thesis we reduce the degrees of freedom and represent the pose of the AUV is two dimensional with orientation. 
 
-In the algorithm the robot can be represented by $s_{t}=(x_{t},y_{t},\theta_{t})$
+In the algorithm the robot can be represented by $X_{t}=(x_{t},y_{t},\theta_{t})$
 where $x_{t},y,\theta_{t}$ are the robot's coordinates in x and y
 plane and orientation at time $t$. We base our motion model equations on Teddy N. Yap motion model which specifically dealt with odometry to update the pose of the robot. In the set of equations for our model we replace the odometry with velocity. 
 
-$x_{t}=x_{t-1}+D_{t}cos(\theta_{t-1}+\frac{T_{t}}{2})$
+$x_{t}=x_{t-1}+V_{t-1}/W_{t-1} \sin(\theta_{t-1})+ V_{t-1}/W_{t-1} \cos(\theta_{t-1} + W_{t-1} \delta t)$
 
-$y_{t}=y_{t-1}+D_{t}sin(\theta_{t-1}+\frac{T_{t}}{2})$
+$y_{t}=y_{t-1}+V_{t-1}/W_{t-1} \cos(\theta_{t-1})- V_{t-1}/W_{t-1} \sin(\theta_{t-1} + W_{t-1} \delta t)$
 
-$\theta_{t}=(\theta_{t-1}+T_{t})mod2\pi$
+$\theta_{t}=\theta_{t-1}+ W_{t-1} \delta t$
 
 
-The terms $D_{t}$ and $T_{t}$are the translational and rotational
+The terms $V_{t}$ and $W_{t}$are the translational and rotational
 velocities respectively. They are represented by a Gaussian distribution
 to account for the change in forces. They can mathematically represented
 as 
 
-$D_{t}\sim\mathcal{{N}}(d_{t},d_{t}^{2}\sigma_{D_{d}}^{2}+r_{t}^{2}\sigma_{D_{r}}^{2}+\sigma_{D_{1}}^{2})$
+$V_{t}\sim\mathcal{{N}}(v_{t},v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
 
-$T_{t}\sim\mathcal{{N}}(r_{t},d_{t}^{2}\sigma_{T_{d}}^{2}+r_{t}^{2}\sigma_{T_{r}}^{2}+\sigma_{T_{1}}^{2})$
+$W_{t}\sim\mathcal{{N}}(w_{t},v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
 
-In the above equations $d_{t}$ and $r_{t}$are reported translational
-and rotational velocity. $\sigma_{A_{b}}$describes the contribution
-of velocity term b to the variance of the distribution over A. $\sigma_{D_{1}}$and
-$\sigma_{T_{1}}$ take into account the independent errors that are
-not proportional to translation and rotation of the robot. $\sigma_{D_{d}}^{2}\ensuremath{,}\sigma_{T_{d}}^{2}\ensuremath{,}\sigma_{D_{r}}^{2}\ensuremath{,}\sigma_{T_{r}}^{2}\ensuremath{,}\sigma_{D_{1}}^{2}\ensuremath{,}\sigma_{T_{1}}^{2}$
-are the motion parameters that our algorithm intends to learn. 
+In the above equations $v_{t}$ and $w_{t}$are reported translational
+and rotational velocity. $\sigma_{A_{b}}$ describes the contribution
+of velocity term b to the variance of the distribution over A. $\sigma_{V_{1}}$and
+$\sigma_{W_{1}}$ take into account the independent errors that are
+not proportional to translation and rotation of the robot. $\sigma_{V_{v}}^{2}\ensuremath{,}\sigma_{W_{v}}^{2}\ensuremath{,}\sigma_{V_{w}}^{2}\ensuremath{,}\sigma_{W_{w}}^{2}\ensuremath{,}\sigma_{V_{1}}^{2}\ensuremath{,}\sigma_{W_{1}}^{2}$
+are the motion parameters that our algorithm intends to learn.
+
+\section{Particle Filter}
+Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. It is an alternative non-parametric implementation of the Bayes filter. It also can be called as a sequential Monte Carlo algorithm. It was first proposed by MK. Pitt and N Shephard[refer the paper]. 
+
+Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle.Additionally they can model non linear transformations of random variables therefore can be applied to any systems and measurement models. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF). 
+
+Particle Filters are used to calculate the approximate of a state in Markov chain.
+\begin{figure}[hbtp]
+\caption{Markov Chain}
+\centering
+\includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
+\end{figure}
+The key idea behind the particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior.The state $ x _{t}=p(x_{t}|x_{t-1},u _{t})$ is dependant upon $ x _{t-1}$ as well as the control input $u _{t}$. The observations are introduced in the system in the form of measurements.The $p(z_{t}/x_{t})$ are used to assign weights to the particles and give survival of the fittest mentality to the algorithm.  
+
+The algorithm for particle filters is described below-:
+
+\begin{algorithm}[H]
+\label{alg:ParticleFilter}
+ \SetAlgoLined
+  		 
+ \KwIn{$ X _{t-1}$: particle set
+ $u_{t}$: most recent control
+ $z{t}$: most recent measurement}
+
+
+ \KwOut{ $X_{t}$:particle set }
+\Begin{
+\For { m=1 to M do} 
+{sample $x_{t}^{m}~p(x_{t}|u_{t},x_{t-1}^m)$
+$w_{t}^{m}=p(z_{t}|x_{t}^{m})$
+$X_{t}^{-}=X_{t}^{-}+(x_{t}^{m},w_{t}^m)$}
+
+\For{m=1 to M do}
+{
+draw $i$ with probability $\propto$ $w_{t}^{[i]}$
+\\
+add $x_{t}^{[i]}$ to $X_{t}$}
+return $X_{t}$
+}
+\caption{Particle Filter Algorithm}
+\end{algorithm}
+
+The importance factor for each particle $x_{t}^{m}$ is calculated denoted $w_{t}^{m}$. Importance is the probability of the measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurement into the particle set. In practice, the number of particles used is a large number(e.g.-:1000).
+
+The key part of the algorithm is the re-sampling step which are line 8 through 11 in the particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor.The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
+
+ \section{Particle smoothing}
+The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. It is defined as the computing the posterior distribution of the past states given all the evidence upto the present.
+Mathematically it can be represented as $p(x _{t}|u _{1:T},z _{1:T})$ for some t with $ 0 \leq t \leq T$.Russel and Norving showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering.
+We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton which was based on the technique presented by Docuet et al. and Godsill et al. The algorithm is used to generate samples from the entire joint smoothing density $p(x_{0:T}|u_{1:T},z_{1:T})$.This algorithm assumes that particle filtering is already done on the entire data set and resulting in a distribution of the pose.
+\begin{algorithm}[H]
+ \SetAlgoLined
+  	\label{alg:Particle Smoothing}
+ \KwIn{$ X _{t}, t = 0, 1, ..., T$: particle approximations to the posterior pdfs $p (x _{t}|c _{1:t}, s _{1:t}) , t = 0, 1, ..,T$ 
+\\
+$c _{1:T} = (c _{1}, c _{2}, ..., c _{T} )$: set of controls from time 1 to time T}
+ \KwOut{ $x ^{'} _{0:T} = (x ^{'}_{0},x ^{'}_{1}, ...,x^{'}_{T} )$: a sample from the entire joint smoothing density $p (x_{0:T} |c _{1:T} , s _{1:T} )$ }
+\Begin{draw \textit{i} with probability $\propto$ $w ^{[i]} _{T}$
+$x ^{'} _{T} \leftarrow x^{[i]}_{T}$
+\\
+\For {$t \leftarrow T-1$ down to 0 do}{\For{ $i \leftarrow 1 to N_{s}$ do}{$w ^{[i]}_{t|t+1} \leftarrow w ^{[i]} _{t}p(x ^{'} _{t+1}|u _{t+1})$}draw \textit{i} with probability $\propto w ^{[i]} _{t|t+1}$\\ $x{'} \leftarrow x^{[i]}_{t}$}}
+	\caption{Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}
+	
+\end{algorithm}
+
+The particle filter process gives us a set of particles with their corresponding weights at the present time step. In the first step of smoothing we choose a particle with the probability proportional to the weight of the particles. Then we move a time step back till time-0 and calculate the new smoothed weights for every particle. They are calculated by the product of the forward probability and the weight of the particle. 
+\\
+$ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})$
+\\
+To calculate the trajectory we draw particles according to the new smoothed weights. At every time step we pick a particle and add it our trajectory set till time=T. We can repeat this process any number of time to get several trajectories. These trajectories are used in estimating the parameters of the motion model as they are treated as ground truth.
+ 
  
 
 \section{SURF}
@@ -269,8 +309,9 @@ Still have to write about it
 
 Figure 1.1 is a block diagram describing the whole system. The
 first step is to initialize the motion model with a set of parameters.
-Then the motion model is used to perform particle filtering and the output is a set of particles with their importance weights.Particle smoothing is performed on these set of particles. This gives us a collection
-of trajectories and completes the Expectation step. 
+Given the prior distribution $p(x_{t-1})$ of the robot's pose at time t-1,the motion model $p(x_{t}|x_{t-1},u_{t})$,the sensor model $p(z_{t}|x_{t})$,the control commands $u_{1:t}$ and the sensor measurements $z_{1:T}$ we perform particle filtering using Algorithm  ~\ref{alg:ParticleFilter} from time t=1 to time t=T. After we perform filtering we have a set of particles with the importance factors  describing the distribution over the pose of the robot.
+To complete the Expectation Step particle smoothing is performed recursively backwards in time. A set of trajectories are generated by repeating Algorithm ~\ref{alg:Particle Smoothing}.
+
 
 Based on the trajectories and the reported translational and rotational
 motion we calculate errors at each time step. We perform newton conjugate
@@ -282,44 +323,21 @@ process is repeated at each time step. The whole algorithm gives us
 a model which can adapt to dynamic environment. The adaptive motion
 model performs better than the static and the results are shown in
 the later chapters.
-\section{Particle smoothing}
-The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. It is defined as the computing the posterior distribution of the past states given all the evidence upto the present.
-Mathematically it can be represented as $p(x _{t}|u _{1:T},z _{1:T})$ for some t with $ 0 \leq t \leq T$.Russel and Norving showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering.
-We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton for generating trajectories which are used in the Maximization step. 
-\begin{algorithm}[H]
- \SetAlgoLined
-  		 
- \KwIn{$ X _{t}, t = 0, 1, ..., T$: particle approximations to the posterior pdfs $p (x _{t}|c _{1:t}, s _{1:t}) , t = 0, 1, ..,T$ 
-\\
-$c _{1:T} = (c _{1}, c _{2}, ..., c _{T} )$: set of controls from time 1 to time T}
- \KwOut{ $x ^{'} _{0:T} = (x ^{'}_{0},x ^{'}_{1}, ...,x^{'}_{T} )$: a sample from the entire joint smoothing density $p (x_{0:T} |c _{1:T} , s _{1:T} )$ }
-\Begin{draw \textit{i} with probability $\propto$ $w ^{[i]} _{T}$
-$x ^{'} _{T} \leftarrow x^{[i]}_{T}$
-\\
-\For {$t \leftarrow T-1$ down to 0 do}{\For{ $i \leftarrow 1 to N_{s}$ do}{$w ^{[i]}_{t|t+1} \leftarrow w ^{[i]} _{t}p(x ^{'} _{t+1}|u _{t+1})$}draw \textit{i} with probability $\propto w ^{[i]} _{t|t+1}$\\ $x{'} \leftarrow x^{[i]}_{t}$}}
-	\caption{Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}
-	
-\end{algorithm}
 
-The particle filter process gives us a set of particles with their corresponding weights at the present time step. In particle smoothing we move backwards to get trajectories which are treated as ground truth. In the first step we choose a particle with the probability proportional to the weight of the particles. Then we move the a time step back and calculate the new smoothed weights for every particle. They are calculated by the product of the forward probability and the weight of the particle. 
-\\
-$ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})$
-\\
-The particles are drawn according to the new smoothed weights. At every time step we pick a particle and call it is as trajectory. We can repeat the same process to get several trajectories. These trajectories are used in estimating the parameters of the motion model.
- 
 
 
 
 
 
 \section{Dynamic Landmarks}
-In our particle filtering algorithm the sensor model is responsible to assign weights to the particles. It is generally done by using some sort of references in the world aka landmarks. Austin and Elizar used static maps as reference for their algorithm. The liberty of having static maps for underwater environments isn't there. To create some reference points underwater we use side sonar images.
+In the particle filtering algorithm the sensor model is responsible to assign weights to the particles.The sensor model describes the process by which sensor measurements are generated in the physical world.It is generally done by using some sort of references in the world aka landmarks. Austin and Elizar in their papers used static maps of known environments to generate references for their sensor model.
+The probability of having static maps for underwater environments is pretty low and thus lead us to use side sonar images as references for the sensor model.
 \begin{figure}[hbtp]
 \caption{Side Sonar Image}
 \centering
 \includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg}
 \end{figure}
-As you can see in the image there are lot of horizontal lines which we can treat as noise. In order to get rid of  these we use a median filter on the image. In order to generate some landmarks we run feature extractions techniques such as SURF. This algorithm helps us in detecting interest points in the image and are shown below in circles. 
+As you can see in the image there are lot of horizontal lines which we treat as noise. For us to use the side sonar images we performed a pre-processing step in which we used a median filter on the image. This helped us in getting rid of major noises in terms of horizontal lines but also blurred the image. In order to generate some landmarks we ran feature extractions techniques like SURF. This algorithm helped us in detecting interest points in the image and are shown below in circles. Andrew Vardy{refer the paper) ran multiple image registration techniques such as phase matching (you need to mention more) on side sonar images and showed that SURF performs better than the rest .
 \begin{figure}[hbtp]
 \caption{SURF Keypoints}
 \centering
@@ -329,7 +347,7 @@ As you can see in the image there are lot of horizontal lines which we can treat
 These interest points can be treated as landmarks. We use a high Hessian
 threshold so that we have a maximum of 4 landmarks. The distance of the robot and the particles to these landmarks are used to assign weights to the particles.
 \\
-Side sonar sensor is very different from a camera. The output of a side sonar is a ping of the surface. For an image to be created we need to combine pings over time. Andrew Vardy in his paper explains on how to combine pings to create an meaningful image. For our algorithm to run on the AUV we use Andrew's algorithm as a black box and run our feature extraction on the output i.e. images of the seabed. 
+The output of a side sonar is a ping of the surface and for an image to be created we need to combine pings over time. Andrew Vardy in his paper explains on how to combine pings to create an meaningful image. For our algorithm to run on the AUV we can use Andrew's algorithm as a black box and run our feature extraction on the output i.e. images of the seabed. 
 This method allows us independence from a static map as well as helps in learning
 the motion model on the fly in a new environment. 
 \section{Parameter Estimation using Expectation Maximization}

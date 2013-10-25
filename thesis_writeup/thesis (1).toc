@@ -14,24 +14,24 @@
 \contentsline {chapter}{\numberline {Chapter 2}Background}{5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.1}Particle Filter}{5}
+\contentsline {section}{\numberline {2.1}Motion Model}{5}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.2}Motion Model}{6}
+\contentsline {section}{\numberline {2.2}Particle Filter}{8}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.3}SURF}{8}
-\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{9}
+\contentsline {section}{\numberline {2.3}Particle smoothing}{10}
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {2.4}SURF}{11}
+\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.1}General Architecture}{9}
+\contentsline {section}{\numberline {3.1}General Architecture}{12}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.2}Particle smoothing}{10}
+\contentsline {section}{\numberline {3.2}Dynamic Landmarks}{13}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.3}Dynamic Landmarks}{11}
+\contentsline {section}{\numberline {3.3}Parameter Estimation using Expectation Maximization}{14}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.4}Parameter Estimation using Expectation Maximization}{12}
+\contentsline {section}{\numberline {3.4}Visual Motion Estimates}{16}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.5}Visual Motion Estimates}{13}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {3.6}Results}{14}
-\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{17}
+\contentsline {section}{\numberline {3.5}Results}{18}
+\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{23}
 \addvspace {10\p@ }

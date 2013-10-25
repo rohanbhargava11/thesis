@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.9.16)  24 OCT 2013 17:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  25 OCT 2013 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -230,7 +230,14 @@ LaTeX Info: Redefining \\ on input line 30.
 LaTeX Info: Redefining \\ on input line 30.
  [3
 
-] (./thesis (1).toc)
+] (./thesis (1).toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `"thesis (1).toc"'.
 
@@ -258,250 +265,211 @@ Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
  [2] [3] [4]
 Chapter 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 99.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 99.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 99.
+<../../thesis_work/Motion_model_thrun.png, id=38, 240.9pt x 160.4394pt>
+File: ../../thesis_work/Motion_model_thrun.png Graphic file (type png)
 
-Overfull \hbox (11.33095pt too wide) in paragraph at lines 99--100
-[]\OT1/cmr/m/n/12 Particle Fil-ters are used to cal-cu-late the ap-prox-i-mate 
-of a state in Markov chains.[Put
- []
-
-
-Underfull \vbox (badness 1527) has occurred while \output is active []
-
+<use ../../thesis_work/Motion_model_thrun.png>
+Package pdftex.def Info: ../../thesis_work/Motion_model_thrun.png used on input
+ line 111.
+(pdftex.def)             Requested size: 240.8994pt x 160.43901pt.
  [5
 
-]
+ <../../thesis_work/Motion_model_thrun.png>]
+</home/rohan/Documents/thesis_work/uav_diagram.png, id=46, 450.18187pt x 175.40
+532pt>
+File: /home/rohan/Documents/thesis_work/uav_diagram.png Graphic file (type png)
 
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/uav_diagram.png' not fou
-nd on input line 139.
+ <use /home/rohan/Documents/thesis_work/uav_diagram.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/uav_diagram.png used
+ on input line 125.
+(pdftex.def)             Requested size: 225.09038pt x 87.70244pt.
 
-
-! Package pdftex.def Error: File `/home/rohan/Documents/thesis_work/uav_diagram
-.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 ...an/Documents/thesis_work/uav_diagram.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6]
-Overfull \hbox (24.4248pt too wide) in paragraph at lines 170--171
+Overfull \hbox (24.4248pt too wide) in paragraph at lines 156--157
 [][] 
  []
 
-[7] [8]
+[6 </home/rohan/Documents/thesis_work/uav_diagram.png>] [7]
+<../../thesis_work/markov_chain.png, id=57, 859.21pt x 409.53pt>
+File: ../../thesis_work/markov_chain.png Graphic file (type png)
+
+<use ../../thesis_work/markov_chain.png>
+Package pdftex.def Info: ../../thesis_work/markov_chain.png used on input line 
+232.
+(pdftex.def)             Requested size: 429.60396pt x 204.7645pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9 <../../thesis_work/markov_chain.png (PNG copy)>] [10] [11]
 Chapter 3.
-<Diagram1.jpeg, id=59, 980.66376pt x 507.8975pt>
+<Diagram1.jpeg, id=73, 980.66376pt x 507.8975pt>
 File: Diagram1.jpeg Graphic file (type jpg)
  <use Diagram1.jpeg>
-Package pdftex.def Info: Diagram1.jpeg used on input line 258.
+Package pdftex.def Info: Diagram1.jpeg used on input line 305.
 (pdftex.def)             Requested size: 490.33067pt x 253.94814pt.
 
-Overfull \hbox (56.71066pt too wide) in paragraph at lines 258--259
+Overfull \hbox (56.71066pt too wide) in paragraph at lines 305--306
  [][] 
  []
 
-[9
+[12
 
- <./Diagram1.jpeg>] [10]
+ <./Diagram1.jpeg>]
+</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=77, 984.678
+76pt x 368.1253pt>
+File: /home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg Graphic fi
+le (type jpg)
 
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18
-.jpg' not found on input line 313.
+<use /home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/visual_sonar/sonar_5
+9/18.jpg used on input line 338.
+(pdftex.def)             Requested size: 492.33817pt x 184.0622pt.
 
-
-! Package pdftex.def Error: File `/home/rohan/Documents/thesis_work/visual_sona
-r/sonar_59/18.jpg' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.313 ...thesis_work/visual_sonar/sonar_59/18.jpg}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (58.71815pt too wide) in paragraph at lines 338--339
+ [][] 
+ []
 
 
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/landmarks.p
-ng' not found on input line 319.
+</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=78, 993.7125p
+t x 383.18156pt>
+File: /home/rohan/Documents/thesis_work/visual_sonar/landmarks.png Graphic file
+ (type png)
 
-
-! Package pdftex.def Error: File `/home/rohan/Documents/thesis_work/visual_sona
-r/landmarks.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.319 ...s/thesis_work/visual_sonar/landmarks.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 348--376
+<use /home/rohan/Documents/thesis_work/visual_sonar/landmarks.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/visual_sonar/landmar
+ks.png used on input line 344.
+(pdftex.def)             Requested size: 397.47795pt x 153.2699pt.
+ [13 </home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg>] [14 </ho
+me/rohan/Documents/thesis_work/visual_sonar/landmarks.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 373--401
 
  []
 
-[12]
+[15]
+</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=91, 1445.
+4pt x 813.0375pt>
+File: /home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg Graphic 
+file (type jpg)
 
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/surf_workin
-g.jpeg' not found on input line 401.
+<use /home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/visual_sonar/surf_wo
+rking.jpeg used on input line 426.
+(pdftex.def)             Requested size: 578.14977pt x 325.20924pt.
+
+Overfull \hbox (144.52975pt too wide) in paragraph at lines 426--427
+ [][] 
+ []
 
 
-! Package pdftex.def Error: File `/home/rohan/Documents/thesis_work/visual_sona
-r/surf_working.jpeg' not found.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.401 ...esis_work/visual_sonar/surf_working.jpeg}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 433--452
+ [16]
+[17 </home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 458--477
 
  []
 
-[14]
 
-! LaTeX Error: File `../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1' no
-t found.
+<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=98, 1734.48pt x
+ 894.7026pt>
+File: ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png Graphic file (
+type png)
+ <use ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1
+.png used on input line 490.
+(pdftex.def)             Requested size: 433.61894pt x 223.6751pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.465 ...5_0\lyxdot 2_1_2\lyxdot 0_motion_model_1}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=99, 1734.48pt x
+ 894.7026pt>
+File: ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png Graphic file (
+type png)
+ <use ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1
+.png used on input line 498.
+(pdftex.def)             Requested size: 433.61894pt x 223.6751pt.
 
+<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=100, 1555.2504pt 
+x 888.921pt>
+File: ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png Graphic file (ty
+pe png)
+ <use ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.p
+ng used on input line 515.
+(pdftex.def)             Requested size: 388.81165pt x 222.2297pt.
 
-! LaTeX Error: File `../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1' no
-t found.
+<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=101, 1541.5191p
+t x 442.2924pt>
+File: ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png Graphic file (
+type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.473 ...5_0\lyxdot 2_1_5\lyxdot 0_motion_model_1}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1
+.png used on input line 524.
+(pdftex.def)             Requested size: 385.37883pt x 110.57283pt.
+ [18] [19 <../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png> <../plot
+_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png>] [20 <../plot_motion_model
+/100_0.05_0.5_1_2.0_motion_model.png> <../plot_motion_model/100_0.05_0.5_1_5.0_
+motion_model_1.png>]
+<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=116, 586.8
+324pt x 442.2924pt>
+File: ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png Graphic f
+ile (type png)
 
+<use ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_
+model.png used on input line 540.
+(pdftex.def)             Requested size: 440.12321pt x 331.71849pt.
 
-! LaTeX Error: File `../plot_motion_model/100_0.05_0.5_1_2.0_motion_model' not 
-found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.490 ... 05_0\lyxdot 5_1_2\lyxdot 0_motion_model}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1' no
-t found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.499 ...5_0\lyxdot 5_1_5\lyxdot 0_motion_model_1}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (6.5032pt too wide) in paragraph at lines 540--541
+[][] 
+ []
 
 
-! LaTeX Error: File `../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_mode
-l' not found.
+<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=117, 1734.
+48pt x 894.7026pt>
+File: ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png Graphic f
+ile (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.515 ...yxdot 2_rotation_5\lyxdot 0_motion_model}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_mode
-l' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.524 ...yxdot 5_rotation_5\lyxdot 0_motion_model}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[15] [16]
+<use ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>
+Package pdftex.def Info: ../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_
+model.png used on input line 549.
+(pdftex.def)             Requested size: 433.61894pt x 223.6751pt.
+ [21 <../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png>] [22 <..
+/plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png>]
 Chapter 4.
 No file "thesis (1)".bbl.
-[17
+[23
 
-] (./thesis (1).aux) ) 
+] (./thesis (1).aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 340 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2948 strings out of 495059
- 40804 string characters out of 3182030
- 123331 words of memory out of 3000000
- 6085 multiletter control sequences out of 15000+200000
- 8456 words of font info for 30 fonts, out of 3000000 for 9000
+ 2989 strings out of 495059
+ 43766 string characters out of 3182030
+ 123348 words of memory out of 3000000
+ 6134 multiletter control sequences out of 15000+200000
+ 8287 words of font info for 29 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,18n,23p,1405b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb>
-Output written on "thesis (1).pdf" (23 pages, 245295 bytes).
+Output written on "thesis (1).pdf" (29 pages, 2000677 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 172 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
