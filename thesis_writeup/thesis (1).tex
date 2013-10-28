@@ -51,15 +51,19 @@ Thanks to all the little people who make me look tall.
 
 
 \section{Motivation}
-The core of human environment interaction is the ability of the person to know its position in the surrounding environment. Similarly for robots the need to know its state in the world is an important task and it is termed as localization. To interact with the environment we need some sort of understanding of it.Primarily mapping the environment and localizing the robot in it i.e. Simultaneous Localization and Mapping (SLAM) has been a way to interact with the world. The integral part of SLAM is the way the robot moves and senses the world. These characteristics are captured in the motion and sensor models. However infrequently discussed but essential input are the parameters to these models. Most of the models are considered to be static which is a wrong assumption to make. For example the movement of the robot on carpet is very different compared to tiles. Another example would be the models can change from general wear and tear on the robot. Generally the motion and sensor models are hand tuned by experts based on their experience. The whole process can be tedious and we propose a way to automate it. As we are moving ahead in our goal of making robots a ubiquitous part our everyday life they need to adapt to our dynamic surroundings. The algorithm that we are proposing not only will help automate the process but also help us adapt the models to our environment.
+The core of human environment interaction is the ability of the person to know its position in the surrounding environment. Similarly for robots the need to know its state in the world is an essential task and it is termed as localization. To interact with the environment we need some sort of understanding of it.Primarily mapping the environment and localizing the robot in it i.e. Simultaneous Localization and Mapping (SLAM) has been a way to interact with the world. The integral part of SLAM is the way the robot moves and senses the world. These characteristics are captured in the motion and sensor models.
 
-Water environments like oceans,rivers are highly dynamic and change in a matter of seconds which affects the movement of the vehicles.For example in Autonomous Underwater Vehicle(AUV) the density and the temperature of the water can lead to changes in the motion model. For my thesis we will specifically deal with underwater environments and propose an online system for an AUV to adapt its motion model. We specifically dealt with AUV that are equipped with side sonar sensor. 
+However infrequently discussed but essential input are the parameters to these models. Most of the models are probabilistic but the parameters to them are fixed which is a wrong assumption to make. For example the movement of the robot on carpet is very different compared to tiles. Another example would be the models can change from general wear and tear on the robot. Generally the motion and sensor models are hand tuned by experts based on their experience. They are manually recalibrated whenever there is a significant change in the environment.The whole process can be tedious and we propose a way to automate it. As we are moving ahead in our goal of making robots a ubiquitous part our everyday life they need to adapt to our dynamic surroundings. The algorithm that we are proposing will not only help automate the process but also help us adapt the models to our environment.
 
-Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for communication,detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. The side sonar images in my thesis is used for two applications. In the first application the side sonar images can be used to gather information for our sensor model. In second application by matching features on consecutive side sonar images we can get an estimate of the movement for the AUV. 
+Water environments like oceans,rivers are highly dynamic and change in a matter of seconds which affects the movement of the vehicles.For example in Autonomous Underwater Vehicle(AUV) the density and the temperature of the water can lead to changes in the motion model. For my thesis we will specifically deal with underwater environments and propose an online system for an AUV to adapt its motion model. The assumption for the algorithm to work is that AUV is equipped with side sonar sensor. 
 
-To learn the right parameters of the model we use Expectation Maximization(EM). It is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
+Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for communication,detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. The side sonar images in my thesis is used for two applications. Side scan sonar is a specific type of sonar used to image the topography of the sea floor. In the first application the side sonar images can be used to gather information for our sensor model. In second application by matching features on consecutive side sonar images we can get an estimate of the movement for the AUV. 
 
-For visual motion estimate we use Speeded Up Robust Features(SURF) to extract interest points in a side sonar image. There are robust local feature detector and is used in computer vision tasks like object recognition or 3D reconstructions.We extract key points and match them in subsequent images to estimate motion of the AUV.
+For the first application to learn the right parameters of the model we use Expectation Maximization(EM). It is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
+
+In the second application for visual motion estimation we use Speeded Up Robust Features(SURF) to extract interest points in a side sonar image. There are robust local feature detector and is used in computer vision tasks like object recognition or 3D reconstructions.We extract key points and match them in subsequent images to estimate motion of the AUV.
+
+For navigation AUVs rely on Inertial Navigation System(INS) which gives us an estimate of the velocity,position and orientation of the vehicle. There sensors suffer from drift and in order to aid them we used Doppler Velocity Log(DVL),surface GPS etc.The DVLs are found in high end systems but there are situations where it fails to work or the sensor reading need to be discarded due to poor quality. Hegrenaes et al[refer] pointed out that we could use velocity estimate from the motion model to compensate for the drift of INS. The assumption they made was that the motion model was static. Our algorithm to learn the motion model would fit in perfectly for such an application. 
 
 To summarize I am proposing a algorithm to learn the right parameters of the model specifically to deal with changes underwater. We are learning these parameters on the fly without having a prior map or revisiting places. We also put forward an idea to estimate the movement of AUV from side sonar images. Results of simulated experiments with environment changes are presented to show the effectiveness of the algorithm. Real mission datasets are used to validate our motion estimation algorithm. 
 \section{Calibration and Localization}
@@ -67,19 +71,15 @@ To summarize I am proposing a algorithm to learn the right parameters of the mod
 
 In our framework we use particle filters to localize the robot. We define a motion and a sensor model for our robot. Instead of a map we use dynamic landmarks to gather sensor readings. The motion and sensor measurements are then processed by particle filters to estimate the pose of the robot. 
 
-\textbf{Calibration} is the process of determining the parameters to the kinematic or dynamical model. Better the calibration of the robot higher the accuracy of localization. Generally the robot is calibrated at the start of the experiment and the parameters values are not changed throughout the experiment. As our environment is dynamic our models whould also be adaptive.Thrun first proposed an algorithm for online calibration using the maximum likelihood estimate. Alziar further continued the work and learned the motion model for land robots using Expectation Maximization framework. The EM framework was further extended by Teddy Yapp to learn the right parameters for motion as well as sensor model. 
-
-As stated earlier underwater environment is highly dynamic.Therefore we use the same framework to estimate the motion models for underwater vehicles. We use side sonar images to extract landmarks and use it as our sensor data. Particle smoothing is performed to get us a set of trajectories. We perform maximum likelihood estimate of the parameters given the trajectories and actual data. 
+\textbf{Calibration} is the process of determining the parameters to the kinematic or dynamical model. Better the calibration of the robot higher the accuracy of localization. Generally the robot is calibrated at the start of the experiment and the parameters values are not changed throughout the experiment. As our environment is dynamic our models should also be adaptive.Thrun first proposed an algorithm for online calibration using the maximum likelihood estimate. Alziar further continued the work and learned the motion model for land robots using Expectation Maximization framework. The EM framework was further extended by Teddy Yapp to learn the right parameters for motion as well as sensor model. We use the same framework to estimate the motion models for underwater vehicles.% We use side sonar images to extract landmarks and use it as our sensor data. Particle smoothing is performed to get us a set of trajectories. We perform maximum likelihood estimate of the parameters given the trajectories and actual data.% 
 
 
 
 \section{Motion Estimation}
-In mobile robots the position and orientation is determined through wheel encoders and velocity estimates. These techniques do not generalize well as they cannot be applied to every robot. On top of that the wheels tend to slip on the floor and also the estimates drift over time. As the errors accumulate, the motion estimation becomes unreliable. 
-We propose a method to estimate motion from only side sonar images.Compared to other techniques they are not restricted to particular locomotion method as well as don't suffer from drift.In our approach we extract and map key points between consecutive image in underwater environment . We use Speeded Up Robust Features (SURF) algorithm first proposed by Herbert Bay in 2006 to extract interest points in the image. 
+In mobile robots the position and orientation is determined through wheel encoders and velocity estimates.The wheels tend to slip on the floor and the estimates drift over time. As the errors accumulate, the motion estimation becomes unreliable. Secondly these techniques do not generalize. 
+We propose a method to estimate motion from only side sonar images.Compared to other techniques they are not restricted to particular locomotion method as well as don't suffer from drift.In our approach we extract and map key points between consecutive image in underwater environment. We use Speeded Up Robust Features (SURF) algorithm first proposed by Herbert Bay in 2006 to extract interest points in the image. 
 
-Silvia Silva da Costa Botelho proposed a similar algorithm which used camera on AUVs to estimate visual motion and Scale Invariant feature transform(SIFT) was used to extract key points. 
-
-There are two major differences in our algorithm. We used side sonar images because at deeper levels in the water cameras don't produce any meaningful images. Secondly we used SURF which is several times faster than SIFT and is more robust against image transformations. 
+Silvia Silva da Costa Botelho proposed a similar algorithm for AUVs which used Scale Invariant feature Transform(SIFT) on camera images to estimate visual motion.There are two major differences in our algorithm. We used side sonar images because at deeper levels in the water cameras don't produce any meaningful images. Secondly we used SURF which is several times faster than SIFT and is more robust against image transformations.
 
 \section{Contributions}
 The main contributions of the algorithm are-:
@@ -106,7 +106,7 @@ first class of motion models are used for robots equipped with wheel
 encoders. Velocity based models calculate their new position based
 on velocities and time elapsed.
 \begin{figure}[hbtp]
-\caption{Markov Chain}
+\caption{Motion Model}
 \centering
 \includegraphics[scale=1.0]{../../thesis_work/Motion_model_thrun.png}
 \end{figure}
@@ -187,10 +187,11 @@ forces listed above
 $\tau_{RB}=\tau_{H}+\tau_{E}+\tau$
 
 Here $\tau_{H}$ is the radiation induced forces and moments, $\tau_{E}$
-and $\tau$ are the environmental and propulsion forces and moments.
+and $\tau$ are the environmental and propulsion forces and moments respectively. 
+A standard numerical ODE integration routine can be used to solve the equation to recover the state.
 
-The control is the input to a motion model and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model $u_{r}=f(n_{s})$ to get a velocity estimate.$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and propeller rotation rate. This can be implemented as a table look-up based on experimental data.
-The same control input won't product the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
+The input to a motion model is a control command and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model $u_{r}=f(n_{s})$ to get a velocity estimate.$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and propeller rotation rate. This can be implemented as a table look-up based on experimental data.
+The same control input won't produce the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
 For my master's thesis we reduce the degrees of freedom and represent the pose of the AUV is two dimensional with orientation. 
 
 In the algorithm the robot can be represented by $X_{t}=(x_{t},y_{t},\theta_{t})$
@@ -261,9 +262,9 @@ return $X_{t}$
 \caption{Particle Filter Algorithm}
 \end{algorithm}
 
-The importance factor for each particle $x_{t}^{m}$ is calculated denoted $w_{t}^{m}$. Importance is the probability of the measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurement into the particle set. In practice, the number of particles used is a large number(e.g.-:1000).
+The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance is the probability of the measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurement into the particle set. In practice, the number of particles used is a large number(e.g.-:1000).
 
-The key part of the algorithm is the re-sampling step which are line 8 through 11 in the particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor.The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
+The key part of the algorithm is the re-sampling step in the particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor.The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
 
  \section{Particle smoothing}
 The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. It is defined as the computing the posterior distribution of the past states given all the evidence upto the present.
@@ -284,7 +285,7 @@ $x ^{'} _{T} \leftarrow x^{[i]}_{T}$
 	
 \end{algorithm}
 
-The particle filter process gives us a set of particles with their corresponding weights at the present time step. In the first step of smoothing we choose a particle with the probability proportional to the weight of the particles. Then we move a time step back till time-0 and calculate the new smoothed weights for every particle. They are calculated by the product of the forward probability and the weight of the particle. 
+The particle filter process gives us a set of particles with their corresponding weights at the present time step. In the first step of smoothing we choose a particle with the probability proportional to the weight of the particles. Then we move a time step back till time=0 and calculate the new smoothed weights for every particle. They are calculated by the product of the forward probability and the weight of the particle. 
 \\
 $ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})$
 \\
@@ -293,7 +294,7 @@ To calculate the trajectory we draw particles according to the new smoothed weig
  
 
 \section{SURF}
-Still have to write about it
+It is a robust local feature detector, first proposed by Herbert Bay et al. in 2006. The sta
 
 \chapter{Learning the motion model}
 \section{General Architecture}
@@ -309,7 +310,8 @@ Still have to write about it
 
 Figure 1.1 is a block diagram describing the whole system. The
 first step is to initialize the motion model with a set of parameters.
-Given the prior distribution $p(x_{t-1})$ of the robot's pose at time t-1,the motion model $p(x_{t}|x_{t-1},u_{t})$,the sensor model $p(z_{t}|x_{t})$,the control commands $u_{1:t}$ and the sensor measurements $z_{1:T}$ we perform particle filtering using Algorithm  ~\ref{alg:ParticleFilter} from time t=1 to time t=T. After we perform filtering we have a set of particles with the importance factors  describing the distribution over the pose of the robot.
+
+Given the prior distribution $p(x_{t-1})$ of the robot's pose at time t-1,the motion model $p(x_{t}|x_{t-1},u_{t})$,the sensor model $p(z_{t}|x_{t})$,the control commands $u_{1:t}$ and the sensor measurements $z_{1:T}$ we perform particle filtering using Algorithm  ~\ref{alg:ParticleFilter} from time t=1 to time t=T. After we perform filtering we have a set of particles with importance factors describing the distribution over the pose of the robot.
 To complete the Expectation Step particle smoothing is performed recursively backwards in time. A set of trajectories are generated by repeating Algorithm ~\ref{alg:Particle Smoothing}.
 
 
@@ -319,7 +321,7 @@ gradient on the errors to give us the best estimate of the parameters.
 This completes the Maximization Step.
 
 The learned parameters are re-assigned to the motion model which helps in adapting the model. The  whole
-process is repeated at each time step so that we can dynamically learn the right parameters. Various algorithm such as SURF,Kalman Filter are dependant upon the accuracy of the motion model and adapting our motion models is the most basic step towards it. We found that the adaptive motion model performs better than the static and the results are shown in the later chapters.
+process is repeated at each time step so that we can dynamically learn the right parameters. Various algorithm such as SLAM,Kalman Filter are dependant upon the accuracy of the motion model and adapting our motion models is the most basic step towards it. We found that the adaptive motion model performs better than the static and the results are shown in the later chapters.
 
 
 
@@ -367,25 +369,26 @@ and return to step 2
 \\
 There are various convergence techniques that can be applied to step 4. In our algorithm we use Newton Conjugate Gradient to estimate the right parameters.	
 
-As we know the output of Expectation step is a set of robot trajectories which are treated as ground truth.At each time step we calculate the error between the distance given by trajectory and the actual distance reported by the encoder.
+As stated in earlier chapters to learn the motion model we have a distribution around the translational and rotational velocity. We have assumed a Gaussian distribution and use the EM algorithm to learn the right parameters.
+In the first step i.e. Expectation Step  we perform particle filtering and smoothing and the output is a set of robot trajectories which are treated as ground truth.At each time step we calculate the error between the distance given by trajectory and the actual distance moved. 
 \\
 $\epsilon_{T_{t}}^{[j]}=(\theta_{t_{+1}}^{'[j]}-\theta_{t}^{'[j]}-r_{t}^{''})mod2\pi$ 
 \\
 $\epsilon_{D_{t}}^{[j]}=(x_{t+1}^{'[j]}-x_{t}^{'[j]})cos(\theta_{t}^{'[j]}+\frac{r_{t}^{''}+\epsilon_{T_{t}}^{[j]}}{2}+(y_{t+1}^{'[j]}-y_{t}^{'[j]})sin(\theta_{t}^{'[j]}+\frac{r_{t}^{''}+\epsilon_{T_{t}}^{[j]}}{2})-d_{t}^{''}$
 \\
-$\epsilon_{T_{t}}^{[j]}$ and $\epsilon_{D_{t}}^{[j]}$ are rotational and translational errors for t=0,1...T-1 for $j^{th}$ sampled trajectory. $r_{t}^{''}$ and $d_{t}^{''}$ are the reported odometry values. 
 \\
+$\epsilon_{T_{t}}^{[j]}$ and $\epsilon_{D_{t}}^{[j]}$ are rotational and translational errors for t=0,1...T-1 for $j^{th}$ sampled trajectory. $\epsilon_{W_{t}}^{[j]}$ and $\epsilon_{V_{t}}^{[j]}$ are the rotational and translation errors in velocity and is given by $\epsilon_{T_{t}}^{[j]}/\delta(t)$ and $\epsilon_{D_{t}}^{[j]}/\delta(t)$. $r_{t}^{''}$ and $d_{t}^{''}$ are the distance moved and are  given by $r_{t}^{''}=w_{t}*\delta(t)$ and $d_{t}^{''}=v_{t}*\delta(t)$. $w_{t}$ and $v_{t}$ are the reported velocity. 
 Based on the motion model described 
 \\
-$\epsilon_{D_{t}}^{[j]}\sim\mathcal{{N}}(0,d_{t}^{''2}\sigma_{D_{d^{''}}}^{2}+r_{t}^{''2}\sigma_{D_{r^{''}}}^{2}+\sigma_{D_{1}}^{2})$
+$\epsilon_{V_{t}}^{[j]}\sim\mathcal{{N}}(0,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
 \\
-$\epsilon_{T_{t}}^{[j]}\sim\mathcal{{N}}(0,d_{t}^{''2}\sigma_{T_{d^{''}}}^{2}+r_{t}^{''2}\sigma_{T_{r^{''}}}^{2}+\sigma_{T_{1}}^{2})$
+$\epsilon_{W_{t}}^{[j]}\sim\mathcal{{N}}(0,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
 \\
 The log likelihood functions are
 \\
-$\mathcal{{L}}(\sigma_{D_{d}}^{2},\sigma_{D_{r}}^{2},\sigma_{D_{1}}^{2})=-\frac{1}{2}\sum_{j}\sum_{t=0}^{T-1}[\log2\pi+\log(d_{t}^{''2}\sigma_{D_{d}}^{2}+r_{t}^{''2}\sigma_{D_{r}}^{2}+\sigma_{D_{1}}^{2})+\frac{(\epsilon_{D_{t}}^{[j]})^{2}}{d_{t}^{''2}\sigma_{D_{d}}^{2}+r_{t}^{''2}\sigma_{D_{r}}^{2}+\sigma_{D_{1}}^{2}}$
+$\mathcal{{L}}(\sigma_{V_{v}}^{2},\sigma_{V_{w}}^{2},\sigma_{V_{1}}^{2})=-\frac{1}{2}\sum_{j}\sum_{t=0}^{T-1}[\log2\pi+\log(v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})+\frac{(\epsilon_{V_{t}}^{[j]})^{2}}{v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{r}}^{2}+\sigma_{V_{1}}^{2}}$
 \\
-$\mathcal{{L}}(\sigma_{T_{d}}^{2},\sigma_{T_{r}}^{2},\sigma_{T_{1}}^{2})=-\frac{1}{2}\sum_{j}\sum_{t=0}^{T-1}[\log2\pi+\log(d_{t}^{''2}\sigma_{T_{d}}^{2}+r_{t}^{''2}\sigma_{T_{r}}^{2}+\sigma_{T_{1}}^{2})+\frac{(\epsilon_{T_{t}}^{[j]})^{2}}{d_{t}^{''2}\sigma_{T_{d}}^{2}+r_{t}^{''2}\sigma_{T_{r}}^{2}+\sigma_{T_{1}}^{2}}$
+$\mathcal{{L}}(\sigma_{W_{v}}^{2},\sigma_{W_{w}}^{2},\sigma_{W_{1}}^{2})=-\frac{1}{2}\sum_{j}\sum_{t=0}^{T-1}[\log2\pi+\log(v_{t}^{2}\sigma_{W_{v}}^{2}+w_{t}^{2}\sigma_{W_{w}}^{2}+\sigma_{W_{1}}^{2})+\frac{(\epsilon_{W_{t}}^{[j]})^{2}}{v_{t}^{''2}\sigma_{W_{v}}^{2}+w_{t}^{''2}\sigma_{W_{w}}^{2}+\sigma_{W_{1}}^{2}}$
 \\
 \\
 In the Maximization Step we minimize the likelihood function. In this
@@ -437,6 +440,30 @@ the problems we use a high Hessian threshold to extract maximum of
 
 We validate our algorithm on datasets consisting of side sonar images
 and the total distance the AUV moves. 
+
+\section{Application}
+In this chapter we describe a specific application for learned motion model in underwater vehicles. A typical navigation sensor system would consists of Inertial Navigation Systems(INS) and some standard compass and pressure sensor. In some of the systems we could have position updates from long baseline(LBL),ultra short baseline(USBL) acoustics and surface GPS. Some high end systems would have Doppler Velocity Log(DVL) which estimates speed over ground or water. These systems are sometimes incorporated to limit the drift of Inertial Navigation System[refer the paper]. Even when a DVL is included there are situations in which DVL fails or the reading have to be discarded due to poor quality. 
+
+We need some sort of alternative velocity information that doesn't depend upon external sensors in order to compensate for the drift in INS. To get an estimate of velocity we can use the kinetic vehicle model to aid the INS. 
+\begin{figure}[hbtp]
+\caption{Traditional aided INS}
+\centering
+\includegraphics[scale=1.0]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_traditional.png}
+\end{figure}
+
+\begin{figure}[hbtp]
+\caption{Traditional aided INS}
+\centering
+\includegraphics[scale=1.0]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_model.png}
+\end{figure}
+In the traditional aided INS the readings from gyro and accelerometer measurements from the IMU are integrated over time to give an estimate of velocity,position and orientation. Due to the inherent errors in the gyros and accelerometers there is a drift in  the INS system. There are aiding sensors such as DVL and surface GPS to compensate the drift for the IMU. The reading from the sensors are fused using a Bayes filters to get an enchained estimate of velocity ,position and orientation. 
+
+In the model aided INS the IMU suffers from the same drift but the output from the model is treated analogously to that of an external aiding sensor. In this system the DVL in traditional INS systems are replaced by vehicle model. The output from the model i.e. the velocity estimate is fused with the readings from the INS by a Bayes filter. The integrating of vehicle model with the IMU systems help in systems which lack external velocity measurements. The other implication is in systems where redundancy and integrity is important e.g. during sensor drop outs or sensor failures.
+
+This specific application shows the importance of having a accurate motion model. As stated in earlier chapters the motion model can change due to various factors and would have a direct impact on the navigation systems of underwater vehicles.Wrong estimates from the motion model will not benefit INS systems and overall lead to wrong estimate about the position and orientation of the vehicle. Our algorithm shows on how to learn the motion model on the fly which can lead to better estimate of the velocity and therefore accurate navigation systems.
+
+As you can see in the figure the input to the motion model is a control command and output is the velocity estimate. In HUGIN 4500 they had implemented a static motion model as table look up based on experimental data i.e.
+$u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity estimate $u_{r}$ is fused with the reading from IMU to get a better estimate of the position of the AUV. As shown before we try to learn the motion model to find the best estimate for the velocity so that it can aid the INS in this particular application. 
 
 \section{Results}
 We use a simulation to demonstrate the effectiveness of learning the
