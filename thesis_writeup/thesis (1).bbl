@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{chen2003bayesian}
+Zhe Chen.
+\newblock {Bayesian filtering: From Kalman filters to particle filters, and
+  beyond}.
+\newblock {\em Statistics}, 182(1):1--69, 2003.
 
 \bibitem{dempster1977maximum}
 Arthur~P Dempster, Nan~M Laird, and Donald~B Rubin.
@@ -6,10 +12,30 @@ Arthur~P Dempster, Nan~M Laird, and Donald~B Rubin.
 \newblock {\em Journal of the Royal Statistical Society. Series B
   (Methodological)}, pages 1--38, 1977.
 
+\bibitem{doucet2000monte}
+Arnaud Doucet, Simon~J Godsill, and Mike West.
+\newblock {Monte Carlo filtering and smoothing with application to time-varying
+  spectral estimation}.
+\newblock In {\em Acoustics, Speech, and Signal Processing, 2000. ICASSP'00.
+  Proceedings. 2000 IEEE International Conference on}, volume~2, pages
+  II701----II704. IEEE, 2000.
+
+\bibitem{doucet2009tutorial}
+Arnaud Doucet and Adam~M Johansen.
+\newblock {A tutorial on particle filtering and smoothing: Fifteen years
+  later}.
+\newblock {\em Handbook of Nonlinear Filtering}, 12:656--704, 2009.
+
 \bibitem{Eliazar2004}
 Austin~I Eliazar, Parr Cs, and Duke Edu.
 \newblock {Learning Probabilistic Motion Models for Mobile Robots}.
 \newblock 2004.
+
+\bibitem{gordon1993novel}
+Neil~J Gordon, David~J Salmond, and Adrian F~M Smith.
+\newblock {Novel approach to nonlinear/non-Gaussian Bayesian state estimation}.
+\newblock In {\em IEE Proceedings F (Radar and Signal Processing)}, volume 140,
+  pages 107--113. IET, 1993.
 
 \bibitem{grisettiyz2005improving}
 G~Grisettiyz, Cyrill Stachniss, and Wolfram Burgard.
@@ -18,15 +44,26 @@ G~Grisettiyz, Cyrill Stachniss, and Wolfram Burgard.
 \newblock In {\em Robotics and Automation, 2005. ICRA 2005. Proceedings of the
   2005 IEEE International Conference on}, pages 2432--2437. IEEE, 2005.
 
-\bibitem{Jr2009}
-T~Yap Jr.
-\newblock {\em {Mobile Robot Navigation With Low-Cost Sensors}}.
-\newblock PhD thesis, 2009.
+\bibitem{kalman1960new}
+Rudolph~Emil Kalman and Others.
+\newblock {A new approach to linear filtering and prediction problems}.
+\newblock {\em Journal of basic Engineering}, 82(1):35--45, 1960.
 
 \bibitem{Lav06}
 S~M LaValle.
 \newblock {\em {Planning Algorithms}}.
 \newblock Cambridge University Press, Cambridge, U.K., 2006.
+
+\bibitem{ristic2004beyond}
+Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
+\newblock {\em {Beyond the Kalman filter: Particle filters for tracking
+  applications}}.
+\newblock Artech House Publishers, 2004.
+
+\bibitem{russell2003artificial}
+Stuart Russell.
+\newblock {\em {Artificial intelligence: A modern approach, 2/E}}.
+\newblock Pearson Education India, 2003.
 
 \bibitem{thrun2005probabilistic}
 Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.
