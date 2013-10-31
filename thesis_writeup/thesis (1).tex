@@ -57,15 +57,18 @@ The core of human environment interaction is the ability of the person to know i
 
 In order to account for the uncertainty in the environment Sebastian Thrun \cite{thrun2005probabilistic} represented the models probabilistically. Eliazar and Parr \cite{Eliazar2004} pointed out that the essential input are the parameters to these models. The process of determining the parameters to a kinematic model is termed as calibration. Generally the robot is calibrated at the start of the experiment and the parameter values are not changed throughout the experiment. In practice wherever there is a significant change in the environment robots are manually re calibrated during the experiment. In most of the cases it is not possible to recalibrate while the robot is in operation. Eliazar and Parr \cite{Eliazar2004} proposed an algorithm to learn the parameters of the motion model for a land robot. Teddy Yapp \cite{Yap2008} took the work further and learned parameters for motion and sensor models for land robots. Both of their algorithms used Expectation Maximization framework to learn the right parameters for the models.
 
-For my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic and change in a matter of seconds. For example change in density and temperature of water can affect the motion model of Autonomous Underwater Vehicles (AUV). In my thesis I propose an online system for an AUV to adapt its motion model to the dynamic environment as well as automate the calibration process. The algorithm is based on the work done by Teddy Yapp \cite{Jr2009} in his Phd thesis and use the same Expectation Maximization Framework. 
+For my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic and change in a matter of seconds. For example change in density and temperature of water can affect the motion model of Autonomous Underwater Vehicles (AUV). In my thesis I propose an online system for an AUV to adapt its motion model to the dynamic environment as well as automate the calibration process. 
 
-Expectation Maximization framework \cite{dempster1977maximum} is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
+In chapter [no] I demonstrate how the parameters of the motion model can be estimated during its normal operation. The algorithm used machine learning methods to learn the parameters as well as eliminate the necessity of identifying the parameters through a manual laborious calibration process. We use Expectation Maximization \cite{dempster1977maximum} framework to estimate the right parameters for the model. It is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
 
-[write here about the algorihtm]
-
-
+To calculate the likely trajectory of robot particle filtering and smoothing is performed using the sensor data collected during robot's normal operation. I then calculate the maximum likelihood estimate of the parameters given the robot's trajectory and the motion data. For AUV the motion data is reported by the vehicle through the propellers revolutions per minute.The landmarks are extracted from side sonar images and are collected as sensor data. I assume that the robot is equipped with a side sonar sensor and has access to the noisy data of its motion.
 
 Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. Side scan sonar is a specific type of sonar used to image the topography of the sea floor. 
+
+
+Expectation Maximization framework \cite{dempster1977maximum} 
+
+
 
 In the second application for visual motion estimation we use Speeded Up Robust Features(SURF) to extract interest points in a side sonar image. There are robust local feature detector and is used in computer vision tasks like object recognition or 3D reconstructions.We extract key points and match them in subsequent images to estimate motion of the AUV.
 
