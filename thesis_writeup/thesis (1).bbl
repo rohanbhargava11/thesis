@@ -44,6 +44,11 @@ G~Grisettiyz, Cyrill Stachniss, and Wolfram Burgard.
 \newblock In {\em Robotics and Automation, 2005. ICRA 2005. Proceedings of the
   2005 IEEE International Conference on}, pages 2432--2437. IEEE, 2005.
 
+\bibitem{Hegrenes2008}
+\O~yvind Hegren\ae~s, Einar Berglund, and Oddvar Hallingstad.
+\newblock {Model-Aided Inertial Navigation for Underwater Vehicles}.
+\newblock 2008.
+
 \bibitem{kalman1960new}
 Rudolph~Emil Kalman and Others.
 \newblock {A new approach to linear filtering and prediction problems}.
