@@ -44,15 +44,22 @@ G~Grisettiyz, Cyrill Stachniss, and Wolfram Burgard.
 \newblock In {\em Robotics and Automation, 2005. ICRA 2005. Proceedings of the
   2005 IEEE International Conference on}, pages 2432--2437. IEEE, 2005.
 
-\bibitem{Hegrenes2008}
-\O~yvind Hegren\ae~s, Einar Berglund, and Oddvar Hallingstad.
-\newblock {Model-Aided Inertial Navigation for Underwater Vehicles}.
-\newblock 2008.
+\bibitem{Hallingstad2007}
+Oddvar Hallingstad and Kongsberg Maritime.
+\newblock {Comparison of Mathematical Models for the HUGIN 4500 AUV Based on
+  Experimental Data Commonsfor dervabiov menfotionetepenotations hed so-led
+  hdodmnamice depries . ntheionseis are oces andimomets . os the}.
+\newblock (7491):17--20, 2007.
 
 \bibitem{kalman1960new}
 Rudolph~Emil Kalman and Others.
 \newblock {A new approach to linear filtering and prediction problems}.
 \newblock {\em Journal of basic Engineering}, 82(1):35--45, 1960.
+
+\bibitem{Lammas2004}
+Andrew Lammas, Karl Sammut, and Fangpo He.
+\newblock {6-DoF Navigation Systems for Autonomous Underwater Vehicles}.
+\newblock 2004.
 
 \bibitem{Lav06}
 S~M LaValle.
@@ -69,6 +76,10 @@ Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
 Stuart Russell.
 \newblock {\em {Artificial intelligence: A modern approach, 2/E}}.
 \newblock Pearson Education India, 2003.
+
+\bibitem{Thor}
+Fossen Thor.
+\newblock {Guidance and Control Of Ocean Vechiles}.
 
 \bibitem{thrun2005probabilistic}
 Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.

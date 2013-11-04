@@ -12,25 +12,25 @@
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {2.1}Motion Model}{4}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.2}Particle Filter}{7}
+\contentsline {section}{\numberline {2.2}Particle Filter}{8}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {2.3}Particle smoothing}{9}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.4}SURF}{10}
-\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{11}
+\contentsline {section}{\numberline {2.4}SURF}{11}
+\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.1}General Architecture}{11}
+\contentsline {section}{\numberline {3.1}General Architecture}{12}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.2}Dynamic Landmarks}{12}
+\contentsline {section}{\numberline {3.2}Dynamic Landmarks}{13}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.3}Parameter Estimation using Expectation Maximization}{13}
+\contentsline {section}{\numberline {3.3}Adapting the motion model by parmater estimation}{14}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.4}Visual Motion Estimates}{15}
+\contentsline {section}{\numberline {3.4}Visual Motion Estimates}{16}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.5}Application}{17}
+\contentsline {section}{\numberline {3.5}Application}{18}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.6}Results}{19}
-\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{24}
+\contentsline {section}{\numberline {3.6}Results}{20}
+\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{25}
 \addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{25}
+\contentsline {chapter}{Bibliography}{26}

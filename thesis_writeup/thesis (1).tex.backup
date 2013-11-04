@@ -3,7 +3,9 @@
 \documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
 %\documentclass[12pt,draft]{dalcsthesis}
-
+\usepackage{verbatim}
+\usepackage{amssymb}
+\usepackage{tabularx}
 \usepackage{algorithm2e}
 \usepackage{graphicx}
 \begin{document}
@@ -81,23 +83,138 @@ The main contributions of the algorithm are-:
 In our introduction we talk about how we need to have an adaptive motion model. In this chapter we start by discussing how motion models are probabilistically reprsetned as well as give an insight about motion models for AUV. This helps us in understanding on how motion model captures the probabilistic movements of robots. We then discuss a probabilistic state estimation algorithm i.e. Particle Filter \cite{ristic2004beyond} \cite{chen2003bayesian} which is at the heart of my algorithm as well as many other robotics systems. Lastly we disucss in detail about Particle smoothing \cite{doucet2000monte} \cite{doucet2009tutorial} which gives a distribution of the past states with taking into acount all the evidence upto present. 
 
 \section{Motion Model}
-A motion model is responsible for capturing the relationship between the control input and the change in robot's configuration. Thrun \cite{thrun2005probabilistic} models the motion of the robot probabilistically because the same
+A motion model is responsible for capturing the relationship between the control input and the change in robot's configuration. Thrun \cite{thrun2005probabilistic} models the motion of a robot probabilistically because the same
 control inputs will never reproduce the same motion. A good motion model will capture the errors such as drift that are encountered during the motion of the robot. The motion model is an integral part of algorithms such as localization,mapping etc. 
 
-Let $X=(x,y,\theta)$ be the initial pose of the robot in x-y space.Mathematically the motion model can be described as $P(X^{'}|X,u)$, where $X^{'}$ is the pose after executing the motion command $u$. Based on the control input Thrun \cite{thrun2005probabilistic} divided the motion model in two classes 1) Odometry based motion model 2) Velocity based motion model. The first class of motion models are used for robots equipped with wheel encoders. Velocity based models calculate their new position based on velocities and time elapsed. The odometry based models are used for land robots equipped with encoders. The velocity based models are used for Autonomous Underwater Vehicle(AUV) and Unmanned Aerial Vehicles(UAV).
+Let $X=(x,y,\theta)$ be the initial pose of the robot in x-y space. Mathematically the motion model can be described as $P(X^{'}|X,u)$, where $X^{'}$ is the pose after executing the motion command $u$. Based on the control input Thrun \cite{thrun2005probabilistic} divided the motion model in two classes 1) Odometry based motion model 2) Velocity based motion model.
 
-\begin{figure}[hbtp]
-\caption{Motion Model}
-\centering
-\includegraphics[scale=1.0]{../../thesis_work/Motion_model_thrun.png}
-\end{figure}
+The first class of motion models are used for robots equipped with wheel encoders. Odometry is generally obtained by intergrating wheel encoders information and is more accurate than velocity.  
+Velocity based models calculate the new position based on velocities and time elapsed. These models are implemented for Autonomous Underwater Vehicle(AUV) and Unmanned Aerial Vehicles(UAV). Both odometry as well as velocity suffer from dift and slippage therfore the same control commands will not generally produce the same motion and the motion model $P(X^{'}|X,u)$ is represented as probability distribution.
 
-For Autonomous Underwater Vehicle(AUV) the pose is represented in
-6 Degrees Of Freedom(DOF). The pose can be represented as $s=(x,y,z,\theta,\phi,\psi)$.
-The first three coordinates correspond to the position along the x,y,z
-axes while the last three coordinates describe the orientation. Generally
-for marine vehicles these motion components are defined as surge,sway,heave,roll,pitch
-and yaw. 
+The velocity motion model proposed by Thrun \cite{thrun2005probabilistic} assumes that robot can be controlled through two velocites a rotational and translational velocity. The translational velocity at time $t$ is denoted by $v_{t}$ and rotational velcoity by $w_{t}$. Hence the control input $u_{t}$ can be represented by  
+\begin{center}
+$u_{t}=\bigl(\begin{array}{c}
+                v_{t} \\
+                w_{t}
+               \end{array}\bigr)$
+  
+\end{center}
+
+The assumption is that postive rotational velocites $w_{t}$ induce a counterclockwise rotation whereas postive translational velocites $v_{t}$ correspond to forward motion. The set of equations to compute the next state of a robot for a velocity motion model are 
+\begin{center}
+$x_{t}=x_{t-1}+V_{t-1}/W_{t-1} \sin(\theta_{t-1})+ V_{t-1}/W_{t-1} \cos(\theta_{t-1} + W_{t-1} \delta t)$
+
+$y_{t}=y_{t-1}+V_{t-1}/W_{t-1} \cos(\theta_{t-1})- V_{t-1}/W_{t-1} \sin(\theta_{t-1} + W_{t-1} \delta t)$
+
+$\theta_{t}=\theta_{t-1}+ W_{t-1} \delta t$
+ 
+\end{center}
+%Read about the mathematical derivation for the equation
+
+To represent AUV's motion, 6 independent coordinates are necessary to determine the position and orientation of the rigid body.
+%\begin{center}
+\begin{table}
+
+
+\caption{Notation used for marine vehicles}
+
+\footnotesize
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|}
+\hline 
+DOF &  & forces and moments & linear and angular vel. & positions and Euler angles\tabularnewline
+\hline 
+\hline 
+1 & motions in the x-direction (surge) & X & u & x\tabularnewline
+\hline 
+2 & motions in the y-direction (sway) & Y & v & y\tabularnewline
+\hline 
+3 & motions in the z-direction (heave) & Z & w & z\tabularnewline
+\hline 
+4 & rotation about the x-axis (roll) & K & p & $\phi$\tabularnewline
+\hline 
+5 & rotation about the y-axis (pitch) & M & q & $\theta$\tabularnewline
+\hline 
+6 & rotation about the z-axis (heave) & N & r & $\psi$\tabularnewline
+\hline 
+\end{tabularx}
+
+\end{table}
+%\end{center}
+
+
+
+The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation.
+To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: 1) Static Motion model 2) Dynamic Motion model
+
+Hegrenaes \cite{Hallingstad2007} points that a way to implement a simple staic motion model as table look-up based on experimental data. 
+\begin{center} $u_{r}=f(n_{s})$ \end{center} 
+$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and control system set point respectively. In a similar manner an experession can be established for $v_{r}$.
+
+Another way to implement the motion model is through dynamics. The vectorial representation of the 6 Degrees of Freedom (DOF) rigid body equations of motion described by Fossen \cite{Thor} is \\
+\begin{equation}
+\label{eq:motion model AUV}
+M_{RB}\mathcal{{V}}^{.}+C_{RB}(\mathcal{V})\mathcal{V}=\tau_{RB}%
+\end{equation}
+
+Here $\mathcal{V}=[u,v,w,p,q,r]^{T}$ is the body fixed lienar and angular velocity and $\tau_{RB}=[X,Y,Z,K,M,N]$,$M_{RB}$ is generalized vector of external forces and moments. $M_{RB}$ is the rigid bidy interia matrix and $C_{RB}$ is Corilos and centripetal matrix. 
+
+The right hand side of the vector \ref{eq:motion model AUV} represents the external forces and moments acting on the vehcile. Fossen \cite{Thor} classfies the firces into-:
+\begin{itemize}
+\item Radiation-induces forces
+
+\begin{itemize}
+\item added inertia
+\item hydrodynamic damping
+\item restoring forces
+\end{itemize}
+\item Environmental Forces
+
+\begin{itemize}
+\item Ocean currents
+\item Waves
+
+\end{itemize}
+\item Propulsion Forces
+
+\begin{itemize}
+\item Thruster/Propeller Forces
+\item Control Surfaces/Rudder Forces
+\end{itemize}
+\end{itemize}
+
+
+\begin{equation}
+\label{eq:total forces}
+ \tau_{RB} = \tau_{H} + \tau_{E} + \tau 
+\end{equation}
+
+Here $\tau_{H}$ is the radiation induced forces and moments, $\tau_{E}$ is used to describe the enviormental forces and moments and $\tau$ is the propulsion forces and moments. Equations \ref{eq:motion model AUV} and equation \ref{eq:total forces} can be combined to yeild the following representation of the 6 DOF dynamic equations of motion:
+ 
+\framebox{\begin{minipage}[t]{1\columnwidth}%
+\begin{equation}
+\label{eq:vehicle hydrodynamics}
+M\mathcal{{V}}^{.}+C(\mathcal{V})\mathcal{V}+D(\mathcal{V})\mathcal{V}+g(\eta)=\tau_{E}+\tau%
+\end{equation}
+
+\end{minipage}} \\
+
+where \\
+
+$M \triangleq M_{RB} + M_{A}$ ; $C(\mathcal{V}) \triangleq C_{RB}(\mathcal{V} + C_{A}(\mathcal{V})$
+
+$M_A$ is the added inertia  matrix $C_{A}(\mathcal{V})$ is the matrix of hydrodynamic Corilos and centripetal terms. $g(\eta)$ is the restoring force.
+
+Lammas \cite{Lammas2004} points out that navigation equation of an underwater vehicle is-:
+
+\begin{equation}
+\label{navigation equation for AUV}
+\mathcal{V}^{.} = M^{-1}(\tau-C(\mathcal{V})\mathcal{V}-D(\mathcal{V})\mathcal{V}-g(\eta))
+\end{equation}
+
+
+$\mathcal{V}^{.}$ can be integrated with time to get the velocity.
+
+
 
 \begin{figure}
 \caption{Body-fixed reference frames}
@@ -132,36 +249,11 @@ represents the center of gravity.
 The above equations can be represented in a more compact and vectorial
 form.
 
-\framebox{\begin{minipage}[t]{1\columnwidth}%
-$M_{RB}\mathcal{{V}}^{.}+C_{RB}(\mathcal{V})\mathcal{V}=\tau_{RB}$%
-\end{minipage}}
 
-Here $\mathcal{V}=[u,v,w,p,q,r]^{T}$,$\tau_{RB}=[X,Y,Z,K,M,N]$,$M_{RB}$and
-$C_{RB}$ are the inertia matrix and centripetal matrix. 
+
 
 The forces acting on AUV can be broken down into three classes-:
-\begin{itemize}
-\item Radiation-induces forces
 
-\begin{itemize}
-\item added inertia
-\item hydrodynamic damping
-\item restoring forces
-\end{itemize}
-\item Environmental Forces
-
-\begin{itemize}
-\item Ocean currents
-\item Waves
-\item Wind
-\end{itemize}
-\item Propulsion Forces
-
-\begin{itemize}
-\item Thruster/Propeller Forces
-\item Control Surfaces/Rudder Forces
-\end{itemize}
-\end{itemize}
 The external forces and moments vector $\tau_{RB}$is the sum of the
 forces listed above 
 
@@ -171,7 +263,7 @@ Here $\tau_{H}$ is the radiation induced forces and moments, $\tau_{E}$
 and $\tau$ are the environmental and propulsion forces and moments respectively. 
 A standard numerical ODE integration routine can be used to solve the equation to recover the state.
 
-The input to a motion model is a control command and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model $u_{r}=f(n_{s})$ to get a velocity estimate.$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and propeller rotation rate. This can be implemented as a table look-up based on experimental data.
+The input to a motion model is a control command and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model to get a velocity estimate. This can be implemented as a table look-up based on experimental data.
 The same control input won't produce the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
 For my master's thesis we reduce the degrees of freedom and represent the pose of the AUV is two dimensional with orientation. 
 
