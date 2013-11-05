@@ -5,8 +5,11 @@
 %\documentclass[12pt,draft]{dalcsthesis}
 \usepackage{verbatim}
 \usepackage{amssymb}
+\usepackage{adjustbox}
 \usepackage{tabularx}
 \usepackage{algorithm2e}
+%\usepackage{caption}
+%\captionsetup[table]{skip=10pt}
 \usepackage{graphicx}
 \begin{document}
 \mcs  % options are \mcs, \macs, \mec, \mhi, \phd, and \bcshon
@@ -55,21 +58,21 @@ Thanks to all the little people who make me look tall.
 \section{Motivation}
 
 
-The core of human environment interaction is the ability of the person to know its position in the surrounding environment. The process of estimating the robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question “Where am I?”. The current location can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic blocks to various algorithms such 
+The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question “Where am I?”. The current location of a robot can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic building blocks to various algorithms such 
 as path planning \cite{Lav06}, Simultaneous Localization and Mapping (SLAM) \cite{thrun2005probabilistic} \cite{grisettiyz2005improving}  etc. which require an accurate estimate of robot's position.
 
-In order to account for the uncertainty in the environment Sebastian Thrun \cite{thrun2005probabilistic} represented the models probabilistically. Eliazar and Parr \cite{Eliazar2004} pointed out that the essential input are the parameters to these models. The process of determining the parameters to a kinematic model is termed as calibration. Generally the robot is calibrated at the start of the experiment and the parameter values are not changed throughout the experiment. In practice wherever there is a significant change in the environment robots are manually re calibrated during the experiment. In most of the cases it is not possible to recalibrate while the robot is in operation. As our environments are dynamic our models need to be adapt to them. Eliazar and Parr \cite{Eliazar2004} proposed an algorithm to learn parameters of a motion model for land robots. Teddy Yapp \cite{Yap2008} took the work further and learned parameters for motion and sensor models for land robots. Both of their algorithms used 
+In order to account for the uncertainty in the environment Sebastian Thrun \cite{thrun2005probabilistic} represented the models probabilistically. Eliazar and Parr \cite{Eliazar2004} pointed out that the essential input are the parameters to these models. The process of determining the parameters to a kinematic model is termed as calibration. Generally the robot is calibrated at the start of the experiment and the parameter values are not changed throughout the experiment. In practice wherever there is a significant change in the environment, robots are manually re calibrated during the experiment. In most of the cases it is not possible to recalibrate while the robot is in operation. As our environments are dynamic our models need to adapt to them. Eliazar and Parr \cite{Eliazar2004} proposed an algorithm to learn parameters of a motion model for land robots. Teddy Yapp \cite{Yap2008} took the work further and learned parameters for motion and sensor models for land robots. Both of their algorithms used 
 Expectation Maximization framework to learn right parameters for models.
 
-For my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic and will lead to changes in motion model for Autonomous Underwater Vehicle. Navigation in AUV relies on Inertial Navigation System(INS) which gives an estimate of velocity, position and orientation. All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively into larger error. Hegrenaes et al \cite{Hegrenes2008} pointed out that systems such as Doppler Velocity Log(DVL), surface GPS etc are used to compensate for the drift but they are situations where these systems fail or readings are discarded due to poor quality. To solve this particular problem they used velocity estimate from a static motion model to aid INS systems. This application shows the importance of accurate motion models for navigation. In my thesis I propose an online system for an AUV to adapt its motion model to the dynamic environment as well as automate 
-the calibration process. 
+For my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic and will lead to changes in motion model for Autonomous Underwater Vehicle. A specific application to demonstrate the importance of accurate motion model is Navigation. In AUV navigation relies on Inertial Navigation System(INS) which gives an estimate of velocity, position and orientation. All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively into larger error. Hegrenaes et al \cite{Hegrenes2008} pointed out that systems such as Doppler Velocity Log(DVL), surface GPS etc are used to compensate for the drift but they are situations where these systems fail or readings are discarded due to poor quality. To solve this particular problem they used velocity estimate from a static motion model to aid INS systems. In my thesis I propose an online system for an AUV to adapt its motion model to the dynamic environment which can be used for applications such as navigation as well as automate the calibration process. 
 
-In Chapter~\ref{learning the motion model} I demonstrate how the parameters of the motion model can be estimated during its normal operation. The algorithm used machine learning methods to learn the parameters as well as eliminate the necessity of identifying the parameters through a manual laborious calibration process. We use Expectation Maximization \cite{dempster1977maximum} framework to estimate the right parameters for the model. It is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
+In Chapter~\ref{learning the motion model} I demonstrate how the parameters of a motion model can be estimated during its normal operation. The algorithm uses machine learning methods to learn the parameters as well as eliminate the necessity of identifying the parameters through a manual laborious calibration process. Yapp \cite{Yap2008} in his algorithm used Expectation Maximization \cite{dempster1977maximum} framework to estimate the right parameters for the model and I use the same framework for my algorithm. It is an unsupervised machine learning technique primarily used to estimate parameters. It alternates between the Expectation Step which creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization Step which computes parameters maximizing the expected log-likelihood found in the E step. 
 
-To calculate the likely trajectory of robot particle filtering \cite{ristic2004beyond} \cite{chen2003bayesian} and smoothing \cite{doucet2000monte} \cite{doucet2009tutorial} is performed using the sensor data collected during robot's normal operation. I choose particle filters because they can model non-linear transformations as well as they have no restrictions in model. Particle smoothing was performed because Russel and Norving \cite{russell2003artificial} pointed out the state of the system is better estimated by smoothing as it incorporates more information than just filtering.I then calculate the maximum likelihood estimate of the parameters given the robot's trajectory and the motion data. For AUV the motion data is reported by the vehicle through the propellers revolutions per minute.The landmarks are extracted from side sonar images and are collected as sensor data. I assume that the robot is equipped with a side sonar sensor and has access to its noisy motion data. Sound Navigation and Ranging (
-SONAR) is a technique based on sound propagation used for detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. Side scan sonar is a specific type of sonar used to image the topography of the sea floor.
+In the algorithm proposed by Yapp \cite{Yap2008} to calculate the likely trajectory of a robot particle filtering \cite{ristic2004beyond} \cite{chen2003bayesian} and smoothing \cite{doucet2000monte} \cite{doucet2009tutorial} were performed using the sensor data collected during robot's normal operation. The particle filters were chosen because they can model non-linear transformations as well as they have no restrictions in model. Particle smoothing was performed because Russel and Norving \cite{russell2003artificial} pointed out the state of the system is better estimated by smoothing as it incorporates more information than just filtering. The maximum likelihood estimate of the parameters given the robot's trajectory and the motion data is calculated. The algorithm by Yapp \cite{Yap2008} was for land robots as well as assumed a prior map of the environment.  
 
-To summarize I am proposing an algorithm to learn the right parameters of a motion model for an AUV. The parameters are learned on the fly without having a prior map or revisiting places.Results of the simulated experiment are presented in chapter ~\ref{results} to show the effectiveness of the algorithm. 
+The algorithm proposed in this thesis is for an AUV and can learn the motion model in unknown environments. In the algorithm instead of using a static map we used landmarks. In AUV the landmarks are extracted from side sonar images and are collected as sensor data. The algorithm assumes that the robot is equipped with a side sonar sensor and has access to its noisy motion data. Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for detecting objects underwater. The SONAR sensor is the only imaging tool which can work at high depth. Side scan sonar is a specific type of sonar used to image the topography of the sea floor.
+
+To summarize I am proposing an algorithm to learn the right parameters of a motion model for an AUV. The parameters are learned on the fly without having a prior map or revisiting places. Results of the simulated experiment are presented in chapter ~\ref{results} to show the effectiveness of the algorithm. 
  
 
 \section{Contributions}
@@ -80,7 +83,7 @@ The main contributions of the algorithm are-:
 2) \textbf{Motion Estimation from Side Sonar Images}-: We present an approach to estimate the movement from side sonar images which can be coupled with existing motion model and can improve localization. It can be easily be performed on-board as limited amount of interest points are used which lead to lesser computation and memory usage. 
 
 \chapter{Background}
-In our introduction we talk about how we need to have an adaptive motion model. In this chapter we start by discussing how motion models are probabilistically reprsetned as well as give an insight about motion models for AUV. This helps us in understanding on how motion model captures the probabilistic movements of robots. We then discuss a probabilistic state estimation algorithm i.e. Particle Filter \cite{ristic2004beyond} \cite{chen2003bayesian} which is at the heart of my algorithm as well as many other robotics systems. Lastly we disucss in detail about Particle smoothing \cite{doucet2000monte} \cite{doucet2009tutorial} which gives a distribution of the past states with taking into acount all the evidence upto present. 
+In the chapter we start by discussing how motion models are probabilistically represented as well as give an insight about motion models for AUV. This helps us in understanding on how motion model captures the probabilistic movements of robots. We then discuss a probabilistic state estimation algorithm i.e. Particle Filter \cite{ristic2004beyond} \cite{chen2003bayesian} which is at the heart of my algorithm as well as many other robotics systems. Lastly we discuss in detail about Particle smoothing \cite{doucet2000monte} \cite{doucet2009tutorial} which gives an estimate of ground truth by calculating the distribution of past states with taking into account all the evidence up to present. 
 
 \section{Motion Model}
 A motion model is responsible for capturing the relationship between the control input and the change in robot's configuration. Thrun \cite{thrun2005probabilistic} models the motion of a robot probabilistically because the same
@@ -88,10 +91,10 @@ control inputs will never reproduce the same motion. A good motion model will ca
 
 Let $X=(x,y,\theta)$ be the initial pose of the robot in x-y space. Mathematically the motion model can be described as $P(X^{'}|X,u)$, where $X^{'}$ is the pose after executing the motion command $u$. Based on the control input Thrun \cite{thrun2005probabilistic} divided the motion model in two classes 1) Odometry based motion model 2) Velocity based motion model.
 
-The first class of motion models are used for robots equipped with wheel encoders. Odometry is generally obtained by intergrating wheel encoders information and is more accurate than velocity.  
-Velocity based models calculate the new position based on velocities and time elapsed. These models are implemented for Autonomous Underwater Vehicle(AUV) and Unmanned Aerial Vehicles(UAV). Both odometry as well as velocity suffer from dift and slippage therfore the same control commands will not generally produce the same motion and the motion model $P(X^{'}|X,u)$ is represented as probability distribution.
+The first class of motion models are used for robots equipped with wheel encoders. Odometry is generally obtained by integrating wheel encoders information and is more accurate than velocity.  
+Velocity based models calculate the new position based on velocities and time elapsed. These models are implemented for Autonomous Underwater Vehicle(AUV) and Unmanned Aerial Vehicles(UAV). Both odometry as well as velocity suffer from drift and slippage therefore the same control commands will not generally produce the same motion and the motion model $P(X^{'}|X,u)$ is represented as probability distribution.
 
-The velocity motion model proposed by Thrun \cite{thrun2005probabilistic} assumes that robot can be controlled through two velocites a rotational and translational velocity. The translational velocity at time $t$ is denoted by $v_{t}$ and rotational velcoity by $w_{t}$. Hence the control input $u_{t}$ can be represented by  
+The velocity motion model proposed by Thrun \cite{thrun2005probabilistic} assumes that robot can be controlled through two velocities a rotational and translational velocity. The translational velocity at time $t$ is denoted by $v_{t}$ and rotational velocity by $w_{t}$. Hence the control input $u_{t}$ can be represented by  
 \begin{center}
 $u_{t}=\bigl(\begin{array}{c}
                 v_{t} \\
@@ -100,7 +103,7 @@ $u_{t}=\bigl(\begin{array}{c}
   
 \end{center}
 
-The assumption is that postive rotational velocites $w_{t}$ induce a counterclockwise rotation whereas postive translational velocites $v_{t}$ correspond to forward motion. The set of equations to compute the next state of a robot for a velocity motion model are 
+The assumption is that positive rotational velocities $w_{t}$ induce a counterclockwise rotation whereas postive translational velocites $v_{t}$ correspond to forward motion. The set of equations to compute the next state of a robot for a velocity motion model are 
 \begin{center}
 $x_{t}=x_{t-1}+V_{t-1}/W_{t-1} \sin(\theta_{t-1})+ V_{t-1}/W_{t-1} \cos(\theta_{t-1} + W_{t-1} \delta t)$
 
@@ -111,15 +114,14 @@ $\theta_{t}=\theta_{t-1}+ W_{t-1} \delta t$
 \end{center}
 %Read about the mathematical derivation for the equation
 
-To represent AUV's motion, 6 independent coordinates are necessary to determine the position and orientation of the rigid body.
+In an AUV a velocity motion model is implemented and to represent AUV's motion, 6 independent coordinates are necessary to determine the position and orientation of the rigid body. The notations used for marine vehicles are described in Table \ref{marine notation}. 
 %\begin{center}
+
 \begin{table}
-
-
+\label{marine notation}
 \caption{Notation used for marine vehicles}
 
-\footnotesize
-\begin{tabularx}{\textwidth}{|c|c|c|c|c|}
+\begin{tabular}{|c|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|}
 \hline 
 DOF &  & forces and moments & linear and angular vel. & positions and Euler angles\tabularnewline
 \hline 
@@ -136,19 +138,22 @@ DOF &  & forces and moments & linear and angular vel. & positions and Euler angl
 \hline 
 6 & rotation about the z-axis (heave) & N & r & $\psi$\tabularnewline
 \hline 
-\end{tabularx}
+\end{tabular}
 
 \end{table}
+
 %\end{center}
 
 
 
 The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation.
+
+
 To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: 1) Static Motion model 2) Dynamic Motion model
 
-Hegrenaes \cite{Hallingstad2007} points that a way to implement a simple staic motion model as table look-up based on experimental data. 
+Hegrenaes \cite{Hallingstad2007} points that a way to implement a simple static motion model as table look-up based on experimental data. 
 \begin{center} $u_{r}=f(n_{s})$ \end{center} 
-$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and control system set point respectively. In a similar manner an experession can be established for $v_{r}$.
+$u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and control system set point respectively. In a similar manner an expression can be established for $v_{r}$.
 
 Another way to implement the motion model is through dynamics. The 6 Degrees of Freedom (DOF) rigid body equations of motion described by Fossen \cite{Thor} are \\
 
@@ -164,19 +169,27 @@ $M=I_{y}q^{.}+(I_{x}-I_{z})rp-(p^{.}+qr)I_{xy}+(p^{2}-r^{2})I_{zx}+(qp-r^{.})I_{
 
 $N=I_{z}r^{.}+(I_{y}-I_{x})pq-(q^{.}+rp)I_{yz}+(q^{2}-p^{2})I_{xy}+(rq-p^{.})I_{zx}+m[x_{G}(v^{.}-wp+ur)-y_{g}(u^{.}-vr+wq)]$
 
+% need to find the best way to write these equations
+\begin{figure}[hbtp]
+\caption{Body-fixed reference frames}
+
+
+\includegraphics[scale=0.8]{/home/rohan/Documents/thesis_work/uav_diagram.png}
+
+\end{figure}
 
 The equations described above can be expressed in a more compact form: 
-
+% what is RB
 \begin{equation}
 \label{eq:motion model AUV}
 M_{RB}\mathcal{{V}}^{.}+C_{RB}(\mathcal{V})\mathcal{V}=\tau_{RB}%
 \end{equation}
 
-Here $\mathcal{V}=[u,v,w,p,q,r]^{T}$ is the body fixed lienar and angular velocity and $\tau_{RB}=[X,Y,Z,K,M,N]$,$M_{RB}$ is generalized vector of external forces and moments. $M_{RB}$ is the rigid bidy interia matrix and $C_{RB}$ is Corilos and centripetal matrix. 
+Here $\mathcal{V}=[u,v,w,p,q,r]^{T}$ is the body fixed linear and angular velocity and $\tau_{RB}=[X,Y,Z,K,M,N]$ is generalized vector of external forces and moments. $M_{RB}$ is the rigid body inertia matrix and $C_{RB}$ is Coriolis and centripetal matrix. 
 
-The right hand side of the vector \ref{eq:motion model AUV} represents the external forces and moments acting on the vehcile. Fossen \cite{Thor} classfies the firces into-:
+The right hand side of the vector \ref{eq:motion model AUV} represents the external forces and moments acting on the vehicle. Fossen \cite{Thor} classifies the forces into-:
 \begin{itemize}
-\item Radiation-induces forces
+\item Radiation-induced forces
 
 \begin{itemize}
 \item added inertia
@@ -198,13 +211,13 @@ The right hand side of the vector \ref{eq:motion model AUV} represents the exter
 \end{itemize}
 \end{itemize}
 
-
+$\tau_{RB}$ can be represented as 
 \begin{equation}
 \label{eq:total forces}
  \tau_{RB} = \tau_{H} + \tau_{E} + \tau 
 \end{equation}
 
-Here $\tau_{H}$ is the radiation induced forces and moments, $\tau_{E}$ is used to describe the enviormental forces and moments and $\tau$ is the propulsion forces and moments. Equations \ref{eq:motion model AUV} and equation \ref{eq:total forces} can be combined to yeild the following representation of the 6 DOF dynamic equations of motion:
+Here $\tau_{H}$ is the radiation induced forces and moments, $\tau_{E}$ is used to describe the environmental forces and moments and $\tau$ is the propulsion forces and moments. Equations \ref{eq:motion model AUV} and equation \ref{eq:total forces} can be combined to yield the following representation of 6 DOF dynamic equations of motion:
  
 \framebox{\begin{minipage}[t]{1\columnwidth}%
 \begin{equation}
@@ -214,13 +227,13 @@ M\mathcal{{V}}^{.}+C(\mathcal{V})\mathcal{V}+D(\mathcal{V})\mathcal{V}+g(\eta)=\
 
 \end{minipage}} \\
 
-where \\
+where 
 
 $M \triangleq M_{RB} + M_{A}$ ; $C(\mathcal{V}) \triangleq C_{RB}(\mathcal{V} + C_{A}(\mathcal{V})$
 
-$M_A$ is the added inertia  matrix $C_{A}(\mathcal{V})$ is the matrix of hydrodynamic Corilos and centripetal terms. $g(\eta)$ is the restoring force.
+$M_A$ is the added inertia  matrix $C_{A}(\mathcal{V})$ is the matrix of hydrodynamic Coriolis and centripetal terms. $g(\eta)$ is the restoring force.
 
-Lammas \cite{Lammas2004} points out that navigation equation of an underwater vehicle is-:
+Lammas \cite{Lammas2004} pointed out that navigation equation of an underwater vehicle is-:
 
 \begin{equation}
 \label{navigation equation for AUV}
@@ -228,17 +241,10 @@ Lammas \cite{Lammas2004} points out that navigation equation of an underwater ve
 \end{equation}
 
 
-$\mathcal{V}^{.}$ can be integrated with time to get the velocity.
+$\mathcal{V}^{.}$ can be integrated with time to get velocity.
 
-In the static model the velocity is calculated from a lookup table. In the other model we are computing forces and moments on the fly but the parameters to these forces are considered to be static. The paramters such as density, temprature etc of water can change with time and lead to an inaccurate estimate of velcoity in both the models. Hence the velocity needs to be adapted and Chapter \ref{adapting the motion model} explains how it is done in my algorithm.    
+In the static model the velocity is calculated from a lookup table. In the other model we are computing forces and moments on the fly but the parameters to these forces are considered to be static. The parameters such as density, temperature etc of water can change with time and lead to an inaccurate estimate of velcoity in both the models. Hence the velocity needs to be adapted and Chapter \ref{adapting the motion model} explains how it is done in my algorithm.    
 
-\begin{figure}
-\caption{Body-fixed reference frames}
-
-
-\includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/uav_diagram.png}
-
-\end{figure}
 
 \begin{comment}
 The 6-DOF rigid body equations of motions are 
@@ -312,27 +318,37 @@ are the motion parameters that our algorithm intends to learn.
 \end{comment}
 
 \section{Particle Filter}
-Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. It is an alternative non-parametric implementation of the Bayes filter. It also can be called as a sequential Monte Carlo algorithm. It was first proposed by MK. Pitt and N Shephard[refer the paper]. 
+Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. Thrun \cite{thrun2005probabilistic} defines particle fitler as an alternative non-parametric implementation of the Bayes filter. It also can be called as a Sequential Monte Carlo(SMC) algorithm. The first attempt to use SMC was seen in simulations of growing polymers by M.N Rosenbluth and A.W. Rosenbluth \cite{rosenbluth1955monte}. Gordon et al. \cite{gordon1993novel} provided the first true implementation of sequential monte carlo algorihtm. 
+\begin{comment}
+Advantages write  after all introdcution of particle filter
 
-Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle.Additionally they can model non linear transformations of random variables therefore can be applied to any systems and measurement models. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF). 
+Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle.Additionally they can model non linear transformations of random variables therefore can be applied to any system and measurement models. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF).
+\end{comment}
 
-Particle Filters are used to calculate the approximate of a state in Markov chain.
 \begin{figure}[hbtp]
 \caption{Markov Chain}
 \centering
 \includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
 \end{figure}
-The key idea behind the particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior.The state $ x _{t}=p(x_{t}|x_{t-1},u _{t})$ is dependant upon $ x _{t-1}$ as well as the control input $u _{t}$. The observations are introduced in the system in the form of measurements.The $p(z_{t}/x_{t})$ are used to assign weights to the particles and give survival of the fittest mentality to the algorithm.  
+Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussians and can model non linear transformations of random variables. 
 
-The algorithm for particle filters is described below-:
+\begin{figure}[hbtp]
+\caption{The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y.}
+\centering
+\includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png}
+\end{figure}
+
+%this figure is copied from Thrun.. How do I reference it???%
+
+The algorithm for particle filters \cite{thrun2005probabilistic} is described below-:
 
 \begin{algorithm}[H]
 \label{alg:ParticleFilter}
  \SetAlgoLined
   		 
- \KwIn{$ X _{t-1}$: particle set
- $u_{t}$: most recent control
- $z{t}$: most recent measurement}
+ \KwIn{$ X _{t-1}$: particle set \\
+ $u_{t}$: most recent control \\
+ $z_{t}$: most recent measurement}
 
 
  \KwOut{ $X_{t}$:particle set }
@@ -352,14 +368,17 @@ return $X_{t}$
 \caption{Particle Filter Algorithm}
 \end{algorithm}
 
-The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance is the probability of the measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurement into the particle set. In practice, the number of particles used is a large number(e.g.-:1000).
+In algorithm ~\ref{alg:ParticleFilter} each particle $x_{t}^{m}$ is instantiation of the state at time $t$.  The first step is to generate a hypothetical state $x_{t}^{m}$ for time $t$ based on previous state $x_{t-1}^{m}$ and control $u_{t}$. The particles are samples from the state transition distribution $p(x_{t}|u_{t},x_{t-1})$. The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance factor is defined as the probability of measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurements into the particle set. In practice, the number of particles used are a large number(e.g.-:1000).
 
-The key part of the algorithm is the re-sampling step in the particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor.The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
+The key part of the algorithm is the re-sampling step in particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor. The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
 
- \section{Particle smoothing}
-The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. It is defined as the computing the posterior distribution of the past states given all the evidence upto the present.
-Mathematically it can be represented as $p(x _{t}|u _{1:T},z _{1:T})$ for some t with $ 0 \leq t \leq T$.Russel and Norving showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering.
-We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton which was based on the technique presented by Docuet et al. and Godsill et al. The algorithm is used to generate samples from the entire joint smoothing density $p(x_{0:T}|u_{1:T},z_{1:T})$.This algorithm assumes that particle filtering is already done on the entire data set and resulting in a distribution of the pose.
+Particle Filters is an integral part of my algorithm to learn the right parameters of the motion model and the way it is used is explained in ~\ref{ch:adapting the motion model}.
+
+\section{Particle smoothing}
+The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. Doucet \cite{doucet2009tutorial} in his paper stated that filtering based on observations recieved up to the current time is used to estimate the distribution of the current state of an Hidden Markov Model (HMM) whereas smoothing is used to estimate distribution of state at a particular time given all the observations up to some later time. Russel and Norving \cite{russell2003artificial} showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering. We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton \cite{Yap2008} which was based on the technique presented by Docuet et al. \cite{doucet2000monte} and Godsill et al. \cite{Godsill2004}.
+
+Algorithm ~\ref{alg:Particle Smoothing} is used to generate samples from the entire joint smoothing density $p(x_{0:T}|u_{1:T},z_{1:T})$.
+
 \begin{algorithm}[H]
  \SetAlgoLined
   	\label{alg:Particle Smoothing}
@@ -375,11 +394,14 @@ $x ^{'} _{T} \leftarrow x^{[i]}_{T}$
 	
 \end{algorithm}
 
-The particle filter process gives us a set of particles with their corresponding weights at the present time step. In the first step of smoothing we choose a particle with the probability proportional to the weight of the particles. Then we move a time step back till time=0 and calculate the new smoothed weights for every particle. They are calculated by the product of the forward probability and the weight of the particle. 
-\\
-$ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})$
-\\
-To calculate the trajectory we draw particles according to the new smoothed weights. At every time step we pick a particle and add it our trajectory set till time=T. We can repeat this process any number of time to get several trajectories. These trajectories are used in estimating the parameters of the motion model as they are treated as ground truth.
+The technique assumes that particle filtering has already been carried on the dataset which results in a set of particles with their corresponding weights at the present time step. In the first step of smoothing we choose a particle with the probability proportional to the weight of the particles. The next step is to move a time step back and calculate the new smoothed weights which are the product of forward probability and the weight of the particle as shown in equation ~\ref{eq:smoothing}. The smoothed weights are calculated till time($t$) = 0.
+
+\begin{equation}
+\label{eq:smoothing}
+p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})
+\end{equation}
+
+To calculate the trajectory we draw particles according to the new smoothed weights. At every time step we pick a particle and add it our trajectory set till time=T. We can repeat this process any number of time to get several trajectories. These trajectories are treated as ground truth and help in estimating the parameters of motion model. 
  
  
 
@@ -412,7 +434,7 @@ gradient on the errors to give us the best estimate of the parameters.
 This completes the Maximization Step.
 
 The learned parameters are re-assigned to the motion model which helps in adapting the model. The  whole
-process is repeated at each time step so that we can dynamically learn the right parameters. Various algorithm such as SLAM,Kalman Filter are dependant upon the accuracy of the motion model and adapting our motion models is the most basic step towards it. We found that the adaptive motion model performs better than the static and the results are shown in the later chapters.
+process is repeated at each time step so that we can dynamically learn the right parameters. Various algorithm such as SLAM,Kalman Filter are dependent upon the accuracy of the motion model and adapting our motion models is the most basic step towards it. We found that the adaptive motion model performs better than the static and the results are shown in the later chapters.
 
 
 
@@ -441,7 +463,7 @@ The output of a side sonar is a ping of the surface and for an image to be creat
 This method allows us independence from a static map as well as helps in learning
 the motion model on the fly in a new environment. 
 \section{Adapting the motion model by parmater estimation}
-\label{adapting the motion model}
+\label{ch:adapting the motion model}
 
 Velocity as distirubtion
 

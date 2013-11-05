@@ -31,6 +31,12 @@ Austin~I Eliazar, Parr Cs, and Duke Edu.
 \newblock {Learning Probabilistic Motion Models for Mobile Robots}.
 \newblock 2004.
 
+\bibitem{Godsill2004}
+Simon~J Godsill, Arnaud Doucet, and Mike West.
+\newblock {Monte Carlo Smoothing for Nonlinear Time Series}.
+\newblock {\em Journal of the American Statistical Association},
+  99(465):156--168, March 2004.
+
 \bibitem{gordon1993novel}
 Neil~J Gordon, David~J Salmond, and Adrian F~M Smith.
 \newblock {Novel approach to nonlinear/non-Gaussian Bayesian state estimation}.
@@ -71,6 +77,12 @@ Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
 \newblock {\em {Beyond the Kalman filter: Particle filters for tracking
   applications}}.
 \newblock Artech House Publishers, 2004.
+
+\bibitem{rosenbluth1955monte}
+Marshall~N Rosenbluth and Arianna~W Rosenbluth.
+\newblock {Monte Carlo calculation of the average extension of molecular
+  chains}.
+\newblock {\em The Journal of Chemical Physics}, 23:356, 1955.
 
 \bibitem{russell2003artificial}
 Stuart Russell.

@@ -3,6 +3,7 @@
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage{array}
 
 \makeatletter
 
@@ -15,12 +16,12 @@
 \usepackage{babel}
 \begin{document}
 \begin{table}
-
-
 \caption{Notation used for marine vehicles}
 
 
-\begin{tabular}{|c|c|c|c|c|}
+
+
+\begin{tabular}{|c|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|}
 \hline 
 DOF &  & forces and moments & linear and angular vel. & positions and Euler angles\tabularnewline
 \hline 

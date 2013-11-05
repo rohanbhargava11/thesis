@@ -1,4 +1,5 @@
 \relax 
+\providecommand \oddpage@label [2]{}
 \@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{toc}{\baselineskip =0.7\baselineskip }
 \@writefile{loa}{\addvspace {10\p@ }}
@@ -46,62 +47,75 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Motion Model}{4}}
 \citation{thrun2005probabilistic}
 \citation{Hallingstad2007}
-\@writefile{lot}{\contentsline {table}{\numberline {Table 2.1}{\ignorespaces Notation used for marine vehicles}}{5}}
 \citation{Thor}
-\citation{Thor}
+\newlabel{marine notation}{{2.1}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {Table 2.1}{\ignorespaces Notation used for marine vehicles}}{6}}
 \newlabel{eq:motion model AUV}{{2.1}{6}}
-\citation{Lammas2004}
+\citation{Thor}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.1}{\ignorespaces Body-fixed reference frames}}{7}}
 \newlabel{eq:total forces}{{2.2}{7}}
-\newlabel{eq:vehicle hydrodynamics}{{2.3}{7}}
-\newlabel{navigation equation for AUV}{{2.4}{7}}
+\citation{Lammas2004}
+\citation{thrun2005probabilistic}
+\citation{rosenbluth1955monte}
+\citation{gordon1993novel}
+\citation{thrun2005probabilistic}
+\newlabel{eq:vehicle hydrodynamics}{{2.3}{8}}
+\newlabel{navigation equation for AUV}{{2.4}{8}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.1}{\ignorespaces Body-fixed reference frames}}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Particle Filter}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.2}{\ignorespaces Markov Chain}}{8}}
+\citation{thrun2005probabilistic}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.2}{\ignorespaces Markov Chain}}{9}}
 \newlabel{alg:ParticleFilter}{{1}{9}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Particle Filter Algorithm}}{9}}
+\citation{doucet2009tutorial}
+\citation{russell2003artificial}
+\citation{Yap2008}
+\citation{doucet2000monte}
+\citation{Godsill2004}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.3}{\ignorespaces The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y.}}{10}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Particle smoothing}{9}}
-\newlabel{alg:Particle Smoothing}{{2}{10}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Particle smoothing}{10}}
+\newlabel{alg:Particle Smoothing}{{2}{11}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}}{11}}
+\newlabel{eq:smoothing}{{2.5}{12}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}SURF}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}SURF}{12}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{12}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{13}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{learning the motion model}{{3}{12}}
+\newlabel{learning the motion model}{{3}{13}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}General Architecture}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.1}{\ignorespaces Block Diagram of the framework}}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}General Architecture}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.1}{\ignorespaces Block Diagram of the framework}}{13}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Dynamic Landmarks}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.2}{\ignorespaces Side Sonar Image}}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.3}{\ignorespaces SURF Keypoints}}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Dynamic Landmarks}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.2}{\ignorespaces Side Sonar Image}}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.3}{\ignorespaces SURF Keypoints}}{15}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Adapting the motion model by parmater estimation}{14}}
-\newlabel{adapting the motion model}{{3.3}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Adapting the motion model by parmater estimation}{15}}
+\newlabel{ch:adapting the motion model}{{3.3}{15}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Visual Motion Estimates}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.4}{\ignorespaces SURF Keypoints}}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Visual Motion Estimates}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.4}{\ignorespaces SURF Keypoints}}{18}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Application}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.5}{\ignorespaces Traditional aided INS}}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.6}{\ignorespaces Traditional aided INS}}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Application}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.5}{\ignorespaces Traditional aided INS}}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.6}{\ignorespaces Traditional aided INS}}{20}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Results}{20}}
-\newlabel{results}{{3.6}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.7}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 2.0}}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.8}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 5.0}}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.9}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 2.0}}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.10}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 5.0}}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Results}{21}}
+\newlabel{results}{{3.6}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.7}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 2.0}}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.8}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 5.0}}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.9}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 2.0}}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.10}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 5.0}}{24}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.11}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.2 Sensor Noise= 5.0}}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.12}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.5 Sensor Noise= 5.0}}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.11}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.2 Sensor Noise= 5.0}}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.12}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.5 Sensor Noise= 5.0}}{25}}
 \bibstyle{plain}
 \bibdata{mendeley.bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{25}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{26}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -110,16 +124,18 @@
 \bibcite{doucet2000monte}{3}
 \bibcite{doucet2009tutorial}{4}
 \bibcite{Eliazar2004}{5}
-\bibcite{gordon1993novel}{6}
-\bibcite{grisettiyz2005improving}{7}
-\bibcite{Hallingstad2007}{8}
-\bibcite{kalman1960new}{9}
-\bibcite{Lammas2004}{10}
-\bibcite{Lav06}{11}
-\bibcite{ristic2004beyond}{12}
-\bibcite{russell2003artificial}{13}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{26}}
+\bibcite{Godsill2004}{6}
+\bibcite{gordon1993novel}{7}
+\bibcite{grisettiyz2005improving}{8}
+\bibcite{Hallingstad2007}{9}
+\bibcite{kalman1960new}{10}
+\bibcite{Lammas2004}{11}
+\bibcite{Lav06}{12}
+\bibcite{ristic2004beyond}{13}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{27}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\bibcite{Thor}{14}
-\bibcite{thrun2005probabilistic}{15}
-\bibcite{Yap2008}{16}
+\bibcite{rosenbluth1955monte}{14}
+\bibcite{russell2003artificial}{15}
+\bibcite{Thor}{16}
+\bibcite{thrun2005probabilistic}{17}
+\bibcite{Yap2008}{18}
