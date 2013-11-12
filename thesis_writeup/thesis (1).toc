@@ -14,7 +14,7 @@
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {2.2}Particle Filter}{8}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.3}Particle smoothing}{10}
+\contentsline {section}{\numberline {2.3}Particle smoothing}{11}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {2.4}SURF}{12}
 \contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{13}
