@@ -1,8 +1,8 @@
 % simple.tex - simple Master's thesis sample
 % $Id: simple.tex 309 2011-01-28 14:46:48Z vlado $
-\documentclass[12pt]{dalcsthesis}
+%\documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
-%\documentclass[12pt,draft]{dalcsthesis}
+\documentclass[12pt,draft]{dalcsthesis}
 \usepackage{verbatim}
 \usepackage{amssymb}
 \usepackage{adjustbox}
@@ -34,6 +34,7 @@
 
 \frontmatter
 
+
 \begin{abstract}
 We present a method to learn and adapt the motion model. The motion model can be influenced by environmental properties and is a crucial part of the navigation system.Examples are the drift that is accounted in the motion model can be different for carpets and tiles. The AUV can have a change in their motion model when they are moving from fresh water to sea water. Our algorithm is based on the Expectation Maximization Framework which help us to learn the right parameters for the model.
 The Expectation Step is completed by particle filtering and smoothing. The Maximization step involves finding the parameters for the model.We use side sonar images to extract landmarks which can gives us position estimates to help us evolve our motion model.This leads to a better position estimate of the robot. 
@@ -59,10 +60,9 @@ Thanks to all the little people who make me look tall.
 
 
 The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question “Where am I?”. The current location of a robot can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic building blocks to various 
-algorithms such 
-as path planning \cite{Lav06}, Simultaneous Localization and Mapping (SLAM) \cite{thrun2005probabilistic} \cite{grisettiyz2005improving}  etc. which require an accurate estimate of robot's position.
+algorithms such as path planning \cite{Lav06}, Simultaneous Localization and Mapping (SLAM) \cite{thrun2005probabilistic} \cite{grisettiyz2005improving}  etc. which require an accurate estimate of robot's position. 
 
-In order to account for the uncertainty in the environment Sebastian Thrun \cite{thrun2005probabilistic} represented the models probabilistically. Eliazar and Parr \cite{Eliazar2004} pointed out that the essential input are the parameters to these models. The process of determining the parameters to a kinematic model is termed as calibration. Generally the robot is calibrated at the start of the experiment and the parameter values are not changed throughout the experiment. In practice wherever there is a significant change in the environment, robots are manually re calibrated during the experiment. In most of the cases it is not possible to recalibrate while the robot is in operation. As our environments are dynamic our models need to adapt to them. Eliazar and Parr \cite{Eliazar2004} proposed an algorithm to learn parameters of a motion model for land robots. Teddy Yapp \cite{Yap2008} took the work further and learned parameters for motion and sensor models for land robots. Both of their algorithms used 
+In order to account for the uncertainty in motion Sebastian Thrun \cite{thrun2005probabilistic} represented the models probabilistically. Eliazar and Parr \cite{Eliazar2004} pointed out that the essential input are the parameters to these models. The process of determining the parameters to a kinematic model is termed as calibration. Generally the robot is calibrated at the start of the experiment and the parameter values are not changed throughout the experiment. In practice wherever there is a significant change in the environment, robots are manually re calibrated during the experiment. In most of the cases it is not possible to recalibrate while the robot is in operation. As our environments are dynamic our models need to adapt to them. Eliazar and Parr \cite{Eliazar2004} proposed an algorithm to learn parameters of a motion model for land robots. Teddy Yapp \cite{Yap2008} took the work further and learned parameters for motion and sensor models for land robots. Both of their algorithms used 
 Expectation Maximization framework to learn right parameters for models.
 
 For my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic and will lead to changes in motion model for Autonomous Underwater Vehicle. A specific application to demonstrate the importance of accurate motion model is Navigation. In AUV navigation relies on Inertial Navigation System(INS) which gives an estimate of velocity, position and orientation. All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively into larger error. Hegrenaes et al \cite{Hegrenes2008} pointed out that systems such as Doppler Velocity Log(DVL), surface GPS etc are used to compensate for the drift but they are situations where these systems fail or readings are discarded due to poor quality. To solve this particular problem they used velocity estimate from a static motion model to aid INS systems. In my thesis I propose an online system for an AUV to adapt its motion model to the dynamic environment which 
@@ -327,11 +327,17 @@ Advantages write  after all introdcution of particle filter
 Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle.Additionally they can model non linear transformations of random variables therefore can be applied to any system and measurement models. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF).
 \end{comment}
 
-\begin{figure}[hbtp]
-\caption{Markov Chain}
-\centering
-\includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../thesis_work/markov_chain.png}}
+  \caption{\label{fig-Markov Chain} Markov Chain.}
 \end{figure}
+
+%\begin{figure}[hbtp]
+%\caption{Markov Chain}
+%\centering
+%\includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
+%\end{figure}
 Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussians and can model non linear transformations of random variables. 
 
 \begin{figure}[hbtp]
@@ -407,12 +413,12 @@ To calculate the trajectory we draw particles according to the new smoothed weig
  
  
 
-\section{SURF}
+\section{Speeded Up Robust Features}
 It is a robust local feature detector, first proposed by Herbert Bay et al. in 2006. The sta
 
 \chapter{Learning the motion model}
 \label{learning the motion model}
-\section{General Architecture}
+\section{Introduction}
 
 
 \begin{figure}[hbtp]
@@ -439,33 +445,17 @@ This completes the Maximization Step.
 The learned parameters are re-assigned to the motion model which helps in adapting the model. The  whole
 process is repeated at each time step so that we can dynamically learn the right parameters. Various algorithm such as SLAM,Kalman Filter are dependent upon the accuracy of the motion model and adapting our motion models is the most basic step towards it. We found that the adaptive motion model performs better than the static and the results are shown in the later chapters.
 
+\section{Particle Filtering and Smoothing}
+\subsection{Particle Filtering}
+\subsection{Particle Smoothing}
 
 
 
 
 
-\section{Dynamic Landmarks}
-In the particle filtering algorithm the sensor model is responsible to assign weights to the particles.The sensor model describes the process by which sensor measurements are generated in the physical world.It is generally done by using some sort of references in the world aka landmarks. Austin and Elizar in their papers used static maps of known environments to generate references for their sensor model.
-The probability of having static maps for underwater environments is pretty low and thus lead us to use side sonar images as references for the sensor model.
-\begin{figure}[hbtp]
-\caption{Side Sonar Image}
-\centering
-\includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg}
-\end{figure}
-As you can see in the image there are lot of horizontal lines which we treat as noise. For us to use the side sonar images we performed a pre-processing step in which we used a median filter on the image. This helped us in getting rid of major noises in terms of horizontal lines but also blurred the image. In order to generate some landmarks we ran feature extractions techniques like SURF. This algorithm helped us in detecting interest points in the image and are shown below in circles. Andrew Vardy{refer the paper) ran multiple image registration techniques such as phase matching (you need to mention more) on side sonar images and showed that SURF performs better than the rest .
-\begin{figure}[hbtp]
-\caption{SURF Keypoints}
-\centering
-\includegraphics[scale=0.4]{/home/rohan/Documents/thesis_work/visual_sonar/landmarks.png}
-\end{figure}
-
-These interest points can be treated as landmarks. We use a high Hessian
-threshold so that we have a maximum of 4 landmarks. The distance of the robot and the particles to these landmarks are used to assign weights to the particles.
-\\
-The output of a side sonar is a ping of the surface and for an image to be created we need to combine pings over time. Andrew Vardy in his paper explains on how to combine pings to create an meaningful image. For our algorithm to run on the AUV we can use Andrew's algorithm as a black box and run our feature extraction on the output i.e. images of the seabed. 
-This method allows us independence from a static map as well as helps in learning
-the motion model on the fly in a new environment. 
-\section{Adapting the motion model by parameter estimation}
+\section{Adapting Motion Model}
+\subsection{Expectation Maximization}
+\subsection{Parameter Estimation}
 \label{ch:adapting the motion model}
 
 Velocity as distribution
@@ -473,7 +463,6 @@ As stated in earlier chapters as our environment changes the estimate for a cont
 
 Expectation Maximization is an iterative process of finding maximum likelihood of parameters of a model which depend upon hidden variables. We use the EM algorithm as described by Christopher M. Bishop in his book \cite{bishop2006pattern}. We have a joint distribution $p(X,Z|\theta)$ where X are the observed variables and Z are the latent variables governed by parameters $\theta$. The goal is to maximize the likelihood function $p(X|\theta)$ with respect to $\theta$. The steps taken in EM algorithm are described below -:
 
-\\
 1. Have an initial estimate of the parameters $\theta ^{old}$
 \\
 2. \textbf{E Step:} Evaluate $p(Z|X,\theta^{old})$
@@ -529,7 +518,58 @@ The output of the step described above is a set of parameters that
 maximize the function. We substitute these values in our motion model
 at every time step and the process is repeated throughout the robot's
 mission. 
-\section{Visual Motion Estimates}
+
+\begin{comment}
+\section{Application}
+In this chapter we describe a specific application for learned motion model in underwater vehicles. A typical navigation sensor system would consists of Inertial Navigation Systems(INS) and some standard compass and pressure sensor. In some of the systems we could have position updates from long baseline(LBL),ultra short baseline(USBL) acoustics and surface GPS. Some high end systems would have Doppler Velocity Log(DVL) which estimates speed over ground or water. These systems are sometimes incorporated to limit the drift of Inertial Navigation System[refer the paper]. Even when a DVL is included there are situations in which DVL fails or the reading have to be discarded due to poor quality. 
+
+We need some sort of alternative velocity information that doesn't depend upon external sensors in order to compensate for the drift in INS. To get an estimate of velocity we can use the kinetic vehicle model to aid the INS. 
+\begin{figure}[hbtp]
+\caption{Traditional aided INS}
+\centering
+\includegraphics[scale=1.0]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_traditional.png}
+\end{figure}
+
+\begin{figure}[hbtp]
+\caption{Traditional aided INS}
+\centering
+\includegraphics[scale=1.0]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_model.png}
+\end{figure}
+In the traditional aided INS the readings from gyro and accelerometer measurements from the IMU are integrated over time to give an estimate of velocity,position and orientation. Due to the inherent errors in the gyros and accelerometers there is a drift in  the INS system. There are aiding sensors such as DVL and surface GPS to compensate the drift for the IMU. The reading from the sensors are fused using a Bayes filters to get an enchained estimate of velocity ,position and orientation. 
+
+In the model aided INS the IMU suffers from the same drift but the output from the model is treated analogously to that of an external aiding sensor. In this system the DVL in traditional INS systems are replaced by vehicle model. The output from the model i.e. the velocity estimate is fused with the readings from the INS by a Bayes filter. The integrating of vehicle model with the IMU systems help in systems which lack external velocity measurements. The other implication is in systems where redundancy and integrity is important e.g. during sensor drop outs or sensor failures.
+
+This specific application shows the importance of having a accurate motion model. As stated in earlier chapters the motion model can change due to various factors and would have a direct impact on the navigation systems of underwater vehicles.Wrong estimates from the motion model will not benefit INS systems and overall lead to wrong estimate about the position and orientation of the vehicle. Our algorithm shows on how to learn the motion model on the fly which can lead to better estimate of the velocity and therefore accurate navigation systems.
+
+As you can see in the figure the input to the motion model is a control command and output is the velocity estimate. In HUGIN 4500 they had implemented a static motion model as table look up based on experimental data i.e.
+$u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity estimate $u_{r}$ is fused with the reading from IMU to get a better estimate of the position of the AUV. As shown before we try to learn the motion model to find the best estimate for the velocity so that it can aid the INS in this particular application. 
+\end{comment}
+\chapter{Landmarks extraction using Side Sonar Images}
+\section{Introduction}
+
+\section{Dynamic Landmarks}
+In the particle filtering algorithm the sensor model is responsible to assign weights to the particles.The sensor model describes the process by which sensor measurements are generated in the physical world.It is generally done by using some sort of references in the world aka landmarks. Austin and Elizar in their papers used static maps of known environments to generate references for their sensor model.
+The probability of having static maps for underwater environments is pretty low and thus lead us to use side sonar images as references for the sensor model.
+\begin{figure}[hbtp]
+\caption{Side Sonar Image}
+\centering
+\includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg}
+\end{figure}
+As you can see in the image there are lot of horizontal lines which we treat as noise. For us to use the side sonar images we performed a pre-processing step in which we used a median filter on the image. This helped us in getting rid of major noises in terms of horizontal lines but also blurred the image. In order to generate some landmarks we ran feature extractions techniques like SURF. This algorithm helped us in detecting interest points in the image and are shown below in circles. Andrew Vardy{refer the paper) ran multiple image registration techniques such as phase matching (you need to mention more) on side sonar images and showed that SURF performs better than the rest .
+\begin{figure}[hbtp]
+\caption{SURF Keypoints}
+\centering
+\includegraphics[scale=0.4]{/home/rohan/Documents/thesis_work/visual_sonar/landmarks.png}
+\end{figure}
+
+These interest points can be treated as landmarks. We use a high Hessian
+threshold so that we have a maximum of 4 landmarks. The distance of the robot and the particles to these landmarks are used to assign weights to the particles.
+\\
+The output of a side sonar is a ping of the surface and for an image to be created we need to combine pings over time. Andrew Vardy in his paper explains on how to combine pings to create an meaningful image. For our algorithm to run on the AUV we can use Andrew's algorithm as a black box and run our feature extraction on the output i.e. images of the seabed. 
+This method allows us independence from a static map as well as helps in learning
+the motion model on the fly in a new environment. 
+
+\section{Motion Estimation using side sonar images}
 In AUV the motion estimation is generally done through dead-reckoning.
 It is a process of calculating the current position based upon the
 previous position and the speed of vessel. The velocity of the AUV
@@ -567,31 +607,9 @@ the problems we use a high Hessian threshold to extract maximum of
 We validate our algorithm on datasets consisting of side sonar images
 and the total distance the AUV moves. 
 
-\section{Application}
-In this chapter we describe a specific application for learned motion model in underwater vehicles. A typical navigation sensor system would consists of Inertial Navigation Systems(INS) and some standard compass and pressure sensor. In some of the systems we could have position updates from long baseline(LBL),ultra short baseline(USBL) acoustics and surface GPS. Some high end systems would have Doppler Velocity Log(DVL) which estimates speed over ground or water. These systems are sometimes incorporated to limit the drift of Inertial Navigation System[refer the paper]. Even when a DVL is included there are situations in which DVL fails or the reading have to be discarded due to poor quality. 
 
-We need some sort of alternative velocity information that doesn't depend upon external sensors in order to compensate for the drift in INS. To get an estimate of velocity we can use the kinetic vehicle model to aid the INS. 
-\begin{figure}[hbtp]
-\caption{Traditional aided INS}
-\centering
-\includegraphics[scale=1.0]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_traditional.png}
-\end{figure}
-
-\begin{figure}[hbtp]
-\caption{Traditional aided INS}
-\centering
-\includegraphics[scale=1.0]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_model.png}
-\end{figure}
-In the traditional aided INS the readings from gyro and accelerometer measurements from the IMU are integrated over time to give an estimate of velocity,position and orientation. Due to the inherent errors in the gyros and accelerometers there is a drift in  the INS system. There are aiding sensors such as DVL and surface GPS to compensate the drift for the IMU. The reading from the sensors are fused using a Bayes filters to get an enchained estimate of velocity ,position and orientation. 
-
-In the model aided INS the IMU suffers from the same drift but the output from the model is treated analogously to that of an external aiding sensor. In this system the DVL in traditional INS systems are replaced by vehicle model. The output from the model i.e. the velocity estimate is fused with the readings from the INS by a Bayes filter. The integrating of vehicle model with the IMU systems help in systems which lack external velocity measurements. The other implication is in systems where redundancy and integrity is important e.g. during sensor drop outs or sensor failures.
-
-This specific application shows the importance of having a accurate motion model. As stated in earlier chapters the motion model can change due to various factors and would have a direct impact on the navigation systems of underwater vehicles.Wrong estimates from the motion model will not benefit INS systems and overall lead to wrong estimate about the position and orientation of the vehicle. Our algorithm shows on how to learn the motion model on the fly which can lead to better estimate of the velocity and therefore accurate navigation systems.
-
-As you can see in the figure the input to the motion model is a control command and output is the velocity estimate. In HUGIN 4500 they had implemented a static motion model as table look up based on experimental data i.e.
-$u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity estimate $u_{r}$ is fused with the reading from IMU to get a better estimate of the position of the AUV. As shown before we try to learn the motion model to find the best estimate for the velocity so that it can aid the INS in this particular application. 
-
-\section{Results}
+\chapter{Results}
+\section{Adapting Motion Model}
 \label{results}
 We use a simulation to demonstrate the effectiveness of learning the
 motion model. The simulation mainly consists of particle filter SLAM.
@@ -713,6 +731,7 @@ its impact on the overall error. Robot calibration is important to
 process in mobile robotics. The proposed algorithm is an automated
 process which can help us in better navigation of the robots and can
 be used for any motion model. 
+\section{Motion estimation using side sonar images}
 
 \chapter{Conclusion}
 

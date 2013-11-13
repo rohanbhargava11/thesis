@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{bishop2006pattern}
+Christopher~M Bishop and Nasser~M Nasrabadi.
+\newblock {\em {Pattern recognition and machine learning}}, volume~1.
+\newblock springer New York, 2006.
+
 \bibitem{chen2003bayesian}
 Zhe Chen.
 \newblock {Bayesian filtering: From Kalman filters to particle filters, and

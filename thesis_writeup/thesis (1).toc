@@ -1,6 +1,6 @@
 \baselineskip =0.7\baselineskip 
-\contentsline {chapter}{Abstract}{v}
-\contentsline {chapter}{Acknowledgements}{vi}
+\contentsline {chapter}{Abstract}{vi}
+\contentsline {chapter}{Acknowledgements}{vii}
 \contentsline {chapter}{\numberline {Chapter 1}Introduction}{1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -16,21 +16,33 @@
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {2.3}Particle smoothing}{11}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.4}SURF}{12}
+\contentsline {section}{\numberline {2.4}Speeded Up Robust Features}{12}
 \contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.1}General Architecture}{13}
+\contentsline {section}{\numberline {3.1}Introduction}{13}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.2}Dynamic Landmarks}{14}
+\contentsline {section}{\numberline {3.2}Particle Filtering and Smoothing}{14}
+\contentsline {subsection}{\numberline {3.2.1}Particle Filtering}{14}
+\contentsline {subsection}{\numberline {3.2.2}Particle Smoothing}{14}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.3}Adapting the motion model by parmater estimation}{15}
+\contentsline {section}{\numberline {3.3}Adapting Motion Model}{14}
+\contentsline {subsection}{\numberline {3.3.1}Expectation Maximization}{14}
+\contentsline {subsection}{\numberline {3.3.2}Parameter Estimation}{14}
+\contentsline {chapter}{\numberline {Chapter 4}Landmarks extraction using Side Sonar Images}{17}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.4}Visual Motion Estimates}{17}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.5}Application}{19}
+\contentsline {section}{\numberline {4.1}Introduction}{17}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.6}Results}{21}
-\contentsline {chapter}{\numberline {Chapter 4}Conclusion}{26}
+\contentsline {section}{\numberline {4.2}Dynamic Landmarks}{17}
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {4.3}Motion Estimation using side sonar images}{18}
+\contentsline {chapter}{\numberline {Chapter 5}Results}{21}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.1}Adapting Motion Model}{21}
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.2}Motion estimation using side sonar images}{25}
+\contentsline {chapter}{\numberline {Chapter 6}Conclusion}{26}
 \addvspace {10\p@ }
 \contentsline {chapter}{Bibliography}{27}
