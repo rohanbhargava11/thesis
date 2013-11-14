@@ -6,43 +6,45 @@
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {1.1}Motivation}{1}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {1.2}Contributions}{3}
-\contentsline {chapter}{\numberline {Chapter 2}Background}{4}
+\contentsline {section}{\numberline {1.2}Contributions}{4}
+\contentsline {chapter}{\numberline {Chapter 2}Background}{5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.1}Motion Model}{4}
+\contentsline {section}{\numberline {2.1}Motion Model}{5}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.2}Particle Filter}{8}
+\contentsline {section}{\numberline {2.2}Particle Filter}{9}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.3}Particle smoothing}{11}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {2.4}Speeded Up Robust Features}{12}
-\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{13}
+\contentsline {section}{\numberline {2.3}Particle smoothing}{12}
+\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.1}Introduction}{13}
+\contentsline {section}{\numberline {3.1}Introduction}{14}
+\contentsline {subsection}{\numberline {3.1.1}Work done so far on learning motion model}{14}
+\contentsline {subsection}{\numberline {3.1.2}General Architecture}{14}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.2}Particle Filtering and Smoothing}{14}
-\contentsline {subsection}{\numberline {3.2.1}Particle Filtering}{14}
-\contentsline {subsection}{\numberline {3.2.2}Particle Smoothing}{14}
+\contentsline {section}{\numberline {3.2}Particle Filtering and Smoothing}{15}
+\contentsline {subsection}{\numberline {3.2.1}Particle Filtering}{15}
+\contentsline {subsection}{\numberline {3.2.2}Particle Smoothing}{15}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {3.3}Adapting Motion Model}{14}
-\contentsline {subsection}{\numberline {3.3.1}Expectation Maximization}{14}
-\contentsline {subsection}{\numberline {3.3.2}Parameter Estimation}{14}
-\contentsline {chapter}{\numberline {Chapter 4}Landmarks extraction using Side Sonar Images}{17}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {4.1}Introduction}{17}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {4.2}Dynamic Landmarks}{17}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {4.3}Motion Estimation using side sonar images}{18}
-\contentsline {chapter}{\numberline {Chapter 5}Results}{21}
+\contentsline {section}{\numberline {3.3}Adapting Motion Model}{15}
+\contentsline {subsection}{\numberline {3.3.1}Expectation Maximization}{15}
+\contentsline {subsection}{\numberline {3.3.2}Parameter Estimation}{15}
+\contentsline {chapter}{\numberline {Chapter 4}Landmarks extraction using Side Sonar Images}{18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.1}Adapting Motion Model}{21}
+\contentsline {section}{\numberline {4.1}Introduction}{18}
+\contentsline {subsection}{\numberline {4.1.1}Side Scan Sonar}{18}
+\contentsline {subsection}{\numberline {4.1.2}Speeded Up Robust Features}{18}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.2}Motion estimation using side sonar images}{25}
-\contentsline {chapter}{\numberline {Chapter 6}Conclusion}{26}
+\contentsline {section}{\numberline {4.2}Dynamic Landmarks}{18}
 \addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{27}
+\contentsline {section}{\numberline {4.3}Motion Estimation using side sonar images}{19}
+\contentsline {chapter}{\numberline {Chapter 5}Results}{22}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.1}Adapting Motion Model}{22}
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.2}Motion estimation using side sonar images}{26}
+\contentsline {chapter}{\numberline {Chapter 6}Conclusion}{27}
+\addvspace {10\p@ }
+\contentsline {chapter}{Bibliography}{28}

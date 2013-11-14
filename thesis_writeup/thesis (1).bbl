@@ -77,6 +77,12 @@ S~M LaValle.
 \newblock {\em {Planning Algorithms}}.
 \newblock Cambridge University Press, Cambridge, U.K., 2006.
 
+\bibitem{leonard1998autonomous}
+John~J Leonard, Andrew~A Bennett, Christopher~M Smith, and H~Feder.
+\newblock {Autonomous underwater vehicle navigation}.
+\newblock In {\em IEEE ICRA Workshop on Navigation of Outdoor Autonomous
+  Vehicles}, 1998.
+
 \bibitem{ristic2004beyond}
 Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
 \newblock {\em {Beyond the Kalman filter: Particle filters for tracking
@@ -88,6 +94,12 @@ Marshall~N Rosenbluth and Arianna~W Rosenbluth.
 \newblock {Monte Carlo calculation of the average extension of molecular
   chains}.
 \newblock {\em The Journal of Chemical Physics}, 23:356, 1955.
+
+\bibitem{Roy}
+N.~Roy and S.~Thrun.
+\newblock {Online self-calibration for mobile robots}.
+\newblock {\em Proceedings 1999 IEEE International Conference on Robotics and
+  Automation (Cat. No.99CH36288C)}, 3:2292--2297.
 
 \bibitem{russell2003artificial}
 Stuart Russell.
@@ -102,6 +114,11 @@ Fossen Thor.
 Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.
 \newblock {\em {Probabilistic robotics}}, volume~1.
 \newblock MIT press Cambridge, MA, 2005.
+
+\bibitem{vukobratovic1989introduction}
+Miomir Vukobratovic and Miomir Vukobratovic.
+\newblock {\em {Introduction to robotics}}.
+\newblock Springer-Verlag Berlin, Germany, 1989.
 
 \bibitem{Yap2008}
 Teddy~N. Yap and Christian~R. Shelton.

@@ -4,52 +4,54 @@ The top-level auxiliary file: thesis (1).aux
 The style file: plain.bst
 Database file #1: mendeley.bib.bib
 Warning--I didn't find a database entry for "Hegrenes2008"
+Warning--I didn't find a database entry for "cox1990autonomous"
 Warning--empty journal in Eliazar2004
 Warning--can't use both volume and number fields in gordon1993novel
 Warning--empty journal in Hallingstad2007
 Warning--there's a number but no volume in Hallingstad2007
 Warning--empty journal in Lammas2004
+Warning--empty year in Roy
 Warning--empty journal in Thor
 Warning--empty year in Thor
-You've used 19 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            615 strings with 7301 characters,
-and the built_in function-call counts, 6428 in all, are:
-= -- 644
-> -- 273
+            632 strings with 7831 characters,
+and the built_in function-call counts, 7360 in all, are:
+= -- 729
+> -- 322
 < -- 9
-+ -- 107
-- -- 88
-* -- 421
-:= -- 1042
-add.period$ -- 59
-call.type$ -- 19
-change.case$ -- 96
++ -- 126
+- -- 104
+* -- 482
+:= -- 1199
+add.period$ -- 68
+call.type$ -- 22
+change.case$ -- 112
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 269
-empty$ -- 505
-format.name$ -- 88
-if$ -- 1366
+cite$ -- 30
+duplicate$ -- 306
+empty$ -- 583
+format.name$ -- 104
+if$ -- 1558
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 24
-newline$ -- 97
-num.names$ -- 38
-pop$ -- 123
+int.to.str$ -- 22
+missing$ -- 28
+newline$ -- 112
+num.names$ -- 44
+pop$ -- 148
 preamble$ -- 1
-purify$ -- 82
+purify$ -- 96
 quote$ -- 0
-skip$ -- 197
+skip$ -- 218
 stack$ -- 0
-substring$ -- 391
-swap$ -- 72
+substring$ -- 437
+swap$ -- 76
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
-warning$ -- 7
-while$ -- 64
-width$ -- 21
-write$ -- 205
-(There were 8 warnings)
+type$ -- 76
+warning$ -- 8
+while$ -- 72
+width$ -- 24
+write$ -- 235
+(There were 10 warnings)
