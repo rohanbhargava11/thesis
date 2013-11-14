@@ -185,8 +185,7 @@ DOF &  & forces and moments & linear and angular vel. & positions and Euler angl
 
 
 
-The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation.
-
+The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation. Fossen \cite{Thor} in his book describes the motion of a marine vehicle in 6 DOF using two coordinate systems as shown in Figure ~\ref{fig-Coordinate System}. $X_0$, $Y_0$, $Z_0$ represent the moving coordinate frame and is called as body-fixed reference frame. The earth-fixed reference frame is denoted by $X$, $Y$, $Z$. The origin of the body-reference frame is denoted by $O$ and is chosen to coincide with the center of gravity denoted by $CG$.  
 
 To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: 1) Static Motion model 2) Dynamic Motion model
 
@@ -228,8 +227,8 @@ M=I_{y}q^{.}+(I_{x}-I_{z})rp-(p^{.}+qr)I_{xy}+(p^{2}-r^{2})I_{zx}+(qp-r^{.})I_{y
 % need to find the best way to write these equations
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis_work/uav_diagram.png}}
-  \caption{\label{fig-Coordinate System} Body-fixed reference frames. Figure from \cite{Thor}
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/coordinate_system.png}}
+  \caption{\label{fig-Coordinate System} Body-fixed and earth-fixed reference frames. Figure from \cite{Thor}
 }
 \end{figure}
 
