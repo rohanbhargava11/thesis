@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  14 NOV 2013 15:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  14 NOV 2013 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -384,12 +384,12 @@ Chapter 2.
 [5
 
 ] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-
-Overfull \hbox (47.14342pt too wide) detected at line 217
+[7]
+Overfull \hbox (47.14342pt too wide) detected at line 216
 \OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]p[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 qr \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]
@@ -405,7 +405,7 @@ t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (46.32191pt too wide) detected at line 221
+Overfull \hbox (46.32191pt too wide) detected at line 220
 \OML/cmm/m/it/12 M \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]q[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 rp \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]
@@ -420,8 +420,8 @@ t/12 z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
 t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]|
  []
 
-[7]
-Overfull \hbox (45.58235pt too wide) detected at line 225
+
+Overfull \hbox (45.58235pt too wide) detected at line 224
 \OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]r[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 pq \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[]
@@ -437,50 +437,51 @@ t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]|
  []
 
 
-</home/rohan/Documents/thesis_work/uav_diagram.png, id=59, 450.18187pt x 175.40
-532pt>
-Overfull \hbox (122.8687pt too wide) in paragraph at lines 231--233
- [][] |
- []
-
-[8]
+</home/rohan/Documents/thesis/coordinate_system.png, id=59, 767.86874pt x 539.7
+6656pt> [8]
 
 LaTeX Warning: Reference `adapting the motion model' on page 9 undefined on inp
-ut line 278.
+ut line 277.
 
-<../../thesis_work/markov_chain.png, id=63, 859.21pt x 409.53pt>
-Overfull \hbox (21.26093pt too wide) in paragraph at lines 362--363
+[9] <../../thesis_work/markov_chain.png, id=67, 859.21pt x 409.53pt>
+Overfull \hbox (21.26093pt too wide) in paragraph at lines 361--362
  [][] |
  []
 
-[9]
-</home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png, id=6
-8, 566.86781pt x 475.02469pt>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 3826) has occurred while \output is active []
 
  [10]
-Underfull \vbox (badness 5203) has occurred while \output is active []
+</home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png, id=7
+1, 566.86781pt x 475.02469pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
+</home/rohan/Documents/thesis/smoothing.png, id=75, 240.14719pt x 52.69687pt>
+Overfull \hbox (554.58446pt too wide) in paragraph at lines 422--423
+ [][] |
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-[13]
+[13] [14] [15]
 Chapter 3.
-<Diagram1.jpeg, id=83, 980.66376pt x 507.8975pt>
-Overfull \hbox (56.71066pt too wide) in paragraph at lines 461--462
+<Diagram1.jpeg, id=91, 980.66376pt x 507.8975pt>
+Overfull \hbox (56.71066pt too wide) in paragraph at lines 482--483
  [][] |
  []
 
-[14
+[16
 
-] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 521--549
+] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 542--570
 
  []
 
 
-Overfull \hbox (12.35893pt too wide) in paragraph at lines 521--549
+Overfull \hbox (12.35893pt too wide) in paragraph at lines 542--570
 \OMS/cmsy/m/n/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^[[]; ^^[[]; ^^[[]\OT1/cmr
 /m/n/12 ) = \OMS/cmsy/m/n/12 ^^@[] [][] [][]\OT1/cmr/m/n/12 [[] 2\OML/cmm/m/it/
 12 ^^Y \OT1/cmr/m/n/12 + [](\OML/cmm/m/it/12 v[]^^[[] \OT1/cmr/m/n/12 + \OML/cm
@@ -489,85 +490,85 @@ m/m/it/12 w[]^^[[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 ) +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--549
+Underfull \hbox (badness 10000) in paragraph at lines 542--570
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-[17]
+ [18]
+[19]
 Chapter 4.
 
-</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=99, 984.678
-76pt x 368.1253pt>
-Overfull \hbox (58.71815pt too wide) in paragraph at lines 591--592
+</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=107, 984.67
+876pt x 368.1253pt>
+Overfull \hbox (58.71815pt too wide) in paragraph at lines 612--613
  [][] |
  []
 
 
-</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=100, 993.7125
-pt x 383.18156pt> [18
+</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=108, 993.7125
+pt x 383.18156pt> [20
 
-] [19]
-</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=109, 1445
+] [21]
+</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=116, 1445
 .4pt x 813.0375pt>
-Overfull \hbox (144.52975pt too wide) in paragraph at lines 627--628
+Overfull \hbox (144.52975pt too wide) in paragraph at lines 648--649
  [][] |
  []
 
-[20] [21]
+[22] [23]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--681
+Underfull \hbox (badness 10000) in paragraph at lines 683--702
 
  []
 
 
-<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=116, 1734.48pt 
+<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=123, 1734.48pt 
 x 894.7026pt>
-<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=117, 1734.48pt 
-x 894.7026pt> [22
+<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=124, 1734.48pt 
+x 894.7026pt> [24
 
-] [23]
-<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=124, 1555.2504pt 
+] [25]
+<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=132, 1555.2504pt 
 x 888.921pt>
-<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=125, 1541.5191p
+<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=133, 1541.5191p
 t x 442.2924pt>
-<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=126, 586.8
+<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=134, 586.8
 324pt x 442.2924pt>
-Overfull \hbox (6.5032pt too wide) in paragraph at lines 744--745
+Overfull \hbox (6.5032pt too wide) in paragraph at lines 765--766
 [][] |
  []
 
 
-<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=127, 1734.
+<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=135, 1734.
 48pt x 894.7026pt>
 Underfull \vbox (badness 3302) has occurred while \output is active []
 
- [24]
-[25] [26]
+ [26]
+[27] [28]
 Chapter 6.
-(./thesis (1).bbl [27
+(./thesis (1).bbl [29
 
-] [28
+] [30
 
 
-]) [29] (./thesis (1).aux)
+]) [31] (./thesis (1).aux)
 
 LaTeX Warning: There were undefined references.
 
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 593 ({)
+### simple group (level 1) entered at line 614 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4149 strings out of 495059
- 60318 string characters out of 3182030
- 140443 words of memory out of 3000000
- 7231 multiletter control sequences out of 15000+200000
+ 4156 strings out of 495059
+ 60574 string characters out of 3182030
+ 141465 words of memory out of 3000000
+ 7236 multiletter control sequences out of 15000+200000
  10365 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  40i,18n,35p,1071b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -586,10 +587,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (36 pages, 245534 bytes).
+Output written on "thesis (1).pdf" (38 pages, 250348 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 209 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

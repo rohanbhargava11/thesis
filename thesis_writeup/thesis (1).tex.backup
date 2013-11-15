@@ -185,8 +185,7 @@ DOF &  & forces and moments & linear and angular vel. & positions and Euler angl
 
 
 
-The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation.
-
+The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation. Fossen \cite{Thor} in his book describes the motion of a marine vehicle in 6 DOF using two coordinate systems as shown in Figure ~\ref{fig-Coordinate System}. $X_0$, $Y_0$, $Z_0$ represent the moving coordinate frame and is called as body-fixed reference frame. The earth-fixed reference frame is denoted by $X$, $Y$, $Z$. The origin of the body-reference frame is denoted by $O$ and is chosen to coincide with the center of gravity denoted by $CG$.  
 
 To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: 1) Static Motion model 2) Dynamic Motion model
 
@@ -360,7 +359,7 @@ Particle Filters have no restrictions in model i.e. it can be applied to non-Gau
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{../../thesis_work/markov_chain.png}}
-  \caption{\label{fig-Markov Chain} Markov Chain.}
+  \caption{\label{fig-Markov Chain} A temporal Bayesian model with hidden states $x_{t}$, observations $z_{t}$ and controls $u_{t}$. Figure taken from \cite{thrun2005probabilistic}}
 \end{figure}
 
 %\begin{figure}[hbtp]
@@ -368,18 +367,21 @@ Particle Filters have no restrictions in model i.e. it can be applied to non-Gau
 %\centering
 %\includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
 %\end{figure}
-Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussians and can model non linear transformations of random variables. 
+Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. In Figure ~\ref{fig: partilce representation} the belief if represented by a set of particles. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussian and can model non linear transformations of random variables. In Figure ~\ref{fig: partilce representation} particle filters are shown to model non-linear transformations. 
+
+The objective of particle filters is to estimate the state of the system given the observation variables. They are designed for Hidden Markov Models(Fig ~\ref{fig-Markov Chain}, where the system consists of hidden and observed variables. In this model the state $x_{t}$ is the hidden random variable as it is not directly observed. The state at time $t$ is only dependent upon the state at time $t-1$ and external influences such as control $u_{t}$. The measurement $z_{t}$ depends on the state at time $t$. The knowledge about the influence of the control on the system can be used to calculate a new expected location and the measurement can be combined in a Bayesian way.
+
 
 \begin{figure}
 \centering
 {\includegraphics[height = 3.0 in]{home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png}}
 
-\caption{The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y.}
+\caption{\label{fig: partilce representation} The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y. Figure taken from \cite{thrun2005probabilistic}}
 \end{figure}
 
 %this figure is copied from Thrun.. How do I reference it???%
 
-The algorithm for particle filters \cite{thrun2005probabilistic} is described below-:
+The algorithm for particle filters is described below-:
 
 \begin{algorithm}[H]
 \label{alg:ParticleFilter}
@@ -404,7 +406,7 @@ draw $i$ with probability $\propto$ $w_{t}^{[i]}$
 add $x_{t}^{[i]}$ to $X_{t}$}
 return $X_{t}$
 }
-\caption{Particle Filter Algorithm}
+\caption{Particle Filter Algorithm. Algorithm taken from \cite{thrun2005probabilistic}}
 \end{algorithm}
 
 In algorithm ~\ref{alg:ParticleFilter} each particle $x_{t}^{m}$ is instantiation of the state at time $t$.  The first step is to generate a hypothetical state $x_{t}^{m}$ for time $t$ based on previous state $x_{t-1}^{m}$ and control $u_{t}$. The particles are samples from the state transition distribution $p(x_{t}|u_{t},x_{t-1})$. The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance factor is defined as the probability of measurement $z_{t}$ under the particle $x_{t}^{m}$. Thus importance factor are used to incorporate the measurements into the particle set. In practice, the number of particles used are a large number(e.g.-:1000).
@@ -414,9 +416,27 @@ The key part of the algorithm is the re-sampling step in particle filter algorit
 Particle Filters is an integral part of my algorithm to learn the right parameters of the motion model and the way it is used is explained in ~\ref{ch:adapting the motion model}.
 
 \section{Particle smoothing}
-The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. Doucet \cite{doucet2009tutorial} in his paper stated that filtering based on observations recieved up to the current time is used to estimate the distribution of the current state of an Hidden Markov Model (HMM) whereas smoothing is used to estimate distribution of state at a particular time given all the observations up to some later time. Russel and Norving \cite{russell2003artificial} showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering. We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton \cite{Yap2008} which was based on the technique presented by Docuet et al. \cite{doucet2000monte} and Godsill et al. \cite{Godsill2004}.
+The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. Doucet \cite{doucet2009tutorial} in his paper stated that filtering based on observations received up to the current time is used to estimate the distribution of the current state of an Hidden Markov Model (HMM) whereas smoothing is used to estimate distribution of state at a particular time given all the observations up to some later time. Russel and Norving \cite{russell2003artificial} showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering. We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton \cite{Yap2008} which was based on the technique presented by Docuet et al. \cite{doucet2000monte} and Godsill et al. \cite{Godsill2004}.
 
-Algorithm ~\ref{alg:Particle Smoothing} is used to generate samples from the entire joint smoothing density $p(x_{0:T}|u_{1:T},z_{1:T})$.
+Particle smoothing is carried out in order to generate samples from the entire joint smoothing density $p(x_{0:T}|u_{1:T},z_{1:T})$. 
+The equations described by Yapp \cite{Yap2008} are
+
+\begin{equation}
+p(x_{0:T}|u_{1:T},z_{1:T}=\prod_{t=0}^{T}p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})
+\end{equation}
+
+where,
+
+\begin{eqnarray}
+p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T}) & = & p(x_{t}|x_{t+1},u_{1:t+1},z_{1:t})\\
+ & = & \frac{p(x_{t+1}|x_{t},u_{1:t+1},z_{1:t})p(x_{t}|u_{1:t+1},z_{1:t})}{p(x_{t+1}|u_{1:t+1},z_{1:t})}\\
+ & = & \frac{p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})}{p(x_{t+1}|u_{1:t+1},z_{1:t})}\\
+\label{eq:smoothing_backward} & \alpha & p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})
+\end{eqnarray}
+
+This technique assumes that particle filtering has been carried out on the data set which results in a set of particles $X_{t}$ with their corresponding weights. The states can be generated recursively backwards in time given the future states using equation ~\ref{eq:smoothing_backward}. $p(x_{t}|u_{1:t},z_{1:t})$ can be obtained by performing particle filtering. $p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T}$ can be approximated by particles with modified importance weights $w_{t|t+1}^{[i]} \alpha w_{t}^{[i]}p(x_{t+1}|x_{t}^{[i]},u_{t+1})$ given filtered particles $x_{t}^{[i]}$.  
+
+Algorithm ~\ref{alg:Particle Smoothing} shows the step involved to sample from the entire joint smoothing density.
 
 \begin{algorithm}[H]
  \SetAlgoLined
@@ -428,19 +448,13 @@ $c _{1:T} = (c _{1}, c _{2}, ..., c _{T} )$: set of controls from time 1 to time
 \Begin{draw \textit{i} with probability $\propto$ $w ^{[i]} _{T}$
 $x ^{'} _{T} \leftarrow x^{[i]}_{T}$
 \\
-\For {$t \leftarrow T-1$ down to 0 do}{\For{ $i \leftarrow 1 to N_{s}$ do}{$w ^{[i]}_{t|t+1} \leftarrow w ^{[i]} _{t}p(x ^{'} _{t+1}|u _{t+1})$}draw \textit{i} with probability $\propto w ^{[i]} _{t|t+1}$\\ $x{'} \leftarrow x^{[i]}_{t}$}}
+\For {$t \leftarrow T-1$ down to 0 do}{\For{ $i \leftarrow 1 to N_{s}$ do}{$w ^{[i]}_{t|t+1} \leftarrow w ^{[i]} _{t}p(x ^{'} _{t+1}|x_{t}^{[i]},u _{t+1})$}draw \textit{i} with probability $\propto w ^{[i]} _{t|t+1}$\\ $x^{'} \leftarrow x^{[i]}_{t}$}}
 	\caption{Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}
 	
 \end{algorithm}
 
-The technique assumes that particle filtering has already been carried on the dataset which results in a set of particles with their corresponding weights at the present time step. In the first step of smoothing we choose a particle with the probability proportional to the weight of the particles. The next step is to move a time step back and calculate the new smoothed weights which are the product of forward probability and the weight of the particle as shown in equation ~\ref{eq:smoothing}. The smoothed weights are calculated till time($t$) = 0.
-
-\begin{equation}
-\label{eq:smoothing}
-p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T})=p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})
-\end{equation}
-
-To calculate the trajectory we draw particles according to the new smoothed weights. At every time step we pick a particle and add it our trajectory set till time=T. We can repeat this process any number of time to get several trajectories. These trajectories are treated as ground truth and help in estimating the parameters of motion model. 
+In the first step of the algorithm a particle is drawn with probability proportional to the filtered weight of the particles. The next step is to move a time step back and modify the weights of the particles by calculating the new smoothed weights. The new smoothed weights are the product of state transition probability $p(x ^{'} _{t+1}|x_{t}^{[i]},u _{t+1})$ and the weight of the particle $w_{t}^{[i]}$. The next step in the algorithm is to draw particles with probability proportional to new smoothed weights $w_{t|t+1}^{[i]}$.  The sequence of particles $x^{'}$ drawn from joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$ from time 0 to time T form a sampled trajectory $x^{'}_{0:T} \triangleq (x^{'}_0,x^{'}_1,.....,x^{'}_T)$.
+ 
  
  
 

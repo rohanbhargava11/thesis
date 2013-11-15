@@ -52,103 +52,114 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Motion Model}{5}}
 \citation{thrun2005probabilistic}
 \citation{Thor}
-\citation{Hallingstad2007}
+\citation{Thor}
 \newlabel{eq:velocity motion model_y}{{2.2}{6}}
 \newlabel{eq:velocity motion model_theta}{{2.3}{6}}
-\newlabel{eq:static AUV model}{{2.4}{6}}
+\citation{Hallingstad2007}
 \citation{Thor}
 \newlabel{marine notation}{{2.1}{7}}
 \@writefile{lot}{\contentsline {table}{\numberline {Table 2.1}{\ignorespaces Notation used for marine vehicles. Table from \cite  {Thor}}}{7}}
+\newlabel{eq:static AUV model}{{2.4}{7}}
 \citation{Thor}
 \citation{Thor}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.1}{\ignorespaces  Body-fixed reference frames. Figure from \cite  {Thor} }}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.1}{\ignorespaces  Body-fixed and earth-fixed reference frames. Figure from \cite  {Thor} }}{8}}
 \newlabel{fig-Coordinate System}{{2.1}{8}}
 \newlabel{eq:motion model AUV}{{2.11}{8}}
-\newlabel{eq:total forces}{{2.12}{8}}
 \citation{Lammas2004}
 \citation{thrun2005probabilistic}
 \citation{rosenbluth1955monte}
 \citation{gordon1993novel}
-\citation{thrun2005probabilistic}
+\newlabel{eq:total forces}{{2.12}{9}}
 \newlabel{eq:vehicle hydrodynamics}{{2.13}{9}}
 \newlabel{navigation equation for AUV}{{2.14}{9}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Particle Filter}{9}}
 \citation{thrun2005probabilistic}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.2}{\ignorespaces  Markov Chain.}}{10}}
+\citation{thrun2005probabilistic}
+\citation{thrun2005probabilistic}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.2}{\ignorespaces  A temporal Bayesian model with hidden states $x_{t}$, observations $z_{t}$ and controls $u_{t}$. Figure taken from \cite  {thrun2005probabilistic}}}{10}}
 \newlabel{fig-Markov Chain}{{2.2}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.3}{\ignorespaces The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y.}}{11}}
-\newlabel{alg:ParticleFilter}{{1}{11}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Particle Filter Algorithm}}{11}}
+\citation{thrun2005probabilistic}
+\citation{thrun2005probabilistic}
+\citation{thrun2005probabilistic}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.3}{\ignorespaces  The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y. Figure taken from \cite  {thrun2005probabilistic}}}{11}}
+\newlabel{fig: partilce representation}{{2.3}{11}}
 \citation{doucet2009tutorial}
 \citation{russell2003artificial}
 \citation{Yap2008}
 \citation{doucet2000monte}
 \citation{Godsill2004}
+\citation{russell2003artificial}
+\citation{russell2003artificial}
+\newlabel{alg:ParticleFilter}{{1}{12}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Particle Filter Algorithm. Algorithm taken from \cite  {thrun2005probabilistic}}}{12}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Particle smoothing}{12}}
-\newlabel{alg:Particle Smoothing}{{2}{13}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}}{13}}
-\newlabel{eq:smoothing}{{2.15}{13}}
+\citation{Yap2008}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 2.4}{\ignorespaces  Smoothing computes $P(X_{k}|e_{1:t})$, the posterior distribution of the state at some past time $k$ given a complete sequence of observations from 1 to $t$. Figure taken from \cite  {russell2003artificial}}}{13}}
+\newlabel{fig: partilce smoothing}{{2.4}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Particle smoothing}{13}}
+\newlabel{eq:smoothing_backward}{{2.19}{14}}
+\newlabel{alg:Particle Smoothing}{{2}{14}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Sample the entire joint smoothing density $p(x_{0:T}|c_{1:T},s_{1:T})$}}{14}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{14}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{16}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{learning the motion model}{{3}{14}}
+\newlabel{learning the motion model}{{3}{16}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Work done so far on learning motion model}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}General Architecture}{14}}
-\newlabel{fig:general archi}{{3.1.2}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.1}{\ignorespaces Block Diagram of the framework}}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Work done so far on learning motion model}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}General Architecture}{16}}
+\newlabel{fig:general archi}{{3.1.2}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 3.1}{\ignorespaces Block Diagram of the framework}}{16}}
 \citation{dempster1977maximum}
 \citation{bishop2006pattern}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Particle Filtering and Smoothing}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Particle Filtering}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Particle Smoothing}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Particle Filtering and Smoothing}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Particle Filtering}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Particle Smoothing}{17}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Adapting Motion Model}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Expectation Maximization}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Parameter Estimation}{15}}
-\newlabel{ch:adapting the motion model}{{3.3.2}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Adapting Motion Model}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Expectation Maximization}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Parameter Estimation}{17}}
+\newlabel{ch:adapting the motion model}{{3.3.2}{17}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 4}Landmarks extraction using Side Sonar Images}{18}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 4}Landmarks extraction using Side Sonar Images}{20}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{18}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Side Scan Sonar}{18}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Speeded Up Robust Features}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Side Scan Sonar}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Speeded Up Robust Features}{20}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Dynamic Landmarks}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 4.1}{\ignorespaces Side Sonar Image}}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 4.2}{\ignorespaces SURF Keypoints}}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Dynamic Landmarks}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 4.1}{\ignorespaces Side Sonar Image}}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 4.2}{\ignorespaces SURF Keypoints}}{21}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Motion Estimation using side sonar images}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 4.3}{\ignorespaces SURF Keypoints}}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Motion Estimation using side sonar images}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 4.3}{\ignorespaces SURF Keypoints}}{22}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 5}Results}{22}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 5}Results}{24}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Adapting Motion Model}{22}}
-\newlabel{results}{{5.1}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.1}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 2.0}}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.2}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 5.0}}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.3}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 2.0}}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.4}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 5.0}}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.5}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.2 Sensor Noise= 5.0}}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.6}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.5 Sensor Noise= 5.0}}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Adapting Motion Model}{24}}
+\newlabel{results}{{5.1}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.1}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 2.0}}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.2}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.2 Sensor Noise= 5.0}}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.3}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 2.0}}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.4}{\ignorespaces $\sigma _{D_{d}}$=0.05 $\sigma _{D_{d}}^{*}$ = 0.5 Sensor Noise= 5.0}}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.5}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.2 Sensor Noise= 5.0}}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {Figure 5.6}{\ignorespaces $\sigma _{T_{r}}$=0.05 $\sigma _{T_{r}}^{*}$ = 0.5 Sensor Noise= 5.0}}{27}}
 \@writefile{toc}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Motion estimation using side sonar images}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Motion estimation using side sonar images}{28}}
 \@writefile{loa}{\addvspace {10\p@ }}
 \bibstyle{plain}
 \bibdata{mendeley.bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 6}Conclusion}{27}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 6}Conclusion}{29}}
 \@writefile{toc}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -165,7 +176,7 @@
 \bibcite{kalman1960new}{11}
 \bibcite{Lammas2004}{12}
 \bibcite{Lav06}{13}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{28}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{30}}
 \@writefile{loa}{\addvspace {10\p@ }}
 \bibcite{leonard1998autonomous}{14}
 \bibcite{ristic2004beyond}{15}
