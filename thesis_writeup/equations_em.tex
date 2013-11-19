@@ -1,0 +1,38 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amssymb}
+\usepackage{babel}
+\begin{document}
+We continue by writing
+
+$\mathcal{Q}(\theta^{new})\geq\mathcal{Q}(\theta^{old})+\triangle(\theta^{new}|\theta^{old})$
+
+and for convenience define,
+
+$q(\theta^{new}|\theta^{old})\triangleq\mathcal{Q}(\theta^{old})+\triangle(\theta^{new}|\theta^{old})$
+
+The function $q(\theta^{new}|\theta^{old})$ is bounded by the likelihood
+functions $\mathcal{Q}(\theta^{new})$. We need to choose values of
+$\theta^{new}$so that $\mathcal{Q}(\theta^{new})$ is maximized.
+The new updated value is denoted by $\theta_{n+1}.$
+\begin{eqnarray*}
+\theta_{n+1} & = & argmax_{\theta}\{q(\theta^{new}|\theta^{old})\}\\
+ & = & argmax_{\theta}\{\mathcal{Q}(\theta^{old})+\sum_{Z}P(Z|X,\theta^{old})\ln(\frac{P(X|Z,\theta^{new})P(Z|\theta^{new})}{P(Z|X,\theta^{old})P(X|\theta^{old})})\\
+ & = & argmax_{\theta}\{\sum_{Z}P(Z|X,\theta^{old})\ln(P(X|Z,\theta^{new})P(Z|\theta^{new})\}\\
+ & = & argmax_{\theta}\{\sum_{Z}P(Z|X,\theta^{old})\ln P(X,Z|\theta^{new})\}\\
+\end{eqnarray*}
+
+
+\begin{eqnarray*}
+Q(\theta^{new})-Q(\theta^{old}) & = & \ln(\sum_{Z}P(X|Z,\theta^{new})P(Z|\theta))-\ln P(X|\theta^{old})\\
+ & = & \ln(\sum_{Z}P(X|Z,\theta^{new})P(Z|\theta).\frac{P(Z|X,\theta^{old})}{P(Z|X,\theta^{old})})-\ln P(X|\theta^{old})\\
+ & = & \ln(\sum_{Z}P(z|X,\theta^{old})\frac{P(X|Z,\theta^{new})P(Z|\theta^{new}}{P(Z|X,\theta^{old})})-\ln P(X|\theta^{new})\\
+ & \geq & \sum_{Z}P(Z|X,\theta^{old})\ln(\frac{P(X|Z,\theta^{new})P(Z|\theta^{new})}{P(Z|X,\theta^{old})})-\ln P(X|\theta^{old})\\
+ & = & \sum_{Z}P(Z|X,\theta^{old})\ln(\frac{P(X|Z,\theta^{new})P(Z|\theta^{new})}{P(Z|X,\theta^{old})P(X|\theta^{old})})\\
+ & \triangleq & \triangle(\theta^{new}|\theta^{old})
+\end{eqnarray*}
+
+\end{document}
