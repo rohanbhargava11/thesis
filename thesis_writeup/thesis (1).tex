@@ -790,19 +790,49 @@ $u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity es
 \chapter{Results and Experimental Setup}
 In this chapter we describe the experimental setup of the simulator to test our algorithm. To demonstrate the effectiveness of our approach the results from the simulated experiment are also shown.
 \section{Experimental Setup}
-To test our algorithm for learning the motion model we create a simulated world(Figure 4.3). The world size of our simulation is 400X400 with four landmarks shown in blue dots. The red * shows the location of the robot and blue triangle is the location estimate of the  robot by particle filters. The robot is moving with a constant forward and rotational velocity throughout the experiment. In simulation the robot can measure its distance from all four landmarks at all time. The sensor noise in the simulation can be varied in between the experiment. The particle size is 500 and is constant throughout the experiment.
+To test our algorithm for learning the motion model we create a simulated world(Figure ~\ref{fig-: simulation world}). The world size of our simulation is 400X400 with four landmarks shown in blue dots. The red * shows the location of the robot and blue triangle is the location estimate of the  robot by particle filters. The robot is moving with a constant forward and rotational velocity throughout the experiment. In simulation the robot can measure its distance from all four landmarks at all time. The sensor noise in the simulation can be varied in between the experiment. The particle size is 500 and is constant throughout the experiment. Table ~\ref{tab- constant parameters} shows the summary of variables for the experiment to test the effectiveness of our algorithm to learn a motion model.
+\begin{table}[tbh]
+\centering
+\begin{tabular}{|r|r|}
+    \hline
+    & Experiment \\
+    \hline \hline
+    World Size & 400 units X 400 units\\
+    \hline
+    Total timesteps & 400  \\
+    \hline
+    No. of sensor readings & 400 \\
+    \hline
+    Translational Velocity & 3 units/timestep \\
+    \hline
+    Rotational Velocity & 01. units/timestep \\
+    \hline
+\end{tabular}
+ \caption{\label{tab-constant paramters}Summary of adapting motion model experiment.}
+\end{table}
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{0.png}}
+  \caption{\label{fig-: simulation world}The simulation environment consisting of the robot(triangle) and the particle estimate of teh location(star). The blue dots represent the landmarks.}
+\end{figure}
 
 
-At the start of the experiment  the initial location of the robot and particle filters are randomly initialized (Figure 4.4a). The robot is moved by a constant velocity and Figure 4.4(b) shows the updated location of the robot as well as an estimate by particle filters of the robot's location.
+At the start of the experiment  the initial location of the robot and particle filters are randomly initialized (Figure ~\ref{fig-: movement simulation world} (a)). The robot is moved by a constant velocity and Figure ~\ref{fig-: movement simulation world (b)(c)(d)} shows the updated location of the robot as well as an estimate by particle filters of the robot's location.
 
 
-To demonstrate the effectiveness of the algorithm we   
 
-1. Picture with landmarks
+\begin{figure}
+  \centering
+  \subfigure[]{\includegraphics[width = 2.75 in]{1.png}}\qquad
+  \subfigure[]{\includegraphics[width = 2.75 in]{2.png}}\qquad
+  \subfigure[]{\includegraphics[width = 2.75 in]{3.png}}\qquad
+  \subfigure[]{\includegraphics[width = 2.75 in]{4.png}}
+  \caption{\label{fig-: movement simulation world}Particle Filters estimating the position of the robot
+   The robot is moved at a constant velocity of 5 units/timestep in each case. The particle filters estimate the location of the robot (star) by integrating the motion and sensor models.}
+\end{figure}
 
-2. Picture with robot and particles
 
-3. Picture with moving and robot and particles
 
 \section{Results}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  19 NOV 2013 14:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  22 NOV 2013 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,61 +633,83 @@ Overfull \hbox (65.88025pt too wide) in alignment at lines 757--760
 [26]
 Chapter 4.
 
-</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=132, 984.67
-876pt x 368.1253pt>
-Overfull \hbox (58.71815pt too wide) in paragraph at lines 801--802
- [][] |
+LaTeX Warning: Reference `tab- constant parameters' on page 27 undefined on inp
+ut line 793.
+
+
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 793--813
+\OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
+ate a sim-u-lated world(Figure|
  []
 
+<0.png, id=132, 586.8324pt x 442.2924pt>
 
-</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=133, 993.7125
-pt x 383.18156pt> [27
+LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
+ undefined on input line 821.
 
-] [28]
-</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=141, 1445
-.4pt x 813.0375pt>
-Overfull \hbox (144.52975pt too wide) in paragraph at lines 837--838
- [][] |
- []
+<1.png, id=134, 586.8324pt x 442.2924pt>
+<2.png, id=135, 586.8324pt x 442.2924pt>
+<3.png, id=136, 586.8324pt x 442.2924pt>
+<4.png, id=137, 586.8324pt x 442.2924pt> [27
 
-[29] [30]
+] [28] [29]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--891
+</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=147, 984.67
+876pt x 368.1253pt>
+Overfull \hbox (58.71815pt too wide) in paragraph at lines 869--870
+ [][] |
+ []
+
+
+</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=148, 993.7125
+pt x 383.18156pt> [30
+
+] [31]
+</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=156, 1445
+.4pt x 813.0375pt>
+Overfull \hbox (144.52975pt too wide) in paragraph at lines 905--906
+ [][] |
+ []
+
+[32] [33]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 940--959
 
  []
 
 
-<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=149, 1734.48pt 
+<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=163, 1734.48pt 
 x 894.7026pt>
-<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=150, 1734.48pt 
-x 894.7026pt> [31
+<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=164, 1734.48pt 
+x 894.7026pt> [34
 
-] [32]
-<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=157, 1555.2504pt 
+] [35]
+<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=171, 1555.2504pt 
 x 888.921pt>
-<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=158, 1541.5191p
+<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=172, 1541.5191p
 t x 442.2924pt>
-<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=159, 586.8
+<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=173, 586.8
 324pt x 442.2924pt>
-Overfull \hbox (6.5032pt too wide) in paragraph at lines 954--955
+Overfull \hbox (6.5032pt too wide) in paragraph at lines 1022--1023
 [][] |
  []
 
 
-<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=160, 1734.
+<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=174, 1734.
 48pt x 894.7026pt>
 Underfull \vbox (badness 3302) has occurred while \output is active []
 
- [33]
-[34] [35]
-Chapter 6.
-(./thesis (1).bbl [36
+ [36]
+[37] [38]
+Chapter 7.
+(./thesis (1).bbl [39
 
-] [37
+] [40
 
 
-]) [38] (./thesis (1).aux)
+]) [41] (./thesis (1).aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -697,13 +719,13 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 803 ({)
+### simple group (level 1) entered at line 871 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4858 strings out of 495059
- 69525 string characters out of 3182030
- 152738 words of memory out of 3000000
- 7916 multiletter control sequences out of 15000+200000
+ 4883 strings out of 495059
+ 69850 string characters out of 3182030
+ 152771 words of memory out of 3000000
+ 7936 multiletter control sequences out of 15000+200000
  10365 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  40i,18n,35p,1071b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -722,10 +744,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (45 pages, 270522 bytes).
+Output written on "thesis (1).pdf" (48 pages, 275466 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
