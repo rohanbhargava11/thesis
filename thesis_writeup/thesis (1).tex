@@ -788,8 +788,16 @@ As you can see in the figure the input to the motion model is a control command 
 $u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity estimate $u_{r}$ is fused with the reading from IMU to get a better estimate of the position of the AUV. As shown before we try to learn the motion model to find the best estimate for the velocity so that it can aid the INS in this particular application. 
 \end{comment}
 \chapter{Results and Experimental Setup}
-
+In this chapter we describe the experimental setup of the simulator to test our algorithm. To demonstrate the effectiveness of our approach the results from the simulated experiment are also shown.
 \section{Experimental Setup}
+To test our algorithm for learning the motion model we create a simulated world(Figure 4.3). The world size of our simulation is 400X400 with four landmarks shown in blue dots. The red * shows the location of the robot and blue triangle is the location estimate of the  robot by particle filters. The robot is moving with a constant forward and rotational velocity throughout the experiment. In simulation the robot can measure its distance from all four landmarks at all time. The sensor noise in the simulation can be varied in between the experiment. The particle size is 500 and is constant throughout the experiment.
+
+
+At the start of the experiment  the initial location of the robot and particle filters are randomly initialized (Figure 4.4a). The robot is moved by a constant velocity and Figure 4.4(b) shows the updated location of the robot as well as an estimate by particle filters of the robot's location.
+
+
+To demonstrate the effectiveness of the algorithm we   
+
 1. Picture with landmarks
 
 2. Picture with robot and particles
@@ -797,7 +805,26 @@ $u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity es
 3. Picture with moving and robot and particles
 
 \section{Results}
+
+Table shows the various experiments that are performed to show the effectiveness of the algorithm proposed.  
 show all the plots 
+
+1)Drifts
+1.1) with lower sensor noise it can recover fast 
+
+1.2) with higher sensor noise it can recover later 
+2) Motion Model noise
+
+3) Explain why have you plotted the weights.
+1) as our sigma of sensor noise is higher we can see that it recovers and keeps like that
+
+2)  when we have drift then we can see that it recovers but its failing to keep it in bound . It takes time to come back. 
+4) Explain all plots -: In the start it varies a lot 
+
+5) more trajectories
+Plots with varying trajectories. See if you can go for a bounded optimization. 
+
+ 
 \chapter{Landmarks extraction using Side Sonar Images}
 \section{Introduction}
 \subsection{Side Scan Sonar} 
