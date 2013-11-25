@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.10.22)  25 NOV 2013 13:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.10.22)  25 NOV 2013 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,7 +693,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.896 ...200_0.05_0.5_s_1_traj_3_motion_model.eps}
+l.897 ...200_0.05_0.5_s_1_traj_3_motion_model.eps}
                                                   }
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -706,28 +706,177 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.902 ...200_0.05_0.5_s_1_traj_3_sensor_model.eps}
+l.903 ...200_0.05_0.5_s_1_traj_3_sensor_model.eps}
                                                   }
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (166.36469pt too wide) in paragraph at lines 913--934
+LaTeX Warning: Reference `fig-varying_sensor_noise_1.0' on page 31 undefined on
+ input line 907.
+
+
+LaTeX Warning: Reference `varying_sensor_noise_motion_model_1.0' on page 31 und
+efined on input line 907.
+
+
+LaTeX Warning: Reference `varying_sensor_noise_sensor_model_1.0' on page 31 und
+efined on input line 907.
+
+
+LaTeX Warning: Reference `tab-: varying_sensor_noise' on page 31 undefined on i
+nput line 909.
+
+
+! LaTeX Error: Unknown graphics extension: .05_1.0_s_1_traj_3.eps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.916 ..._model/plots/200_0.05_1.0_s_1_traj_3.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3_motion_mo
+del.eps' not found on input line 923.
+
+
+! LaTeX Error: Unknown graphics extension: .05_1.0_s_1_traj_3_motion_model.eps.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.923 ...200_0.05_1.0_s_1_traj_3_motion_model.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3_sensor_mo
+del.eps' not found on input line 929.
+
+
+! LaTeX Error: Unknown graphics extension: .05_1.0_s_1_traj_3_sensor_model.eps.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.929 ...200_0.05_1.0_s_1_traj_3_sensor_model.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Unknown graphics extension: .05_0.05_s_1.0_10_traj_3_drift_2.eps
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.943 ...00_0.05_0.05_s_1.0_10_traj_3_drift_2.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Unknown graphics extension: .05_0.05_s_1.0_10_traj_3_drift_2_mot
+ion_model.eps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.950 ...s_1.0_10_traj_3_drift_2_motion_model.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Unknown graphics extension: .05_0.05_s_1.0_10_traj_3_drift_2_sen
+sor_model.eps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.956 ...s_1.0_10_traj_3_drift_2_sensor_model.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `tab-:drift' on page 31 undefined on input line 960.
+
+! Extra }, or forgotten $.
+l.960 ...del as the variances $\sigma_{V_{v}}^{2}}
+                                                  $ $\sigma_{V_{v}}^{1}}$  s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.960 ...\sigma_{V_{v}}^{2}}$ $\sigma_{V_{v}}^{1}}
+                                                  $  should account for drif...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Reference `tab-:drift' on page 31 undefined on input line 960.
+
+
+Overfull \hbox (226.65054pt too wide) in paragraph at lines 970--991
  [][] |
  []
 
 
-Overfull \hbox (166.36469pt too wide) in paragraph at lines 944--965
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.999 \begin{table}[tbh]
+                        
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (166.36469pt too wide) in paragraph at lines 1005--1026
+ [][] |
+ []
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1030 \begin{table}[tbh]
+                         
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (166.36469pt too wide) in paragraph at lines 1036--1057
 [][] |
  []
 
 
-Overfull \hbox (267.94304pt too wide) in paragraph at lines 974--995
- [][] |
- []
-
-
-Overfull \hbox (250.482pt too wide) in paragraph at lines 1005--1026
+Overfull \hbox (250.482pt too wide) in paragraph at lines 1064--1085
  [][] |
  []
 
@@ -735,23 +884,23 @@ Overfull \hbox (250.482pt too wide) in paragraph at lines 1005--1026
 Chapter 5.
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18
-.jpg' not found on input line 1041.
+.jpg' not found on input line 1100.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/landmarks.p
-ng' not found on input line 1047.
+ng' not found on input line 1106.
 
 [33
 
 ]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/surf_workin
-g.jpeg' not found on input line 1077.
+g.jpeg' not found on input line 1136.
 
 [34] [35]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1112--1131
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1190
 
  []
 
@@ -763,7 +912,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1144 ..._0\lyxdot 2_1_2\lyxdot 0_motion_model_1}
+l.1203 ..._0\lyxdot 2_1_2\lyxdot 0_motion_model_1}
                                                   
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -778,7 +927,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1152 ..._0\lyxdot 2_1_5\lyxdot 0_motion_model_1}
+l.1211 ..._0\lyxdot 2_1_5\lyxdot 0_motion_model_1}
                                                   
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -796,7 +945,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1169 ...05_0\lyxdot 5_1_2\lyxdot 0_motion_model}
+l.1228 ...05_0\lyxdot 5_1_2\lyxdot 0_motion_model}
                                                   
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -811,7 +960,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1178 ..._0\lyxdot 5_1_5\lyxdot 0_motion_model_1}
+l.1237 ..._0\lyxdot 5_1_5\lyxdot 0_motion_model_1}
                                                   
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -826,7 +975,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1194 ...xdot 2_rotation_5\lyxdot 0_motion_model}
+l.1253 ...xdot 2_rotation_5\lyxdot 0_motion_model}
                                                   
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -841,7 +990,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1203 ...xdot 5_rotation_5\lyxdot 0_motion_model}
+l.1262 ...xdot 5_rotation_5\lyxdot 0_motion_model}
                                                   
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -865,13 +1014,13 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 1043 ({)
+### simple group (level 1) entered at line 1102 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5122 strings out of 495031
- 71870 string characters out of 6181530
- 172246 words of memory out of 5000000
- 8183 multiletter control sequences out of 15000+600000
+ 5144 strings out of 495031
+ 72687 string characters out of 6181530
+ 170246 words of memory out of 5000000
+ 8199 multiletter control sequences out of 15000+600000
  10365 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,18n,35p,1551b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -890,7 +1039,7 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (48 pages, 282975 bytes).
+Output written on "thesis (1).pdf" (48 pages, 282532 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  156 compressed objects within 2 object streams

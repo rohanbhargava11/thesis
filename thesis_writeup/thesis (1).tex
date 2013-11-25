@@ -878,7 +878,7 @@ $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 3\tabularnewline
 and trajectories}
 \end{table}
 
-As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigma_{V_{v}}^2$ are $1.185$ and $2.640$ which are greater than the actual values and could lead to better localization. In order to demonstrate that I show the localization error i.e. euclidean error between the robot's actual position and location estimate of partilce filters. In Figure ~\ref{fig-varying_sensor_noise} the red and blue line shows the error with a static motion model and adaptive motion model respectively.
+As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigma_{V_{v}}^2$ are $1.185$ and $2.640$ which are greater than the actual values and could lead to better localization. In order to demonstrate that I plot the localization error i.e. euclidean error between the robot's actual position and location estimate of partilce filters with time. In Figure ~\ref{fig-varying_sensor_noise} the red and blue line shows the error with a static motion model and adaptive motion model respectively.
 
  
  
@@ -889,7 +889,8 @@ As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigm
 \end{figure}
 At the start of the experiment the parameter values for the robot's motion model and static motion model for particle filters are intialized with the same value. The adaptive motion model right from time step 0 starts estimating the parameters. In Figure ~\ref{fig-varying_sensor_noise} in the first $20$ there is no change and we can see that the adaptive motion model performs better than the static. In theory the static motion model has the best estimate of robot' motion as they are intialized with the same parameter value so the error should be less for static motion model. We don't see this because the location of particles are randomly initilazied therefore it might be at different location to robot's start position. It needs sensor model to decrease the error and as the sensor noise is high it takes time to build the weight of particles. In Figure ~\ref{varying_sensor_noise_sensor_model} we plot the average weight of particles at each time step and when the weights of particle are higher we can see the static motion model performing better. This is due to the resampling step of particle fitlers where they choose the most proabable particles based on motion and sensor models. As soon as the algorithm starts picking the most probabasle particles the error goes down and we can see that the average weight of particles are also higher. In the case of adaptive motion model the distribution of motion model gets wider right from the start and which leads to decrease in error.
 
-After time step 60 we change the motion model noise and we can see that adative motion model performing way better as comparated to the static motion model. The average weight of partilces in Figure ~\ref{fig-varying_sensor_noise_sensor_model} also goes down. In Figure ~\ref{fig-varying_sensor_noise_motion_model} we don't see a jump in the red line or green line at time step 60 and this due to the fact that the estimate of parameter before the change was greater than the change after time step 60.   
+After time step 60 we change the motion model noise and we can see that adative motion model performing way better as comparated to the static motion model. The average weight of partilces in Figure ~\ref{fig-varying_sensor_noise_sensor_model} also goes down. In Figure ~\ref{fig-varying_sensor_noise_motion_model} we don't see a jump in the red line or green line at time step 60 and this due to the fact that the estimate of parameter before the change was greater than the change after time step 60. 
+
    
 \begin{figure}
   \centering
@@ -903,6 +904,94 @@ After time step 60 we change the motion model noise and we can see that adative 
   \caption{\label{fig-varying_sensor_noise_sensor_model} }
 \end{figure}
 
+In the next experiment $\sigma_{V_{v}}^2$ is changed from $0.05$ to $1.0$ and the errors, estimation of parameters and average weight are shown in Figure ~\ref{fig-varying_sensor_noise_1.0}, Figure ~\ref{varying_sensor_noise_motion_model_1.0} and Figure \ref{varying_sensor_noise_sensor_model_1.0} respectively. 
+
+In both the experiment's the robot's $\sigma_{V_{1}}^2$ is $0.05$ and is not changed throughout the experiment. Table ~\ref{tab-: varying_sensor_noise} shows that in adaptive motion model the estimated value of $\sigma_{V_{1}}^2$ changes from the initilaztion experiment. This error in estimation is not of much concern as the main goal of the algorithm proposed was to learn the motion model to decrease the localization error. 
+
+To simulate changes in the enviornment for the first two experiments we change $\sigma_{V_{v}}^2$. In the next two expriments we would induce drift in the system and compare both motion models in terms of localization error.
+ 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_1.0_s_1_traj_3.eps}}
+  \caption{\label{fig-varying_sensor_noise_1.0} }
+\end{figure}
+   
+   
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_1.0_s_1_traj_3_motion_model.eps}}
+  \caption{\label{fig-varying_sensor_noise_motion_model_1.0} }
+\end{figure}
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_1.0_s_1_traj_3_sensor_model.eps}}
+  \caption{\label{fig-varying_sensor_noise_sensor_model_1.0} }
+\end{figure}
+
+
+In order to simulate drift we describe the translational and rotational movement as
+$V_{t}\sim\mathcal{{N}}(v_{t}-a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
+
+$W_{t}\sim\mathcal{{N}}(w_{t}-b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
+
+where a and b are constants representing drifts in the system. 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_drift_2.eps}}
+  \caption{\label{fig-drift_2.0} }
+\end{figure}
+   
+   
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_drift_2_motion_model.eps}}
+  \caption{\label{fig-drift_motion_model_1.0} }
+\end{figure}
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_drift_2_sensor_model.eps}}
+  \caption{\label{fig-drift_sensor_model_1.0} }
+\end{figure}
+
+Table ~\ref{tab-:drift} gives us a summary of the experiments performed to demonstrate the effectivness of the algorithm to account for drift. To account for the drift we don't include an extra parameter in motion model as the variances $\sigma_{V_{v}}^{2}}$ $\sigma_{V_{v}}^{1}}$  should account for drift and we see that in Table ~\ref{tab-:drift}. The rest of the parameters remain unchanged. 
+
+
+
+\begin{table}[tbh]
+\centering
+
+
+
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & Estimated Parameter Values & Drift & Trajectories & Sensor noise\tabularnewline
+\hline 
+ &  & 1 & 1 & 2 & 1 & 2 &  & \tabularnewline
+\hline 
+$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 0.500 & 2.0 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 &  2.0 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.100 & 2.0 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
+\hline 
+\end{tabular}
+\caption{\label{tab-:drift}Initial and estimated values of parameters with drift}
+\end{table}
+
+The key part to the algorithm is to get an estimate of ground truth and that is obtained by performing partilce smoothing. The partilce smoothing can be repeated several times to get a set of trajectories. In the next set of experiments we show how the estimation of parameters varies with trajectories. The sensor noise is $2.0$ throughout the experiment. Table ~\ref{tab-: trajectory} shows that higher the number of trajectories better the estimation of parameters. This is due to the fact that if we sample more we have more chances to form the most probable trajectory of robot's movement. 
 
 \begin{table}[tbh]
 
@@ -931,102 +1020,13 @@ $\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabu
 $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
 \hline 
 \end{tabular}
-\caption{Initial and estimated values of parameters with varying trajectories}
+\caption{\label{tab-: trajectory}Initial and estimated values of parameters with varying trajectories}
 \end{table}
 
-
-\begin{table}[tbh]
-
+The advantage in having more trajectories is having a better estimate of the parameters but it comes at a cost. The computational time is directly proportional to the number of trajectories. The interesting fact in Figure 4, Figure 5, Figure 6 is that there is not much of a difference in localization error for various trajectories therefore we don't gain much in having a lot of trajectories. 
 
 
 
-
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-\hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{3}{c|}{Estimated Parameter Values} & Sensor Noise & \multicolumn{3}{c}{Trajectories}\tabularnewline
-\hline 
- &  & 1 & 1 & 2 & 3 &  &  &  & \tabularnewline
-\hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 1.0 & 3.960 &  & 0.765 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.484 &  & 0.129 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-\end{tabular}
-\end{table}
-
-
-\begin{table}
-\centering
-
-\caption{Initial and estimated values of parameters with drift}
-
-
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{2}{c|}{Estimated Parameter Values} & \multicolumn{2}{c|}{Drift } & Trajectories & Sensor noise(after 60)\tabularnewline
-\hline 
- &  & 1 & 1 & 2 & 1 & 2 &  & \tabularnewline
-\hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 38.071 & 20.025 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 4.274 & 2.269 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-\end{tabular}
-\caption{Initial and estimated values of parameters with varying trajectories}
-\end{table}
-
-
-\begin{table}[tbh]
-\centering
-
-
-
-
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-\hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{3}{c|}{Estimated Parameter Values} & \multicolumn{1}{c|}{Drift } & \multicolumn{3}{c|}{Trajectories} & Sensor noise(after 60)\tabularnewline
-\hline 
- &  &  & 1 & 2 & 3 &  & 1 & 2 & 3 & \tabularnewline
-\hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 20.025 & 0.713 & 0.569 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 2.269 & 0.123 & 0.107 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-\end{tabular}
-\caption{Inital and estimated values of parameters with drift and varying trajectories}
-\end{table}
-
- 
 \chapter{Landmarks extraction using Side Sonar Images}
 \section{Introduction}
 \subsection{Side Scan Sonar} 
