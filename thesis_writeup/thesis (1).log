@@ -1,12 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  22 NOV 2013 11:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.10.22)  25 NOV 2013 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **"thesis (1).tex"
 (./thesis (1).tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
-aded.
+Babel <3.9f> and hyphenation patterns for 2 languages loaded.
 (./dalcsthesis.cls
 Document Class: dalcsthesis 2005/02/24 v2.4 Dalhousie University thesis class
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -51,7 +50,7 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read1
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
@@ -71,20 +70,20 @@ Package: amsbsy 1999/11/29 v1.2d
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count94
 \leftroot@=\count95
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count96
 \DOTSCASE@=\count97
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
 \big@size=\dimen107
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count98
 \c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
@@ -105,30 +104,30 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip46
 \multlinetaggap=\skip47
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2009/06/22 v3.00
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks22
 \XKV@tempa@toks=\toks23
 \XKV@depth=\count105
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -220,7 +219,7 @@ Package: subfigure 1995/03/06 v2.0
 \c@subtable=\count112
 \c@lotdepth=\count113
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count114
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
@@ -230,24 +229,14 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
-Package: relsize 2011/09/21 ver 4.0
-
-Examine \normalsize starts \@setfontsize size may be \@xiipt. 
-Examine \small starts \@setfontsize size may be \@xipt. 
-Examine \footnotesize starts \@setfontsize size may be \@xpt. 
-Examine \large starts \@setfontsize size may be \@xivpt. 
-Examine \Large starts \@setfontsize size may be \@xviipt. 
-Examine \LARGE starts \@setfontsize size may be \@xxpt. 
-Examine \scriptsize starts \@setfontsize size may be \@viiipt. 
-Examine \tiny starts \@setfontsize size may be \@vipt. 
-Examine \huge starts \@setfontsize size may be \@xxvpt. 
-Examine \Huge starts \@setfontsize size may be \@xxvpt. )
+Package: relsize 2013/03/29 ver 4.1
+)
 ********************************************************
-Package `algorithm2e' Release 4.01 -- december 14 2009 --
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
 - algorithm2e-discussion@lirmm.fr mailing list for discussion about package
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (fiorio@lirmm.fr)
+- Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
 \skiptotal=\skip50
 \skiplinenumber=\skip51
@@ -259,7 +248,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \skipalgocfslide=\skip57
 \algowidth=\dimen133
 \inoutsize=\dimen134
-\inoutline=\dimen135
+\inoutindent=\dimen135
 \interspacetitleruled=\dimen136
 \interspacealgoruled=\dimen137
 \interspacetitleboxruled=\dimen138
@@ -267,70 +256,24 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algocf@inputbox=\box33
 \AlCapSkip=\skip58
 \AlCapHSkip=\skip59
+\algoskipindent=\skip60
 \algocf@nlbox=\box34
 \algocf@hangingbox=\box35
-\algocf@capbox=\box36
-\algoheightruledefault=\skip60
-\algoheightrule=\skip61
-\algotitleheightruledefault=\skip62
-\algotitleheightrule=\skip63
+\algocf@untilbox=\box36
+\algocf@skipuntil=\skip61
+\algocf@capbox=\box37
+\algoheightruledefault=\skip62
+\algoheightrule=\skip63
+\algotitleheightruledefault=\skip64
+\algotitleheightrule=\skip65
 \c@algocfline=\count115
 \c@algocfproc=\count116
 \c@algocf=\count117
-\algocf@algoframe=\box37
-\algocf@algobox=\box38
-) (./thesis (1).aux
+\algocf@algoframe=\box38
+\algocf@algobox=\box39
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-LaTeX Warning: Label `eq:velocity motion model_y' multiply defined.
-
-
-LaTeX Warning: Label `eq:velocity motion model_theta' multiply defined.
-
-)
-\openout1 = `"thesis (1).aux"'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen139
-\scratchbox=\box39
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen140
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks27
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -348,11 +291,29 @@ Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -361,39 +322,75 @@ G,.JBIG2,.JB2,.eps]
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-))
+)))
+(./thesis (1).aux
+
+LaTeX Warning: Label `eq:velocity motion model_y' multiply defined.
+
+
+LaTeX Warning: Label `eq:velocity motion model_theta' multiply defined.
+
+)
+\openout1 = `"thesis (1).aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen139
+\scratchbox=\box40
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen140
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks27
+)
 Unavoidable over/underfulls may occur in the first
 few pages of dalcsthesis. These can usually be ignored.
 However, if uncorrectable errors occur, notify staff.
-LaTeX Info: Redefining \\ on input line 37.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+LaTeX Info: Redefining \\ on input line 39.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Info: Redefining \\ on input line 37.
-LaTeX Info: Redefining \\ on input line 37.
+LaTeX Info: Redefining \\ on input line 39.
+LaTeX Info: Redefining \\ on input line 39.
 \c@dal@loopindex=\count124
  [2
 
 ]
-LaTeX Info: Redefining \\ on input line 37.
+LaTeX Info: Redefining \\ on input line 39.
  [3
 
 ] (./thesis (1).toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [4
 
 
@@ -416,21 +413,23 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 64.
+LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 66.
 
-<../hugin_4500.png, id=30, 1631.09375pt x 1084.05pt>
+
+LaTeX Warning: File `../hugin_4500.png' not found on input line 69.
+
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [1
+[1
 
 ]
 
 LaTeX Warning: Citation `cox1990autonomous' on page 2 undefined on input line 7
-5.
+7.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -454,12 +453,12 @@ Chapter 2.
 [5
 
 ] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 [7]
-Overfull \hbox (47.14342pt too wide) detected at line 219
+Overfull \hbox (47.14342pt too wide) detected at line 221
 \OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]p[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 qr \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]
@@ -475,7 +474,7 @@ t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (46.32191pt too wide) detected at line 223
+Overfull \hbox (46.32191pt too wide) detected at line 225
 \OML/cmm/m/it/12 M \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]q[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 rp \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]
@@ -491,7 +490,7 @@ t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (45.58235pt too wide) detected at line 227
+Overfull \hbox (45.58235pt too wide) detected at line 229
 \OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]r[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 pq \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[]
@@ -507,34 +506,38 @@ t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]|
  []
 
 
-</home/rohan/Documents/thesis/coordinate_system.png, id=60, 767.86874pt x 539.7
-6656pt> [8]
+LaTeX Warning: File `/home/rohan/Documents/thesis/coordinate_system.png' not fo
+und on input line 235.
+
+[8]
 
 LaTeX Warning: Reference `adapting the motion model' on page 9 undefined on inp
-ut line 280.
+ut line 282.
 
-[9] <../../thesis_work/markov_chain.png, id=68, 859.21pt x 409.53pt>
-Overfull \hbox (21.26093pt too wide) in paragraph at lines 364--365
- [][] |
- []
+[9]
+
+LaTeX Warning: File `../../thesis_work/markov_chain.png' not found on input lin
+e 366.
 
 
 Underfull \vbox (badness 3826) has occurred while \output is active []
 
  [10]
-</home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png, id=7
-2, 566.86781pt x 475.02469pt>
+
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/particle_filter_non_gaus
+sian_thrun.png' not found on input line 382.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 
 LaTeX Warning: Reference `fig:particle smoothing' on page 12 undefined on input
- line 423.
+ line 425.
 
-</home/rohan/Documents/thesis/smoothing.png, id=76, 240.14719pt x 52.69687pt>
-Overfull \hbox (554.58446pt too wide) in paragraph at lines 426--427
- [][] |
- []
+
+LaTeX Warning: File `/home/rohan/Documents/thesis/smoothing.png' not found on i
+nput line 428.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -544,89 +547,96 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Chapter 3.
 
 LaTeX Warning: Citation `cox1990autonomous' on page 16 undefined on input line 
-485.
+487.
 
 [16
 
 ]
-</home/rohan/Documents/thesis_work/parameter_estimation_yapp.png, id=94, 348.55
-219pt x 247.67531pt>
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 538.
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/parameter_estimation_yap
+p.png' not found on input line 539.
 
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 538.
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 540.
+
+
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 540.
 
 [17]
 
-LaTeX Warning: Citation `Hegren√¶s2008' on page 18 undefined on input line 551.
+LaTeX Warning: Citation `Hegren√¶s2008' on page 18 undefined on input line 553.
 
 
 
 LaTeX Warning: Reference `fig-INS systems(a)' on page 18 undefined on input lin
-e 553.
+e 555.
 
 [18]
-</home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_trad
-itional.png, id=104, 447.92343pt x 284.56313pt>
-</home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_mode
-l.png, id=105, 509.65407pt x 267.24844pt>
 
-LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 567.
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
+aigation_system_traditional.png' not found on input line 566.
 
 
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
+aigation_system_model.png' not found on input line 567.
 
-LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 567.
+
+LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 569.
+
+
+
+LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 569.
 
 
 
 LaTeX Warning: Reference `fig:general archi' on page 19 undefined on input line
- 573.
+ 575.
 
-<Diagram1.jpeg, id=106, 980.66376pt x 507.8975pt>
+<Diagram1.jpeg, id=98, 980.66376pt x 507.8975pt>
 
 LaTeX Warning: Reference `fig- General Architecture' on page 19 undefined on in
-put line 579.
+put line 581.
 
-[19]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [19]
+[20]
 
 LaTeX Warning: Reference `eq-: maximization' on page 21 undefined on input line
- 600.
+ 602.
 
 
 LaTeX Warning: Citation `minka1998expectation' on page 21 undefined on input li
-ne 610.
+ne 612.
 
 [21]
 
 LaTeX Warning: Reference `eq-: derivation_em' on page 22 undefined on input lin
-e 628.
+e 630.
 
 [22] [23]
-Overfull \hbox (31.43094pt too wide) in paragraph at lines 706--709
+Overfull \hbox (31.43094pt too wide) in paragraph at lines 708--711
 \OT1/cmr/m/n/12 the pa-ram-e-ters of the mo-tion model that we want to learn ar
 e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$|
  []
 
 [24]
-Overfull \hbox (7.62697pt too wide) in alignment at lines 735--738
+Overfull \hbox (7.62697pt too wide) in alignment at lines 737--740
  [][][] []
  []
 
 
-Overfull \hbox (38.67104pt too wide) in alignment at lines 742--745
+Overfull \hbox (38.67104pt too wide) in alignment at lines 744--747
  [][][] []
  []
 
 
 LaTeX Warning: Citation `shewchuk1994introduction' on page 25 undefined on inpu
-t line 755.
+t line 757.
 
 [25]
-Overfull \hbox (65.88025pt too wide) in alignment at lines 757--760
+Overfull \hbox (65.88025pt too wide) in alignment at lines 759--762
  [][][] []
  []
 
@@ -634,74 +644,210 @@ Overfull \hbox (65.88025pt too wide) in alignment at lines 757--760
 Chapter 4.
 
 LaTeX Warning: Reference `tab- constant parameters' on page 27 undefined on inp
-ut line 793.
+ut line 795.
 
 
-Overfull \hbox (3.04907pt too wide) in paragraph at lines 793--813
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 795--815
 \OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
 ate a sim-u-lated world(Figure|
  []
 
-<0.png, id=132, 586.8324pt x 442.2924pt>
+<0.png, id=124, 586.8324pt x 442.2924pt>
 
 LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
- undefined on input line 821.
+ undefined on input line 823.
 
-<1.png, id=134, 586.8324pt x 442.2924pt>
-<2.png, id=135, 586.8324pt x 442.2924pt>
-<3.png, id=136, 586.8324pt x 442.2924pt>
-<4.png, id=137, 586.8324pt x 442.2924pt> [27
+<1.png, id=126, 586.8324pt x 442.2924pt>
+<2.png, id=127, 586.8324pt x 442.2924pt>
+<3.png, id=128, 586.8324pt x 442.2924pt>
+<4.png, id=129, 586.8324pt x 442.2924pt> [27
 
-] [28] [29]
-Chapter 5.
+]
+Overfull \hbox (219.31274pt too wide) in paragraph at lines 856--878
+ [][] |
+ []
 
-</home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg, id=147, 984.67
-876pt x 368.1253pt>
-Overfull \hbox (58.71815pt too wide) in paragraph at lines 869--870
+[28] [29]
+
+! LaTeX Error: Unknown graphics extension: .05_0.5_s_1_traj_3.eps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.887 ..._model/plots/200_0.05_0.5_s_1_traj_3.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `varying_sensor_noise_sensor_model' on page 30 undefin
+ed on input line 890.
+
+[30]
+
+! LaTeX Error: Unknown graphics extension: .05_0.5_s_1_traj_3_motion_model.eps.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.896 ...200_0.05_0.5_s_1_traj_3_motion_model.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Unknown graphics extension: .05_0.5_s_1_traj_3_sensor_model.eps.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.902 ...200_0.05_0.5_s_1_traj_3_sensor_model.eps}
+                                                  }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (166.36469pt too wide) in paragraph at lines 913--934
  [][] |
  []
 
 
-</home/rohan/Documents/thesis_work/visual_sonar/landmarks.png, id=148, 993.7125
-pt x 383.18156pt> [30
-
-] [31]
-</home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg, id=156, 1445
-.4pt x 813.0375pt>
-Overfull \hbox (144.52975pt too wide) in paragraph at lines 905--906
- [][] |
- []
-
-[32] [33]
-Chapter 6.
-
-Underfull \hbox (badness 10000) in paragraph at lines 940--959
-
- []
-
-
-<../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1.png, id=163, 1734.48pt 
-x 894.7026pt>
-<../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1.png, id=164, 1734.48pt 
-x 894.7026pt> [34
-
-] [35]
-<../plot_motion_model/100_0.05_0.5_1_2.0_motion_model.png, id=171, 1555.2504pt 
-x 888.921pt>
-<../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1.png, id=172, 1541.5191p
-t x 442.2924pt>
-<../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_model.png, id=173, 586.8
-324pt x 442.2924pt>
-Overfull \hbox (6.5032pt too wide) in paragraph at lines 1022--1023
+Overfull \hbox (166.36469pt too wide) in paragraph at lines 944--965
 [][] |
  []
 
 
-<../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_model.png, id=174, 1734.
-48pt x 894.7026pt>
-Underfull \vbox (badness 3302) has occurred while \output is active []
+Overfull \hbox (267.94304pt too wide) in paragraph at lines 974--995
+ [][] |
+ []
 
- [36]
+
+Overfull \hbox (250.482pt too wide) in paragraph at lines 1005--1026
+ [][] |
+ []
+
+[31] [32]
+Chapter 5.
+
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18
+.jpg' not found on input line 1041.
+
+
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/landmarks.p
+ng' not found on input line 1047.
+
+[33
+
+]
+
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/visual_sonar/surf_workin
+g.jpeg' not found on input line 1077.
+
+[34] [35]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1131
+
+ []
+
+
+! LaTeX Error: File `../plot_motion_model/100_0.05_0.2_1_2.0_motion_model_1' no
+t found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1144 ..._0\lyxdot 2_1_2\lyxdot 0_motion_model_1}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `../plot_motion_model/100_0.05_0.2_1_5.0_motion_model_1' no
+t found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1152 ..._0\lyxdot 2_1_5\lyxdot 0_motion_model_1}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[36
+
+]
+
+! LaTeX Error: File `../plot_motion_model/100_0.05_0.5_1_2.0_motion_model' not 
+found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1169 ...05_0\lyxdot 5_1_2\lyxdot 0_motion_model}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `../plot_motion_model/100_0.05_0.5_1_5.0_motion_model_1' no
+t found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1178 ..._0\lyxdot 5_1_5\lyxdot 0_motion_model_1}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `../plot_motion_model/100_0.05_0.2_rotation_5.0_motion_mode
+l' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1194 ...xdot 2_rotation_5\lyxdot 0_motion_model}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `../plot_motion_model/100_0.05_0.5_rotation_5.0_motion_mode
+l' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1203 ...xdot 5_rotation_5\lyxdot 0_motion_model}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [37] [38]
 Chapter 7.
 (./thesis (1).bbl [39
@@ -719,16 +865,16 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 871 ({)
+### simple group (level 1) entered at line 1043 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4883 strings out of 495059
- 69850 string characters out of 3182030
- 152771 words of memory out of 3000000
- 7936 multiletter control sequences out of 15000+200000
- 10365 words of font info for 39 fonts, out of 3000000 for 9000
+ 5122 strings out of 495031
+ 71870 string characters out of 6181530
+ 172246 words of memory out of 5000000
+ 8183 multiletter control sequences out of 15000+600000
+ 10365 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,18n,35p,1071b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,35p,1551b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -744,10 +890,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (48 pages, 275466 bytes).
+Output written on "thesis (1).pdf" (48 pages, 282975 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
+ 231 PDF objects out of 1000 (max. 8388607)
  156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
