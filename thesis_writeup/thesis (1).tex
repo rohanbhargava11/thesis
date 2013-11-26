@@ -1023,7 +1023,30 @@ $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabu
 \caption{\label{tab-: trajectory}Initial and estimated values of parameters with varying trajectories}
 \end{table}
 
-The advantage in having more trajectories is having a better estimate of the parameters but it comes at a cost. The computational time is directly proportional to the number of trajectories. The interesting fact in Figure 4, Figure 5, Figure 6 is that there is not much of a difference in localization error for various trajectories therefore we don't gain much in having a lot of trajectories. 
+The advantage in having more trajectories is having a better estimate of the parameters but it comes at a cost. The computational time is directly proportional to the number of trajectories. The interesting fact in Figure 4, Figure 5, Figure 6 is that there is not much of a difference in localization error for various trajectories therefore we don't gain much in having a lot of trajectories. Table ~\ref{tab-:timevstrajectory} gives us an estimate of the time taken to estimate the parameters with various number of trajectories. It is clear that the time taken increases with more number of trajectoires. 
+
+
+\begin{table}[tbh]
+
+
+
+\begin{tabular}{|c|c|}
+\hline 
+No. of Trajectories & Time Elapsed(seconds) for 200 timesteps\tabularnewline
+\hline 
+\hline 
+3 & 75\tabularnewline
+\hline 
+15 & 210\tabularnewline
+\hline 
+30 & 400\tabularnewline
+\hline 
+\end{tabular}
+
+\caption{\label{tab-:timevstrajectory}Time taken to estimate the parameters}
+
+\end{table}
+
 
 
 
