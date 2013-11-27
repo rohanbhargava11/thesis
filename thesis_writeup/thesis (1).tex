@@ -991,6 +991,18 @@ $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \caption{\label{tab-:drift}Initial and estimated values of parameters with drift}
 \end{table}
 
+Another way to inlcude drift in the system is 
+$V_{t}\sim\mathcal{{N}}(v_{t}*a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
+
+$W_{t}\sim\mathcal{{N}}(w_{t}*b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
+
+The results are described in Figure ~\ref{fig-drift_multiply} and drift is present throught the experiment.
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_traj_3_drift_multiply_2.0.eps}}
+  \caption{\label{fig-drift_multiply} }
+\end{figure}
+
 The key part to the algorithm is to get an estimate of ground truth and that is obtained by performing partilce smoothing. The partilce smoothing can be repeated several times to get a set of trajectories. In the next set of experiments we show how the estimation of parameters varies with trajectories. The sensor noise is $2.0$ throughout the experiment. Table ~\ref{tab-: trajectory} shows that higher the number of trajectories better the estimation of parameters. This is due to the fact that if we sample more we have more chances to form the most probable trajectory of robot's movement. 
 
 \begin{table}[tbh]
@@ -1047,7 +1059,9 @@ No. of Trajectories & Time Elapsed(seconds) for 200 timesteps\tabularnewline
 
 \end{table}
 
+In all the experiments above we assume that the sensor noise is constant through out the experiment. In practice we find that the quality of sensor readings varies with enviornment. For example in an AUV we won't get sonar readings throughout the mission. This could be because sometimes its difficult to find the bottom of the sea floor or sonar sensor could be switched off for some time periods to save power on the battery.
 
+In the next experiment we change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model (Figure ). 
 
 
 \chapter{Landmarks extraction using Side Sonar Images}
