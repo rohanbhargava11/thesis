@@ -3,6 +3,9 @@
 %\documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
 \documentclass[12pt,draft]{dalcsthesis}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{epsfig}
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -13,8 +16,7 @@
 
 %\usepackage{caption}
 %\captionsetup[table]{skip=10pt}
-\usepackage{graphicx}
-\usepackage{epstopdf}
+
 \begin{document}
 \mcs  % options are \mcs, \macs, \mec, \mhi, \phd, and \bcshon
 \title{Feature Based adaptive motion model}
@@ -1061,7 +1063,8 @@ No. of Trajectories & Time Elapsed(seconds) for 200 timesteps\tabularnewline
 
 In all the experiments above we assume that the sensor noise is constant through out the experiment. In practice we find that the quality of sensor readings varies with enviornment. For example in an AUV we won't get sonar readings throughout the mission. This could be because sometimes its difficult to find the bottom of the sea floor or sonar sensor could be switched off for some time periods to save power on the battery.
 
-In the next experiment we change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model (Figure ). 
+In the next experiment we change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model (Figure ). In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model.
+
 
 
 \chapter{Landmarks extraction using Side Sonar Images}
