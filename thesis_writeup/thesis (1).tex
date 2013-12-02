@@ -792,6 +792,7 @@ As you can see in the figure the input to the motion model is a control command 
 $u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity estimate $u_{r}$ is fused with the reading from IMU to get a better estimate of the position of the AUV. As shown before we try to learn the motion model to find the best estimate for the velocity so that it can aid the INS in this particular application. 
 \end{comment}
 \chapter{Results and Experimental Setup}
+\label{ch-: results adapting motion model}
 In this chapter we describe the experimental setup of the simulator to test our algorithm. To demonstrate the effectiveness of our approach the results from the simulated experiment are also shown.
 \section{Experimental Setup}
 To test our algorithm for learning the motion model we create a simulated world(Figure ~\ref{fig-: simulation world}). The world size of our simulation is 400X400 with four landmarks shown in blue dots. The red * shows the location of the robot and blue triangle is the location estimate of the  robot by particle filters. The robot is moving with a constant forward and rotational velocity throughout the experiment. In simulation the robot can measure its distance from all four landmarks at all time. The sensor noise in the simulation can be varied in between the experiment. The particle size is 500 and is constant throughout the experiment. Table ~\ref{tab- constant parameters} shows the summary of variables for the experiment to test the effectiveness of our algorithm to learn a motion model.
@@ -1069,10 +1070,168 @@ In the next experiment we change the sensor noise  at time step 100 and compare 
 
 \chapter{Landmarks extraction using Side Sonar Images}
 \section{Introduction}
-\subsection{Side Scan Sonar} 
-\subsection{Speeded Up Robust Features}
+The sensor model (equation) is the probabilty of a measurement z given the robot is at postition x. Thrun \cite{thrun2005probabilistic} divides the sensors for mobile robots in five classes such as contact sensors, internal sensors, proximity sensors, visual sensors and satellite-based sensors. Examples for various classes are shown in Table ~\ref{tab-: classes of sensors}.
 
+\begin {table}[tbh]
+\begin{tabular}{|c|c|}
+\hline 
+Classes of Sensors & Exaxples of each class \\ 
+\hline 
+Contact Sensors & Bumpers \\ 
+\hline 
+Internal Sensors & Accelerometers, Gyroscopes, Compasses \\ 
+\hline 
+Proximity Sensors & Sonar, Radar, Laser range-finders, Infrared \\ 
+\hline 
+Visual Sensors  & Cameras \\ 
+\hline 
+Sateellite Based Sensors & GPS \\ 
+\hline 
+\end{tabular}
+\caption{\label{tab-: classes of sensors} Sensors for Mobile robots. Table taken from \cite{thrun2005probabilistic}}
+\end{table}
+The measurments from these sensors in a partilce filter algorithm are used to assign weights aka importance factor to particles. Most common way of sensing the enviorment is through landmarks. The landmarks can be active beacons such as GPS or passive such as visual, retro-refeclective etc. The sensors measure the distance , bearing or both from the landmarks to estimate their position in the envrionment. 
+
+In our simluated experiment the sensor model assumes to have four static landmarks and at all times we can measure the distance from them. For our algorithm to work on AUV we need some sort of reference points to measure the actual movement of the vehicle. These reference points need to be computed on the fly as we don't have the liberty of having static maps for underwater envrioments. As my algorithm deals with cases in which AUV doesn't loop back and we have limited field of view we need dynamic landmarks for our sensor model. To extract dynamic landmarks we used side sonar images and run feature extraction technqiues such as SURF on the images. These extracted landmarks can be used as reference points for our algorithm to adapt motion model for AUV.
+
+The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavilabilty of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two section I desrribe how side scan sonar and SURF works. In section ~\ref{{ch-: dynamic landmakrs} the algorithm to compute landmakrs is presented and Chapter ~\ref{{ch-: results motion estimation} contains the results of the algorithm.  
+
+\subsection{Side Scan Sonar} 
+Side scan sonar is used to create pictures or an image of the sea floor. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures of how "loud" the return echo is and paints a picture [refer http://oceanservice.noaa.gov/education/seafloor-mapping/how_sidescansonar.html]. In the sea floor we find  hard areas such as rock and soft ares such as sand. The hard areas are represented by darker areas in the image as they return a stronger singal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adpating the motion model. Sound waves travel very effectivley in water as compared to light therfore at lower depths sonar is used to image the sea floor instead of cameras. 
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg}}
+  \caption{\label{fig- side scan sonar sensor} Side scan sonar sensor using dual frequency made by JW Fishers . Image taken from \cite{}{http://www.jwfishers.com/sss.htm} }
+\end{figure}
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar.jpg}}
+  \caption{\label{fig- side scan sonar image} Side scan sonar image of the wreck. Image taken from \cite{}{http://www.nauticalcharts.noaa.gov/hsd/SSS.html} }
+\end{figure}
+
+Side-scan transmits sound energy and analyzes the echo that is bounced off from the sea floor or other objects. It typicaly consists of three basic components: towfish, transmission cable and topside porcessing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimesions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are recieved by transducers and are contronously recorded. Each pulse shows a narrow stip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequicies range from 100 to 500 Khz in side scan sonar; higher frequencies yeild better resolution but less range. Currenlty in the market there are systems with dual frequncy which allow the opeator to use high frequecy to produce sharper images or lower frequinces to cover greater depths. Side scan systems can be characterized according to their operating frequncy ((http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm; Long, 2007).
+
+\begin{table}
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Sidescan Sonar Type & Frequency & Wavelenght & Range \\ 
+\hline 
+"Low" & 5 kHz & 30 cm & >50 km \\ 
+\hline 
+"Low" & 10 kHz & 15 cm & 10 km \\ 
+\hline 
+"Low" & 25 kHz & 6 cm & 3 km \\ 
+\hline 
+"Medium" & 50 kHz & 3 cm & 1 km \\ 
+\hline 
+"Medium" & 100 kHz & 1.5 cm & 600 m \\ 
+\hline 
+"Medium" & 200 kHz & 0.75 cm & 300 m \\ 
+\hline 
+"High" & 500 kHz & 3 mm & 150 m \\ 
+\hline 
+"High" & 1 mHz & 1.5 mm & 50 m \\ 
+\hline 
+\end{tabular} 
+\caption{\label{tab-: classification of side scan} Characterization of Sidescan system according to their operating frequency. Table taken form \cite{Menezes}} 
+\end{table}
+It can be used fisheries research, environomental studies and military applications such as mine detection. 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/work_side_scan.jpg}}
+  \caption{\label{fig- side scan sonar working} Working of a side scan sonar. Image taken from \cite{}{http://www.nauticalcharts.noaa.gov/hsd/SSS.html} }
+\end{figure}
+
+
+\subsection{Scale Invariant Feature Transform}
+SIFT is an algrotihm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was first proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stiching, video tracking etc.
+
+The first step in SIFT is to constrcut scale space i.e. create internal representations of the original image to ensure scale invariance. In SIFT progressivlely blurred out images are generated using the original image. In the next step you the original image is resized to half of its size and again the blurred out images are generated. 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-octaves.jpg}}
+  \caption{\label{fig- sift octaves} Representation of what Octaved look like in SIFT. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure}
+
+The images of same size are grouped together and belong to an octave. In the figure ~\ref{fig- sift octaves} there are four ocatace and each octave has five images. The number of octaves depends upon the original size of the image. The blurring of images in each octave can be represented mathematically by 
+
+\begin{equation}
+L(x,y,\sigma) = G(x,y,\sigma) * I(x,y)
+\end{equation}
+where L is the blurred image , G is the Gaussian blur operator, I is an image, x,y are the location coordinates and $\sigma$ is the scale parameter. The $*$ is the convulation of gaussain blur G onto the image I. 
+The next step is to find another set of images by Difference of Gaussian (DOG) which help us in finding out the interesting keypoints in the image. In this step we calcualte the difference between two consuective scales as shown in Figure ~\ref{fig- sift dog}. This process is done at every octave. 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.jpg}}
+  \caption{\label{fig- sift dog} Difference of Gaussian done to caluclate keypoints in the image. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure
+
+To put this concept in our example the DOG is applied to the cat images and the output is shown in Figure ~\ref{}. 
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-dog-images.jpg}}
+  \caption{\label{fig- sift dog images} Applying DOG on a set of images present in a single octave. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure}
+
+After calucalating the DOG images we can find the keypoints in two steps. Firstly locate the maxima/minima in DOG images. Secondaly find subpixel maxima/minima. In the first step the algorithm iterates through each pixel and all the neighbours are checked. This process is explained in Figure 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sif-maxima-idea.jpg}}
+  \caption{\label{fig- sift octaves} Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbours. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure}
+
+In the figure X is the current pixel and the green circles represent the neighbours. X is marked as a keypoint if it is the greatest or least of all neighbours. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calucalte the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint. It can be mathematically represented by 
+
+\begin{equation}
+D(x) = D + 
+\end{equation}
+
+After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intenstiry value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicual gradients are calcualted at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are consided to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invarinace. 
+
+In this step SIFT calculated gradient maginitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proposrtinal to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{} it peaks at 20-29 degrees therfore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above $80%$ of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-orientation-histogram.jpg}}
+  \caption{\label{fig- sift bin histogram} Histogram describing the bins for assigning orientation to the keypoint. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure}
+
+In the final step of SIFT algorithm a unique fingerprint for a keypoint aka descriptor is calculated. To calcualte the gradient we take $16 X 16$ window around the each keypoint. This $16 X 16$ window is broken into sixteen $4 X4$ windows (Figure ~\ref{}).
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-fingerprint.jpg}}
+  \caption{\label{fig- sift bin fingerprint} A $16 X16$ window is taken around a keypoint. This window is broken into sixteen $4 X 4$ windows. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure}
+
+In each window gradient magnitudes and orientations are calucalted and are put in a 8 bin histogram (Figure ~\ref{}). For examples a gradient orientation in the range of 0-44 degrees is put in the first bin. The amount added to the bin depends upon the magnitude of the gradient and the distance from the keypoint. The gradients that are far away from the keypoint will add smaller values to the bin. This can be performed using "gaussian weighthing function". 
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-4X4.jpg}}
+  \caption{\label{fig- sift bin histogram} The gradient orientation is assinged to 8 bin histogram. The value depends upon the magnitude of the orientation and distance from the keypoint. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+\end{figure}
+
+This is done for all 16 pixels therefore you end up with $4X4X8=129$ numbers. The numbers are normalized and form the feauter vector. This feature vector gives a unique identity to the keypoint. To achieve rotation independence the keypoint rotation is subtracted from each orientation therefore each gradient orientation if relative to the keypoints orientation. For illumination independence we threshold any numbers that are big and the resulant feature vector is normalized again. 
+
+After we calculate the desrciptors for each keypoint we have a set of features that describes the image and these can be used for various image processing tasks such as image matching, stiching etc. 
+
+
+
+
+3. SURF in robots
+
+4. Andrew Vardy , Warren use of SURF
+
+5. Andrew Vardy how he forms the image and his work
 \section{Dynamic Landmarks}
+\label{ch-: dynamic landmarks}
 In the particle filtering algorithm the sensor model is responsible to assign weights to the particles.The sensor model describes the process by which sensor measurements are generated in the physical world.It is generally done by using some sort of references in the world aka landmarks. Austin and Elizar in their papers used static maps of known environments to generate references for their sensor model.
 The probability of having static maps for underwater environments is pretty low and thus lead us to use side sonar images as references for the sensor model.
 \begin{figure}[hbtp]
@@ -1095,6 +1254,9 @@ This method allows us independence from a static map as well as helps in learnin
 the motion model on the fly in a new environment. 
 
 \section{Motion Estimation using side sonar images}
+
+1. write about how it is done with cameras
+
 In AUV the motion estimation is generally done through dead-reckoning.
 It is a process of calculating the current position based upon the
 previous position and the speed of vessel. The velocity of the AUV
@@ -1134,6 +1296,7 @@ and the total distance the AUV moves.
 
 
 \chapter{Results}
+\label{ch-: results motion estimation}
 \section{Adapting Motion Model}
 \label{results}
 We use a simulation to demonstrate the effectiveness of learning the
