@@ -1,6 +1,6 @@
 \baselineskip =0.7\baselineskip 
-\contentsline {chapter}{Abstract}{vi}
-\contentsline {chapter}{Acknowledgements}{vii}
+\contentsline {chapter}{Abstract}{v}
+\contentsline {chapter}{Acknowledgements}{vi}
 \contentsline {chapter}{\numberline {Chapter 1}Introduction}{1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -35,18 +35,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {5.1}Introduction}{38}
-\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{38}
-\contentsline {subsection}{\numberline {5.1.2}Speeded Up Robust Features}{38}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {5.2}Dynamic Landmarks}{38}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{39}
-\contentsline {chapter}{\numberline {Chapter 6}Results}{41}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {6.1}Adapting Motion Model}{41}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {6.2}Motion estimation using side sonar images}{42}
-\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{44}
-\addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{45}
+\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{39}
+\contentsline {subsection}{\numberline {5.1.2}Scale Invariant Feature Transform}{40}

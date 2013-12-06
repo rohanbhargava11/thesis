@@ -1262,11 +1262,24 @@ the motion model on the fly in a new environment.
 
 \section{Motion Estimation using side sonar images}
 
+In mobile robots the position and orientation is determined through wheel encoders and velocity estimates. These techniques do not generalize well as they cannot be applied every robot as well as the estimates drift over time. Motion estimation using visual sensors such as camera are not restricted to particular locomotion and doesn't suffer from drift. There has been a lot of work done in estimating motion using camera images on land robots \cite{barfoot2005online} \cite{scaramuzza2008appearance}. Silvia \cite{Silva} proposed an algorithm for AUV which used camera images and SIFT to estimate motion. 
+
+In AUV the motion estimates from INS suffer from drift and are coupled with DVL to give a better estimate of the position. Hegreneas \cite{hegrenaes2008model} combined the knowledge of vehicle dynamics to aid INS systems. In a similar manner visual motion information can be used to aid INS systems. The visual input to the dead reckoning algorithm has its pros and cons. The main advantage of using a visual estimate is that it doesn't suffer from drift which is prime concern for underwater vehicles. The disadvantage lies in the fact that we don't have side sonar images available every time. The second disadvantage is the computation power available on AUV. To specifically deal with the problems we use a high Hessian threshold to extract maximum of 4 landmarks so that feature matching is not computationally expensive.    
+
+We verify our dynamic landmark approach by estimating motion information from side sonar images and compare it to reported movement by DVL. To generate keypoints we run SIFT on the side sonar images. We use a high hessian threhold so that we can restrict the amount of keypoints. These keypoints are matched with keypoints of the next consecutive image using a KNN based matcher. Figure ~\ref{} shows two consecutive images that are used to estimate motion of the AUV. In the first image the keypoints are marked in yellow circles. These keypoints are matched with the second image and the matched keypoints are marked in red circles. The $x$ and $y$ position of the matched keypoints is compared to the original keypoints. This gives us motion estimate of the AUV. 
+
+The method to estimate motion is a very simple one with assumptions that AUV moves in a straight line at the same depth. To overcome the assumptions there needs to be work done on integrating side scan sonar pose in the algorithm. The method proposed in the section was to verify the dynamic landmark approach instead of proposing an algorithm for estimating motion. 
+
+The performance of the algorithm is evaluated on real side sonar data. The results of the algorithm are compared to real motion information of the AUV and are discussed in the next chapter. 
+
+
+0. Introduction- This is done to verify our dynamic landmarks
+
 1. We just feature matching and calculate pixel
 
 2. Assumption are the its travelling at the same depth. 
 
-3. They are algorithms to consider camera pose and complex algorothm for camera and can be ported for side sonar 
+3. They are algorithms to consider camera pose and complex algorithm for camera and can be ported for side sonar 
 
 4. This is not an motion estimation algorithm but its just to verify we can get motion information. there has to a lot of work done to get motion estimation.  
 1. write about how it is done with cameras
@@ -1310,130 +1323,10 @@ and the total distance the AUV moves.
 
 
 \chapter{Results}
-\label{ch-: results motion estimation}
-\section{Adapting Motion Model}
-\label{results}
-We use a simulation to demonstrate the effectiveness of learning the
-motion model. The simulation mainly consists of particle filter SLAM.
-We use a motion model described in the above chapters. The sensor
-model basically measures the distance from the four static landmarks
-defined at the start of the experiment. The experiment runs over 100
-time steps and at every 5\textsuperscript{th} time step we change
-the parameters of the motion model. As described in the above chapters
-the parameters that we intended to learn are $\sigma_{D_{d}}^{2}$,$\sigma_{T_{d}}^{2}$,$\sigma_{D_{1}}^{2},\sigma_{D_{r}}^{2}$,$\sigma_{T_{r}}^{2}$,$\sigma_{D_{1}}^{2}$,$\sigma_{T_{1}}^{2}$.
-In the first stage of the experiment at every 5\textsuperscript{th }time step
-we change $\sigma_{D_{d}}^{2}$ or $\sigma_{T_{r}}^{2}$in our motion
-model. The following table and plots describes the five experiments
-that were conducted in the simulation.
-
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline 
-No. & $\sigma_{D_{d}}$ & $\sigma_{T_{r}}$ & $\sigma_{D_{d}}^{*}$ & $\sigma_{T_{r}}^{*}$ & Sensor Noise\tabularnewline
-\hline 
-\hline 
-1 & 0.05 & 0.05 & 0.2 & 0.05 & 2.0\tabularnewline
-\hline 
-2 & 0.05 & 0.05 & 0.2 & 0.05 & 5.0\tabularnewline
-\hline 
-4 & 0.05 & 0.05 & 0.5 & 0.05 & 2.0\tabularnewline
-\hline 
-5 & 0.05 & 0.05 & 0.5 & 0.05 & 5.0\tabularnewline
-\hline 
-6 & 0.05 & 0.05 & 0.05 & 0.2 & 5.0\tabularnewline
-\hline 
-7 & 0.05 & 0.05 & 0.05 & 0.5 & 5.0\tabularnewline
-\hline 
-\end{tabular}
-\\
-
-$\sigma_{D_{d}}$,$\sigma_{T_{r}}$ are the parameters values that
-the motion model was initialized. These values are altered in order
-to simulate a change in the motion model and they are described by
-$\sigma_{D_{d}}^{*}$,$\sigma_{T_{r}}^{*}$. The sensor noise can
-be described as the confidence the robot has in its sensor model .
-The impact of the noise on the localization error can be seen in the
-following plots.	
-
-\begin{figure}
-\caption{$\sigma_{D_{d}}$=0.05 $\sigma_{D_{d}}^{*}$ = 0.2 Sensor Noise= 2.0}
-
-
-\includegraphics[scale=0.25]{\lyxdot \lyxdot /plot_motion_model/100_0\lyxdot 05_0\lyxdot 2_1_2\lyxdot 0_motion_model_1}
-\end{figure}
-
-
-\begin{figure}
-\caption{$\sigma_{D_{d}}$=0.05 $\sigma_{D_{d}}^{*}$ = 0.2 Sensor Noise= 5.0}
-
-
-\includegraphics[scale=0.25]{\lyxdot \lyxdot /plot_motion_model/100_0\lyxdot 05_0\lyxdot 2_1_5\lyxdot 0_motion_model_1}
-
-\end{figure}
-
-
-Figure 1 and Figure 2 are plots of the localization error with different
-sensor noises. We can see in both the cases the learned motion model
-performed better than the static motion model. Another important point
-is that the average error is less when the sensor noise is 2.0 as
-compared to the second case. This can be accounted for the fact that
-our localization algorithm is more confident on the sensor model as
-compared to the motion model. 
-
-\begin{figure}
-\caption{$\sigma_{D_{d}}$=0.05 $\sigma_{D_{d}}^{*}$ = 0.5 Sensor Noise= 2.0}
-
-
-\includegraphics[scale=0.25]{\lyxdot \lyxdot /plot_motion_model/100_0\lyxdot 05_0\lyxdot 5_1_2\lyxdot 0_motion_model}
-
-\end{figure}
-
-
-\begin{figure}
-\caption{$\sigma_{D_{d}}$=0.05 $\sigma_{D_{d}}^{*}$ = 0.5 Sensor Noise= 5.0}
-
-
-\includegraphics[scale=0.25]{\lyxdot \lyxdot /plot_motion_model/100_0\lyxdot 05_0\lyxdot 5_1_5\lyxdot 0_motion_model_1}
-
-\end{figure}
-
-
-As we can see in Figure 3 and Figure 4 at 5\textsuperscript{th} time
-step the error shooting up but the learned motion model brings back
-the error whereas the static motion model takes time to recover back
-depending upon the sensor noise. In both the figures we can see that
-the error is pretty static in the learned motion model whereas in
-the static motion model there is a lot of fluctulation. 
-
-\begin{figure}
-\caption{$\sigma_{T_{r}}$=0.05 $\sigma_{T_{r}}^{*}$ = 0.2 Sensor Noise= 5.0}
-
-
-\includegraphics[scale=0.75]{\lyxdot \lyxdot /plot_motion_model/100_0\lyxdot 05_0\lyxdot 2_rotation_5\lyxdot 0_motion_model}
-
-\end{figure}
-
-
-\begin{figure}
-\caption{$\sigma_{T_{r}}$=0.05 $\sigma_{T_{r}}^{*}$ = 0.5 Sensor Noise= 5.0}
-
-
-\includegraphics[scale=0.25]{\lyxdot \lyxdot /plot_motion_model/100_0\lyxdot 05_0\lyxdot 5_rotation_5\lyxdot 0_motion_model}
-
-\end{figure}
-
-
-Figure 5 and Figure 6 describe the errors when the robot rotational
-motion is much more than the translational motion. We can clearly
-see that the learned motion model quickly adapts to the changes whereas
-the static motion model struggles to get the error down. 
-
-In all the cases it was very clear that we could see the adaptive
-motion model performing better than the static. The sensor noise had
-its impact on the overall error. Robot calibration is important to
-process in mobile robotics. The proposed algorithm is an automated
-process which can help us in better navigation of the robots and can
-be used for any motion model. 
 \section{Motion estimation using side sonar images}
+We validate our algorithm on datasets consisting of side sonar images
+and the total distance the AUV moves. 
+
 
 \chapter{Conclusion}
 
