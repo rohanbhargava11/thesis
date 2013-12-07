@@ -1,0 +1,939 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  7 DEC 2013 14:50
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**thesis_1.tex
+(./thesis_1.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(./dalcsthesis.cls
+Document Class: dalcsthesis 2005/02/24 v2.4 Dalhousie University thesis class
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
+\AP@output=\toks14
+\AP@partial=\box26
+\AP@footins=\box27
+)
+\dal@textheight@default=\skip43
+\dal@textheight@footer=\skip44
+\dal@tempdima=\dimen103
+\dal@tempdimb=\dimen104
+\dal@supervisornum=\count88
+\c@dal@signatures=\count89
+\c@dal@readernum=\count90
+)
+\drafthours=\count91
+\draftmins=\count92
+ (./graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count93
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen107
+\epsfysize=\dimen108
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen109
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks19
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks20
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks21
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+\XKV@depth=\count106
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box30
+)
+\tc@llx=\dimen118
+\tc@lly=\dimen119
+\tc@urx=\dimen120
+\tc@ury=\dimen121
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen122
+\adjbox@Height=\dimen123
+\adjbox@Depth=\dimen124
+\adjbox@Totalheight=\dimen125
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box31
+\sift@deathcycles=\count108
+\@vwid@loff=\dimen126
+\@vwid@roff=\dimen127
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen128
+\extrarowheight=\dimen129
+\NC@list=\toks25
+\extratabsurround=\skip48
+\backup@length=\skip49
+)
+\TX@col@width=\dimen130
+\TX@old@table=\dimen131
+\TX@old@col=\dimen132
+\TX@target=\dimen133
+\TX@delta=\dimen134
+\TX@cols=\count109
+\TX@ftn=\toks26
+) (./subfigure.sty
+Package: subfigure 1995/03/06 v2.0 subfigure package
+
+Package: subfigure 1995/03/06 v2.0
+\c@subfigure=\count110
+\c@lofdepth=\count111
+\c@subtable=\count112
+\c@lotdepth=\count113
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+\c@AlgoLine=\count114
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2011/09/21 ver 4.0
+
+Examine \normalsize starts \@setfontsize size may be \@xiipt. 
+Examine \small starts \@setfontsize size may be \@xipt. 
+Examine \footnotesize starts \@setfontsize size may be \@xpt. 
+Examine \large starts \@setfontsize size may be \@xivpt. 
+Examine \Large starts \@setfontsize size may be \@xviipt. 
+Examine \LARGE starts \@setfontsize size may be \@xxpt. 
+Examine \scriptsize starts \@setfontsize size may be \@viiipt. 
+Examine \tiny starts \@setfontsize size may be \@vipt. 
+Examine \huge starts \@setfontsize size may be \@xxvpt. 
+Examine \Huge starts \@setfontsize size may be \@xxvpt. )
+********************************************************
+Package `algorithm2e' Release 4.01 -- december 14 2009 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip50
+\skiplinenumber=\skip51
+\skiprule=\skip52
+\skiphlne=\skip53
+\skiptext=\skip54
+\skiplength=\skip55
+\algomargin=\skip56
+\skipalgocfslide=\skip57
+\algowidth=\dimen135
+\inoutsize=\dimen136
+\inoutline=\dimen137
+\interspacetitleruled=\dimen138
+\interspacealgoruled=\dimen139
+\interspacetitleboxruled=\dimen140
+\algocf@inoutbox=\box32
+\algocf@inputbox=\box33
+\AlCapSkip=\skip58
+\AlCapHSkip=\skip59
+\algocf@nlbox=\box34
+\algocf@hangingbox=\box35
+\algocf@capbox=\box36
+\algoheightruledefault=\skip60
+\algoheightrule=\skip61
+\algotitleheightruledefault=\skip62
+\algotitleheightrule=\skip63
+\c@algocfline=\count115
+\c@algocfproc=\count116
+\c@algocf=\count117
+\algocf@algoframe=\box37
+\algocf@algobox=\box38
+) (./thesis_1.aux
+
+LaTeX Warning: Label `eq:velocity motion model_y' multiply defined.
+
+
+LaTeX Warning: Label `eq:velocity motion model_theta' multiply defined.
+
+)
+Runaway argument?
+{shewchuk1994introduction 
+! File ended while scanning use of \citation.
+<inserted text> 
+                \par 
+l.20 \begin{document}
+                     
+? 
+\openout1 = `thesis_1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen141
+\scratchbox=\box39
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen142
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks28
+)
+Unavoidable over/underfulls may occur in the first
+few pages of dalcsthesis. These can usually be ignored.
+However, if uncorrectable errors occur, notify staff.
+LaTeX Info: Redefining \\ on input line 41.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Info: Redefining \\ on input line 41.
+LaTeX Info: Redefining \\ on input line 41.
+\c@dal@loopindex=\count124
+ [2
+
+]
+LaTeX Info: Redefining \\ on input line 41.
+ [3
+
+] (./thesis_1.toc)
+\tf@toc=\write3
+\openout3 = `thesis_1.toc'.
+
+ [4
+
+
+]
+\ab@page=\count125
+ [5
+
+
+] [6
+
+]
+Dalthesis preface pages completed.
+Chapter 1.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 1 undefined on input l
+ine 66.
+
+
+LaTeX Warning: Citation `Lammas2004' on page 1 undefined on input line 68.
+
+
+LaTeX Warning: Citation `leonard1998autonomous' on page 1 undefined on input li
+ne 68.
+
+
+LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 68.
+
+<../hugin_4500.png, id=26, 1631.09375pt x 1084.05pt>
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 1 undefined on input l
+ine 77.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+LaTeX Warning: Citation `kalman1960new' on page 1 undefined on input line 77.
+
+
+LaTeX Warning: Citation `gordon1993novel' on page 1 undefined on input line 77.
+
+
+[1
+
+]
+
+LaTeX Warning: Citation `cox1990autonomous' on page 2 undefined on input line 7
+9.
+
+
+LaTeX Warning: Citation `vukobratovic1989introduction' on page 2 undefined on i
+nput line 79.
+
+
+LaTeX Warning: Citation `Lav06' on page 2 undefined on input line 79.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 2 undefined on input l
+ine 80.
+
+
+LaTeX Warning: Citation `grisettiyz2005improving' on page 2 undefined on input 
+line 80.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+
+LaTeX Warning: Citation `Roy' on page 3 undefined on input line 82.
+
+
+LaTeX Warning: Citation `Eliazar2004' on page 3 undefined on input line 84.
+
+
+LaTeX Warning: Citation `dempster1977maximum' on page 3 undefined on input line
+ 84.
+
+
+LaTeX Warning: Citation `Yap2008' on page 3 undefined on input line 86.
+
+
+LaTeX Warning: Citation `Eliazar2004' on page 3 undefined on input line 86.
+
+
+LaTeX Warning: Citation `ristic2004beyond' on page 3 undefined on input line 86
+.
+
+
+LaTeX Warning: Citation `chen2003bayesian' on page 3 undefined on input line 86
+.
+
+
+LaTeX Warning: Citation `doucet2000monte' on page 3 undefined on input line 86.
+
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+Underfull \vbox (badness 4454) has occurred while \output is active []
+
+ [3]
+[4]
+Chapter 2.
+
+LaTeX Warning: Citation `ristic2004beyond' on page 5 undefined on input line 12
+4.
+
+
+LaTeX Warning: Citation `chen2003bayesian' on page 5 undefined on input line 12
+4.
+
+
+LaTeX Warning: Citation `doucet2000monte' on page 5 undefined on input line 124
+.
+
+
+LaTeX Warning: Citation `doucet2009tutorial' on page 5 undefined on input line 
+124.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 5 undefined on input l
+ine 128.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 131.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 131.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 5 undefined on input l
+ine 131.
+
+[5
+
+]
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 6 undefined on input l
+ine 136.
+
+
+LaTeX Warning: Citation `Thor' on page 6 undefined on input line 188.
+
+
+LaTeX Warning: Citation `Thor' on page 6 undefined on input line 195.
+
+[6]
+
+LaTeX Warning: Citation `Hallingstad2007' on page 7 undefined on input line 199
+.
+
+
+LaTeX Warning: Citation `Thor' on page 7 undefined on input line 208.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+[7]
+Overfull \hbox (47.14342pt too wide) detected at line 223
+\OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]p[] \OT1/cmr/m/n/12 + 
+(\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
+)\OML/cmm/m/it/12 qr \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]
+ \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 pq\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
+1/cmr/m/n/12 + (\OML/cmm/m/it/12 r[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 q[]\
+OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 pr \OM
+S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 q[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
+1/cmr/m/n/12 + \OML/cmm/m/it/12 m\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 y[]\OT1/cmr/
+m/n/12 (\OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 uq \OT1/cmr/
+m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
+t/12 Z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 v[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
+t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]|
+ []
+
+
+Overfull \hbox (46.32191pt too wide) detected at line 227
+\OML/cmm/m/it/12 M \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]q[] \OT1/cmr/m/n/12 + 
+(\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
+)\OML/cmm/m/it/12 rp \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]
+ \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 qr\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
+1/cmr/m/n/12 + (\OML/cmm/m/it/12 p[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 r[]\
+OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 qp \OM
+S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
+1/cmr/m/n/12 + \OML/cmm/m/it/12 m\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 y[]\OT1/cmr/
+m/n/12 (\OML/cmm/m/it/12 u[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 vr \OT1/cmr/
+m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
+t/12 z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
+t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]|
+ []
+
+
+Overfull \hbox (45.58235pt too wide) detected at line 231
+\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]r[] \OT1/cmr/m/n/12 + 
+(\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
+)\OML/cmm/m/it/12 pq \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[]
+ \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 rp\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
+1/cmr/m/n/12 + (\OML/cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\
+OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT1/cmr/m/n/12 + (\OML/cmm/m/it/12 rq \OM
+S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
+1/cmr/m/n/12 + \OML/cmm/m/it/12 m\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x[]\OT1/cmr/
+m/n/12 (\OML/cmm/m/it/12 v[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 wp \OT1/cmr/
+m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
+t/12 y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
+t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]|
+ []
+
+
+</home/rohan/Documents/thesis/coordinate_system.png, id=57, 767.86874pt x 539.7
+6656pt>
+
+LaTeX Warning: Citation `Thor' on page 8 undefined on input line 239.
+
+
+LaTeX Warning: Citation `Thor' on page 8 undefined on input line 252.
+
+[8]
+
+LaTeX Warning: Citation `Lammas2004' on page 9 undefined on input line 274.
+
+
+LaTeX Warning: Reference `adapting the motion model' on page 9 undefined on inp
+ut line 284.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 9 undefined on input l
+ine 359.
+
+
+LaTeX Warning: Citation `rosenbluth1955monte' on page 9 undefined on input line
+ 359.
+
+
+LaTeX Warning: Citation `gordon1993novel' on page 9 undefined on input line 359
+.
+
+[9] <../../thesis_work/markov_chain.png, id=65, 859.21pt x 409.53pt>
+Overfull \hbox (21.26093pt too wide) in paragraph at lines 368--369
+ [][] |
+ []
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 10 undefined on input 
+line 369.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 10 undefined on input 
+line 369.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 10 undefined on input 
+line 377.
+
+
+Underfull \vbox (badness 3826) has occurred while \output is active []
+
+ [10]
+</home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png, id=6
+9, 566.86781pt x 475.02469pt>
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 11 undefined on input 
+line 386.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 11 undefined on input 
+line 386.
+
+
+LaTeX Warning: Citation `thrun2005probabilistic' on page 11 undefined on input 
+line 416.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+
+LaTeX Warning: Citation `doucet2009tutorial' on page 12 undefined on input line
+ 427.
+
+
+LaTeX Warning: Reference `fig:particle smoothing' on page 12 undefined on input
+ line 427.
+
+
+LaTeX Warning: Citation `russell2003artificial' on page 12 undefined on input l
+ine 427.
+
+
+LaTeX Warning: Citation `Yap2008' on page 12 undefined on input line 427.
+
+
+LaTeX Warning: Citation `doucet2000monte' on page 12 undefined on input line 42
+7.
+
+
+LaTeX Warning: Citation `Godsill2004' on page 12 undefined on input line 427.
+
+</home/rohan/Documents/thesis/smoothing.png, id=73, 240.14719pt x 52.69687pt>
+Overfull \hbox (554.58446pt too wide) in paragraph at lines 430--431
+ [][] |
+ []
+
+
+LaTeX Warning: Citation `russell2003artificial' on page 12 undefined on input l
+ine 432.
+
+
+LaTeX Warning: Citation `russell2003artificial' on page 12 undefined on input l
+ine 432.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+
+LaTeX Warning: Citation `Yap2008' on page 13 undefined on input line 436.
+
+[13] [14] [15]
+Chapter 3.
+
+LaTeX Warning: Citation `cox1990autonomous' on page 16 undefined on input line 
+489.
+
+
+LaTeX Warning: Citation `vukobratovic1989introduction' on page 16 undefined on 
+input line 489.
+
+
+LaTeX Warning: Citation `Roy' on page 16 undefined on input line 489.
+
+
+LaTeX Warning: Citation `Roy' on page 16 undefined on input line 491.
+
+[16
+
+]
+
+LaTeX Warning: Citation `Eliazar2004' on page 17 undefined on input line 518.
+
+
+LaTeX Warning: Citation `Yap2008' on page 17 undefined on input line 538.
+
+
+</home/rohan/Documents/thesis_work/parameter_estimation_yapp.png, id=91, 348.55
+219pt x 247.67531pt>
+
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 542.
+
+
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 542.
+
+[17]
+
+LaTeX Warning: Citation `Hegren√¶s2008' on page 18 undefined on input line 555.
+
+
+
+LaTeX Warning: Reference `fig-INS systems(a)' on page 18 undefined on input lin
+e 557.
+
+
+LaTeX Warning: Citation `leonard1998autonomous' on page 18 undefined on input l
+ine 557.
+
+[18]
+</home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_trad
+itional.png, id=100, 447.92343pt x 284.56313pt>
+</home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_mode
+l.png, id=101, 509.65407pt x 267.24844pt>
+
+LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 571.
+
+
+
+LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 571.
+
+
+
+LaTeX Warning: Reference `fig:general archi' on page 19 undefined on input line
+ 577.
+
+
+LaTeX Warning: Citation `Yap2008' on page 19 undefined on input line 577.
+
+<Diagram1.jpeg, id=102, 980.66376pt x 507.8975pt>
+
+LaTeX Warning: Reference `fig- General Architecture' on page 19 undefined on in
+put line 583.
+
+[19]
+
+LaTeX Warning: Citation `Yap2008' on page 20 undefined on input line 591.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+
+LaTeX Warning: Citation `russell2003artificial' on page 21 undefined on input l
+ine 596.
+
+
+LaTeX Warning: Citation `dempster1977maximum' on page 21 undefined on input lin
+e 596.
+
+
+LaTeX Warning: Reference `eq-: maximization' on page 21 undefined on input line
+ 604.
+
+
+LaTeX Warning: Citation `minka1998expectation' on page 21 undefined on input li
+ne 614.
+
+[21]
+
+LaTeX Warning: Reference `eq-: derivation_em' on page 22 undefined on input lin
+e 632.
+
+[22]
+
+LaTeX Warning: Citation `bishop2006pattern' on page 23 undefined on input line 
+661.
+
+[23]
+Overfull \hbox (31.43094pt too wide) in paragraph at lines 710--713
+\OT1/cmr/m/n/12 the pa-ram-e-ters of the mo-tion model that we want to learn ar
+e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$|
+ []
+
+[24]
+Overfull \hbox (7.62697pt too wide) in alignment at lines 739--742
+ [][][] []
+ []
+
+
+Overfull \hbox (38.67104pt too wide) in alignment at lines 746--749
+ [][][] []
+ []
+
+
+LaTeX Warning: Citation `shewchuk1994introduction' on page 25 undefined on inpu
+t line 759.
+
+[25]
+Overfull \hbox (65.88025pt too wide) in alignment at lines 761--764
+ [][][] []
+ []
+
+[26]
+Chapter 4.
+
+LaTeX Warning: Reference `fig-: simulation world' on page 27 undefined on input
+ line 798.
+
+
+LaTeX Warning: Reference `tab- constant parameters' on page 27 undefined on inp
+ut line 798.
+
+
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 798--818
+\OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
+ate a sim-u-lated world(Figure|
+ []
+
+<0.png, id=129, 586.8324pt x 442.2924pt>
+
+LaTeX Warning: Reference `fig-: movement simulation world' on page 27 undefined
+ on input line 826.
+
+
+LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
+ undefined on input line 826.
+
+<1.png, id=131, 586.8324pt x 442.2924pt>
+<2.png, id=132, 586.8324pt x 442.2924pt>
+<3.png, id=133, 586.8324pt x 442.2924pt>
+<4.png, id=134, 586.8324pt x 442.2924pt>
+
+LaTeX Warning: Reference `tab-constant paramters' on page 27 undefined on input
+ line 843.
+
+[27
+
+]
+
+LaTeX Warning: Reference `tab-:varying_sensor_noise' on page 28 undefined on in
+put line 851.
+
+
+Overfull \hbox (219.31274pt too wide) in paragraph at lines 859--881
+ [][] |
+ []
+
+
+LaTeX Warning: Reference `tab-:varying_sensor_noise' on page 28 undefined on in
+put line 884.
+
+
+LaTeX Warning: Reference `fig-varying_sensor_noise' on page 28 undefined on inp
+ut line 884.
+
+[28] [29]
+
+LaTeX Warning: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3.eps' not 
+found on input line 890.
+
+
+! LaTeX Error: Unknown graphics extension: .05_0.5_s_1_traj_3.eps.
+
+See the LaTeX

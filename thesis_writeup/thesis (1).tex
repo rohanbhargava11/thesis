@@ -2,7 +2,10 @@
 % $Id: simple.tex 309 2011-01-28 14:46:48Z vlado $
 %\documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
+
+
 \documentclass[12pt,draft]{dalcsthesis}
+
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{epsfig}
@@ -14,10 +17,12 @@
 \usepackage{subfigure}
 \usepackage{algorithm2e}
 
+
 %\usepackage{caption}
 %\captionsetup[table]{skip=10pt}
 
 \begin{document}
+
 \mcs  % options are \mcs, \macs, \mec, \mhi, \phd, and \bcshon
 \title{Feature Based adaptive motion model}
 \author{Rohan Bhargava}
@@ -890,7 +895,8 @@ As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigm
      {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.5_s_1_traj_3.eps}}
   \caption{\label{fig-varying_sensor_noise} }
 \end{figure}
-At the start of the experiment the parameter values for the robot's motion model and static motion model for particle filters are intialized with the same value. The adaptive motion model right from time step 0 starts estimating the parameters. In Figure ~\ref{fig-varying_sensor_noise} in the first $20$ there is no change and we can see that the adaptive motion model performs better than the static. In theory the static motion model has the best estimate of robot' motion as they are intialized with the same parameter value so the error should be less for static motion model. We don't see this because the location of particles are randomly initilazied therefore it might be at different location to robot's start position. It needs sensor model to decrease the error and as the sensor noise is high it takes time to build the weight of particles. In Figure ~\ref{varying_sensor_noise_sensor_model} we plot the average weight of particles at each time step and when the weights of particle are higher we can see the static motion model performing better. This is due to the resampling step of particle fitlers where they choose the most proabable particles based on motion and sensor models. As soon as the algorithm starts picking the most probabasle particles the error goes down and we can see that the average weight of particles are also higher. In the case of adaptive motion model the distribution of motion model gets wider right from the start and which leads to decrease in error.
+At the start of the experiment the parameter values for the robot's motion model and static motion model for particle filters are intialized with the same value. The adaptive motion model right from time step 0 starts estimating the parameters. In Figure ~\ref{fig-varying_sensor_noise} in the first $20$ there is no change and we can see that the adaptive motion model performs better than the static. In theory the static motion model has the best estimate of robot' motion as they are intialized with the same parameter value so the error should be less for static motion model. We don't see this because the location of particles are randomly initilazied therefore it might be at different location to robot's start position. It needs sensor model to decrease the error and as the sensor noise is high it takes time to build the weight of particles. In Figure ~\ref{varying_sensor_noise_sensor_model} we plot the average weight of particles at each time step and when the weights of particle are higher we can see the 
+static motion model performing better. This is due to the resampling step of particle fitlers where they choose the most proabable particles based on motion and sensor models. As soon as the algorithm starts picking the most probabasle particles the error goes down and we can see that the average weight of particles are also higher. In the case of adaptive motion model the distribution of motion model gets wider right from the start and which leads to decrease in error.
 
 After time step 60 we change the motion model noise and we can see that adative motion model performing way better as comparated to the static motion model. The average weight of partilces in Figure ~\ref{fig-varying_sensor_noise_sensor_model} also goes down. In Figure ~\ref{fig-varying_sensor_noise_motion_model} we don't see a jump in the red line or green line at time step 60 and this due to the fact that the estimate of parameter before the change was greater than the change after time step 60. 
 
@@ -1110,7 +1116,8 @@ Side scan sonar is used to create pictures or an image of the sea floor. A side 
   \caption{\label{fig- side scan sonar image} Side scan sonar image of the wreck. Image taken from \cite{}{http://www.nauticalcharts.noaa.gov/hsd/SSS.html} }
 \end{figure}
 
-Side-scan transmits sound energy and analyzes the echo that is bounced off from the sea floor or other objects. It typicaly consists of three basic components: towfish, transmission cable and topside porcessing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimesions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are recieved by transducers and are contronously recorded. Each pulse shows a narrow stip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequicies range from 100 to 500 Khz in side scan sonar; higher frequencies yeild better resolution but less range. Currenlty in the market there are systems with dual frequncy which allow the opeator to use high frequecy to produce sharper images or lower frequinces to cover greater depths. Side scan systems can be characterized according to their operating frequncy ((http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm; Long, 2007).
+Side-scan transmits sound energy and analyzes the echo that is bounced off from the sea floor or other objects. It typicaly consists of three basic components: towfish, transmission cable and topside porcessing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimesions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are recieved by transducers and are contronously recorded. Each pulse shows a narrow stip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequicies range from 100 to 500 Khz in side scan sonar; higher frequencies yeild better resolution but less range. Currenlty in the market there are systems with dual frequncy which allow the opeator to use high frequecy to produce sharper images or lower frequinces to cover greater depths. Side scan 
+systems can be characterized according to their operating frequncy ((http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm; Long, 2007).
 
 \begin{table}
 
@@ -1252,31 +1259,23 @@ The disadvantage of this step is we loose information because the image is blurr
   \caption{\label{fig- side sonar median high} High Median filter applied to side sonar image.}
 \end{figure}
 
-The preprocessed image is used to extract landmarks for the AUV. To generate landmarks we use feature extraction techniques such as SIFT. Figure ~\ref{} shows the keypoints generated by SIFT using a high hessian threshold. These keypoints can be used as landmarks to adapt our motion model. We need to keep in mind that we need a high hessian threshold or else the algorithm will generate hunderds of landmarks as shown in Figure ~\ref{}.
+The preprocessed image is used to extract landmarks for the AUV. To generate landmarks we use feature extraction techniques such as SIFT. Figure ~\ref{side sonar sift} shows the keypoints generated by SIFT using a high hessian threshold. These keypoints can be used as landmarks to adapt our motion model. We need to keep in mind that we need a high hessian threshold or else the algorithm will generate hunderds of landmarks as shown in Figure ~\ref{side sonar sift high}.
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg}}
+  \caption{\label{fig- side sonar sift} SIFT features on a side sonar image.}
+\end{figure}
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/image_original_sift_high.jpg}}
+  \caption{\label{fig- side sonar sift high} SIFT features on a side sonar image with low hessian threhold.}
+\end{figure}
+
 
 The distance of the AUV to landmarks in x-y plane can be measured. Similary the distance of the paticle filter estimate to the landmarks can be measured. Both the measured distances can be compared and used to assign weights to the particles. 
 
 Using dynamic landmarks allows our adaptive motion model algorithm independence from a static map and helps us in learning on the fly.  
-
-
-\begin{figure}[hbtp]
-\caption{Side Sonar Image}
-\centering
-\includegraphics[scale=0.5]{/home/rohan/Documents/thesis_work/visual_sonar/sonar_59/18.jpg}
-\end{figure}
-As you can see in the image there are lot of horizontal lines which we treat as noise. For us to use the side sonar images we performed a pre-processing step in which we used a median filter on the image. This helped us in getting rid of major noises in terms of horizontal lines but also blurred the image. In order to generate some landmarks we ran feature extractions techniques like SURF. This algorithm helped us in detecting interest points in the image and are shown below in circles. Andrew Vardy{refer the paper) ran multiple image registration techniques such as phase matching (you need to mention more) on side sonar images and showed that SURF performs better than the rest .
-\begin{figure}[hbtp]
-\caption{SURF Keypoints}
-\centering
-\includegraphics[scale=0.4]{/home/rohan/Documents/thesis_work/visual_sonar/landmarks.png}
-\end{figure}
-
-These interest points can be treated as landmarks. We use a high Hessian
-threshold so that we have a maximum of 4 landmarks. The distance of the robot and the particles to these landmarks are used to assign weights to the particles.
-\\
-The output of a side sonar is a ping of the surface and for an image to be created we need to combine pings over time. Andrew Vardy in his paper explains on how to combine pings to create an meaningful image. For our algorithm to run on the AUV we can use Andrew's algorithm as a black box and run our feature extraction on the output i.e. images of the seabed. 
-This method allows us independence from a static map as well as helps in learning
-the motion model on the fly in a new environment. 
 
 \section{Motion Estimation using side sonar images}
 
@@ -1284,61 +1283,18 @@ In mobile robots the position and orientation is determined through wheel encode
 
 In AUV the motion estimates from INS suffer from drift and are coupled with DVL to give a better estimate of the position. Hegreneas \cite{hegrenaes2008model} combined the knowledge of vehicle dynamics to aid INS systems. In a similar manner visual motion information can be used to aid INS systems. The visual input to the dead reckoning algorithm has its pros and cons. The main advantage of using a visual estimate is that it doesn't suffer from drift which is prime concern for underwater vehicles. The disadvantage lies in the fact that we don't have side sonar images available every time. The second disadvantage is the computation power available on AUV. To specifically deal with the problems we use a high Hessian threshold to extract maximum of 4 landmarks so that feature matching is not computationally expensive.    
 
-We verify our dynamic landmark approach by estimating motion information from side sonar images and compare it to reported movement by DVL. To generate keypoints we run SIFT on the side sonar images. We use a high hessian threhold so that we can restrict the amount of keypoints. These keypoints are matched with keypoints of the next consecutive image using a KNN based matcher. Figure ~\ref{} shows two consecutive images that are used to estimate motion of the AUV. In the first image the keypoints are marked in yellow circles. These keypoints are matched with the second image and the matched keypoints are marked in red circles. The $x$ and $y$ position of the matched keypoints is compared to the original keypoints. This gives us motion estimate of the AUV. 
+We verify our dynamic landmark approach by estimating motion information from side sonar images and compare it to reported movement by DVL. To generate keypoints we run SIFT on the side sonar images. We use a high hessian threhold so that we can restrict the amount of keypoints. These keypoints are matched with keypoints of the next consecutive image using a KNN based matcher. Figure ~\ref{matched images} shows two consecutive images that are used to estimate motion of the AUV. In the first image the keypoints are marked in white circles. These keypoints are matched with the second image and the matched keypoints are marked in black circles. The $x$ and $y$ position of the matched keypoints is compared to the original keypoints. This gives us motion estimate of the AUV. 
+
+\begin{figure}
+  \centering
+  \subfigure[a]{\includegraphics[width = 2.75 in]{home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg}\qquad
+  \subfigure[b]{\includegraphics[width = 2.75 in]{home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg}}\qquad
+ \caption{\label{fig- Two consective side sonar images. The white circles represent the landmarks and the black circle in next image shows the matched keypoints.}
+\end{figure}
 
 The method to estimate motion is a very simple one with assumptions that AUV moves in a straight line at the same depth. To overcome the assumptions there needs to be work done on integrating side scan sonar pose in the algorithm. The method proposed in the section was to verify the dynamic landmark approach instead of proposing an algorithm for estimating motion. 
 
 The performance of the algorithm is evaluated on real side sonar data. The results of the algorithm are compared to real motion information of the AUV and are discussed in the next chapter. 
-
-
-0. Introduction- This is done to verify our dynamic landmarks
-
-1. We just feature matching and calculate pixel
-
-2. Assumption are the its travelling at the same depth. 
-
-3. They are algorithms to consider camera pose and complex algorithm for camera and can be ported for side sonar 
-
-4. This is not an motion estimation algorithm but its just to verify we can get motion information. there has to a lot of work done to get motion estimation.  
-1. write about how it is done with cameras
-
-In AUV the motion estimation is generally done through dead-reckoning.
-It is a process of calculating the current position based upon the
-previous position and the speed of vessel. The velocity of the AUV
-can be estimated by the acceleration measurement supplied by an Inertial
-Measurement Unit. Another way is to use a Doppler Velocity Log(DVL) that
-measures velocity in water by measuring the Doppler effect on scattered
-sound waves. Dead reckoning may have significant errors as the velocity
-and direction must be accurately known at every time step. 
-
-In this algorithm we propose to get motion estimates using side sonar
-images. As stated before we run SURF on the images and generate some
-key points. These key points are matched in the next image using a
-KNN based matcher. The matched key points gives us an estimate on
-the movement of the vehicle. In the figure we show two consecutive
-images and in the first image we have the key points marked in circle.
-In the next image we have the matched key points marked in green circles. 
-\begin{figure}[hbtp]
-\caption{SURF Keypoints}
-\centering
-\includegraphics[scale=0.4]{/home/rohan/Documents/thesis_work/visual_sonar/surf_working.jpeg}
-\end{figure}
-This estimate can be coupled with the previous estimate to calculate
-the current position. The visual input to the dead reckoning algorithm
-has its pros and cons.The main advantage of using a visual estimate
-is that it doesn't suffer from drift which is prime concern for underwater
-vehicles. The disadvantage lies in the fact that we don't have side
-sonar images available every time. We can solve the problem by combining
-the visual input with the velocity estimates. We can pass the visual
-motion estimate and the DVL estimate to a Kalman Filter and use the
-output as an input to our dead-reckoning estimate. The second disadvantage
-is the computation power available on AUV. To specifically deal with
-the problems we use a high Hessian threshold to extract maximum of
-4 landmarks so that feature matching is not computationally expensive. 
-
-We validate our algorithm on datasets consisting of side sonar images
-and the total distance the AUV moves. 
-
 
 \chapter{Results}
 \section{Motion estimation using side sonar images}
