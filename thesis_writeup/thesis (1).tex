@@ -6,7 +6,8 @@
 
 \documentclass[12pt,draft]{dalcsthesis}
 
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
+
 \usepackage{epstopdf}
 \usepackage{epsfig}
 \usepackage{verbatim}
@@ -796,6 +797,10 @@ This specific application shows the importance of having a accurate motion model
 As you can see in the figure the input to the motion model is a control command and output is the velocity estimate. In HUGIN 4500 they had implemented a static motion model as table look up based on experimental data i.e.
 $u_{r}=f(n_{s})$  where $n_{s}$ is the control system set point. The velocity estimate $u_{r}$ is fused with the reading from IMU to get a better estimate of the position of the AUV. As shown before we try to learn the motion model to find the best estimate for the velocity so that it can aid the INS in this particular application. 
 \end{comment}
+
+ 
+
+
 \chapter{Results and Experimental Setup}
 \label{ch-: results adapting motion model}
 In this chapter we describe the experimental setup of the simulator to test our algorithm. To demonstrate the effectiveness of our approach the results from the simulated experiment are also shown.
@@ -845,9 +850,9 @@ At the start of the experiment  the initial location of the robot and particle f
 
 
 \section{Results}
-In this section we describe the various experiments that were performed in our simulated world. To simulate changes in the envrionment I externally change the noise in robot's motion model. In the experiments external chagnes were simulated by artifically intoducting a drift in the motion, secondaly by changing the variance of the motion model distribution. The parameter estimation was based on smoothed trajectories therfore in the results we show how estimation of parameter varies with number of trajectories. As shown in Table ~\ref{tab-constant paramters} the total timesteps is 200 and in all the experiments we simulate the changes at time step 60. 
+In this section we describe the various experiments that were performed in our simulated world. To simulate changes in the environment I externally change the noise in robot's motion model. In the experiments external changes were simulated by artificially introducing a drift in the motion, secondly by changing the variance of the motion model distribution. The parameter estimation was based on smoothed trajectories therefore in the results we show how estimation of parameter varies with number of trajectories. As shown in Table ~\ref{tab-constant parameters} the total timesteps is 200 and in all the experiments we simulate the changes at time step 60. 
 
-As desribed in Chapter ~\ref{chap-:Motion Model} the noise model for our simulated experiment is 
+As described in Chapter ~\ref{chap-:Motion Model} the noise model for our simulated experiment is 
 
 $V_{t}\sim\mathcal{{N}}(v_{t},v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
 
@@ -867,78 +872,89 @@ In first experiment we change $\sigma_{V_{v}}^2$ at time step 60 as shown in Tab
 \hline 
  &  & 1 & 2 & 1 & 2 &  & \tabularnewline
 \hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.5 & 1.0 & 1.185 & 2.640 & 1.0 & 3\tabularnewline
+$\sigma_{V_{v}}^{2}$ & 0.05 & 0.5 & 1.0 & 0.707 & 1.868 & 1.0 & 3\tabularnewline
 \hline 
 $\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 3\tabularnewline
 \hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.176 & 0.337 & 1.0 & 3\tabularnewline
+$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.123 & 0.252 & 1.0 & 3\tabularnewline
 \hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 3\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 3\tabularnewline
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 1.476 & 1.496 & 1.0 & 3\tabularnewline
 \hline 
 $\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 3\tabularnewline
 \hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 3\tabularnewline
+$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.208 & 0.210 & 1.0 & 3\tabularnewline
 \hline 
 \end{tabular}
 \caption{\label{tab-:varying_sensor_noise}Initial and estimated values of parameters with constant sensor noise
 and trajectories}
 \end{table}
 
-As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigma_{V_{v}}^2$ are $1.185$ and $2.640$ which are greater than the actual values and could lead to better localization. In order to demonstrate that I plot the localization error i.e. euclidean error between the robot's actual position and location estimate of partilce filters with time. In Figure ~\ref{fig-varying_sensor_noise} the red and blue line shows the error with a static motion model and adaptive motion model respectively.
+As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigma_{V_{v}}^2$ are $0.707$ and $2.640$ which are greater than the actual values and could lead to better localization. In order to demonstrate that I plot the localization error i.e. euclidean error between the robot's actual position and location estimate of particle filters with time. In Figure ~\ref{fig-varying_sensor_noise} the red and blue line shows the error with a static motion model and adaptive motion model respectively.
 
  
  
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.5_s_1_traj_3.eps}}
+     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10.pdf}}
   \caption{\label{fig-varying_sensor_noise} }
 \end{figure}
-At the start of the experiment the parameter values for the robot's motion model and static motion model for particle filters are intialized with the same value. The adaptive motion model right from time step 0 starts estimating the parameters. In Figure ~\ref{fig-varying_sensor_noise} in the first $20$ there is no change and we can see that the adaptive motion model performs better than the static. In theory the static motion model has the best estimate of robot' motion as they are intialized with the same parameter value so the error should be less for static motion model. We don't see this because the location of particles are randomly initilazied therefore it might be at different location to robot's start position. It needs sensor model to decrease the error and as the sensor noise is high it takes time to build the weight of particles. In Figure ~\ref{varying_sensor_noise_sensor_model} we plot the average weight of particles at each time step and when the weights of particle are higher we can see the 
-static motion model performing better. This is due to the resampling step of particle fitlers where they choose the most proabable particles based on motion and sensor models. As soon as the algorithm starts picking the most probabasle particles the error goes down and we can see that the average weight of particles are also higher. In the case of adaptive motion model the distribution of motion model gets wider right from the start and which leads to decrease in error.
+At the start of the experiment the parameter values for the robot's motion model and static motion model for particle filters are initialized with the same value. The adaptive motion model right from time step 0 starts estimating the parameters. In Figure ~\ref{fig-varying_sensor_noise} in the first $20$ there is no change and we can see that the adaptive motion model performs better than the static. In theory the static motion model has the best estimate of robot' motion as they are initialized with the same parameter value so the error should be less for static motion model. We don't see this because the location of particles are randomly initialized therefore it might be at different location to robot's start position. It needs sensor model to decrease the error and as the sensor noise is high it takes time to build the weight of particles. In Figure ~\ref{varying_sensor_noise_sensor_model} we plot the difference between the maximum weight and average weight of the particle set at each time step. When the weights of particle are higher we can see the 
+static motion model performing better. This is due to the resampling step of particle filters where they choose the most probable particles based on motion and sensor models. As soon as the algorithm starts picking the most probable particles the error goes down and we can see that the average weight of particles are also higher. In the case of adaptive motion model the distribution of motion model gets wider right from the start and which leads to decrease in error.
 
-After time step 60 we change the motion model noise and we can see that adative motion model performing way better as comparated to the static motion model. The average weight of partilces in Figure ~\ref{fig-varying_sensor_noise_sensor_model} also goes down. In Figure ~\ref{fig-varying_sensor_noise_motion_model} we don't see a jump in the red line or green line at time step 60 and this due to the fact that the estimate of parameter before the change was greater than the change after time step 60. 
+After time step 60 we change the motion model noise and we can see that adaptive motion model performing way better as compared to the static motion model. The difference in the weights of particles in Figure ~\ref{fig-varying_sensor_noise_sensor_model} also goes down. In Figure ~\ref{fig-varying_sensor_noise_motion_model} we don't see a jump in the red line or green line at time step 60 and this due to the fact that the estimate of parameter before the change was greater than the change after time step 60. 
 
    
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.5_s_1_traj_3_motion_model.eps}}
-  \caption{\label{fig-varying_sensor_noise_motion_model} }
+     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_motion_model_trans.pdf}}
+  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step.}
 \end{figure}
 
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.5_s_1_traj_3_sensor_model.eps}}
-  \caption{\label{fig-varying_sensor_noise_sensor_model} }
+     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_motion_model_rotation.pdf}}
+  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step.}
+\end{figure}
+
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_max_weight.pdf}}
+  \caption{\label{fig-varying_sensor_noise_sensor_model} Difference between the maximum weight and average weight of the particles.}
 \end{figure}
 
 In the next experiment $\sigma_{V_{v}}^2$ is changed from $0.05$ to $1.0$ and the errors, estimation of parameters and average weight are shown in Figure ~\ref{fig-varying_sensor_noise_1.0}, Figure ~\ref{varying_sensor_noise_motion_model_1.0} and Figure \ref{varying_sensor_noise_sensor_model_1.0} respectively. 
 
-In both the experiment's the robot's $\sigma_{V_{1}}^2$ is $0.05$ and is not changed throughout the experiment. Table ~\ref{tab-: varying_sensor_noise} shows that in adaptive motion model the estimated value of $\sigma_{V_{1}}^2$ changes from the initilaztion experiment. This error in estimation is not of much concern as the main goal of the algorithm proposed was to learn the motion model to decrease the localization error. 
+In both the experiment's the robot's $\sigma_{V_{1}}^2$ is $0.05$ and is not changed throughout the experiment. Table ~\ref{tab-: varying_sensor_noise} shows that in adaptive motion model the estimated value of $\sigma_{V_{1}}^2$ changes from the initialization experiment. This error in estimation is not of much concern as the main goal of the algorithm proposed was to learn the motion model to decrease the localization error. 
 
-To simulate changes in the enviornment for the first two experiments we change $\sigma_{V_{v}}^2$. In the next two expriments we would induce drift in the system and compare both motion models in terms of localization error.
+ Explain why other parameters are changed.
  
-
+ 
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_1.0_s_1_traj_3.eps}}
+     {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10.pdf}}
   \caption{\label{fig-varying_sensor_noise_1.0} }
 \end{figure}
    
    
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_1.0_s_1_traj_3_motion_model.eps}}
-  \caption{\label{fig-varying_sensor_noise_motion_model_1.0} }
+     {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10_motion_model_trans.pdf}}
+  \caption{\label{fig-varying_sensor_noise_motion_model_1.0}Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. }
 \end{figure}
 
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_1.0_s_1_traj_3_sensor_model.eps}}
-  \caption{\label{fig-varying_sensor_noise_sensor_model_1.0} }
+     {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10_motion_model_rotation.pdf}}
+  \caption{\label{fig-varying_sensor_noise_motion_model_1.0}Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. }
 \end{figure}
 
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10_max_weight.pdf}}
+  \caption{\label{fig-varying_sensor_noise_sensor_model_1.0}  Difference between the maximum weight and average weight of the particles.}
+\end{figure}
+
+To simulate changes in the environment for the first two experiments we change $\sigma_{V_{v}}^2$. In the next two experiments we would induce drift in the system and compare both motion models in terms of localization error.
 
 In order to simulate drift we describe the translational and rotational movement as
 $V_{t}\sim\mathcal{{N}}(v_{t}-a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
@@ -949,58 +965,52 @@ where a and b are constants representing drifts in the system.
 
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_drift_2.eps}}
+     {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20.pdf}}
   \caption{\label{fig-drift_2.0} }
 \end{figure}
    
    
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_drift_2_motion_model.eps}}
-  \caption{\label{fig-drift_motion_model_1.0} }
+     {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans.pdf}}
+  \caption{\label{fig-drift_motion_model_1.0_trans} }
 \end{figure}
 
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_drift_2_sensor_model.eps}}
-  \caption{\label{fig-drift_sensor_model_1.0} }
+     {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf}}
+  \caption{\label{fig-drift_motion_model_1.0_rotation} }
 \end{figure}
 
-Table ~\ref{tab-:drift} gives us a summary of the experiments performed to demonstrate the effectivness of the algorithm to account for drift. To account for the drift we don't include an extra parameter in motion model as the variances $\sigma_{V_{v}}^{2}}$ $\sigma_{V_{v}}^{1}}$  should account for drift and we see that in Table ~\ref{tab-:drift}. The rest of the parameters remain unchanged. 
+Table ~\ref{tab-:drift} gives us a summary of the experiments performed to demonstrate the effectiveness of the algorithm to account for drift. To account for the drift we don't include an extra parameter in motion model as the variances $\sigma_{V_{v}^{2}}$, $\sigma_{V_{v}^{1}}$  should account for drift and we see that in Table ~\ref{tab-:drift}. The rest of the parameters remain unchanged. 
 
 
 
 \begin{table}[tbh]
 \centering
-
-
-
-
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline 
 \multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & Estimated Parameter Values & Drift & Trajectories & Sensor noise\tabularnewline
 \hline 
  &  & 1 & 1 & 2 & 1 & 2 &  & \tabularnewline
 \hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 0.500 & 2.0 & 3 & 1.0\tabularnewline
+$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 0.461 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
 $\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 &  2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.100 & 2.0 & 3 & 1.0\tabularnewline
+$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.095 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 1.460 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
 $\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
+$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.206 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
 \end{tabular}
 \caption{\label{tab-:drift}Initial and estimated values of parameters with drift}
 \end{table}
 
-Another way to inlcude drift in the system is 
+Another way to include drift in the system is 
 $V_{t}\sim\mathcal{{N}}(v_{t}*a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
 
 $W_{t}\sim\mathcal{{N}}(w_{t}*b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
@@ -1008,70 +1018,19 @@ $W_{t}\sim\mathcal{{N}}(w_{t}*b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{
 The results are described in Figure ~\ref{fig-drift_multiply} and drift is present throught the experiment.
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{../../motion_model/plots/200_0.05_0.05_s_1.0_traj_3_drift_multiply_2.0.eps}}
+     {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf}}
   \caption{\label{fig-drift_multiply} }
 \end{figure}
-
-The key part to the algorithm is to get an estimate of ground truth and that is obtained by performing partilce smoothing. The partilce smoothing can be repeated several times to get a set of trajectories. In the next set of experiments we show how the estimation of parameters varies with trajectories. The sensor noise is $2.0$ throughout the experiment. Table ~\ref{tab-: trajectory} shows that higher the number of trajectories better the estimation of parameters. This is due to the fact that if we sample more we have more chances to form the most probable trajectory of robot's movement. 
-
-\begin{table}[tbh]
-
-
-
-\centering
-
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-\hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{3}{c|}{Estimated Parameter Values} & Sensor Noise & \multicolumn{3}{c}{Trajectories}\tabularnewline
-\hline 
- &  & 1 & 1 & 2 & 3 &  &  &  & \tabularnewline
-\hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.5 & 3.407 & 2.547 & 1.240 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 0.423 & 0.327 & 0.182 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabularnewline
-\hline 
-\end{tabular}
-\caption{\label{tab-: trajectory}Initial and estimated values of parameters with varying trajectories}
-\end{table}
-
-The advantage in having more trajectories is having a better estimate of the parameters but it comes at a cost. The computational time is directly proportional to the number of trajectories. The interesting fact in Figure 4, Figure 5, Figure 6 is that there is not much of a difference in localization error for various trajectories therefore we don't gain much in having a lot of trajectories. Table ~\ref{tab-:timevstrajectory} gives us an estimate of the time taken to estimate the parameters with various number of trajectories. It is clear that the time taken increases with more number of trajectoires. 
-
-
-\begin{table}[tbh]
-
-
-
-\begin{tabular}{|c|c|}
-\hline 
-No. of Trajectories & Time Elapsed(seconds) for 200 timesteps\tabularnewline
-\hline 
-\hline 
-3 & 75\tabularnewline
-\hline 
-15 & 210\tabularnewline
-\hline 
-30 & 400\tabularnewline
-\hline 
-\end{tabular}
-
-\caption{\label{tab-:timevstrajectory}Time taken to estimate the parameters}
-
-\end{table}
 
 In all the experiments above we assume that the sensor noise is constant through out the experiment. In practice we find that the quality of sensor readings varies with enviornment. For example in an AUV we won't get sonar readings throughout the mission. This could be because sometimes its difficult to find the bottom of the sea floor or sonar sensor could be switched off for some time periods to save power on the battery.
 
 In the next experiment we change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model (Figure ). In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model.
 
+\begin{figure}
+  \centering
+     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf}}
+  \caption{\label{fig-drift_multiply} }
+\end{figure}
 
 
 \chapter{Landmarks extraction using Side Sonar Images}
@@ -1100,10 +1059,12 @@ The measurments from these sensors in a partilce filter algorithm are used to as
 
 In our simluated experiment the sensor model assumes to have four static landmarks and at all times we can measure the distance from them. For our algorithm to work on AUV we need some sort of reference points to measure the actual movement of the vehicle. These reference points need to be computed on the fly as we don't have the liberty of having static maps for underwater envrioments. As my algorithm deals with cases in which AUV doesn't loop back and we have limited field of view we need dynamic landmarks for our sensor model. To extract dynamic landmarks we used side sonar images and run feature extraction technqiues such as SURF on the images. These extracted landmarks can be used as reference points for our algorithm to adapt motion model for AUV.
 
-The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavilabilty of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two section I desrribe how side scan sonar and SURF works. In section ~\ref{{ch-: dynamic landmakrs} the algorithm to compute landmakrs is presented and Chapter ~\ref{{ch-: results motion estimation} contains the results of the algorithm.  
+The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavilabilty of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two section I desrribe how side scan sonar and SURF works. In section ~\ref{ch-: dynamic landmakrs} the algorithm to compute landmakrs is presented and Chapter ~\ref{ch-: results motion estimation} contains the results of the algorithm.  
+
+
 
 \subsection{Side Scan Sonar} 
-Side scan sonar is used to create pictures or an image of the sea floor. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures of how "loud" the return echo is and paints a picture [refer http://oceanservice.noaa.gov/education/seafloor-mapping/how_sidescansonar.html]. In the sea floor we find  hard areas such as rock and soft ares such as sand. The hard areas are represented by darker areas in the image as they return a stronger singal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adpating the motion model. Sound waves travel very effectivley in water as compared to light therfore at lower depths sonar is used to image the sea floor instead of cameras. 
+Side scan sonar is used to create pictures or an image of the sea floor. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures of how "loud" the return echo is and paints a picture (1). In the sea floor we find  hard areas such as rock and soft ares such as sand. The hard areas are represented by darker areas in the image as they return a stronger singal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adpating the motion model. Sound waves travel very effectivley in water as compared to light therfore at lower depths sonar is used to image the sea floor instead of cameras. 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg}}
@@ -1152,7 +1113,6 @@ It can be used fisheries research, environomental studies and military applicati
   \caption{\label{fig- side scan sonar working} Working of a side scan sonar. Image taken from \cite{}{http://www.nauticalcharts.noaa.gov/hsd/SSS.html} }
 \end{figure}
 
-
 \subsection{Scale Invariant Feature Transform}
 SIFT is an algrotihm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was first proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stiching, video tracking etc.
 
@@ -1176,7 +1136,7 @@ The next step is to find another set of images by Difference of Gaussian (DOG) w
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.jpg}}
   \caption{\label{fig- sift dog} Difference of Gaussian done to caluclate keypoints in the image. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
-\end{figure
+\end{figure}
 
 To put this concept in our example the DOG is applied to the cat images and the output is shown in Figure ~\ref{}. 
 \begin{figure}
@@ -1201,12 +1161,12 @@ D(x) = D +
 
 After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intenstiry value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicual gradients are calcualted at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are consided to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invarinace. 
 
-In this step SIFT calculated gradient maginitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proposrtinal to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{} it peaks at 20-29 degrees therfore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above $80%$ of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
+In this step SIFT calculated gradient maginitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proposrtinal to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{} it peaks at 20-29 degrees therfore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above $80 \%$ of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-orientation-histogram.jpg}}
-  \caption{\label{fig- sift bin histogram} Histogram describing the bins for assigning orientation to the keypoint. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+  \caption{\label{fig- sift bin histogram} Histogram describing the bins for assigning orientation to the keypoint. Image taken from (2)}
 \end{figure}
 
 In the final step of SIFT algorithm a unique fingerprint for a keypoint aka descriptor is calculated. To calcualte the gradient we take $16 X 16$ window around the each keypoint. This $16 X 16$ window is broken into sixteen $4 X4$ windows (Figure ~\ref{}).
@@ -1232,6 +1192,7 @@ After we calculate the desrciptors for each keypoint we have a set of features t
 SIFT has  been widely used in various robotic applications. Stephen Se et. al \cite{se2001vision} proposed an vision based algorithm to localize a robot and map the environment using SIFT features. Various algorithm have been proposed to estimate motion from camera images using SIFT features \cite{barfoot2005online} \cite{scaramuzza2008appearance}. Similar algorithms have been proposed to estimate motion underwater using camera images \cite{Silva}.
 
 Andrew Vardy et. al \cite{vandrish2011side} compared various image registration techniques for side sonar images such as  maximization of mutual information, log-polar cross-correlation, SIFT and phase correlation. He presented results and concluded that SIFT and phase-correlation provide the best performance among all the techniques. Peter King \cite{king2012real} described an algorithm to generate images from side scan sonar pings in real time. To implement my algorithm on AUV we can use the algorithm proposed by them as a black box.
+
 
 \section{Dynamic Landmarks}
 \label{ch-: dynamic landmarks}
@@ -1287,9 +1248,9 @@ We verify our dynamic landmark approach by estimating motion information from si
 
 \begin{figure}
   \centering
-  \subfigure[a]{\includegraphics[width = 2.75 in]{home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg}\qquad
+  \subfigure[a]{\includegraphics[width = 2.75 in]{home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg}}\qquad
   \subfigure[b]{\includegraphics[width = 2.75 in]{home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg}}\qquad
- \caption{\label{fig- Two consective side sonar images. The white circles represent the landmarks and the black circle in next image shows the matched keypoints.}
+ \caption{\label{fig- Two consective side sonar images. The white circles represent the landmarks and the black circle in next image shows the matched keypoints.}}
 \end{figure}
 
 The method to estimate motion is a very simple one with assumptions that AUV moves in a straight line at the same depth. To overcome the assumptions there needs to be work done on integrating side scan sonar pose in the algorithm. The method proposed in the section was to verify the dynamic landmark approach instead of proposing an algorithm for estimating motion. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.7.11)  7 DEC 2013 15:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.9.16)  9 DEC 2013 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -59,10 +59,18 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count93
 ))
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
@@ -73,18 +81,12 @@ Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
@@ -109,17 +111,23 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-Package epstopdf Warning: Drivers other than `pdftex.def' are not supported.
-
-)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen107
 \epsfysize=\dimen108
@@ -150,13 +158,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count94
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count95
+\leftroot@=\count96
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count97
+\DOTSCASE@=\count98
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -165,15 +173,15 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen111
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
 \tag@help=\toks19
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
 \andhelp@=\toks20
 \eqnshift@=\dimen112
 \alignsep@=\dimen113
@@ -207,7 +215,7 @@ Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks23
 \XKV@tempa@toks=\toks24
-\XKV@depth=\count105
+\XKV@depth=\count106
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -225,10 +233,10 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@lly=\dimen119
 \tc@urx=\dimen120
 \tc@ury=\dimen121
-Package trimclip Info: Using driver 'tc-dvips.def'.
+Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-dvips.def
-File: tc-dvips.def 2012/05/13 v1.0 Clipping driver for dvips
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen122
 \adjbox@Height=\dimen123
@@ -237,12 +245,12 @@ File: tc-dvips.def 2012/05/13 v1.0 Clipping driver for dvips
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count106
+\c@checkoddpage=\count107
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box31
-\sift@deathcycles=\count107
+\sift@deathcycles=\count108
 \@vwid@loff=\dimen126
 \@vwid@roff=\dimen127
 ))
@@ -262,19 +270,19 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen132
 \TX@target=\dimen133
 \TX@delta=\dimen134
-\TX@cols=\count108
+\TX@cols=\count109
 \TX@ftn=\toks26
 ) (./subfigure.sty
 Package: subfigure 1995/03/06 v2.0 subfigure package
 
 Package: subfigure 1995/03/06 v2.0
-\c@subfigure=\count109
-\c@lofdepth=\count110
-\c@subtable=\count111
-\c@lotdepth=\count112
+\c@subfigure=\count110
+\c@lofdepth=\count111
+\c@subtable=\count112
+\c@lotdepth=\count113
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count113
+\c@AlgoLine=\count114
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -327,9 +335,9 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algoheightrule=\skip61
 \algotitleheightruledefault=\skip62
 \algotitleheightrule=\skip63
-\c@algocfline=\count114
-\c@algocfproc=\count115
-\c@algocf=\count116
+\c@algocfline=\count115
+\c@algocfproc=\count116
+\c@algocf=\count117
 \algocf@algoframe=\box37
 \algocf@algobox=\box38
 ) (./thesis (1).aux
@@ -339,67 +347,97 @@ LaTeX Warning: Label `eq:velocity motion model_y' multiply defined.
 
 LaTeX Warning: Label `eq:velocity motion model_theta' multiply defined.
 
+
+LaTeX Warning: Label `fig-varying_sensor_noise_motion_model' multiply defined.
+
+
+LaTeX Warning: Label `fig-varying_sensor_noise_motion_model_1.0' multiply defin
+ed.
+
+
+LaTeX Warning: Label `fig-drift_multiply' multiply defined.
+
+
+LaTeX Warning: Label `fig- sift octaves' multiply defined.
+
+
+LaTeX Warning: Label `fig- sift bin histogram' multiply defined.
+
 )
 \openout1 = `"thesis (1).aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen141
+\scratchbox=\box39
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen142
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks28
+)
 Unavoidable over/underfulls may occur in the first
 few pages of dalcsthesis. These can usually be ignored.
 However, if uncorrectable errors occur, notify staff.
-LaTeX Info: Redefining \\ on input line 46.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
+LaTeX Info: Redefining \\ on input line 47.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
  [1
 
-]
-LaTeX Info: Redefining \\ on input line 46.
-LaTeX Info: Redefining \\ on input line 46.
-\c@dal@loopindex=\count117
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Info: Redefining \\ on input line 47.
+LaTeX Info: Redefining \\ on input line 47.
+\c@dal@loopindex=\count124
  [2
 
 ]
-LaTeX Info: Redefining \\ on input line 46.
+LaTeX Info: Redefining \\ on input line 47.
  [3
 
-]
-(./thesis (1).toc
+] (./thesis (1).toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-))
+) [4
+
+
+])
 \tf@toc=\write3
 \openout3 = `"thesis (1).toc"'.
 
- [4
+ [5]
+\ab@page=\count125
+ [6
 
 
 ]
-\ab@page=\count118
- [5
-
-
-] [6
+[7
 
 ]
 Dalthesis preface pages completed.
@@ -408,20 +446,10 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 73.
+LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 74.
 
 
-! LaTeX Error: Cannot determine size of graphic in ../hugin_4500.png (no Boundi
-ngBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 ...aphics[height = 3.0 in]{../hugin_4500.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `../hugin_4500.png' not found on input line 77.
 
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -434,7 +462,7 @@ Missing character: There is no ù in font cmr12!
 ]
 
 LaTeX Warning: Citation `cox1990autonomous' on page 2 undefined on input line 8
-4.
+5.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -458,12 +486,12 @@ Chapter 2.
 [5
 
 ] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
 [7]
-Overfull \hbox (47.14342pt too wide) detected at line 228
+Overfull \hbox (47.14342pt too wide) detected at line 229
 \OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]p[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 qr \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]
@@ -479,7 +507,7 @@ t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (46.32191pt too wide) detected at line 232
+Overfull \hbox (46.32191pt too wide) detected at line 233
 \OML/cmm/m/it/12 M \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]q[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 rp \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]
@@ -495,7 +523,7 @@ t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (45.58235pt too wide) detected at line 236
+Overfull \hbox (45.58235pt too wide) detected at line 237
 \OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]r[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 pq \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[]
@@ -511,53 +539,26 @@ t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]|
  []
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/coordinate_system.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.242 ...n/Documents/thesis/coordinate_system.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/home/rohan/Documents/thesis/coordinate_system.png' not fo
+und on input line 243.
 
 [8]
 
 LaTeX Warning: Reference `adapting the motion model' on page 9 undefined on inp
-ut line 289.
+ut line 290.
 
 [9]
 
-! LaTeX Error: Cannot determine size of graphic in ../../thesis_work/markov_cha
-in.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.373 ...0 in]{../../thesis_work/markov_chain.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `../../thesis_work/markov_chain.png' not found on input lin
+e 374.
 
 
 Underfull \vbox (badness 3826) has occurred while \output is active []
 
  [10]
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-_work/particle_filter_non_gaussian_thrun.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.389 ...k/particle_filter_non_gaussian_thrun.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/particle_filter_non_gaus
+sian_thrun.png' not found on input line 390.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -565,20 +566,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [11]
 
 LaTeX Warning: Reference `fig:particle smoothing' on page 12 undefined on input
- line 432.
+ line 433.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/smoothing.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.435 ...ome/rohan/Documents/thesis/smoothing.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/home/rohan/Documents/thesis/smoothing.png' not found on i
+nput line 436.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -588,95 +580,43 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Chapter 3.
 
 LaTeX Warning: Citation `cox1990autonomous' on page 16 undefined on input line 
-494.
+495.
 
 [16
 
 ]
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-_work/parameter_estimation_yapp.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.546 ...hesis_work/parameter_estimation_yapp.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/parameter_estimation_yap
+p.png' not found on input line 547.
 
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 547.
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 548.
 
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 547.
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 548.
 
 [17]
 
-LaTeX Warning: Citation `Hegren√¶s2008' on page 18 undefined on input line 560.
-
-
-
 LaTeX Warning: Reference `fig-INS systems(a)' on page 18 undefined on input lin
-e 562.
+e 563.
 
 [18]
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-_work/model_aided_intertial_nvaigation_system_traditional.png (no BoundingBox).
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
+aigation_system_traditional.png' not found on input line 574.
 
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.573 ...rtial_nvaigation_system_traditional.png}}
-                                                  \qquad
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-_work/model_aided_intertial_nvaigation_system_model.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 ...d_intertial_nvaigation_system_model.png}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 576.
-
-
-
-LaTeX Warning: Citation `Hegren√¶s2008' on page 19 undefined on input line 576.
-
+LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
+aigation_system_model.png' not found on input line 575.
 
 
 LaTeX Warning: Reference `fig:general archi' on page 19 undefined on input line
- 582.
+ 583.
 
-
-! LaTeX Error: Cannot determine size of graphic in Diagram1.jpeg (no BoundingBo
-x).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.585 ...egraphics[height = 3.0 in]{Diagram1.jpeg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<Diagram1.jpeg, id=98, 980.66376pt x 507.8975pt>
 
 LaTeX Warning: Reference `fig- General Architecture' on page 19 undefined on in
-put line 588.
+put line 589.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -685,39 +625,31 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [20]
 
 LaTeX Warning: Reference `eq-: maximization' on page 21 undefined on input line
- 609.
-
-
-LaTeX Warning: Citation `minka1998expectation' on page 21 undefined on input li
-ne 619.
+ 610.
 
 [21]
 
 LaTeX Warning: Reference `eq-: derivation_em' on page 22 undefined on input lin
-e 637.
+e 638.
 
 [22] [23]
-Overfull \hbox (31.43094pt too wide) in paragraph at lines 715--718
+Overfull \hbox (31.43094pt too wide) in paragraph at lines 716--719
 \OT1/cmr/m/n/12 the pa-ram-e-ters of the mo-tion model that we want to learn ar
 e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$|
  []
 
 [24]
-Overfull \hbox (7.62697pt too wide) in alignment at lines 744--747
+Overfull \hbox (7.62697pt too wide) in alignment at lines 745--748
  [][][] []
  []
 
 
-Overfull \hbox (38.67104pt too wide) in alignment at lines 751--754
+Overfull \hbox (38.67104pt too wide) in alignment at lines 752--755
  [][][] []
  []
-
-
-LaTeX Warning: Citation `shewchuk1994introduction' on page 25 undefined on inpu
-t line 764.
 
 [25]
-Overfull \hbox (65.88025pt too wide) in alignment at lines 766--769
+Overfull \hbox (65.88025pt too wide) in alignment at lines 767--770
  [][][] []
  []
 
@@ -725,1069 +657,364 @@ Overfull \hbox (65.88025pt too wide) in alignment at lines 766--769
 Chapter 4.
 
 LaTeX Warning: Reference `tab- constant parameters' on page 27 undefined on inp
-ut line 803.
+ut line 808.
 
 
-Overfull \hbox (3.04907pt too wide) in paragraph at lines 803--823
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 808--828
 \OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
 ate a sim-u-lated world(Figure|
  []
 
-
-! LaTeX Error: Cannot determine size of graphic in 0.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.826 ...{\includegraphics[height = 3.0 in]{0.png}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<0.png, id=124, 586.8324pt x 442.2924pt>
 
 LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
- undefined on input line 831.
+ undefined on input line 836.
 
+<1.png, id=126, 586.8324pt x 442.2924pt>
+<2.png, id=127, 586.8324pt x 442.2924pt>
+<3.png, id=128, 586.8324pt x 442.2924pt>
+<4.png, id=129, 586.8324pt x 442.2924pt>
 
-! LaTeX Error: Cannot determine size of graphic in 1.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.837 ...\includegraphics[width = 2.75 in]{1.png}}
-                                                  \qquad
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in 2.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.838 ...\includegraphics[width = 2.75 in]{2.png}}
-                                                  \qquad
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in 3.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.839 ...\includegraphics[width = 2.75 in]{3.png}}
-                                                  \qquad
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in 4.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.840 ...\includegraphics[width = 2.75 in]{4.png}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `tab-constant parameters' on page 27 undefined on inpu
+t line 853.
 
 [27
 
 ]
-Overfull \hbox (219.31274pt too wide) in paragraph at lines 864--886
+Overfull \hbox (219.31274pt too wide) in paragraph at lines 869--889
  [][] |
  []
 
 [28] [29]
 
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3.eps' not 
-found on input line 895.
-
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3.eps' not 
-found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895 ..._model/plots/200_0.05_0.5_s_1_traj_3.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.5_s_1_traj_3.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.895 ..._model/plots/200_0.05_0.5_s_1_traj_3.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/plots/200_005_05_s_10.pdf' not found on input line 898.
 
 
 LaTeX Warning: Reference `varying_sensor_noise_sensor_model' on page 30 undefin
-ed on input line 898.
-
-[30]
-
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3_motion_mo
-del.eps' not found on input line 906.
+ed on input line 901.
 
 
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3_motion_mo
-del.eps' not found.
+Underfull \vbox (badness 6204) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.906 ...200_0.05_0.5_s_1_traj_3_motion_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ [30]
+
+LaTeX Warning: File `/plots/200_005_05_s_10_motion_model_trans.pdf' not found o
+n input line 909.
 
 
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.5_s_1_traj_3_motion_model.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.906 ...200_0.05_0.5_s_1_traj_3_motion_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/plots/200_005_05_s_10_motion_model_rotation.pdf' not foun
+d on input line 915.
 
 
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3_sensor_mo
-del.eps' not found on input line 912.
-
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.5_s_1_traj_3_sensor_mo
-del.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.912 ...200_0.05_0.5_s_1_traj_3_sensor_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.5_s_1_traj_3_sensor_model.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.912 ...200_0.05_0.5_s_1_traj_3_sensor_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/plots/200_005_05_s_10_max_weight.pdf' not found on input 
+line 921.
 
 
 LaTeX Warning: Reference `varying_sensor_noise_motion_model_1.0' on page 31 und
-efined on input line 916.
+efined on input line 925.
 
 
 LaTeX Warning: Reference `varying_sensor_noise_sensor_model_1.0' on page 31 und
-efined on input line 916.
+efined on input line 925.
+
+[31] [32]
+
+LaTeX Warning: Reference `tab-: varying_sensor_noise' on page 33 undefined on i
+nput line 927.
 
 
-Underfull \vbox (badness 1057) has occurred while \output is active []
-
- [31]
-
-LaTeX Warning: Reference `tab-: varying_sensor_noise' on page 32 undefined on i
-nput line 918.
+LaTeX Warning: File `/plots/200_005_10_s_10.pdf' not found on input line 934.
 
 
-LaTeX Warning: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3.eps' not 
-found on input line 925.
+LaTeX Warning: File `/plots/200_005_10_s_10_motion_model_trans.pdf' not found o
+n input line 941.
 
 
-! LaTeX Error: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3.eps' not 
-found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.925 ..._model/plots/200_0.05_1.0_s_1_traj_3.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/plots/200_005_10_s_10_motion_model_rotation.pdf' not foun
+d on input line 947.
 
 
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_1.0_s_1_traj_3.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.925 ..._model/plots/200_0.05_1.0_s_1_traj_3.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/plots/200_005_10_s_10_max_weight.pdf' not found on input 
+line 953.
 
 
-LaTeX Warning: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3_motion_mo
-del.eps' not found on input line 932.
+LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20.pdf' not found on 
+input line 968.
 
 
-! LaTeX Error: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3_motion_mo
-del.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.932 ...200_0.05_1.0_s_1_traj_3_motion_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans
+.pdf' not found on input line 975.
 
 
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_1.0_s_1_traj_3_motion_model.eps (no BoundingBox).
+LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_senso
+r.eps' not found on input line 981.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.932 ...200_0.05_1.0_s_1_traj_3_motion_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Package epstopdf Info: Source file: </plots/200_005_005_s_10_traj_3_drift_20_mo
+tion_model_sensor.eps>
+(epstopdf)             Output file: </plots/200_005_005_s_10_traj_3_drift_20_mo
+tion_model_sensor-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=/plots/200_005_005_s_10_tr
+aj_3_drift_20_motion_model_sensor-eps-converted-to.pdf /plots/200_005_005_s_10_
+traj_3_drift_20_motion_model_sensor.eps>
+(epstopdf)             \includegraphics on input line 981.
+Package epstopdf Info: Output file is already uptodate.
 
-
-LaTeX Warning: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3_sensor_mo
-del.eps' not found on input line 938.
-
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_1.0_s_1_traj_3_sensor_mo
-del.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.938 ...200_0.05_1.0_s_1_traj_3_sensor_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_1.0_s_1_traj_3_sensor_model.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.938 ...200_0.05_1.0_s_1_traj_3_sensor_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_dri
-ft_2.eps' not found on input line 952.
-
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_dri
-ft_2.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.952 ...00_0.05_0.05_s_1.0_10_traj_3_drift_2.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.05_s_1.0_10_traj_3_drift_2.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.952 ...00_0.05_0.05_s_1.0_10_traj_3_drift_2.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_dri
-ft_2_motion_model.eps' not found on input line 959.
-
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_dri
-ft_2_motion_model.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.959 ...s_1.0_10_traj_3_drift_2_motion_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.05_s_1.0_10_traj_3_drift_2_motion_model.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.959 ...s_1.0_10_traj_3_drift_2_motion_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_dri
-ft_2_sensor_model.eps' not found on input line 965.
-
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.05_s_1.0_10_traj_3_dri
-ft_2_sensor_model.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.965 ...s_1.0_10_traj_3_drift_2_sensor_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.05_s_1.0_10_traj_3_drift_2_sensor_model.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.965 ...s_1.0_10_traj_3_drift_2_sensor_model.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Extra }, or forgotten $.
-l.969 ...del as the variances $\sigma_{V_{v}}^{2}}
-                                                  $ $\sigma_{V_{v}}^{1}}$  s...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-l.969 ...\sigma_{V_{v}}^{2}}$ $\sigma_{V_{v}}^{1}}
-                                                  $  should account for drif...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Overfull \hbox (226.65054pt too wide) in paragraph at lines 979--1000
+Overfull \hbox (226.65054pt too wide) in paragraph at lines 991--1010
  [][] |
  []
 
+[33] [34] [35] [36]
 
-LaTeX Warning: File `../../motion_model/plots/200_0.05_0.05_s_1.0_traj_3_drift_
-multiply_2.0.eps' not found on input line 1011.
+LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf' not 
+found on input line 1021.
 
-
-! LaTeX Error: File `../../motion_model/plots/200_0.05_0.05_s_1.0_traj_3_drift_
-multiply_2.0.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1011 ....05_s_1.0_traj_3_drift_multiply_2.0.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../../motion_model/plots/200
-_0.05_0.05_s_1.0_traj_3_drift_multiply_2.0.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1011 ....05_s_1.0_traj_3_drift_multiply_2.0.eps}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[32] [33] [34] [35]
-Overfull \hbox (166.36469pt too wide) in paragraph at lines 1023--1044
- [][] |
- []
-
-
-Underfull \vbox (badness 3375) has occurred while \output is active []
-
- [36]
 [37]
+
+LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf' not fou
+nd on input line 1031.
+
+[38]
 Chapter 5.
-[38
+[39
 
 ]
-Runaway argument?
-{{ch-: dynamic landmakrs} the algorithm to compute landmakrs is prese\ETC.
-! Paragraph ended before \ref was complete.
-<to be read again> 
-                   \par 
-l.1104 
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+
+LaTeX Warning: Reference `ch-: dynamic landmakrs' on page 40 undefined on input
+ line 1062.
 
 
-LaTeX Warning: Reference `fig- side scan sonar sensor' on page 39 undefined on 
-input line 1106.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1106 ...noaa.gov/education/seafloor-mapping/how_
-                                                  sidescansonar.html]. In th...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: Reference `ch-: results motion estimation' on page 40 undefined 
+on input line 1062.
 
 
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1108   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@xfloat ...@fltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1108   \centering
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \color@vbox 
-l.1108   \centering
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
+r_sensor.jpg' not found on input line 1070.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/side_scan_sonar_sensor.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1109 ...esis_writeup/side_scan_sonar_sensor.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1112 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
+r.jpg' not found on input line 1076.
 
 
-Overfull \hbox (2255.68602pt too wide) in paragraph at lines 1106--1112
-\OT1/cmr/m/n/12 mapping/how$[]\OML/cmm/m/it/12 idescansonar:html\OT1/cmr/m/n/12
- ]\OML/cmm/m/it/12 :Intheseafloorwefindhardareassuchasrockandsoftaressuchassand
-:Thehardareasarerepresentedbydarkerareasintheimageastheyreturnastrongersingalas
-comparedtoasoftarea:AtypicalsidesonarimageisshowninFigure []\OT1/cmr/m/n/12 5\O
-ML/cmm/m/it/12 :\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 :Sidescansonaristheonlyimag
-ingtoolthatworksatlowdepththereforeweuseittoextractlandmarksforadpatingthemotio
-nmodel:Soundwavestravelveryeffectivleyinwaterascomparedtolighttherforeatlowerde
-pthssonarisusedtoimagetheseafloorinsteadofcameras:$ |
- []
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/side_scan_sonar.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1115 ...esis/thesis_writeup/side_scan_sonar.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 4013) in paragraph at lines 1116--1116
+Underfull \hbox (badness 4013) in paragraph at lines 1077--1077
 []\OT1/cmr/m/n/12 Figure 5.2: []Side scan sonar im-age of the wreck. Im-age tak
 en from
  []
 
-[39]
+[40] [41]
 
-LaTeX Warning: Citation `Menezes' on page 40 undefined on input line 1145.
-
-
-LaTeX Warning: Citation `Menezes' on page 40 undefined on input line 1145.
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/work_side_scan
+.jpg' not found on input line 1112.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/work_side_scan.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1151 ...hesis/thesis_writeup/work_side_scan.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1152
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
 []\OT1/cmr/m/n/12 Figure 5.3: []Work-ing of a side scan sonar. Im-age taken fro
 m
  []
 
 
-LaTeX Warning: Citation `lowe1999object' on page 40 undefined on input line 115
-7.
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-octaves.j
+pg' not found on input line 1123.
+
+[42] [43]
+
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.
+jpg' not found on input line 1137.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sift-octaves.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1163 .../thesis/thesis_writeup/sift-octaves.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[40] [41]
-
-LaTeX Warning: Reference `fig- sift dog' on page 42 undefined on input line 117
-3.
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sift-dog-idea.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1177 ...thesis/thesis_writeup/sift-dog-idea.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 1603) in paragraph at lines 1178--1178
+Underfull \hbox (badness 1603) in paragraph at lines 1138--1138
 []\OT1/cmr/m/n/12 Figure 5.5: []Dif-fer-ence of Gaus-sian done to calu-clate ke
 y-points in the im-
  []
 
-Runaway argument?
-{figure 
-! Paragraph ended before \end was complete.
-<to be read again> 
-                   \par 
-l.1180 
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+
+LaTeX Warning: Reference `' on page 44 undefined on input line 1141.
 
 
-LaTeX Warning: Reference `' on page 42 undefined on input line 1181.
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-dog-image
+s.jpg' not found on input line 1144.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sift-dog-images.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1184 ...esis/thesis_writeup/sift-dog-images.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1191   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (0.40846pt too wide) in paragraph at lines 1148--1149
+\OT1/cmr/m/n/12 lo-cate the max-ima/minima in DOG im-ages. Sec-on-daly find sub
+-pixel max-ima/minima.|
+ []
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sif-maxima-ide
-a.jpg' not found on input line 1192.
+a.jpg' not found on input line 1152.
 
 
-! LaTeX Error: File `/home/rohan/Documents/thesis/thesis_writeup/sif-maxima-ide
-a.jpg' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1192 ...esis/thesis_writeup/sif-maxima-idea.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sif-maxima-idea.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1192 ...esis/thesis_writeup/sif-maxima-idea.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 1193--1193
+Underfull \hbox (badness 2020) in paragraph at lines 1153--1153
 []\OT1/cmr/m/n/12 Figure 5.7: []Lo-cate max-ima/minima in DOG im-ages. X marks 
 the cur-
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 1193--1193
+Underfull \hbox (badness 1472) in paragraph at lines 1153--1153
 \OT1/cmr/m/n/12 rent pixel and it is com-pared with its 26 neigh-bours. Im-age 
 taken from
  []
 
+[44] [45]
 
-LaTeX Warning: Reference `' on page 42 undefined on input line 1204.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1205 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: Reference `' on page 46 undefined on input line 1164.
 
 
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1207   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-orientati
+on-histogram.jpg' not found on input line 1168.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sift-orientation-histogram.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1208 ..._writeup/sift-orientation-histogram.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `' on page 46 undefined on input line 1172.
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 1209--1209
-[]\OT1/cmr/m/n/12 Figure 5.8: []His-togram de-scrib-ing the bins for as-sign-in
-g ori-en-ta-tion to the
- []
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-fingerpri
+nt.jpg' not found on input line 1176.
 
 
-LaTeX Warning: Reference `' on page 42 undefined on input line 1212.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1215   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sift-fingerprint.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1216 ...sis/thesis_writeup/sift-fingerprint.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `' on page 42 undefined on input line 1220.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1223   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `' on page 46 undefined on input line 1180.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-4X4.jpg' 
-not found on input line 1224.
+not found on input line 1184.
 
 
-! LaTeX Error: File `/home/rohan/Documents/thesis/thesis_writeup/sift-4X4.jpg' 
-not found.
+Underfull \vbox (badness 4454) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1224 ...ents/thesis/thesis_writeup/sift-4X4.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ [46]
+[47]
 
+LaTeX Warning: Citation `se2001vision' on page 48 undefined on input line 1192.
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/sift-4X4.jpg (no BoundingBox).
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1224 ...ents/thesis/thesis_writeup/sift-4X4.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
+LaTeX Warning: Citation `barfoot2005online' on page 48 undefined on input line 
+1192.
 
-LaTeX Warning: Citation `se2001vision' on page 42 undefined on input line 1232.
 
+LaTeX Warning: Citation `scaramuzza2008appearance' on page 48 undefined on inpu
+t line 1192.
 
 
-LaTeX Warning: Citation `barfoot2005online' on page 42 undefined on input line 
-1232.
+LaTeX Warning: Citation `vandrish2011side' on page 48 undefined on input line 1
+194.
 
 
-LaTeX Warning: Citation `scaramuzza2008appearance' on page 42 undefined on inpu
-t line 1232.
+LaTeX Warning: Citation `king2012real' on page 48 undefined on input line 1194.
 
 
-LaTeX Warning: Citation `Silva' on page 42 undefined on input line 1232.
+[48]
 
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_sonar_ori
+ginal.jpg' not found on input line 1204.
 
-LaTeX Warning: Citation `vandrish2011side' on page 42 undefined on input line 1
-234.
 
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/median_filter_
+sonar.jpg' not found on input line 1212.
 
-LaTeX Warning: Citation `king2012real' on page 42 undefined on input line 1234.
 
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/median_filter_
+sonar_high.jpg' not found on input line 1219.
 
 
-LaTeX Warning: Reference `fig- side sonar image original' on page 42 undefined 
-on input line 1239.
+LaTeX Warning: Reference `side sonar sift' on page 49 undefined on input line 1
+223.
 
 
-! LaTeX Error: Not in outer par mode.
+LaTeX Warning: Reference `side sonar sift high' on page 49 undefined on input l
+ine 1223.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1242   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/image_original
+_sift.jpg' not found on input line 1226.
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/side_sonar_original.jpg (no BoundingBox).
+[49] [50]
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1243 .../thesis_writeup/side_sonar_original.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/image_original
+_sift_high.jpg' not found on input line 1232.
 
 
-LaTeX Warning: Reference `fig- side sonar median' on page 42 undefined on input
- line 1248.
+LaTeX Warning: Citation `barfoot2005online' on page 51 undefined on input line 
+1243.
 
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/median_filter_sonar.jpg (no BoundingBox).
+LaTeX Warning: Citation `scaramuzza2008appearance' on page 51 undefined on inpu
+t line 1243.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1251 .../thesis_writeup/median_filter_sonar.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[51]
 
+LaTeX Warning: Reference `matched images' on page 52 undefined on input line 12
+47.
 
-LaTeX Warning: Reference `fig- side sonar median high' on page 42 undefined on 
-input line 1255.
 
+Underfull \vbox (badness 1057) has occurred while \output is active []
 
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/median_filter_sonar_high.jpg (no BoundingBox).
+ [52]
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1258 ...is_writeup/median_filter_sonar_high.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: File `home/rohan/Documents/thesis/thesis_writeup/image_original_
+sift.jpg' not found on input line 1251.
 
 
-LaTeX Warning: Reference `side sonar sift' on page 42 undefined on input line 1
-262.
+LaTeX Warning: File `home/rohan/Documents/thesis/thesis_writeup/image_matched_s
+ift.jpg' not found on input line 1252.
 
-
-LaTeX Warning: Reference `side sonar sift high' on page 42 undefined on input l
-ine 1262.
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/image_original_sift.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1265 .../thesis_writeup/image_original_sift.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1270   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in /home/rohan/Documents/thesis
-/thesis_writeup/image_original_sift_high.jpg (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1271 ...is_writeup/image_original_sift_high.jpg}
-                                                  }
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation `barfoot2005online' on page 42 undefined on input line 
-1282.
-
-
-LaTeX Warning: Citation `scaramuzza2008appearance' on page 42 undefined on inpu
-t line 1282.
-
-
-LaTeX Warning: Citation `Silva' on page 42 undefined on input line 1282.
-
-
-LaTeX Warning: Citation `hegrenaes2008model' on page 42 undefined on input line
- 1284.
-
-
-LaTeX Warning: Reference `matched images' on page 42 undefined on input line 12
-86.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1289   \centering
-                   
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Runaway argument?
-{\includegraphics [width = 2.75 in]{home/rohan/Documents/thesis/thesi\ETC.
-! Paragraph ended before \@subfloat was complete.
-<to be read again> 
-                   \par 
-l.1294 
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+[53]
 Chapter 6.
+[54
+
+]
 Chapter 7.
-(./thesis (1).bbl)
+(./thesis (1).bbl [55
 
-! LaTeX Error: \begin{figure} on input line 1288 ended by \end{document}.
+] [56
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1312 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
-(./thesis (1).aux)
+]
+Underfull \hbox (badness 3049) in paragraph at lines 108--112
+[]\OT1/cmr/m/n/12 Thomas Minka.  Expectation-Maximization as lower bound max-i-
+miza-
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 108--112
+\OT1/cmr/m/n/12 tion.  \OT1/cmr/m/it/12 Tu-to-rial pub-lished on the web at htt
+p://www-white. me-dia. mit.
+ []
+
+[57]) [58] (./thesis (1).aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-! You can't use `\end' in internal vertical mode.
-\AP@enddocument ...ndgroup \deadcycles \z@ \@@end 
-                                                  
-l.1312 \end{document}
-                     
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-! LaTeX Error: \begin{figure} on input line 1288 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1312 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1312 \end{document}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1312 \end{document}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-)
-! Emergency stop.
-<*> "thesis (1).tex"
-                    
-*** (job aborted, no legal \end found)
-
- 
+ ) 
 Here is how much of TeX's memory you used:
- 4421 strings out of 495060
- 61822 string characters out of 3182053
- 160956 words of memory out of 3000000
- 7463 multiletter control sequences out of 15000+200000
+ 4943 strings out of 495059
+ 69033 string characters out of 3182030
+ 153290 words of memory out of 3000000
+ 7970 multiletter control sequences out of 15000+200000
  10365 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,18n,35p,3361b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on "thesis (1).dvi" (47 pages, 123032 bytes).
+ 42i,18n,35p,1124b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "thesis (1).pdf" (65 pages, 301656 bytes).
+PDF statistics:
+ 285 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

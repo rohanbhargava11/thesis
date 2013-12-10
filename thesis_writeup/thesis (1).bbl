@@ -62,6 +62,17 @@ Oddvar Hallingstad and Kongsberg Maritime.
   hdodmnamice depries . ntheionseis are oces andimomets . os the}.
 \newblock (7491):17--20, 2007.
 
+\bibitem{Hegrenæs2008}
+\O~yvind Hegren\ae~s, Einar Berglund, and Oddvar Hallingstad.
+\newblock {Model-Aided Inertial Navigation for Underwater Vehicles}.
+\newblock 2008.
+
+\bibitem{hegrenaes2008model}
+Oyvind Hegrenaes, Einar Berglund, and Oddvar Hallingstad.
+\newblock {Model-aided inertial navigation for underwater vehicles}.
+\newblock In {\em Robotics and Automation, 2008. ICRA 2008. IEEE International
+  Conference on}, pages 1069--1076. IEEE, 2008.
+
 \bibitem{kalman1960new}
 Rudolph~Emil Kalman and Others.
 \newblock {A new approach to linear filtering and prediction problems}.
@@ -82,6 +93,22 @@ John~J Leonard, Andrew~A Bennett, Christopher~M Smith, and H~Feder.
 \newblock {Autonomous underwater vehicle navigation}.
 \newblock In {\em IEEE ICRA Workshop on Navigation of Outdoor Autonomous
   Vehicles}, 1998.
+
+\bibitem{lowe1999object}
+David~G Lowe.
+\newblock {Object recognition from local scale-invariant features}.
+\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
+
+\bibitem{Menezes}
+Lu\'{\i}s Menezes and Pinheiro Ua.
+\newblock {MeshAtlantic}.
+
+\bibitem{minka1998expectation}
+Thomas Minka.
+\newblock {Expectation-Maximization as lower bound maximization}.
+\newblock {\em Tutorial published on the web at http://www-white. media. mit.
+  edu/tpminka/papers/em. html}, 1998.
 
 \bibitem{ristic2004beyond}
 Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
@@ -106,6 +133,15 @@ Stuart Russell.
 \newblock {\em {Artificial intelligence: A modern approach, 2/E}}.
 \newblock Pearson Education India, 2003.
 
+\bibitem{shewchuk1994introduction}
+Jonathan~Richard Shewchuk.
+\newblock {An introduction to the conjugate gradient method without the
+  agonizing pain}, 1994.
+
+\bibitem{Silva}
+Silvia Silva, Paulo~Drews Jr, Gabriel~Leivas Oliveira, and Silva Figueiredo.
+\newblock {Visual Odometry and Mapping for Underwater Autonomous Vehicles}.
+
 \bibitem{Thor}
 Fossen Thor.
 \newblock {Guidance and Control Of Ocean Vechiles}.
@@ -116,7 +152,7 @@ Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.
 \newblock MIT press Cambridge, MA, 2005.
 
 \bibitem{vukobratovic1989introduction}
-Miomir Vukobratovic and Miomir Vukobratovic.
+Miomir Vukobratovic.
 \newblock {\em {Introduction to robotics}}.
 \newblock Springer-Verlag Berlin, Germany, 1989.
 

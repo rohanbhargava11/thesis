@@ -5,53 +5,64 @@ The style file: plain.bst
 Database file #1: mendeley.bib.bib
 Warning--I didn't find a database entry for "Hegrenes2008"
 Warning--I didn't find a database entry for "cox1990autonomous"
+Warning--I didn't find a database entry for "Yapp2008"
+Warning--I didn't find a database entry for "se2001vision"
+Warning--I didn't find a database entry for "barfoot2005online"
+Warning--I didn't find a database entry for "scaramuzza2008appearance"
+Warning--I didn't find a database entry for "vandrish2011side"
+Warning--I didn't find a database entry for "king2012real"
 Warning--empty journal in Eliazar2004
 Warning--can't use both volume and number fields in gordon1993novel
 Warning--empty journal in Hallingstad2007
 Warning--there's a number but no volume in Hallingstad2007
+Warning--empty journal in Hegrenæs2008
 Warning--empty journal in Lammas2004
+Warning--empty journal in Menezes
+Warning--empty year in Menezes
 Warning--empty year in Roy
+Warning--empty journal in Silva
+Warning--empty year in Silva
 Warning--empty journal in Thor
 Warning--empty year in Thor
-You've used 22 entries,
+You've used 29 entries,
             2118 wiz_defined-function locations,
-            632 strings with 7831 characters,
-and the built_in function-call counts, 7360 in all, are:
-= -- 729
-> -- 322
-< -- 9
-+ -- 126
-- -- 104
-* -- 482
-:= -- 1199
-add.period$ -- 68
-call.type$ -- 22
-change.case$ -- 112
+            672 strings with 9033 characters,
+and the built_in function-call counts, 9539 in all, are:
+= -- 945
+> -- 409
+< -- 12
++ -- 161
+- -- 132
+* -- 606
+:= -- 1545
+add.period$ -- 88
+call.type$ -- 29
+change.case$ -- 147
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 306
-empty$ -- 583
-format.name$ -- 104
-if$ -- 1558
+cite$ -- 42
+duplicate$ -- 403
+empty$ -- 761
+format.name$ -- 132
+if$ -- 2029
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 28
-newline$ -- 112
-num.names$ -- 44
-pop$ -- 148
+int.to.str$ -- 29
+missing$ -- 34
+newline$ -- 144
+num.names$ -- 58
+pop$ -- 203
 preamble$ -- 1
-purify$ -- 96
+purify$ -- 124
 quote$ -- 0
-skip$ -- 218
+skip$ -- 295
 stack$ -- 0
-substring$ -- 437
-swap$ -- 76
-text.length$ -- 9
+substring$ -- 552
+swap$ -- 105
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
-warning$ -- 8
-while$ -- 72
-width$ -- 24
-write$ -- 235
-(There were 10 warnings)
+type$ -- 104
+warning$ -- 13
+while$ -- 92
+width$ -- 31
+write$ -- 301
+(There were 21 warnings)

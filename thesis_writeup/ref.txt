@@ -1,0 +1,3 @@
+1 -> [refer http://oceanservice.noaa.gov/education/seafloormapping/how_sidescansonar.html]
+
+2-> {http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/}
