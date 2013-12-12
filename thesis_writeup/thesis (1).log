@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.9.16)  9 DEC 2013 17:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.9.16)  12 DEC 2013 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,10 +355,8 @@ LaTeX Warning: Label `fig-varying_sensor_noise_motion_model_1.0' multiply defin
 ed.
 
 
-LaTeX Warning: Label `fig-drift_multiply' multiply defined.
-
-
-LaTeX Warning: Label `fig- sift octaves' multiply defined.
+LaTeX Warning: Label `fig-different sensor noise motion model trans' multiply d
+efined.
 
 
 LaTeX Warning: Label `fig- sift bin histogram' multiply defined.
@@ -442,21 +440,12 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ]
 Dalthesis preface pages completed.
 Chapter 1.
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
 
 LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 74.
 
 
 LaTeX Warning: File `../hugin_4500.png' not found on input line 77.
 
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
 [1
 
 ]
@@ -468,16 +457,6 @@ LaTeX Warning: Citation `cox1990autonomous' on page 2 undefined on input line 8
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
 Underfull \vbox (badness 4454) has occurred while \output is active []
 
  [3]
@@ -486,12 +465,12 @@ Chapter 2.
 [5
 
 ] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 [7]
-Overfull \hbox (47.14342pt too wide) detected at line 229
+Overfull \hbox (47.14342pt too wide) detected at line 232
 \OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]p[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 qr \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]
@@ -507,7 +486,7 @@ t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (46.32191pt too wide) detected at line 233
+Overfull \hbox (46.32191pt too wide) detected at line 236
 \OML/cmm/m/it/12 M \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]q[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 rp \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]
@@ -523,7 +502,7 @@ t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]|
  []
 
 
-Overfull \hbox (45.58235pt too wide) detected at line 237
+Overfull \hbox (45.58235pt too wide) detected at line 240
 \OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[]r[] \OT1/cmr/m/n/12 + 
 (\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 
 )\OML/cmm/m/it/12 pq \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[]
@@ -540,25 +519,26 @@ t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]|
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/coordinate_system.png' not fo
-und on input line 243.
+und on input line 246.
 
 [8]
+Overfull \hbox (10.6812pt too wide) in paragraph at lines 265--274
+ [][] |
+ []
+
 
 LaTeX Warning: Reference `adapting the motion model' on page 9 undefined on inp
-ut line 290.
+ut line 308.
 
 [9]
 
 LaTeX Warning: File `../../thesis_work/markov_chain.png' not found on input lin
-e 374.
+e 392.
 
-
-Underfull \vbox (badness 3826) has occurred while \output is active []
-
- [10]
+[10]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/particle_filter_non_gaus
-sian_thrun.png' not found on input line 390.
+sian_thrun.png' not found on input line 408.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -566,11 +546,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [11]
 
 LaTeX Warning: Reference `fig:particle smoothing' on page 12 undefined on input
- line 433.
+ line 449.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/smoothing.png' not found on i
-nput line 436.
+nput line 452.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -580,76 +560,73 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Chapter 3.
 
 LaTeX Warning: Citation `cox1990autonomous' on page 16 undefined on input line 
-495.
+504.
 
 [16
 
 ]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/parameter_estimation_yap
-p.png' not found on input line 547.
+p.png' not found on input line 560.
 
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 548.
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 561.
 
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 548.
+LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 561.
 
 [17]
 
 LaTeX Warning: Reference `fig-INS systems(a)' on page 18 undefined on input lin
-e 563.
+e 576.
 
 [18]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
-aigation_system_traditional.png' not found on input line 574.
+aigation_system_traditional.png' not found on input line 587.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
-aigation_system_model.png' not found on input line 575.
+aigation_system_model.png' not found on input line 588.
 
+[19]
 
-LaTeX Warning: Reference `fig:general archi' on page 19 undefined on input line
- 583.
+LaTeX Warning: Reference `fig:general archi' on page 20 undefined on input line
+ 596.
 
-<Diagram1.jpeg, id=98, 980.66376pt x 507.8975pt>
+<Diagram1.jpeg, id=101, 980.66376pt x 507.8975pt>
 
-LaTeX Warning: Reference `fig- General Architecture' on page 19 undefined on in
-put line 589.
+LaTeX Warning: Reference `fig- General Architecture' on page 20 undefined on in
+put line 602.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
 [20]
 
 LaTeX Warning: Reference `eq-: maximization' on page 21 undefined on input line
- 610.
+ 623.
 
 [21]
 
 LaTeX Warning: Reference `eq-: derivation_em' on page 22 undefined on input lin
-e 638.
+e 651.
 
 [22] [23]
-Overfull \hbox (31.43094pt too wide) in paragraph at lines 716--719
+Overfull \hbox (31.43094pt too wide) in paragraph at lines 729--733
 \OT1/cmr/m/n/12 the pa-ram-e-ters of the mo-tion model that we want to learn ar
 e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$|
  []
 
 [24]
-Overfull \hbox (7.62697pt too wide) in alignment at lines 745--748
+Overfull \hbox (7.62697pt too wide) in alignment at lines 752--755
  [][][] []
  []
 
 
-Overfull \hbox (38.67104pt too wide) in alignment at lines 752--755
+Overfull \hbox (38.67104pt too wide) in alignment at lines 759--762
  [][][] []
  []
 
 [25]
-Overfull \hbox (65.88025pt too wide) in alignment at lines 767--770
+Overfull \hbox (65.88025pt too wide) in alignment at lines 774--777
  [][][] []
  []
 
@@ -657,10 +634,10 @@ Overfull \hbox (65.88025pt too wide) in alignment at lines 767--770
 Chapter 4.
 
 LaTeX Warning: Reference `tab- constant parameters' on page 27 undefined on inp
-ut line 808.
+ut line 815.
 
 
-Overfull \hbox (3.04907pt too wide) in paragraph at lines 808--828
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 815--835
 \OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
 ate a sim-u-lated world(Figure|
  []
@@ -668,7 +645,7 @@ ate a sim-u-lated world(Figure|
 <0.png, id=124, 586.8324pt x 442.2924pt>
 
 LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
- undefined on input line 836.
+ undefined on input line 843.
 
 <1.png, id=126, 586.8324pt x 442.2924pt>
 <2.png, id=127, 586.8324pt x 442.2924pt>
@@ -676,22 +653,22 @@ LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
 <4.png, id=129, 586.8324pt x 442.2924pt>
 
 LaTeX Warning: Reference `tab-constant parameters' on page 27 undefined on inpu
-t line 853.
+t line 860.
 
 [27
 
 ]
-Overfull \hbox (219.31274pt too wide) in paragraph at lines 869--889
+Overfull \hbox (219.31274pt too wide) in paragraph at lines 876--896
  [][] |
  []
 
 [28] [29]
 
-LaTeX Warning: File `/plots/200_005_05_s_10.pdf' not found on input line 898.
+LaTeX Warning: File `/plots/200_005_05_s_10.pdf' not found on input line 905.
 
 
 LaTeX Warning: Reference `varying_sensor_noise_sensor_model' on page 30 undefin
-ed on input line 901.
+ed on input line 908.
 
 
 Underfull \vbox (badness 6204) has occurred while \output is active []
@@ -699,273 +676,269 @@ Underfull \vbox (badness 6204) has occurred while \output is active []
  [30]
 
 LaTeX Warning: File `/plots/200_005_05_s_10_motion_model_trans.pdf' not found o
-n input line 909.
+n input line 916.
 
 
 LaTeX Warning: File `/plots/200_005_05_s_10_motion_model_rotation.pdf' not foun
-d on input line 915.
+d on input line 922.
 
 
 LaTeX Warning: File `/plots/200_005_05_s_10_max_weight.pdf' not found on input 
-line 921.
+line 928.
 
 
 LaTeX Warning: Reference `varying_sensor_noise_motion_model_1.0' on page 31 und
-efined on input line 925.
+efined on input line 932.
 
 
 LaTeX Warning: Reference `varying_sensor_noise_sensor_model_1.0' on page 31 und
-efined on input line 925.
+efined on input line 932.
 
 [31] [32]
 
 LaTeX Warning: Reference `tab-: varying_sensor_noise' on page 33 undefined on i
-nput line 927.
+nput line 934.
 
 
-LaTeX Warning: File `/plots/200_005_10_s_10.pdf' not found on input line 934.
+LaTeX Warning: File `/plots/200_005_10_s_10.pdf' not found on input line 938.
 
 
 LaTeX Warning: File `/plots/200_005_10_s_10_motion_model_trans.pdf' not found o
-n input line 941.
+n input line 945.
 
 
 LaTeX Warning: File `/plots/200_005_10_s_10_motion_model_rotation.pdf' not foun
-d on input line 947.
+d on input line 951.
 
 
 LaTeX Warning: File `/plots/200_005_10_s_10_max_weight.pdf' not found on input 
-line 953.
+line 957.
 
 
 LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20.pdf' not found on 
-input line 968.
+input line 973.
 
 
 LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans
-.pdf' not found on input line 975.
+.pdf' not found on input line 980.
 
 
-LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_senso
-r.eps' not found on input line 981.
+LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotat
+ion.pdf' not found on input line 986.
 
-Package epstopdf Info: Source file: </plots/200_005_005_s_10_traj_3_drift_20_mo
-tion_model_sensor.eps>
-(epstopdf)             Output file: </plots/200_005_005_s_10_traj_3_drift_20_mo
-tion_model_sensor-eps-converted-to.pdf>
-(epstopdf)             Command: <repstopdf --outfile=/plots/200_005_005_s_10_tr
-aj_3_drift_20_motion_model_sensor-eps-converted-to.pdf /plots/200_005_005_s_10_
-traj_3_drift_20_motion_model_sensor.eps>
-(epstopdf)             \includegraphics on input line 981.
-Package epstopdf Info: Output file is already uptodate.
 
-Overfull \hbox (226.65054pt too wide) in paragraph at lines 991--1010
+LaTeX Warning: Reference `fig-drfit_2.0' on page 33 undefined on input line 990
+.
+
+[33] [34] [35] [36]
+Overfull \hbox (226.65054pt too wide) in paragraph at lines 996--1015
  [][] |
  []
 
-[33] [34] [35] [36]
 
 LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf' not 
-found on input line 1021.
+found on input line 1027.
 
 [37]
 
 LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf' not fou
-nd on input line 1031.
+nd on input line 1038.
 
-[38]
+
+LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_motion_model_t
+rans.pdf' not found on input line 1044.
+
+
+LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_motion_model_r
+otation.pdf' not found on input line 1050.
+
+[38] [39]
 Chapter 5.
-[39
+[40
 
 ]
 
-LaTeX Warning: Reference `ch-: dynamic landmakrs' on page 40 undefined on input
- line 1062.
+LaTeX Warning: Reference `ch-: dynamic landmakrs' on page 41 undefined on input
+ line 1081.
 
 
-LaTeX Warning: Reference `ch-: results motion estimation' on page 40 undefined 
-on input line 1062.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
-r_sensor.jpg' not found on input line 1070.
+LaTeX Warning: Reference `ch-: results motion estimation' on page 41 undefined 
+on input line 1081.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
-r.jpg' not found on input line 1076.
+r_sensor.jpg' not found on input line 1089.
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 1077--1077
+LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
+r.jpg' not found on input line 1095.
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 1096--1096
 []\OT1/cmr/m/n/12 Figure 5.2: []Side scan sonar im-age of the wreck. Im-age tak
 en from
  []
 
-[40] [41]
+[41] [42]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/work_side_scan
-.jpg' not found on input line 1112.
+.jpg' not found on input line 1131.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
 []\OT1/cmr/m/n/12 Figure 5.3: []Work-ing of a side scan sonar. Im-age taken fro
 m
  []
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-octaves.j
-pg' not found on input line 1123.
+pg' not found on input line 1142.
 
-[42] [43]
+[43] [44]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.
-jpg' not found on input line 1137.
+jpg' not found on input line 1156.
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 1138--1138
+Underfull \hbox (badness 1603) in paragraph at lines 1157--1157
 []\OT1/cmr/m/n/12 Figure 5.5: []Dif-fer-ence of Gaus-sian done to calu-clate ke
 y-points in the im-
  []
 
 
-LaTeX Warning: Reference `' on page 44 undefined on input line 1141.
+LaTeX Warning: Reference `' on page 45 undefined on input line 1160.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-dog-image
-s.jpg' not found on input line 1144.
-
-
-Overfull \hbox (0.40846pt too wide) in paragraph at lines 1148--1149
-\OT1/cmr/m/n/12 lo-cate the max-ima/minima in DOG im-ages. Sec-on-daly find sub
--pixel max-ima/minima.|
- []
+s.jpg' not found on input line 1163.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sif-maxima-ide
-a.jpg' not found on input line 1152.
+a.jpg' not found on input line 1171.
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 1153--1153
+Underfull \hbox (badness 2020) in paragraph at lines 1172--1172
 []\OT1/cmr/m/n/12 Figure 5.7: []Lo-cate max-ima/minima in DOG im-ages. X marks 
 the cur-
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 1153--1153
-\OT1/cmr/m/n/12 rent pixel and it is com-pared with its 26 neigh-bours. Im-age 
-taken from
+Underfull \hbox (badness 1939) in paragraph at lines 1172--1172
+\OT1/cmr/m/n/12 rent pixel and it is com-pared with its 26 neigh-bors. Im-age t
+aken from
  []
 
-[44] [45]
+[45] [46]
 
-LaTeX Warning: Reference `' on page 46 undefined on input line 1164.
+LaTeX Warning: Reference `' on page 47 undefined on input line 1183.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-orientati
-on-histogram.jpg' not found on input line 1168.
+on-histogram.jpg' not found on input line 1187.
 
 
-LaTeX Warning: Reference `' on page 46 undefined on input line 1172.
+LaTeX Warning: Reference `' on page 47 undefined on input line 1191.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-fingerpri
-nt.jpg' not found on input line 1176.
+nt.jpg' not found on input line 1195.
 
 
-LaTeX Warning: Reference `' on page 46 undefined on input line 1180.
+LaTeX Warning: Reference `' on page 47 undefined on input line 1199.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-4X4.jpg' 
-not found on input line 1184.
+not found on input line 1203.
 
 
 Underfull \vbox (badness 4454) has occurred while \output is active []
 
- [46]
-[47]
-
-LaTeX Warning: Citation `se2001vision' on page 48 undefined on input line 1192.
-
-
-
-LaTeX Warning: Citation `barfoot2005online' on page 48 undefined on input line 
-1192.
-
-
-LaTeX Warning: Citation `scaramuzza2008appearance' on page 48 undefined on inpu
-t line 1192.
-
-
-LaTeX Warning: Citation `vandrish2011side' on page 48 undefined on input line 1
-194.
-
-
-LaTeX Warning: Citation `king2012real' on page 48 undefined on input line 1194.
-
-
+ [47]
 [48]
 
+LaTeX Warning: Citation `se2001vision' on page 49 undefined on input line 1211.
+
+
+
+LaTeX Warning: Citation `barfoot2005online' on page 49 undefined on input line 
+1211.
+
+
+LaTeX Warning: Citation `scaramuzza2008appearance' on page 49 undefined on inpu
+t line 1211.
+
+
+LaTeX Warning: Citation `vandrish2011side' on page 49 undefined on input line 1
+213.
+
+
+LaTeX Warning: Citation `king2012real' on page 49 undefined on input line 1213.
+
+
+[49]
+
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_sonar_ori
-ginal.jpg' not found on input line 1204.
+ginal.jpg' not found on input line 1223.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/median_filter_
-sonar.jpg' not found on input line 1212.
+sonar.jpg' not found on input line 1231.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/median_filter_
-sonar_high.jpg' not found on input line 1219.
+sonar_high.jpg' not found on input line 1238.
 
 
-LaTeX Warning: Reference `side sonar sift' on page 49 undefined on input line 1
-223.
+LaTeX Warning: Reference `side sonar sift' on page 50 undefined on input line 1
+242.
 
 
-LaTeX Warning: Reference `side sonar sift high' on page 49 undefined on input l
-ine 1223.
+LaTeX Warning: Reference `side sonar sift high' on page 50 undefined on input l
+ine 1242.
 
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/image_original
-_sift.jpg' not found on input line 1226.
+_sift.jpg' not found on input line 1245.
 
-[49] [50]
+[50] [51]
 
 LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/image_original
-_sift_high.jpg' not found on input line 1232.
+_sift_high.jpg' not found on input line 1251.
 
 
-LaTeX Warning: Citation `barfoot2005online' on page 51 undefined on input line 
-1243.
+LaTeX Warning: Citation `barfoot2005online' on page 52 undefined on input line 
+1262.
 
 
-LaTeX Warning: Citation `scaramuzza2008appearance' on page 51 undefined on inpu
-t line 1243.
+LaTeX Warning: Citation `scaramuzza2008appearance' on page 52 undefined on inpu
+t line 1262.
 
-[51]
+[52]
 
-LaTeX Warning: Reference `matched images' on page 52 undefined on input line 12
-47.
+LaTeX Warning: Reference `matched images' on page 53 undefined on input line 12
+66.
 
 
 Underfull \vbox (badness 1057) has occurred while \output is active []
 
- [52]
+ [53]
 
 LaTeX Warning: File `home/rohan/Documents/thesis/thesis_writeup/image_original_
-sift.jpg' not found on input line 1251.
+sift.jpg' not found on input line 1270.
 
 
 LaTeX Warning: File `home/rohan/Documents/thesis/thesis_writeup/image_matched_s
-ift.jpg' not found on input line 1252.
+ift.jpg' not found on input line 1271.
 
-[53]
+[54]
 Chapter 6.
-[54
+[55
 
 ]
 Chapter 7.
-(./thesis (1).bbl [55
+(./thesis (1).bbl [56
 
-] [56
+] [57
 
 
 ]
@@ -980,7 +953,7 @@ Underfull \hbox (badness 2111) in paragraph at lines 108--112
 p://www-white. me-dia. mit.
  []
 
-[57]) [58] (./thesis (1).aux)
+[58]) [59] (./thesis (1).aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -989,13 +962,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4943 strings out of 495059
- 69033 string characters out of 3182030
- 153290 words of memory out of 3000000
- 7970 multiletter control sequences out of 15000+200000
+ 4949 strings out of 495059
+ 69292 string characters out of 3182030
+ 153339 words of memory out of 3000000
+ 7975 multiletter control sequences out of 15000+200000
  10365 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,18n,35p,1124b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,35p,1318b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -1011,10 +984,10 @@ m/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (65 pages, 301656 bytes).
+Output written on "thesis (1).pdf" (66 pages, 302961 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
+ 288 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
