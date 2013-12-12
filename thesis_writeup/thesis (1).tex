@@ -1064,7 +1064,7 @@ Sateellite Based Sensors & GPS \\
 \end{tabular}
 \caption{\label{tab-: classes of sensors} Sensors for Mobile robots. Table taken from \cite{thrun2005probabilistic}}
 \end{table}
-The measurments from these sensors in a particle filter algorithm are used to assign weights aka importance factor to particles. Most common way of sensing the environment is through landmarks. The landmarks can be active beacons such as GPS or passive such as visual, retro-reflective etc. The sensors measure the distance , bearing or both from the landmarks to estimate their position in the environment. 
+The measurements from these sensors in a particle filter algorithm are used to assign weights aka importance factor to particles. Most common way of sensing the environment is through landmarks. The landmarks can be active beacons such as GPS or passive such as visual, retro-reflective etc. The sensors measure the distance , bearing or both from the landmarks to estimate their position in the environment. 
 
 In our simulated experiment the sensor model assumes to have four static landmarks and at all times we can measure the distance from them. For our algorithm to work on AUV we need some sort of reference points to measure the actual movement of the vehicle. These reference points need to be computed on the fly as we don't have the liberty of having static maps for underwater environments. As my algorithm deals with cases in which AUV doesn't loop back and we have limited field of view we need dynamic landmarks for our sensor model. To extract dynamic landmarks we used side sonar images and run feature extraction technqiues such as SURF on the images. These extracted landmarks can be used as reference points for our algorithm to adapt motion model for AUV.
 
@@ -1123,17 +1123,17 @@ It can be used fisheries research, environomental studies and military applicati
 \end{figure}
 
 \subsection{Scale Invariant Feature Transform}
-SIFT is an algrotihm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was first proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stiching, video tracking etc.
+SIFT is an algorithm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was first proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stiching, video tracking etc.
 
-The first step in SIFT is to constrcut scale space i.e. create internal representations of the original image to ensure scale invariance. In SIFT progressivlely blurred out images are generated using the original image. In the next step you the original image is resized to half of its size and again the blurred out images are generated. 
+The first step in SIFT is to construct scale space i.e. create internal representations of the original image to ensure scale in variance. In SIFT progressively blurred out images are generated using the original image. In the next step you the original image is resized to half of its size and again the blurred out images are generated. 
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-octaves.jpg}}
-  \caption{\label{fig- sift octaves} Representation of what Octaved look like in SIFT. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+  \caption{\label{fig- sift octaves} Representation of what Octaves look like in SIFT. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
 \end{figure}
 
-The images of same size are grouped together and belong to an octave. In the figure ~\ref{fig- sift octaves} there are four ocatace and each octave has five images. The number of octaves depends upon the original size of the image. The blurring of images in each octave can be represented mathematically by 
+The images of same size are grouped together and belong to an octave. In figure ~\ref{fig- sift octaves} there are four octave and each octave has five images. The number of octaves depends upon the original size of the image. The blurring of images in each octave can be represented mathematically by 
 
 \begin{equation}
 L(x,y,\sigma) = G(x,y,\sigma) * I(x,y)
@@ -1154,23 +1154,23 @@ To put this concept in our example the DOG is applied to the cat images and the 
   \caption{\label{fig- sift dog images} Applying DOG on a set of images present in a single octave. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
 \end{figure}
 
-After calucalating the DOG images we can find the keypoints in two steps. Firstly locate the maxima/minima in DOG images. Secondaly find subpixel maxima/minima. In the first step the algorithm iterates through each pixel and all the neighbours are checked. This process is explained in Figure 
+After calculating the DOG images we can find the keypoints in two steps. Firstly locate the maxima/minima in DOG images. Secondly find subpixel maxima/minima. In the first step the algorithm iterates through each pixel and all the neighbors are checked. This process is explained in Figure 
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sif-maxima-idea.jpg}}
-  \caption{\label{fig- sift octaves} Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbours. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
+  \caption{\label{fig- maxima and minima sift octaves} Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbors. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
 \end{figure}
 
-In the figure X is the current pixel and the green circles represent the neighbours. X is marked as a keypoint if it is the greatest or least of all neighbours. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calucalte the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint. It can be mathematically represented by 
+In the figure X is the current pixel and the green circles represent the neighbors. X is marked as a keypoint if it is the greatest or least of all neighbors. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calculate the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint. It can be mathematically represented by 
 
 \begin{equation}
-D(x) = D + 
+D(x) = D + \tfrac{\di D^{T}}{\di x}x+\tfrac{1}{2}x^{T}{\di ^{2} D}{\di x^{2}}x
 \end{equation}
 
-After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intenstiry value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicual gradients are calcualted at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are consided to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invarinace. 
+After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intensity value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicular gradients are calculated at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are considered to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invarinace. 
 
-In this step SIFT calculates gradient magnitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proposrtinal to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{} it peaks at 20-29 degrees therfore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above $80 \%$ of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
+In this step SIFT calculates gradient magnitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proportional to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{} it peaks at 20-29 degrees therefore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above $80 \%$ of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
 
 \begin{figure}
   \centering
@@ -1178,7 +1178,7 @@ In this step SIFT calculates gradient magnitudes and directions around each keyp
   \caption{\label{fig- sift bin histogram} Histogram describing the bins for assigning orientation to the keypoint. Image taken from (2)}
 \end{figure}
 
-In the final step of SIFT algorithm a unique fingerprint for a keypoint aka descriptor is calculated. To calcualte the gradient we take $16 X 16$ window around the each keypoint. This $16 X 16$ window is broken into sixteen $4 X4$ windows (Figure ~\ref{}).
+In the final step of SIFT algorithm a unique fingerprint for a keypoint aka descriptor is calculated. To calculate the gradient we take $16 X 16$ window around the each keypoint. This $16 X 16$ window is broken into sixteen $4 X4$ windows (Figure ~\ref{}).
 
 \begin{figure}
   \centering
@@ -1186,7 +1186,7 @@ In the final step of SIFT algorithm a unique fingerprint for a keypoint aka desc
   \caption{\label{fig- sift bin fingerprint} A $16 X16$ window is taken around a keypoint. This window is broken into sixteen $4 X 4$ windows. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
 \end{figure}
 
-In each window gradient magnitudes and orientations are calucalted and are put in a 8 bin histogram (Figure ~\ref{}). For examples a gradient orientation in the range of 0-44 degrees is put in the first bin. The amount added to the bin depends upon the magnitude of the gradient and the distance from the keypoint. The gradients that are far away from the keypoint will add smaller values to the bin. This can be performed using "gaussian weighthing function". 
+In each window gradient magnitudes and orientations are calculated and are put in a 8 bin histogram (Figure ~\ref{}). For examples a gradient orientation in the range of 0-44 degrees is put in the first bin. The amount added to the bin depends upon the magnitude of the gradient and the distance from the keypoint. The gradients that are far away from the keypoint will add smaller values to the bin. This can be performed using "gaussian weighthing function". 
 
 \begin{figure}
   \centering
@@ -1194,9 +1194,9 @@ In each window gradient magnitudes and orientations are calucalted and are put i
   \caption{\label{fig- sift bin histogram} The gradient orientation is assinged to 8 bin histogram. The value depends upon the magnitude of the orientation and distance from the keypoint. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
 \end{figure}
 
-This is done for all 16 pixels therefore you end up with $4X4X8=129$ numbers. The numbers are normalized and form the feauter vector. This feature vector gives a unique identity to the keypoint. To achieve rotation independence the keypoint rotation is subtracted from each orientation therefore each gradient orientation if relative to the keypoints orientation. For illumination independence we threshold any numbers that are big and the resulant feature vector is normalized again. 
+This is done for all 16 pixels therefore you end up with $4X4X8=129$ numbers. The numbers are normalized and form the feature vector. This feature vector gives a unique identity to the keypoint. To achieve rotation independence the keypoint rotation is subtracted from each orientation therefore each gradient orientation if relative to the keypoints orientation. For illumination independence we threshold any numbers that are big and the resultant feature vector is normalized again. 
 
-After we calculate the desrciptors for each keypoint we have a set of features that describes the image and these can be used for various image processing tasks such as image matching, stiching etc. 
+After we calculate the descriptors for each keypoint we have a set of features that describes the image and these can be used for various image processing tasks such as image matching, stitching etc. 
 
 SIFT has  been widely used in various robotic applications. Stephen Se et. al \cite{se2001vision} proposed an vision based algorithm to localize a robot and map the environment using SIFT features. Various algorithm have been proposed to estimate motion from camera images using SIFT features \cite{barfoot2005online} \cite{scaramuzza2008appearance}. Similar algorithms have been proposed to estimate motion underwater using camera images \cite{Silva}.
 
@@ -1253,7 +1253,7 @@ In mobile robots the position and orientation is determined through wheel encode
 
 In AUV the motion estimates from INS suffer from drift and are coupled with DVL to give a better estimate of the position. Hegreneas \cite{hegrenaes2008model} combined the knowledge of vehicle dynamics to aid INS systems. In a similar manner visual motion information can be used to aid INS systems. The visual input to the dead reckoning algorithm has its pros and cons. The main advantage of using a visual estimate is that it doesn't suffer from drift which is prime concern for underwater vehicles. The disadvantage lies in the fact that we don't have side sonar images available every time. The second disadvantage is the computation power available on AUV. To specifically deal with the problems we use a high Hessian threshold to extract maximum of 4 landmarks so that feature matching is not computationally expensive.    
 
-We verify our dynamic landmark approach by estimating motion information from side sonar images and compare it to reported movement by DVL. To generate keypoints we run SIFT on the side sonar images. We use a high hessian threhold so that we can restrict the amount of keypoints. These keypoints are matched with keypoints of the next consecutive image using a KNN based matcher. Figure ~\ref{matched images} shows two consecutive images that are used to estimate motion of the AUV. In the first image the keypoints are marked in white circles. These keypoints are matched with the second image and the matched keypoints are marked in black circles. The $x$ and $y$ position of the matched keypoints is compared to the original keypoints. This gives us motion estimate of the AUV. 
+We verify our dynamic landmark approach by estimating motion information from side sonar images and compare it to reported movement by DVL. To generate keypoints we run SIFT on the side sonar images. We use a high hessian threshold so that we can restrict the amount of keypoints. These keypoints are matched with keypoints of the next consecutive image using a KNN based matcher. Figure ~\ref{matched images} shows two consecutive images that are used to estimate motion of the AUV. In the first image the keypoints are marked in white circles. These keypoints are matched with the second image and the matched keypoints are marked in black circles. The $x$ and $y$ position of the matched keypoints is compared to the original keypoints. This gives us motion estimate of the AUV. 
 
 \begin{figure}
   \centering
