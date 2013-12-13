@@ -1,8 +1,9 @@
-%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage{array}
 
 \makeatletter
 
@@ -19,9 +20,9 @@
 and trajectories}
 
 
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|>{\centering}p{2cm}|>{\centering}p{2cm}|}
 \hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & \multicolumn{2}{c|}{Changed Parameter Values (after 60)} & \multicolumn{2}{c|}{Estimated Parameter Values} & Sensor Noise & Trajectories\tabularnewline
+\multicolumn{2}{|>{\centering}p{2cm}|}{Initial Parameter Values} & \multicolumn{2}{>{\centering}p{2cm}|}{Changed Parameter Values (after 60)} & \multicolumn{2}{>{\centering}p{2cm}|}{Estimated Parameter Values} & Sensor Noise & Trajectories\tabularnewline
 \hline 
  &  & 1 & 2 & 1 & 2 &  & \tabularnewline
 \hline 
@@ -110,59 +111,27 @@ $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30\tabu
 \caption{Initial and estimated values of parameters with drift}
 
 
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|>{\centering}p{2cm}|c|c|>{\centering}p{2cm}|>{\centering}p{2cm}|}
 \hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{2}{c|}{Estimated Parameter Values} & \multicolumn{2}{c|}{Drift } & Trajectories & Sensor noise(after 60)\tabularnewline
+\multicolumn{2}{|>{\centering}p{2cm}|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{1}{>{\centering}p{2cm}|}{Estimated Parameter Values} & \multicolumn{1}{>{\centering}p{2cm}|}{Drift } & Trajectories & Sensor noise\tabularnewline
 \hline 
- &  & 1 & 1 & 2 & 1 & 2 &  & \tabularnewline
+ &  & 1 & 1 & 1 &  & \tabularnewline
 \hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 38.071 & 20.025 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
+$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 0.461 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
+$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 4.274 & 2.269 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
+$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 &  & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
+$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 1.0 & 2.0 & 3 & 10.0\tabularnewline
-\hline 
-\end{tabular}
-
-\end{table}
-
-
-\begin{table}
-
-
-\caption{Inital and estimated values of parameters with drift and varying trajectories}
-
-
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-\hline 
-\multicolumn{2}{|c|}{Initial Parameter Values} & Changed Parameter Values & \multicolumn{3}{c|}{Estimated Parameter Values} & \multicolumn{1}{c|}{Drift } & \multicolumn{3}{c|}{Trajectories} & Sensor noise(after 60)\tabularnewline
-\hline 
- &  &  & 1 & 2 & 3 &  & 1 & 2 & 3 & \tabularnewline
-\hline 
-$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 20.025 & 0.713 & 0.569 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 2.269 & 0.123 & 0.107 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{v}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
-\hline 
-$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 15 & 30 & 10.0\tabularnewline
+$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 2.0 & 3 & 1.0\tabularnewline
 \hline 
 \end{tabular}
-
 \end{table}
 
 
@@ -182,6 +151,35 @@ No. of Trajectories & Time Elapsed\tabularnewline
 15 & 210\tabularnewline
 \hline 
 30 & 400\tabularnewline
+\hline 
+\end{tabular}
+
+\end{table}
+
+
+\begin{table}
+
+
+\caption{Inital and estimated parameters rotation}
+
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Initial Parameter Values} & \multicolumn{1}{c|}{Changed Parameter Values} & \multicolumn{1}{c|}{Estimated Parameter Values} & Trajectories & Sensor noise\tabularnewline
+\hline 
+ &  & 1 & 1 &  & \tabularnewline
+\hline 
+$\sigma_{V_{v}}^{2}$ & 0.05 & 0.05 & 38.071 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{V_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{V_{1}}^{2}$ & 0.05 & 0.05 & 4.274 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{v}}^{2}$ & 0.05 & 0.5 & 0.05 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{w}}^{2}$ & 0.05 & 0.05 & 0.05 & 3 & 1.0\tabularnewline
+\hline 
+$\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.05 & 3 & 1.0\tabularnewline
 \hline 
 \end{tabular}
 

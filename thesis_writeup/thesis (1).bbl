@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{barfoot2005online}
+Timothy~D Barfoot.
+\newblock {Online visual motion estimation using fastslam with sift features}.
+\newblock In {\em Intelligent Robots and Systems, 2005.(IROS 2005). 2005
+  IEEE/RSJ International Conference on}, pages 579--585. IEEE, 2005.
+
 \bibitem{bishop2006pattern}
 Christopher~M Bishop and Nasser~M Nasrabadi.
 \newblock {\em {Pattern recognition and machine learning}}, volume~1.
@@ -10,6 +16,11 @@ Zhe Chen.
 \newblock {Bayesian filtering: From Kalman filters to particle filters, and
   beyond}.
 \newblock {\em Statistics}, 182(1):1--69, 2003.
+
+\bibitem{cox1990autonomous}
+Ingemar~J Cox and Gordon~Thomas Wilfong.
+\newblock {\em {Autonomous robot vehicles}}, volume 447.
+\newblock Springer-Verlag New York, 1990.
 
 \bibitem{dempster1977maximum}
 Arthur~P Dempster, Nan~M Laird, and Donald~B Rubin.
@@ -35,6 +46,11 @@ Arnaud Doucet and Adam~M Johansen.
 Austin~I Eliazar, Parr Cs, and Duke Edu.
 \newblock {Learning Probabilistic Motion Models for Mobile Robots}.
 \newblock 2004.
+
+\bibitem{side_sonar_fisheries_url}
+J~W Fishers.
+\newblock {Side Scan Sonar}.
+\newblock $\backslash$url\{http://www.jwfishers.com/sss.htm\}.
 
 \bibitem{Godsill2004}
 Simon~J Godsill, Arnaud Doucet, and Mike West.
@@ -78,6 +94,13 @@ Rudolph~Emil Kalman and Others.
 \newblock {A new approach to linear filtering and prediction problems}.
 \newblock {\em Journal of basic Engineering}, 82(1):35--45, 1960.
 
+\bibitem{king2012real}
+Peter King, Andrew Vardy, Peter Vandrish, and Benjamin Anstey.
+\newblock {Real-time side scan image generation and registration framework for
+  AUV route following}.
+\newblock In {\em Autonomous Underwater Vehicles (AUV), 2012 IEEE/OES}, pages
+  1--6. IEEE, 2012.
+
 \bibitem{Lammas2004}
 Andrew Lammas, Karl Sammut, and Fangpo He.
 \newblock {6-DoF Navigation Systems for Autonomous Underwater Vehicles}.
@@ -100,15 +123,16 @@ David~G Lowe.
 \newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
   international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
 
-\bibitem{Menezes}
-Lu\'{\i}s Menezes and Pinheiro Ua.
-\newblock {MeshAtlantic}.
-
 \bibitem{minka1998expectation}
 Thomas Minka.
 \newblock {Expectation-Maximization as lower bound maximization}.
 \newblock {\em Tutorial published on the web at http://www-white. media. mit.
   edu/tpminka/papers/em. html}, 1998.
+
+\bibitem{side_sonar_url}
+Office {of Coast Survey}.
+\newblock {Side Scan Sonar}.
+\newblock $\backslash$url\{http://www.nauticalcharts.noaa.gov/hsd/SSS.html\}.
 
 \bibitem{ristic2004beyond}
 Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
@@ -133,6 +157,19 @@ Stuart Russell.
 \newblock {\em {Artificial intelligence: A modern approach, 2/E}}.
 \newblock Pearson Education India, 2003.
 
+\bibitem{scaramuzza2008appearance}
+Davide Scaramuzza and Roland Siegwart.
+\newblock {Appearance-guided monocular omnidirectional visual odometry for
+  outdoor ground vehicles}.
+\newblock {\em Robotics, IEEE Transactions on}, 24(5):1015--1026, 2008.
+
+\bibitem{se2001vision}
+Stephen Se, David Lowe, and Jim Little.
+\newblock {Vision-based mobile robot localization and mapping using
+  scale-invariant features}.
+\newblock In {\em Robotics and Automation, 2001. Proceedings 2001 ICRA. IEEE
+  International Conference on}, volume~2, pages 2051--2058. IEEE, 2001.
+
 \bibitem{shewchuk1994introduction}
 Jonathan~Richard Shewchuk.
 \newblock {An introduction to the conjugate gradient method without the
@@ -150,6 +187,26 @@ Fossen Thor.
 Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.
 \newblock {\em {Probabilistic robotics}}, volume~1.
 \newblock MIT press Cambridge, MA, 2005.
+
+\bibitem{side_sonar_usgs_url}
+USGS.
+\newblock {WHSC Sidescan Sonar Systems}.
+\newblock
+  $\backslash$url\{http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm\}.
+
+\bibitem{sift_url}
+Utkarsh.
+\newblock {SIFT: Scale Invariant Feature Transform}.
+\newblock
+  $\backslash$url\{http://aishack.in/2010/05/sift-scale-invariant-feature-transform/\},
+  2010.
+
+\bibitem{vandrish2011side}
+Peter Vandrish, Andrew Vardy, Dan Walker, and O~A Dobre.
+\newblock {Side-scan sonar image registration for AUV navigation}.
+\newblock In {\em Underwater Technology (UT), 2011 IEEE Symposium on and 2011
+  Workshop on Scientific Use of Submarine Cables and Related Technologies
+  (SSC)}, pages 1--7. IEEE, 2011.
 
 \bibitem{vukobratovic1989introduction}
 Miomir Vukobratovic.

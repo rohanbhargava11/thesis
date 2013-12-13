@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.9.16)  12 DEC 2013 17:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  13 DEC 2013 12:29
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **"thesis (1).tex"
 (./thesis (1).tex
@@ -40,10 +40,7 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \dal@supervisornum=\count88
 \c@dal@signatures=\count89
 \c@dal@readernum=\count90
-)
-\drafthours=\count91
-\draftmins=\count92
- (./graphicx.sty
+) (./graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
@@ -70,7 +67,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count93
+\Gread@gobject=\count91
 ))
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
@@ -158,13 +155,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count94
+\inf@bad=\count92
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count95
-\leftroot@=\count96
+\uproot@=\count93
+\leftroot@=\count94
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count97
-\DOTSCASE@=\count98
+\classnum@=\count95
+\DOTSCASE@=\count96
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -173,15 +170,15 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen111
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
 \dotsspace@=\muskip10
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
 \tag@help=\toks19
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
 \andhelp@=\toks20
 \eqnshift@=\dimen112
 \alignsep@=\dimen113
@@ -215,7 +212,7 @@ Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks23
 \XKV@tempa@toks=\toks24
-\XKV@depth=\count106
+\XKV@depth=\count104
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -245,12 +242,12 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count107
+\c@checkoddpage=\count105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box31
-\sift@deathcycles=\count108
+\sift@deathcycles=\count106
 \@vwid@loff=\dimen126
 \@vwid@roff=\dimen127
 ))
@@ -270,19 +267,19 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen132
 \TX@target=\dimen133
 \TX@delta=\dimen134
-\TX@cols=\count109
+\TX@cols=\count107
 \TX@ftn=\toks26
 ) (./subfigure.sty
 Package: subfigure 1995/03/06 v2.0 subfigure package
 
 Package: subfigure 1995/03/06 v2.0
-\c@subfigure=\count110
-\c@lofdepth=\count111
-\c@subtable=\count112
-\c@lotdepth=\count113
+\c@subfigure=\count108
+\c@lofdepth=\count109
+\c@subtable=\count110
+\c@lotdepth=\count111
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count114
+\c@AlgoLine=\count112
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -335,33 +332,15 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algoheightrule=\skip61
 \algotitleheightruledefault=\skip62
 \algotitleheightrule=\skip63
-\c@algocfline=\count115
-\c@algocfproc=\count116
-\c@algocf=\count117
+\c@algocfline=\count113
+\c@algocfproc=\count114
+\c@algocf=\count115
 \algocf@algoframe=\box37
 \algocf@algobox=\box38
-) (./thesis (1).aux
-
-LaTeX Warning: Label `eq:velocity motion model_y' multiply defined.
-
-
-LaTeX Warning: Label `eq:velocity motion model_theta' multiply defined.
-
-
-LaTeX Warning: Label `fig-varying_sensor_noise_motion_model' multiply defined.
-
-
-LaTeX Warning: Label `fig-varying_sensor_noise_motion_model_1.0' multiply defin
-ed.
-
-
-LaTeX Warning: Label `fig-different sensor noise motion model trans' multiply d
-efined.
-
-
-LaTeX Warning: Label `fig- sift bin histogram' multiply defined.
-
-)
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+) (./thesis (1).aux)
 \openout1 = `"thesis (1).aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -376,18 +355,19 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
+\scratchcounter=\count116
 \scratchdimen=\dimen141
 \scratchbox=\box39
-\nofMPsegments=\count119
-\nofMParguments=\count120
+\nofMPsegments=\count117
+\nofMParguments=\count118
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count121
+\MPscratchCnt=\count119
 \MPscratchDim=\dimen142
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks28
 )
 Unavoidable over/underfulls may occur in the first
@@ -405,7 +385,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Info: Redefining \\ on input line 47.
 LaTeX Info: Redefining \\ on input line 47.
-\c@dal@loopindex=\count124
+\c@dal@loopindex=\count122
  [2
 
 ]
@@ -430,33 +410,52 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \openout3 = `"thesis (1).toc"'.
 
  [5]
-\ab@page=\count125
+(./thesis (1).lot)
+\tf@lot=\write4
+\openout4 = `"thesis (1).lot"'.
+
  [6
 
 
-]
+] (./thesis (1).lof
+Overfull \hbox (1.2348pt too wide) in paragraph at lines 3--3
+ [][] []\OT1/cmr/m/n/12 Hugin 4500 au-tonomous un-der-wa-ter ve-hi-cles. When s
+ub-merged, 
+ []
+
 [7
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9])
+\tf@lof=\write5
+\openout5 = `"thesis (1).lof"'.
+
+ [10]
+\ab@page=\count123
+ [11
+
+
+] [12
 
 ]
 Dalthesis preface pages completed.
 Chapter 1.
-
-LaTeX Warning: Citation `Hegrenes2008' on page 1 undefined on input line 74.
-
-
-LaTeX Warning: File `../hugin_4500.png' not found on input line 77.
+<../hugin_4500.png, id=49, 1631.09375pt x 1084.05pt>
+File: ../hugin_4500.png Graphic file (type png)
+ <use ../hugin_4500.png>
+Package pdftex.def Info: ../hugin_4500.png used on input line 79.
+(pdftex.def)             Requested size: 326.21297pt x 216.81pt.
 
 [1
 
 ]
-
-LaTeX Warning: Citation `cox1990autonomous' on page 2 undefined on input line 8
-5.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
+ [2 <../hugin_4500.png>]
 Underfull \vbox (badness 4454) has occurred while \output is active []
 
  [3]
@@ -482,7 +481,7 @@ S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 q[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
 m/n/12 (\OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 uq \OT1/cmr/
 m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
 t/12 Z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 v[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
-t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]|
+t/12 wp \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 )]
  []
 
 
@@ -498,7 +497,7 @@ S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
 m/n/12 (\OML/cmm/m/it/12 u[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 vr \OT1/cmr/
 m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
 t/12 z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
-t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]|
+t/12 uq \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 vp\OT1/cmr/m/n/12 )]
  []
 
 
@@ -514,480 +513,634 @@ S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 I[] \OT
 m/n/12 (\OML/cmm/m/it/12 v[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 wp \OT1/cmr/
 m/n/12 + \OML/cmm/m/it/12 ur\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
 t/12 y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/i
-t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]|
+t/12 vr \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 wq\OT1/cmr/m/n/12 )]
  []
 
 
-LaTeX Warning: File `/home/rohan/Documents/thesis/coordinate_system.png' not fo
-und on input line 246.
-
-[8]
+</home/rohan/Documents/thesis/coordinate_system.png, id=76, 767.86874pt x 539.7
+6656pt>
+File: /home/rohan/Documents/thesis/coordinate_system.png Graphic file (type png
+)
+ <use /home/rohan/Documents/thesis/coordinate_system.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis/coordinate_system.png use
+d on input line 246.
+(pdftex.def)             Requested size: 308.4309pt x 216.81pt.
+ [8 </home/rohan/Documents/thesis/coordinate_system.png>]
 Overfull \hbox (10.6812pt too wide) in paragraph at lines 265--274
- [][] |
+ [][] 
  []
 
+[9] <../../thesis_work/markov_chain.png, id=84, 859.21pt x 409.53pt>
+File: ../../thesis_work/markov_chain.png Graphic file (type png)
 
-LaTeX Warning: Reference `adapting the motion model' on page 9 undefined on inp
-ut line 308.
+<use ../../thesis_work/markov_chain.png>
+Package pdftex.def Info: ../../thesis_work/markov_chain.png used on input line 
+392.
+(pdftex.def)             Requested size: 454.88094pt x 216.81pt.
 
-[9]
+Overfull \hbox (21.26093pt too wide) in paragraph at lines 392--393
+ [][] 
+ []
 
-LaTeX Warning: File `../../thesis_work/markov_chain.png' not found on input lin
-e 392.
+[10 <../../thesis_work/markov_chain.png (PNG copy)>]
+</home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png, id=8
+8, 566.86781pt x 475.02469pt>
+File: /home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png 
+Graphic file (type png)
 
-[10]
-
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/particle_filter_non_gaus
-sian_thrun.png' not found on input line 408.
-
+<use /home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/particle_filter_non_
+gaussian_thrun.png used on input line 408.
+(pdftex.def)             Requested size: 258.72968pt x 216.81pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [11 </home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png>
+]
+</home/rohan/Documents/thesis/smoothing.png, id=92, 240.14719pt x 52.69687pt>
+File: /home/rohan/Documents/thesis/smoothing.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:particle smoothing' on page 12 undefined on input
- line 449.
+<use /home/rohan/Documents/thesis/smoothing.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis/smoothing.png used on inp
+ut line 452.
+(pdftex.def)             Requested size: 988.20447pt x 216.81pt.
 
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/smoothing.png' not found on i
-nput line 452.
+Overfull \hbox (554.58446pt too wide) in paragraph at lines 452--453
+ [][] 
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-[13] [14] [15]
+[13 </home/rohan/Documents/thesis/smoothing.png>] [14] [15]
 Chapter 3.
-
-LaTeX Warning: Citation `cox1990autonomous' on page 16 undefined on input line 
-504.
-
 [16
 
 ]
+</home/rohan/Documents/thesis_work/parameter_estimation_yapp.png, id=110, 348.5
+5219pt x 247.67531pt>
+File: /home/rohan/Documents/thesis_work/parameter_estimation_yapp.png Graphic f
+ile (type png)
 
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/parameter_estimation_yap
-p.png' not found on input line 560.
+<use /home/rohan/Documents/thesis_work/parameter_estimation_yapp.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/parameter_estimation
+_yapp.png used on input line 560.
+(pdftex.def)             Requested size: 305.11536pt x 216.81pt.
+ [17]
+[18 </home/rohan/Documents/thesis_work/parameter_estimation_yapp.png>]
+</home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_trad
+itional.png, id=117, 447.92343pt x 284.56313pt>
+File: /home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system
+_traditional.png Graphic file (type png)
 
+<use /home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_
+traditional.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/model_aided_intertia
+l_nvaigation_system_traditional.png used on input line 587.
+(pdftex.def)             Requested size: 198.7425pt x 126.25894pt.
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 561.
+</home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_mode
+l.png, id=118, 509.65407pt x 267.24844pt>
+File: /home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system
+_model.png Graphic file (type png)
 
+<use /home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_
+model.png>
+Package pdftex.def Info: /home/rohan/Documents/thesis_work/model_aided_intertia
+l_nvaigation_system_model.png used on input line 588.
+(pdftex.def)             Requested size: 198.7425pt x 104.21423pt.
+ <Diagram1.jpeg, id=119, 980.66376pt x 507.8975pt>
+File: Diagram1.jpeg Graphic file (type jpg)
 
-LaTeX Warning: Citation `Yapp2008' on page 17 undefined on input line 561.
+<use Diagram1.jpeg>
+Package pdftex.def Info: Diagram1.jpeg used on input line 599.
+(pdftex.def)             Requested size: 418.6246pt x 216.81pt.
 
-[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig-INS systems(a)' on page 18 undefined on input lin
-e 576.
-
-[18]
-
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
-aigation_system_traditional.png' not found on input line 587.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis_work/model_aided_intertial_nv
-aigation_system_model.png' not found on input line 588.
-
-[19]
-
-LaTeX Warning: Reference `fig:general archi' on page 20 undefined on input line
- 596.
-
-<Diagram1.jpeg, id=101, 980.66376pt x 507.8975pt>
-
-LaTeX Warning: Reference `fig- General Architecture' on page 20 undefined on in
-put line 602.
-
-[20]
-
-LaTeX Warning: Reference `eq-: maximization' on page 21 undefined on input line
- 623.
-
-[21]
-
-LaTeX Warning: Reference `eq-: derivation_em' on page 22 undefined on input lin
-e 651.
-
-[22] [23]
-Overfull \hbox (31.43094pt too wide) in paragraph at lines 729--733
+ [19 </home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system
+_traditional.png> </home/rohan/Documents/thesis_work/model_aided_intertial_nvai
+gation_system_model.png>] [20 <./Diagram1.jpeg>] [21] [22] [23]
+Overfull \hbox (31.43094pt too wide) in paragraph at lines 730--734
 \OT1/cmr/m/n/12 the pa-ram-e-ters of the mo-tion model that we want to learn ar
-e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$|
+e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$
  []
 
 [24]
-Overfull \hbox (7.62697pt too wide) in alignment at lines 752--755
+Overfull \hbox (7.62697pt too wide) in alignment at lines 753--756
  [][][] []
  []
 
 
-Overfull \hbox (38.67104pt too wide) in alignment at lines 759--762
+Overfull \hbox (38.67104pt too wide) in alignment at lines 760--763
  [][][] []
  []
 
 [25]
-Overfull \hbox (65.88025pt too wide) in alignment at lines 774--777
+Overfull \hbox (65.88025pt too wide) in alignment at lines 775--778
  [][][] []
  []
 
 [26]
 Chapter 4.
 
-LaTeX Warning: Reference `tab- constant parameters' on page 27 undefined on inp
-ut line 815.
-
-
-Overfull \hbox (3.04907pt too wide) in paragraph at lines 815--835
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 816--836
 \OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
-ate a sim-u-lated world(Figure|
+ate a sim-u-lated world(Figure
  []
 
-<0.png, id=124, 586.8324pt x 442.2924pt>
+<0.png, id=146, 586.8324pt x 442.2924pt>
+File: 0.png Graphic file (type png)
+ <use 0.png>
+Package pdftex.def Info: 0.png used on input line 839.
+(pdftex.def)             Requested size: 287.6668pt x 216.81pt.
 
-LaTeX Warning: Reference `fig-: movement simulation world (b)(c)(d)' on page 27
- undefined on input line 843.
+<1.png, id=148, 586.8324pt x 442.2924pt>
+File: 1.png Graphic file (type png)
+ <use 1.png>
+Package pdftex.def Info: 1.png used on input line 850.
+(pdftex.def)             Requested size: 198.7425pt x 149.79027pt.
 
-<1.png, id=126, 586.8324pt x 442.2924pt>
-<2.png, id=127, 586.8324pt x 442.2924pt>
-<3.png, id=128, 586.8324pt x 442.2924pt>
-<4.png, id=129, 586.8324pt x 442.2924pt>
+<2.png, id=149, 586.8324pt x 442.2924pt>
+File: 2.png Graphic file (type png)
+ <use 2.png>
+Package pdftex.def Info: 2.png used on input line 851.
+(pdftex.def)             Requested size: 198.7425pt x 149.79027pt.
 
-LaTeX Warning: Reference `tab-constant parameters' on page 27 undefined on inpu
-t line 860.
+<3.png, id=150, 586.8324pt x 442.2924pt>
+File: 3.png Graphic file (type png)
+ <use 3.png>
+Package pdftex.def Info: 3.png used on input line 852.
+(pdftex.def)             Requested size: 198.7425pt x 149.79027pt.
 
-[27
+<4.png, id=151, 586.8324pt x 442.2924pt>
+File: 4.png Graphic file (type png)
+ <use 4.png>
+Package pdftex.def Info: 4.png used on input line 853.
+(pdftex.def)             Requested size: 198.7425pt x 149.79027pt.
+ [27
 
 ]
-Overfull \hbox (219.31274pt too wide) in paragraph at lines 876--896
- [][] |
+Overfull \hbox (3.86748pt too wide) in paragraph at lines 878--879
+ []|\OT1/cmr/m/n/12 Trajectories| 
  []
 
-[28] [29]
+[28 <./0.png>] [29 <./1.png> <./2.png> <./3.png> <./4.png>]
+<./plots/200_005_05_s_10.pdf, id=166, 587.19376pt x 442.65375pt>
+File: ./plots/200_005_05_s_10.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `/plots/200_005_05_s_10.pdf' not found on input line 905.
+<use ./plots/200_005_05_s_10.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10.pdf used on input line 905.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
-
-LaTeX Warning: Reference `varying_sensor_noise_sensor_model' on page 30 undefin
-ed on input line 908.
-
-
-Underfull \vbox (badness 6204) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
+<./plots/200_005_05_s_10_motion_model_trans.pdf, id=170, 587.19376pt x 442.6537
+5pt>
+File: ./plots/200_005_05_s_10_motion_model_trans.pdf Graphic file (type pdf)
+ <use ./plots/200_005_05_s_10_motion_model_trans.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10_motion_model_trans.pdf used on
+ input line 916.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
-LaTeX Warning: File `/plots/200_005_05_s_10_motion_model_trans.pdf' not found o
-n input line 916.
+<./plots/200_005_05_s_10_motion_model_rotation.pdf, id=171, 587.19376pt x 442.6
+5375pt>
+File: ./plots/200_005_05_s_10_motion_model_rotation.pdf Graphic file (type pdf)
 
+ <use ./plots/200_005_05_s_10_motion_model_rotation.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10_motion_model_rotation.pdf used
+ on input line 922.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
-LaTeX Warning: File `/plots/200_005_05_s_10_motion_model_rotation.pdf' not foun
-d on input line 922.
+<./plots/200_005_05_s_10_max_weight.pdf, id=172, 587.19376pt x 442.65375pt>
+File: ./plots/200_005_05_s_10_max_weight.pdf Graphic file (type pdf)
 
+<use ./plots/200_005_05_s_10_max_weight.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10_max_weight.pdf used on input l
+ine 928.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
-LaTeX Warning: File `/plots/200_005_05_s_10_max_weight.pdf' not found on input 
-line 928.
+<./plots/200_005_10_s_10.pdf, id=173, 587.19376pt x 442.65375pt>
+File: ./plots/200_005_10_s_10.pdf Graphic file (type pdf)
 
+<use ./plots/200_005_10_s_10.pdf>
+Package pdftex.def Info: ./plots/200_005_10_s_10.pdf used on input line 938.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
-LaTeX Warning: Reference `varying_sensor_noise_motion_model_1.0' on page 31 und
-efined on input line 932.
+<./plots/200_005_10_s_10_motion_model_trans.pdf, id=174, 587.19376pt x 442.6537
+5pt>
+File: ./plots/200_005_10_s_10_motion_model_trans.pdf Graphic file (type pdf)
+ <use ./plots/200_005_10_s_10_motion_model_trans.pdf>
+Package pdftex.def Info: ./plots/200_005_10_s_10_motion_model_trans.pdf used on
+ input line 945.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
+<./plots/200_005_10_s_10_motion_model_rotation.pdf, id=175, 587.19376pt x 442.6
+5375pt>
+File: ./plots/200_005_10_s_10_motion_model_rotation.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `varying_sensor_noise_sensor_model_1.0' on page 31 und
-efined on input line 932.
+ <use ./plots/200_005_10_s_10_motion_model_rotation.pdf>
+Package pdftex.def Info: ./plots/200_005_10_s_10_motion_model_rotation.pdf used
+ on input line 951.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
 
-[31] [32]
+<./plots/200_005_10_s_10_max_weight.pdf, id=176, 587.19376pt x 442.65375pt>
+File: ./plots/200_005_10_s_10_max_weight.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `tab-: varying_sensor_noise' on page 33 undefined on i
-nput line 934.
+<use ./plots/200_005_10_s_10_max_weight.pdf>
+Package pdftex.def Info: ./plots/200_005_10_s_10_max_weight.pdf used on input l
+ine 957.
+(pdftex.def)             Requested size: 287.61098pt x 216.81pt.
+ [31 <./plots/200_005_05_s_10.pdf>] [32 <./plots/200_005_05_s_10_motion_model_t
+rans.pdf> <./plots/200_005_05_s_10_motion_model_rotation.pdf
 
+pdfTeX warning: pdflatex (file ./plots/200_005_05_s_10_motion_model_rotation.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>] [33 <./plots/200_005_05_s_10_max_weight.pdf> <./plots/200_005_10_s_10.pdf
 
-LaTeX Warning: File `/plots/200_005_10_s_10.pdf' not found on input line 938.
+pdfTeX warning: pdflatex (file ./plots/200_005_10_s_10.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [34 <./plots/200_005_10_s_10_motion_model_trans.pdf> <./plots/200_005_10_s_1
+0_motion_model_rotation.pdf
 
+pdfTeX warning: pdflatex (file ./plots/200_005_10_s_10_motion_model_rotation.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>] <./plots/200_005_005_s_10_traj_3_drift_20.pdf, id=396, 578.16pt x 433.62pt>
+File: ./plots/200_005_005_s_10_traj_3_drift_20.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `/plots/200_005_10_s_10_motion_model_trans.pdf' not found o
-n input line 945.
+<use ./plots/200_005_005_s_10_traj_3_drift_20.pdf>
+Package pdftex.def Info: ./plots/200_005_005_s_10_traj_3_drift_20.pdf used on i
+nput line 978.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
 
+<./plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans.pdf, id=397, 578.1
+6pt x 433.62pt>
+File: ./plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans.pdf Graphic f
+ile (type pdf)
 
-LaTeX Warning: File `/plots/200_005_10_s_10_motion_model_rotation.pdf' not foun
-d on input line 951.
+<use ./plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans.pdf>
+Package pdftex.def Info: ./plots/200_005_005_s_10_traj_3_drift_20_motion_model_
+trans.pdf used on input line 985.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
 
+<./plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf, id=398, 57
+8.16pt x 433.62pt>
+File: ./plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf Graphi
+c file (type pdf)
 
-LaTeX Warning: File `/plots/200_005_10_s_10_max_weight.pdf' not found on input 
-line 957.
+<use ./plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf>
+Package pdftex.def Info: ./plots/200_005_005_s_10_traj_3_drift_20_motion_model_
+rotation.pdf used on input line 991.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
 
-
-LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20.pdf' not found on 
-input line 973.
-
-
-LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans
-.pdf' not found on input line 980.
-
-
-LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotat
-ion.pdf' not found on input line 986.
-
-
-LaTeX Warning: Reference `fig-drfit_2.0' on page 33 undefined on input line 990
-.
-
-[33] [34] [35] [36]
-Overfull \hbox (226.65054pt too wide) in paragraph at lines 996--1015
- [][] |
+Overfull \hbox (3.86748pt too wide) in paragraph at lines 1002--1002
+ []|\OT1/cmr/m/n/12 Trajectories| 
  []
 
 
-LaTeX Warning: File `/plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf' not 
-found on input line 1027.
+<./plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf, id=399, 578.16pt x 433.
+62pt>
+File: ./plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf Graphic file (type 
+pdf)
+ <use ./plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf>
+Package pdftex.def Info: ./plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf 
+used on input line 1035.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
+ [35 <./plots/200_005_10_s_10_max_weight.pdf>] [36 <./plots/200_005_005_s_10_tr
+aj_3_drift_20.pdf> <./plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans
+.pdf
 
-[37]
+pdfTeX warning: pdflatex (file ./plots/200_005_005_s_10_traj_3_drift_20_motion_
+model_trans.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>] [37 <./plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf>]
+<./plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf, id=519, 578.16pt x 433.62p
+t>
+File: ./plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf Graphic file (type pdf
+)
+ <use ./plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf use
+d on input line 1046.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
 
-LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf' not fou
-nd on input line 1038.
+<./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_trans.pdf, id=520,
+ 578.16pt x 433.62pt>
+File: ./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_trans.pdf Gra
+phic file (type pdf)
 
+<use ./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_trans.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_
+model_trans.pdf used on input line 1052.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
 
-LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_motion_model_t
-rans.pdf' not found on input line 1044.
+<./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_rotation.pdf, id=5
+21, 578.16pt x 433.62pt>
+File: ./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_rotation.pdf 
+Graphic file (type pdf)
 
+<use ./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_rotation.pdf>
+Package pdftex.def Info: ./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_
+model_rotation.pdf used on input line 1058.
+(pdftex.def)             Requested size: 289.07928pt x 216.81pt.
 
-LaTeX Warning: File `/plots/200_005_05_s_10_100_100_traj_3_trial_motion_model_r
-otation.pdf' not found on input line 1050.
+[38 <./plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf>] [39 <./plots/200_0
+05_05_s_10_100_100_traj_3_trial_1.pdf> <./plots/200_005_05_s_10_100_100_traj_3_
+trial_1_motion_model_trans.pdf
 
-[38] [39]
+pdfTeX warning: pdflatex (file ./plots/200_005_05_s_10_100_100_traj_3_trial_1_m
+otion_model_trans.pdf): PDF inclusion: multiple pdfs with page group included i
+n a single page
+>] [40 <./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_rotation.pd
+f>]
 Chapter 5.
-[40
+[41
 
 ]
+</home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg, id=668
+, 803.0pt x 279.0425pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg Gr
+aphic file (type jpg)
 
-LaTeX Warning: Reference `ch-: dynamic landmakrs' on page 41 undefined on input
- line 1081.
+<use /home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/side_scan_
+sonar_sensor.jpg used on input line 1097.
+(pdftex.def)             Requested size: 623.93594pt x 216.81pt.
 
-
-LaTeX Warning: Reference `ch-: results motion estimation' on page 41 undefined 
-on input line 1081.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
-r_sensor.jpg' not found on input line 1089.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_scan_sona
-r.jpg' not found on input line 1095.
-
-
-Underfull \hbox (badness 4013) in paragraph at lines 1096--1096
-[]\OT1/cmr/m/n/12 Figure 5.2: []Side scan sonar im-age of the wreck. Im-age tak
-en from
- []
-
-[41] [42]
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/work_side_scan
-.jpg' not found on input line 1131.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
-[]\OT1/cmr/m/n/12 Figure 5.3: []Work-ing of a side scan sonar. Im-age taken fro
-m
+Overfull \hbox (190.31593pt too wide) in paragraph at lines 1097--1098
+ [][] 
  []
 
 
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-octaves.j
-pg' not found on input line 1142.
+</home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar.jpg, id=669, 301.1
+25pt x 272.01625pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar.jpg Graphic f
+ile (type jpg)
 
-[43] [44]
+<use /home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/side_scan_
+sonar.jpg used on input line 1103.
+(pdftex.def)             Requested size: 240.0227pt x 216.81pt.
+ [42]
+[43 </home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg> </
+home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar.jpg>]
+</home/rohan/Documents/thesis/thesis_writeup/work_side_scan.jpg, id=677, 281.05
+pt x 280.04625pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/work_side_scan.jpg Graphic fi
+le (type jpg)
 
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.
-jpg' not found on input line 1156.
+<use /home/rohan/Documents/thesis/thesis_writeup/work_side_scan.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/work_side_
+scan.jpg used on input line 1139.
+(pdftex.def)             Requested size: 217.59706pt x 216.81pt.
+ [44 </home/rohan/Documents/thesis/thesis_writeup/work_side_scan.jpg>]
+</home/rohan/Documents/thesis/thesis_writeup/sift-octaves.jpg, id=681, 642.4pt 
+x 1027.84pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-octaves.jpg Graphic file
+ (type jpg)
 
+<use /home/rohan/Documents/thesis/thesis_writeup/sift-octaves.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-octav
+es.jpg used on input line 1150.
+(pdftex.def)             Requested size: 135.50592pt x 216.81pt.
 
-Underfull \hbox (badness 1603) in paragraph at lines 1157--1157
-[]\OT1/cmr/m/n/12 Figure 5.5: []Dif-fer-ence of Gaus-sian done to calu-clate ke
-y-points in the im-
+</home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.jpg, id=682, 423.833
+44pt x 302.63063pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.jpg Graphic fil
+e (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-dog-i
+dea.jpg used on input line 1164.
+(pdftex.def)             Requested size: 303.64651pt x 216.81pt.
+
+</home/rohan/Documents/thesis/thesis_writeup/sift-dog-images.jpg, id=683, 642.4
+pt x 1027.84pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-dog-images.jpg Graphic f
+ile (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/sift-dog-images.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-dog-i
+mages.jpg used on input line 1171.
+(pdftex.def)             Requested size: 135.50592pt x 216.81pt.
+ [45 </home/rohan/Documents/thesis/thesis_writeup/sift-octaves.jpg>] [46 </home
+/rohan/Documents/thesis/thesis_writeup/sift-dog-idea.jpg> </home/rohan/Document
+s/thesis/thesis_writeup/sift-dog-images.jpg>]
+</home/rohan/Documents/thesis/thesis_writeup/sift-maxima-idea.jpg, id=691, 175.
+40532pt x 158.09062pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-maxima-idea.jpg Graphic 
+file (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/sift-maxima-idea.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-maxim
+a-idea.jpg used on input line 1179.
+(pdftex.def)             Requested size: 240.57414pt x 216.81pt.
+ [47 </home/rohan/Documents/thesis/thesis_writeup/sift-maxima-idea.jpg>]
+</home/rohan/Documents/thesis/thesis_writeup/sift-orientation-histogram.jpg, id
+=695, 481.8pt x 321.2pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-orientation-histogram.jp
+g Graphic file (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/sift-orientation-histogram.jpg
+>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-orien
+tation-histogram.jpg used on input line 1195.
+(pdftex.def)             Requested size: 325.223pt x 216.81pt.
+
+</home/rohan/Documents/thesis/thesis_writeup/sift-fingerprint.jpg, id=696, 642.
+4pt x 321.2pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-fingerprint.jpg Graphic 
+file (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/sift-fingerprint.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-finge
+rprint.jpg used on input line 1203.
+(pdftex.def)             Requested size: 433.6307pt x 216.81pt.
+
+Underfull \vbox (badness 1953) has occurred while \output is active []
+
+ [48 </home/rohan/Documents/thesis/thesis_writeup/sift-orientation-histogram.jp
+g>]
+</home/rohan/Documents/thesis/thesis_writeup/sift-4x4.jpg, id=700, 642.4pt x 32
+1.2pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/sift-4x4.jpg Graphic file (ty
+pe jpg)
+ <use /home/rohan/Documents/thesis/thesis_writeup/sift-4x4.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/sift-4x4.j
+pg used on input line 1211.
+(pdftex.def)             Requested size: 433.6307pt x 216.81pt.
+
+Underfull \vbox (badness 1953) has occurred while \output is active []
+
+ [49 </home/rohan/Documents/thesis/thesis_writeup/sift-fingerprint.jpg>]
+</home/rohan/Documents/thesis/thesis_writeup/side_sonar_original.jpg, id=705, 9
+84.67876pt x 368.1253pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/side_sonar_original.jpg Graph
+ic file (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/side_sonar_original.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/side_sonar
+_original.jpg used on input line 1231.
+(pdftex.def)             Requested size: 579.94876pt x 216.81pt.
+
+Overfull \hbox (146.32875pt too wide) in paragraph at lines 1231--1232
+ [][] 
  []
 
 
-LaTeX Warning: Reference `' on page 45 undefined on input line 1160.
+</home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar.jpg, id=706, 1
+312.905pt x 490.83376pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar.jpg Graph
+ic file (type jpg)
 
+<use /home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/median_fil
+ter_sonar.jpg used on input line 1239.
+(pdftex.def)             Requested size: 579.92372pt x 216.81pt.
 
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-dog-image
-s.jpg' not found on input line 1163.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sif-maxima-ide
-a.jpg' not found on input line 1171.
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 1172--1172
-[]\OT1/cmr/m/n/12 Figure 5.7: []Lo-cate max-ima/minima in DOG im-ages. X marks 
-the cur-
+Overfull \hbox (146.30371pt too wide) in paragraph at lines 1239--1240
+ [][] 
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 1172--1172
-\OT1/cmr/m/n/12 rent pixel and it is com-pared with its 26 neigh-bors. Im-age t
-aken from
+</home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar_high.jpg, id=7
+07, 1312.905pt x 490.83376pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar_high.jpg 
+Graphic file (type jpg)
+
+<use /home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar_high.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/median_fil
+ter_sonar_high.jpg used on input line 1246.
+(pdftex.def)             Requested size: 579.92372pt x 216.81pt.
+
+Overfull \hbox (146.30371pt too wide) in paragraph at lines 1246--1247
+ [][] 
  []
 
-[45] [46]
+[50 </home/rohan/Documents/thesis/thesis_writeup/sift-4x4.jpg>] [51 </home/roha
+n/Documents/thesis/thesis_writeup/side_sonar_original.jpg> </home/rohan/Documen
+ts/thesis/thesis_writeup/median_filter_sonar.jpg>]
+</home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg, id=714, 1
+312.905pt x 490.83376pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg Graph
+ic file (type jpg)
 
-LaTeX Warning: Reference `' on page 47 undefined on input line 1183.
+<use /home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/image_orig
+inal_sift.jpg used on input line 1253.
+(pdftex.def)             Requested size: 579.92372pt x 216.81pt.
 
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-orientati
-on-histogram.jpg' not found on input line 1187.
-
-
-LaTeX Warning: Reference `' on page 47 undefined on input line 1191.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-fingerpri
-nt.jpg' not found on input line 1195.
-
-
-LaTeX Warning: Reference `' on page 47 undefined on input line 1199.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/sift-4X4.jpg' 
-not found on input line 1203.
+Overfull \hbox (146.30371pt too wide) in paragraph at lines 1253--1254
+ [][] 
+ []
 
 
-Underfull \vbox (badness 4454) has occurred while \output is active []
+</home/rohan/Documents/thesis/thesis_writeup/image_original_sift_high.jpg, id=7
+15, 1312.905pt x 490.83376pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/image_original_sift_high.jpg 
+Graphic file (type jpg)
 
- [47]
-[48]
+<use /home/rohan/Documents/thesis/thesis_writeup/image_original_sift_high.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/image_orig
+inal_sift_high.jpg used on input line 1259.
+(pdftex.def)             Requested size: 579.92372pt x 216.81pt.
 
-LaTeX Warning: Citation `se2001vision' on page 49 undefined on input line 1211.
-
-
-
-LaTeX Warning: Citation `barfoot2005online' on page 49 undefined on input line 
-1211.
-
-
-LaTeX Warning: Citation `scaramuzza2008appearance' on page 49 undefined on inpu
-t line 1211.
+Overfull \hbox (146.30371pt too wide) in paragraph at lines 1259--1260
+ [][] 
+ []
 
 
-LaTeX Warning: Citation `vandrish2011side' on page 49 undefined on input line 1
-213.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [52 </home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar_high.jpg>
+] [53 </home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg> </h
+ome/rohan/Documents/thesis/thesis_writeup/image_original_sift_high.jpg>]
+File: /home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg Graph
+ic file (type jpg)
 
-LaTeX Warning: Citation `king2012real' on page 49 undefined on input line 1213.
+<use /home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/image_orig
+inal_sift.jpg used on input line 1278.
+(pdftex.def)             Requested size: 198.7425pt x 74.29593pt.
 
+</home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg, id=722, 13
+12.905pt x 490.83376pt>
+File: /home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg Graphi
+c file (type jpg)
 
-[49]
+<use /home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg>
+Package pdftex.def Info: /home/rohan/Documents/thesis/thesis_writeup/image_matc
+hed_sift.jpg used on input line 1279.
+(pdftex.def)             Requested size: 198.7425pt x 74.29593pt.
 
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/side_sonar_ori
-ginal.jpg' not found on input line 1223.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/median_filter_
-sonar.jpg' not found on input line 1231.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/median_filter_
-sonar_high.jpg' not found on input line 1238.
-
-
-LaTeX Warning: Reference `side sonar sift' on page 50 undefined on input line 1
-242.
-
-
-LaTeX Warning: Reference `side sonar sift high' on page 50 undefined on input l
-ine 1242.
-
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/image_original
-_sift.jpg' not found on input line 1245.
-
-[50] [51]
-
-LaTeX Warning: File `/home/rohan/Documents/thesis/thesis_writeup/image_original
-_sift_high.jpg' not found on input line 1251.
-
-
-LaTeX Warning: Citation `barfoot2005online' on page 52 undefined on input line 
-1262.
-
-
-LaTeX Warning: Citation `scaramuzza2008appearance' on page 52 undefined on inpu
-t line 1262.
-
-[52]
-
-LaTeX Warning: Reference `matched images' on page 53 undefined on input line 12
-66.
-
-
-Underfull \vbox (badness 1057) has occurred while \output is active []
-
- [53]
-
-LaTeX Warning: File `home/rohan/Documents/thesis/thesis_writeup/image_original_
-sift.jpg' not found on input line 1270.
-
-
-LaTeX Warning: File `home/rohan/Documents/thesis/thesis_writeup/image_matched_s
-ift.jpg' not found on input line 1271.
-
-[54]
+[54] [55 </home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg>]
 Chapter 6.
-[55
+[56
 
 ]
 Chapter 7.
-(./thesis (1).bbl [56
+(./thesis (1).bbl [57
 
-] [57
+] [58
 
 
 ]
-Underfull \hbox (badness 3049) in paragraph at lines 108--112
+Underfull \hbox (badness 3049) in paragraph at lines 127--131
 []\OT1/cmr/m/n/12 Thomas Minka.  Expectation-Maximization as lower bound max-i-
 miza-
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 108--112
+Underfull \hbox (badness 2111) in paragraph at lines 127--131
 \OT1/cmr/m/n/12 tion.  \OT1/cmr/m/it/12 Tu-to-rial pub-lished on the web at htt
 p://www-white. me-dia. mit.
  []
 
-[58]) [59] (./thesis (1).aux)
 
-LaTeX Warning: There were undefined references.
+Underfull \hbox (badness 10000) in paragraph at lines 133--136
+[]\OT1/cmr/m/n/12 Office of Coast Sur-vey.  Side Scan Sonar.
+ []
+
+[59]
+Overfull \hbox (151.60019pt too wide) in paragraph at lines 192--196
+[]\OT1/cmr/m/n/12 USGS.  WHSC Sides-can Sonar Sys-tems.  $\OMS/cmsy/m/n/12 n$\O
+T1/cmr/m/n/12 url\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 http://woodshole.er.usgs.gov
+/operations/sfmapping/sonar.htm\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 . 
+ []
 
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 198--203
+[]\OT1/cmr/m/n/12 Utkarsh.  SIFT: Scale In-vari-ant Fea-ture Trans-form.
+ []
 
- ) 
+) [60] (./thesis (1).aux) ) 
 Here is how much of TeX's memory you used:
- 4949 strings out of 495059
- 69292 string characters out of 3182030
- 153339 words of memory out of 3000000
- 7975 multiletter control sequences out of 15000+200000
- 10365 words of font info for 39 fonts, out of 3000000 for 9000
+ 5177 strings out of 495059
+ 79821 string characters out of 3182030
+ 156343 words of memory out of 3000000
+ 8195 multiletter control sequences out of 15000+200000
+ 10196 words of font info for 38 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,18n,35p,1318b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (66 pages, 302961 bytes).
+ 42i,18n,35p,1348b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb>
+Output written on "thesis (1).pdf" (72 pages, 2752505 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
+ 792 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

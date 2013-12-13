@@ -1,6 +1,8 @@
 \baselineskip =0.7\baselineskip 
-\contentsline {chapter}{Abstract}{vi}
-\contentsline {chapter}{Acknowledgements}{vii}
+\contentsline {chapter}{List of Tables}{vi}
+\contentsline {chapter}{List of Figures}{vii}
+\contentsline {chapter}{Abstract}{xi}
+\contentsline {chapter}{Acknowledgements}{xii}
 \contentsline {chapter}{\numberline {Chapter 1}Introduction}{1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -31,20 +33,20 @@
 \contentsline {section}{\numberline {4.1}Experimental Setup}{27}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {4.2}Results}{28}
-\contentsline {chapter}{\numberline {Chapter 5}Landmarks extraction using Side Sonar Images}{40}
+\contentsline {chapter}{\numberline {Chapter 5}Landmarks extraction using Side Sonar Images}{41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.1}Introduction}{40}
-\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{41}
-\contentsline {subsection}{\numberline {5.1.2}Scale Invariant Feature Transform}{43}
+\contentsline {section}{\numberline {5.1}Introduction}{41}
+\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{42}
+\contentsline {subsection}{\numberline {5.1.2}Scale Invariant Feature Transform}{44}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {5.2}Dynamic Landmarks}{50}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{52}
-\contentsline {chapter}{\numberline {Chapter 6}Results}{55}
+\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{54}
+\contentsline {chapter}{\numberline {Chapter 6}Results}{56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{55}
-\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{56}
+\contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{56}
+\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{57}
 \addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{57}
+\contentsline {chapter}{Bibliography}{58}

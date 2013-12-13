@@ -1,0 +1,15 @@
+\baselineskip =0.7\baselineskip 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {Table 2.1}{\ignorespaces Notation used for marine vehicles. Table from \cite {Thor}}}{7}
+\contentsline {table}{\numberline {Table 2.2}{\ignorespaces Examples of Forces acting on an AUV. Table taken from \cite {Thor}}}{9}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {Table 4.1}{\ignorespaces Summary of the experiments performed to adapt motion model.}}{27}
+\contentsline {table}{\numberline {Table 4.2}{\ignorespaces Initial and estimated values of parameters with constant sensor noise and trajectories}}{30}
+\contentsline {table}{\numberline {Table 4.3}{\ignorespaces Initial and estimated values of parameters with drift}}{37}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {Table 5.1}{\ignorespaces Sensors for Mobile robots. Table taken from \cite {thrun2005probabilistic}}}{41}
+\contentsline {table}{\numberline {Table 5.2}{\ignorespaces Characterization of Sidescan system according to their operating frequency. Table taken form \cite {side_sonar_usgs_url}}}{44}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
