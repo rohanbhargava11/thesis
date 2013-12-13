@@ -98,7 +98,7 @@ My algorithm uses EM algorithm to calculate the most likely parameters for a dat
 The remainder of the thesis is structured as follows. Chapter 2 will explain the motion model for AUV as well as give an insight on particle filtering and smoothing. Chapter 3 will give an overview of Expectation Maximization and show how this framework is used to adapt parameters for a motion model. Chapter 4 will give explain how landmarks are extracted from side sonar images. The reliability of the landmarks are shown by extracting motion information and the algorithm to do that is described in Chapter 4. Chapter 5 consist results of a simulated experiment to show the effectiveness of the algorithm. This chapter also includes the comparison of motion estimation using side sonar images to DVL.
  
 \begin{comment}
- The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question “Where am I?”. The current location of a robot can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic building blocks to various 
+ The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question ''Where am I?”. The current location of a robot can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic building blocks to various 
 algorithms such as path planning \cite{Lav06}, Simultaneous Localization and Mapping (SLAM) \cite{thrun2005probabilistic} \cite{grisettiyz2005improving}  etc. which require an accurate estimate of robot's position. 
 
 In order to account for the uncertainty in motion Sebastian Thrun \cite{thrun2005probabilistic} represented the models probabilistically. Eliazar and Parr \cite{Eliazar2004} pointed out that the essential input are the parameters to these models. The process of determining the parameters to a kinematic model is termed as calibration. Generally the robot is calibrated at the start of the experiment and the parameter values are not changed throughout the experiment. In practice wherever there is a significant change in the environment, robots are manually re calibrated during the experiment. In most of the cases it is not possible to recalibrate while the robot is in operation. As our environments are dynamic our models need to adapt to them. Eliazar and Parr \cite{Eliazar2004} proposed an algorithm to learn parameters of a motion model for land robots. Teddy Yapp \cite{Yap2008} took the work further and learned parameters for motion and sensor models for land robots. Both of their algorithms used 
@@ -244,7 +244,7 @@ M=I_{y}q^{.}+(I_{x}-I_{z})rp-(p^{.}+qr)I_{xy}+(p^{2}-r^{2})I_{zx}+(qp-r^{.})I_{y
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/coordinate_system.png}}
-  \caption{\label{fig-Coordinate System} Body-fixed and earth-fixed reference frames. Figure from \cite{Thor}
+  \caption{\label{fig-Coordinate System} Body-fixed and earth-fixed reference frames to describe the coordinate system of an AUV. Figure from \cite{Thor}
 }
 \end{figure}
 
@@ -348,7 +348,7 @@ and $\tau$ are the environmental and propulsion forces and moments respectively.
 A standard numerical ODE integration routine can be used to solve the equation to recover the state.
 
 The input to a motion model is a control command and in our case it is the velocity of the AUV. The velocity is calculated from the propellers. In our algorithm we assume a static model to get a velocity estimate. This can be implemented as a table look-up based on experimental data.
-The same control input won't produce the same output every time as it is dependant upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
+The same control input won't produce the same output every time as it is dependent upon the environment. Therefore we assume a Gaussian distribution over the velocity and try to learn the right parameters over time. 
 For my master's thesis we reduce the degrees of freedom and represent the pose of the AUV is two dimensional with orientation. 
 
 In the algorithm the robot can be represented by $X_{t}=(x_{t},y_{t},\theta_{t})$
@@ -380,9 +380,9 @@ are the motion parameters that our algorithm intends to learn.
 \end{comment}
 
 \section{Particle Filter}
-Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. Thrun \cite{thrun2005probabilistic} defines particle fitler as an alternative non-parametric implementation of the Bayes filter. It also can be called as a Sequential Monte Carlo(SMC) algorithm. The first attempt to use SMC was seen in simulations of growing polymers by M.N Rosenbluth and A.W. Rosenbluth \cite{rosenbluth1955monte}. Gordon et al. \cite{gordon1993novel} provided the first true implementation of sequential monte carlo algorihtm. 
+Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. Thrun \cite{thrun2005probabilistic} defines particle fitler as an alternative non-parametric implementation of the Bayes filter. It also can be called as a Sequential Monte Carlo(SMC) algorithm. The first attempt to use SMC was seen in simulations of growing polymers by M.N Rosenbluth and A.W. Rosenbluth \cite{rosenbluth1955monte}. Gordon et al. \cite{gordon1993novel} provided the first true implementation of sequential Monte Carlo algorithm. 
 \begin{comment}
-Advantages write  after all introdcution of particle filter
+Advantages write  after all introduction of particle filter
 
 Particle Filters have no restrictions in model i.e. it can be applied to non-Gaussian models,they are super set of other filtering methods i.e. Kalman filter is Rao-Blackwellized particle filter with one particle.Additionally they can model non linear transformations of random variables therefore can be applied to any system and measurement models. All the advantages make them a good alternative to Extended Kalman Filter(EKF) and Unscented Kalman Filter(UKF).
 \end{comment}
@@ -398,7 +398,7 @@ Particle Filters have no restrictions in model i.e. it can be applied to non-Gau
 %\centering
 %\includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
 %\end{figure}
-Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. In Figure ~\ref{fig: partilce representation} the belief is represented by a set of particles. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussian and can model non linear transformations of random variables. In Figure ~\ref{fig: partilce representation} particle filters are shown to model non-linear transformations. 
+Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. In Figure ~\ref{fig: particle representation} the belief is represented by a set of particles. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussian and can model non linear transformations of random variables. In Figure ~\ref{fig: partilce representation} particle filters are shown to model non-linear transformations. 
 
 The objective of particle filters is to estimate the state of the system given the observation variables. They are designed for Hidden Markov Models(Fig ~\ref{fig-Markov Chain}), where the system consists of hidden and observed variables. In this model the state $x_{t}$ is the hidden random variable as it is not directly observed. The state at time $t$ is only dependent upon the state at time $t-1$ and external influences such as control $u_{t}$. The measurement $z_{t}$ depends on the state at time $t$. The knowledge about the influence of the control on the system can be used to calculate a new expected location and the measurement can be combined in a Bayesian way.
 
@@ -470,7 +470,7 @@ p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T}) & = & p(x_{t}|x_{t+1},u_{1:t+1},z_{1:t})\\
 \label{eq:smoothing_backward} & \alpha & p(x_{t+1}|x_{t},u_{t+1})p(x_{t}|u_{1:t},z_{1:t})
 \end{eqnarray}
 
-Equation ~\ref{eq:smoothing_backward} is used to generate states backwards in time give future states. $p(x_{t+1}|x_{t},u_{t+1})$ is the state transition probability and $p(x_{t}|u_{1:t},z_{1:t})$ is obtained by peforming partilce filtering. 
+Equation ~\ref{eq:smoothing_backward} is used to generate states backwards in time give future states. $p(x_{t+1}|x_{t},u_{t+1})$ is the state transition probability and $p(x_{t}|u_{1:t},z_{1:t})$ is obtained by performing particle filtering. 
 \begin{comment}
  This technique assumes that particle filtering has been carried out on the data set which results in a set of particles $X_{t}$ with their corresponding weights. The states can be generated recursively backwards in time given the future states using equation ~\ref{eq:smoothing_backward}. $p(x_{t}|u_{1:t},z_{1:t})$ can be obtained by performing particle filtering. $p(x_{t}|x_{t+1:T},u_{1:T},z_{1:T}$ can be approximated by particles with modified importance weights $w_{t|t+1}^{[i]} \alpha w_{t}^{[i]}p(x_{t+1}|x_{t}^{[i]},u_{t+1})$ given filtered particles $x_{t}^{[i]}$.  
 \end{comment}
@@ -585,7 +585,7 @@ The system is very similar to traditional INS except that the vehicle model outp
 \begin{figure}
   \centering
   \subfigure[Traditional aided INS]{\includegraphics[width = 2.75 in]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_traditional.png}}\qquad
-  \subfigure[Mode-aided INS]{\includegraphics[width = 2.75 in]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_model.png}}
+  \subfigure[Model-aided INS]{\includegraphics[width = 2.75 in]{/home/rohan/Documents/thesis_work/model_aided_intertial_nvaigation_system_model.png}}
  
   \caption{\label{fig-INS systems}High level system outline. The vehicle model can be used in parallel to external aiding sensors. Figure taken from \cite{Hegrenæs2008}}
 \end{figure}
@@ -597,7 +597,7 @@ In this section we give an overview of the system and point out the differences 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{Diagram1.jpeg}}
-  \caption{\label{fig-General Architecture} Block diagram for adapting motion model.}
+  \caption{\label{fig-General Architecture} Block diagram for the algorithm proposed to adapt motion model.}
 \end{figure}
 Figure ~\ref{fig- General Architecture} is an outline of the proposed system. The motion and sensor models are initialized with a set of parameters. Given the motion model $p(x_{t}|x_{t-1},u_{t})$, sensor model $p(z_{t}|x_{t})$ and the pose $p(x_{t-1})$ of a robot we can perform particle filtering using Algorithm ~\ref{alg:ParticleFilter}. It is performed to estimate the pose $p(x_{t})$ of a robot at next time step. 
 
@@ -830,7 +830,7 @@ To test our algorithm for learning the motion model we create a simulated world(
     Rotational Velocity & 01. units/timestep \\
     \hline
 \end{tabular}
- \caption{\label{tab-constant paramters}Summary of adapting motion model experiment.}
+ \caption{\label{tab-constant paramters}Summary of the experiments performed to adapt motion model.}
 \end{table}
 
 \begin{figure}
@@ -850,8 +850,7 @@ At the start of the experiment  the initial location of the robot and particle f
   \subfigure[]{\includegraphics[width = 2.75 in]{2.png}}\qquad
   \subfigure[]{\includegraphics[width = 2.75 in]{3.png}}\qquad
   \subfigure[]{\includegraphics[width = 2.75 in]{4.png}}
-  \caption{\label{fig-: movement simulation world}Particle Filters estimating the position of the robot
-   The robot is moved at a constant velocity of 5 units/timestep in each case. The particle filters estimate the location of the robot (star) by integrating the motion and sensor models.}
+  \caption{\label{fig-: movement simulation world}Particle Filters estimating the position of the robot. The robot is moved at a constant velocity of 5 units/timestep in each case. The particle filters estimate the location of the robot (star) by integrating the motion and sensor models.}
 \end{figure}
 
 
@@ -903,7 +902,7 @@ As shown in Table ~\ref{tab-:varying_sensor_noise} the estimated value of $\sigm
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10.pdf}}
-  \caption{\label{fig-varying_sensor_noise} }
+  \caption{\label{fig-varying_sensor_noise}Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}
 \end{figure}
 At the start of the experiment the parameter values for the robot's motion model and static motion model for particle filters are initialized with the same value. The adaptive motion model right from time step 0 starts estimating the parameters. In Figure ~\ref{fig-varying_sensor_noise} in the first $20$ there is no change and we can see that the adaptive motion model performs better than the static. In theory the static motion model has the best estimate of robot' motion as they are initialized with the same parameter value so the error should be less for static motion model. We don't see this because the location of particles are randomly initialized therefore it might be at different location to robot's start position. It needs sensor model to decrease the error and as the sensor noise is high it takes time to build the weight of particles. In Figure ~\ref{varying_sensor_noise_sensor_model} we plot the difference between the maximum weight and average weight of the particle set at each time step. This gives us a measure of distribution of the particle set. If we have a higher difference it means that the particle set contains particle which are sure about robot's location or vice versa. When the weights of particle are higher we can see the 
 static motion model performing better. This is due to the resampling step of particle filters where they choose the most probable particles based on motion and sensor models. As soon as the algorithm starts picking the most probable particles the error goes down and we can see that the average weight of particles are also higher. In the case of adaptive motion model the distribution of motion model gets wider right from the start and which leads to decrease in error.
@@ -914,77 +913,82 @@ After time step 60 we change the motion model noise and we can see that adaptive
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_motion_model_trans.pdf}}
-  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step.}
+  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_motion_model_rotation.pdf}}
-  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step.}
+  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_max_weight.pdf}}
-  \caption{\label{fig-varying_sensor_noise_sensor_model} Difference between the maximum weight and average weight of the particles.}
+  \caption{\label{fig-varying_sensor_noise_sensor_model} Difference between the maximum weight and average weight of the particle set. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0 }
 \end{figure}
 
 In the next experiment $\sigma_{V_{v}}^2$ is changed from $0.05$ to $1.0$ and the errors, estimation of parameters and average weight are shown in Figure ~\ref{fig-varying_sensor_noise_1.0}, Figure ~\ref{varying_sensor_noise_motion_model_1.0} and Figure \ref{varying_sensor_noise_sensor_model_1.0} respectively. 
 
-In both the experiment's the robot's $\sigma_{V_{1}}^2$ is $0.05$ and is not changed throughout the experiment. Table ~\ref{tab-: varying_sensor_noise} shows that in adaptive motion model the estimated value of $\sigma_{V_{1}}^2$ changes from the initialization value. Similarly other parameters such as $\sigma_{W_{V}}^2$ and $\sigma_{W_{1}}^2$ are also chagned. This error in estimation is not of much concern as the main goal of the algorithm proposed was to learn the motion model to decrease the localization error. 
+In both the experiment's the robot's $\sigma_{V_{1}}^2$ is $0.05$ and is not changed throughout the experiment. Table ~\ref{tab-: varying_sensor_noise} shows that in adaptive motion model the estimated value of $\sigma_{V_{1}}^2$ changes from the initialization value. Similarly other parameters such as $\sigma_{W_{V}}^2$ and $\sigma_{W_{1}}^2$ are also changed. This error in estimation is not of much concern as the main goal of the algorithm proposed was to learn the motion model to decrease the localization error. 
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10.pdf}}
-  \caption{\label{fig-varying_sensor_noise_1.0} }
+  \caption{\label{fig-varying_sensor_noise_1.0} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}
 \end{figure}
    
    
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10_motion_model_trans.pdf}}
-  \caption{\label{fig-varying_sensor_noise_motion_model_1.0}Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. }
+  \caption{\label{fig-varying_sensor_noise_motion_model_1.0}Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0.}
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10_motion_model_rotation.pdf}}
-  \caption{\label{fig-varying_sensor_noise_motion_model_1.0}Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. }
+  \caption{\label{fig-varying_sensor_noise_motion_model_1.0}Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0 }
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_10_s_10_max_weight.pdf}}
-  \caption{\label{fig-varying_sensor_noise_sensor_model_1.0}  Difference between the maximum weight and average weight of the particles.}
+  \caption{\label{fig-varying_sensor_noise_sensor_model_1.0} Difference between the maximum weight and average weight of the particles. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}
 \end{figure}
 
 To simulate changes in the environment for the first two experiments we change $\sigma_{V_{v}}^2$. In the next two experiments we would induce drift in the system and compare both motion models in terms of localization error.
 
 In order to simulate drift we describe the translational and rotational movement as
-\\
-$V_{t}\sim\mathcal{{N}}(v_{t}-a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
+\begin{equation}
+\label{eq- drift subtract}
+V_{t}\sim\mathcal{{N}}(v_{t}-a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})
+\end{equation}
 
-$W_{t}\sim\mathcal{{N}}(w_{t}-b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
+\begin{equation}
+W_{t}\sim\mathcal{{N}}(w_{t}-b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})
+\end{equation}
+
 
 where a and b are constants representing drifts in the system. 
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20.pdf}}
-  \caption{\label{fig-drift_2.0} }
+  \caption{\label{fig-drift_2.0} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation ~\ref{eq- drift subtract} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}
 \end{figure}
    
    
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans.pdf}}
-  \caption{\label{fig-drift_motion_model_1.0_trans} }
+  \caption{\label{fig-drift_motion_model_1.0_trans} Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. The drift is present throughout the experiment described by equation ~\ref{eq- drift subtract} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf}}
-  \caption{\label{fig-drift_motion_model_1.0_rotation} }
+  \caption{\label{fig-drift_motion_model_1.0_rotation} Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. The drift is present throughout the experiment described by equation ~\ref{eq- drift subtract} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}
 \end{figure}
 
 Table ~\ref{tab-:drift} gives us a summary of the experiments performed to demonstrate the effectiveness of the algorithm to account for drift. To account for the drift we don't include an extra parameter in motion model as the variances $\sigma_{V_{v}^{2}}$, $\sigma_{V_{v}^{1}}$  should account for drift and we see that in Table ~\ref{tab-:drift}. The rest of the parameters remain unchanged. The drift is present throughout the experiment and performance of the algorithm is shown in Figure ~\ref{fig-drfit_2.0}.
@@ -1016,16 +1020,20 @@ $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.206 & 2.0 & 3 & 1.0\tabularnewline
 \end{table}
 
 Another way to include drift in the system is 
-\\
-$V_{t}\sim\mathcal{{N}}(v_{t}*a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})$
-\\
-$W_{t}\sim\mathcal{{N}}(w_{t}*b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})$
+\begin{equation}
+\label{eq- drift multiply}
+V_{t}\sim\mathcal{{N}}(v_{t}*a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})
+\end{equation}
+\begin{equation}
+W_{t}\sim\mathcal{{N}}(w_{t}*b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})
+\end{equation}
+
 
 The results are described in Figure ~\ref{fig-drift_multiply} and in this case as well the drift is present throughout the experiment.
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf}}
-  \caption{\label{fig-drift_multiply} }
+  \caption{\label{fig-drift_multiply} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation ~\ref{eq- drift multiply} with a=2. The rest of the parameters remain same and the sensor noise is 1.0. }
 \end{figure}
 
 In all the experiments above we assume that the sensor noise is constant through out the experiment. In practice we find that the quality of sensor readings varies with enviornment. For example in an AUV we won't get sonar readings throughout the mission. This could be because sometimes its difficult to find the bottom of the sea floor or sonar sensor could be switched off for some time periods to save power on the battery.
@@ -1035,20 +1043,20 @@ In the next experiment there are two changes at time steps 60 and 100. At time s
 
 \begin{figure}
   \centering
-     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf}}
+     {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf}Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}
   \caption{\label{fig-different sensor noise} }
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_100_100_traj_3_trial_motion_model_trans.pdf}}
-  \caption{\label{fig-different sensor noise motion model trans} }
+  \caption{\label{fig-different sensor noise motion model trans} Estimate of parameter values $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ at every time step. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}
 \end{figure}
 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/plots/200_005_05_s_10_100_100_traj_3_trial_motion_model_rotation.pdf}}
-  \caption{\label{fig-different sensor noise motion model trans} }
+  \caption{\label{fig-different sensor noise motion model rotation}Estimate of parameter values $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}
 \end{figure}
 
 
@@ -1059,7 +1067,7 @@ The sensor model $p(z_{t}|x_{t})$ is the probability of a measurement z given th
 \begin {table}[tbh]
 \begin{tabular}{|c|c|}
 \hline 
-Classes of Sensors & Exaxples of each class \\ 
+Classes of Sensors & Examples of each class \\ 
 \hline 
 Contact Sensors & Bumpers \\ 
 \hline 
@@ -1069,21 +1077,21 @@ Proximity Sensors & Sonar, Radar, Laser range-finders, Infrared \\
 \hline 
 Visual Sensors  & Cameras \\ 
 \hline 
-Sateellite Based Sensors & GPS \\ 
+Satellite Based Sensors & GPS \\ 
 \hline 
 \end{tabular}
 \caption{\label{tab-: classes of sensors} Sensors for Mobile robots. Table taken from \cite{thrun2005probabilistic}}
 \end{table}
 The measurements from these sensors in a particle filter algorithm are used to assign weights aka importance factor to particles. Most common way of sensing the environment is through landmarks. The landmarks can be active beacons such as GPS or passive such as visual, retro-reflective etc. The sensors measure the distance , bearing or both from the landmarks to estimate their position in the environment. 
 
-In our simulated experiment the sensor model assumes to have four static landmarks and at all times we can measure the distance from them. For our algorithm to work on AUV we need some sort of reference points to measure the actual movement of the vehicle. These reference points need to be computed on the fly as we don't have the liberty of having static maps for underwater environments. As my algorithm deals with cases in which AUV doesn't loop back and we have limited field of view we need dynamic landmarks for our sensor model. To extract dynamic landmarks we used side sonar images and run feature extraction technqiues such as SURF on the images. These extracted landmarks can be used as reference points for our algorithm to adapt motion model for AUV.
+In our simulated experiment the sensor model assumes to have four static landmarks and at all times we can measure the distance from them. For our algorithm to work on AUV we need some sort of reference points to measure the actual movement of the vehicle. These reference points need to be computed on the fly as we don't have the liberty of having static maps for underwater environments. As my algorithm deals with cases in which AUV doesn't loop back and we have limited field of view we need dynamic landmarks for our sensor model. To extract dynamic landmarks we used side sonar images and run feature extraction techniques such as SURF on the images. These extracted landmarks can be used as reference points for our algorithm to adapt motion model for AUV.
 
-The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavilabilty of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two section I desrribe how side scan sonar and SURF works. In section ~\ref{ch-: dynamic landmakrs} the algorithm to compute landmakrs is presented and Chapter ~\ref{ch-: results motion estimation} contains the results of the algorithm.  
+The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavailability of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two section I describe how side scan sonar and SURF works. In section ~\ref{ch-: dynamic landmarks} the algorithm to compute landmarks is presented and Chapter ~\ref{ch-: results motion estimation} contains the results of the algorithm.  
 
 
 
 \subsection{Side Scan Sonar} 
-Side scan sonar is used to create pictures or an image of the sea floor. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures of how "loud" the return echo is and paints a picture (1). In the sea floor we find  hard areas such as rock and soft areas such as sand. The hard areas are represented by darker areas in the image as they return a stronger signal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adpating the motion model. Sound waves travel very effectively in water as compared to light therefore at lower depths sonar is used to image the sea floor instead of cameras. 
+Side scan sonar is used to create pictures or an image of the sea floor. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures of how "loud" the return echo is and paints a picture (1). In the sea floor we find  hard areas such as rock and soft areas such as sand. The hard areas are represented by darker areas in the image as they return a stronger signal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adapting the motion model. Sound waves travel very effectively in water as compared to light therefore at lower depths sonar is used to image the sea floor instead of cameras. 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg}}
@@ -1096,8 +1104,8 @@ Side scan sonar is used to create pictures or an image of the sea floor. A side 
   \caption{\label{fig- side scan sonar image} Side scan sonar image of the wreck. Image taken from \cite{}{http://www.nauticalcharts.noaa.gov/hsd/SSS.html} }
 \end{figure}
 
-Side-scan transmits sound energy and analyzes the echo that is bounced off from the sea floor or other objects. It typicaly consists of three basic components: towfish, transmission cable and topside porcessing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimesions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are recieved by transducers and are contronously recorded. Each pulse shows a narrow stip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequicies range from 100 to 500 Khz in side scan sonar; higher frequencies yeild better resolution but less range. Currenlty in the market there are systems with dual frequncy which allow the opeator to use high frequecy to produce sharper images or lower frequinces to cover greater depths. Side scan 
-systems can be characterized according to their operating frequncy ((http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm; Long, 2007).
+Side-scan transmits sound energy and analyzes the echo that is bounced off from the sea floor or other objects. It typically consists of three basic components: towfish, transmission cable and topside porcessing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimensions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are received by transducers and are continuously recorded. Each pulse shows a narrow stip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequencies range from 100 to 500 Khz in side scan sonar; higher frequencies yield better resolution but less range. Currently in the market there are systems with dual frequency which allow the opeator to use high frequency to produce sharper images or lower frequencies to cover greater depths. Side scan 
+systems can be characterized according to their operating frequency ((http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm; Long, 2007).
 
 \begin{table}
 
@@ -1124,7 +1132,7 @@ Sidescan Sonar Type & Frequency & Wavelenght & Range \\
 \end{tabular} 
 \caption{\label{tab-: classification of side scan} Characterization of Sidescan system according to their operating frequency. Table taken form \cite{Menezes}} 
 \end{table}
-It can be used fisheries research, environomental studies and military applications such as mine detection. 
+It can be used fisheries research, environmental studies and military applications such as mine detection. 
 
 \begin{figure}
   \centering
@@ -1133,7 +1141,7 @@ It can be used fisheries research, environomental studies and military applicati
 \end{figure}
 
 \subsection{Scale Invariant Feature Transform}
-SIFT is an algorithm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was first proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stiching, video tracking etc.
+SIFT is an algorithm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was first proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stitching, video tracking etc.
 
 The first step in SIFT is to construct scale space i.e. create internal representations of the original image to ensure scale in variance. In SIFT progressively blurred out images are generated using the original image. In the next step you the original image is resized to half of its size and again the blurred out images are generated. 
 
@@ -1148,8 +1156,8 @@ The images of same size are grouped together and belong to an octave. In figure 
 \begin{equation}
 L(x,y,\sigma) = G(x,y,\sigma) * I(x,y)
 \end{equation}
-where L is the blurred image , G is the Gaussian blur operator, I is an image, x,y are the location coordinates and $\sigma$ is the scale parameter. The $*$ is the convulation of gaussain blur G onto the image I. 
-The next step is to find another set of images by Difference of Gaussian (DOG) which help us in finding out the interesting keypoints in the image. In this step we calculate the difference between two consuective scales as shown in Figure ~\ref{fig- sift dog}. This process is done at every octave. 
+where L is the blurred image , G is the Gaussian blur operator, I is an image, x,y are the location coordinates and $\sigma$ is the scale parameter. The $*$ is the convulation of Gaussian blur G onto the image I. 
+The next step is to find another set of images by Difference of Gaussian (DOG) which help us in finding out the interesting keypoints in the image. In this step we calculate the difference between two consecutive scales as shown in Figure ~\ref{fig- sift dog}. This process is done at every octave. 
 
 \begin{figure}
   \centering
@@ -1178,7 +1186,7 @@ In the figure X is the current pixel and the green circles represent the neighbo
 D(x) = D + \tfrac{\partial D^{T}}{\partial x}x+\tfrac{1}{2}x^{T}\tfrac{\partial^{2} D}{\partial x^{2}}x
 \end{equation}
 
-After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intensity value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicular gradients are calculated at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are considered to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invarinace. 
+After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intensity value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicular gradients are calculated at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are considered to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invariance. 
 
 In this step SIFT calculates gradient magnitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proportional to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{} it peaks at 20-29 degrees therefore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above $80 \%$ of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
 
@@ -1196,7 +1204,7 @@ In the final step of SIFT algorithm a unique fingerprint for a keypoint aka desc
   \caption{\label{fig- sift bin fingerprint} A $16 X16$ window is taken around a keypoint. This window is broken into sixteen $4 X 4$ windows. Image taken from \cite{}{http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/2/} }
 \end{figure}
 
-In each window gradient magnitudes and orientations are calculated and are put in a 8 bin histogram (Figure ~\ref{}). For examples a gradient orientation in the range of 0-44 degrees is put in the first bin. The amount added to the bin depends upon the magnitude of the gradient and the distance from the keypoint. The gradients that are far away from the keypoint will add smaller values to the bin. This can be performed using "gaussian weighthing function". 
+In each window gradient magnitudes and orientations are calculated and are put in a 8 bin histogram (Figure ~\ref{}). For examples a gradient orientation in the range of 0-44 degrees is put in the first bin. The amount added to the bin depends upon the magnitude of the gradient and the distance from the keypoint. The gradients that are far away from the keypoint will add smaller values to the bin. This can be performed using "Gaussian weighting function". 
 
 \begin{figure}
   \centering
@@ -1239,7 +1247,7 @@ The disadvantage of this step is we loose information because the image is blurr
   \caption{\label{fig- side sonar median high} Median filter with high size applied to side sonar image.}
 \end{figure}
 
-The preprocessed image is used to extract landmarks for the AUV. To generate landmarks we use feature extraction techniques such as SIFT. Figure ~\ref{side sonar sift} shows the keypoints generated by SIFT using a high hessian threshold. These keypoints can be used as landmarks to adapt our motion model. We need to keep in mind that we need a high hessian threshold or else the algorithm will generate hunderds of landmarks as shown in Figure ~\ref{side sonar sift high}.
+The preprocessed image is used to extract landmarks for the AUV. To generate landmarks we use feature extraction techniques such as SIFT. Figure ~\ref{side sonar sift} shows the keypoints generated by SIFT using a high hessian threshold. These keypoints can be used as landmarks to adapt our motion model. We need to keep in mind that we need a high hessian threshold or else the algorithm will generate hundreds of landmarks as shown in Figure ~\ref{side sonar sift high}.
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/image_original_sift.jpg}}
@@ -1253,7 +1261,7 @@ The preprocessed image is used to extract landmarks for the AUV. To generate lan
 \end{figure}
 
 
-The distance of the AUV to landmarks in x-y plane can be measured. Similary the distance of the paticle filter estimate to the landmarks can be measured. Both the measured distances can be compared and used to assign weights to the particles. 
+The distance of the AUV to landmarks in x-y plane can be measured. Similarly the distance of the particle filter estimate to the landmarks can be measured. Both the measured distances can be compared and used to assign weights to the particles. 
 
 Using dynamic landmarks allows our adaptive motion model algorithm independence from a static map and helps us in learning on the fly.  
 
