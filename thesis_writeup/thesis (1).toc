@@ -47,6 +47,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{56}
-\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{57}
+\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{58}
 \addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{58}
+\contentsline {chapter}{Bibliography}{61}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  13 DEC 2013 12:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  16 DEC 2013 14:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1076,13 +1076,32 @@ hed_sift.jpg used on input line 1279.
 
 [54] [55 </home/rohan/Documents/thesis/thesis_writeup/image_matched_sift.jpg>]
 Chapter 6.
+
+LaTeX Warning: Reference `tab-table_motion_estimation' on page 56 undefined on 
+input line 1291.
+
+
+Overfull \hbox (66.8127pt too wide) in paragraph at lines 1293--1313
+[][] 
+ []
+
 [56
 
-]
+] [57]
 Chapter 7.
-(./thesis (1).bbl [57
 
-] [58
+LaTeX Warning: Citation `Yapp2008' on page 58 undefined on input line 1322.
+
+
+Underfull \vbox (badness 4713) has occurred while \output is active []
+
+ [58
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+(./thesis (1).bbl [60] [61
 
 
 ]
@@ -1102,7 +1121,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--136
 []\OT1/cmr/m/n/12 Office of Coast Sur-vey.  Side Scan Sonar.
  []
 
-[59]
+[62]
 Overfull \hbox (151.60019pt too wide) in paragraph at lines 192--196
 []\OT1/cmr/m/n/12 USGS.  WHSC Sides-can Sonar Sys-tems.  $\OMS/cmsy/m/n/12 n$\O
 T1/cmr/m/n/12 url\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 http://woodshole.er.usgs.gov
@@ -1114,33 +1133,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--203
 []\OT1/cmr/m/n/12 Utkarsh.  SIFT: Scale In-vari-ant Fea-ture Trans-form.
  []
 
-) [60] (./thesis (1).aux) ) 
+) [63] (./thesis (1).aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5177 strings out of 495059
- 79821 string characters out of 3182030
+ 5179 strings out of 495059
+ 79860 string characters out of 3182030
  156343 words of memory out of 3000000
- 8195 multiletter control sequences out of 15000+200000
+ 8197 multiletter control sequences out of 15000+200000
  10196 words of font info for 38 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,18n,35p,1348b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msam10.pfb>
-Output written on "thesis (1).pdf" (72 pages, 2752505 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "thesis (1).pdf" (75 pages, 2759717 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
+ 803 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

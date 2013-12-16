@@ -1287,15 +1287,46 @@ The performance of the algorithm is evaluated on real side sonar data. The resul
 \chapter{Results}
 \label{ch-: results motion estimation}
 \section{Motion estimation using side sonar images}
-We validate our algorithm on datasets consisting of side sonar images and the total distance the AUV moves. The datasets are provided by Defense Research and Development Canada(DRDC). The SIFT features that are applied to side sonar images are implemented using Opencv in python. The motion estimation algorithm  and feature matching is also implemented in python. The video datasets provided could only be read by a specific software called sonar data reader. To test our algorithm we extracted set of images from the video and used it as a input to our motion estimation algorithm.  
-Table ~\ref{} shows the results of motion estimation using side sonar images. The table also shows the estimated distance by AUV using a DVL. The distance estimated by DVL can be noisy but is treated as ground truth.    
-
-{working on plotting the results}
-
+We validate our algorithm on datasets consisting of side sonar images and the total distance the AUV moves. The datasets are provided by Defence Research and Development Canada(DRDC). The SIFT features that are applied to side sonar images are implemented using Opencv in python. The motion estimation algorithm  and feature matching is also implemented in python. The video datasets provided could only be read by a specific software called sonar data reader. To test our algorithm we extracted set of images from the video and used it as a input to our motion estimation algorithm.  
+Table ~\ref{tab-table_motion_estimation} shows the results of motion estimation using side sonar images. The table also shows the estimated distance by AUV using a DVL. The distance estimated by DVL can be noisy but is treated as ground truth because there is no practical noise free way to measure how much the AUV actually moved.      
+\begin{table}
+\begin{tabular}{|c|c|c|}
+\hline 
+Datasets & Distance estimated by DVL(m) & Distance estimated through Side sonar images(m)\tabularnewline
+\hline 
+\hline 
+1 & 234.06 & 228.88\tabularnewline
+\hline 
+2 & 232.17 & 237.53\tabularnewline
+\hline 
+3 & 226.45 & 229.35\tabularnewline
+\hline 
+4 & 231.17 & 233.70\tabularnewline
+\hline 
+5 & 235.98 & 231.72\tabularnewline
+\hline 
+6 & 232.17 & 225.65\tabularnewline
+\hline 
+7 & 218.84 & 229.15\tabularnewline
+\hline 
+\end{tabular}
+\caption{\label{tab-table_motion_estimation}Results of motion estimation using side sonar images. The results are compared to estimated distance by DVL, which is treated as ground truth.}
+\end{table}
+The algorithm gives us a decent estimate of the movement. The results when compared to DVL data show that the algorithm to estimate motion from side sonar data was not extremely accurate. Its hard to judge whether the algorithm was at fault or the ground truth was noisy. Secondly the movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{} in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
 The results presented shows the accuracy of our motion estimation algorithm. This helps is us determining the reliability and feasibility of our dynamic landmark algorithm.   
 \chapter{Conclusion}
+The goal of the work presented in thesis was to present an algorithm that can adapt the parameters to a motion model of an AUV. The work was primarily focused on developing and comparing an adaptive motion model to a static motion model. The use of side sonar images as a feedback to the algorithm enabled the algorithm to learn on the fly. Expectation maximization was used to learn the parameters in an unsupervised manner. The second part of the thesis focussed on validating our dynamic landmark approach. This was done by estimating motion from side sonar images and comparing it to DVL. The results of the first section is illustrated in an experiment to produce pose estimates by integrating the motion and sensor models. The pose estimates are compared to static motion model and the localization error is plotted. The estimated distances on real side sonar datasets are presented in the results of the second section.
 
-Did it!
+Probabilistic robotics has been the way to approach robotics for a long time. The motion and sensor model are key ingredients to any algorithms for navigation, localization and map building. These models are treated as Gaussian distribution with static parameters. The questions that arises is how these models react to changes in the environment and robots. Higher level task such as navigation and path planning are dependant upon the accuracy of these model. To adapt to these changes we need to change our parameters to a model with time.
+
+The work proposed here was to show that by changing parameters to a motion model with time, we can localize robots more accurately. The algorithm can be broken down into two step based on the learning process i.e. expectation maximization.  The first step consists of the Expectation step where particle filtering and smoothing is performed. A set of trajectories are calculated and are treated as ground truth. In the maximization step the movement given by the trajectories and reported movement is compared. The error in two dimensions is calculated and recorded over time. To estimate the parameters we use Newton conjugate gradient method on the error functions. The estimated parameters are replace the current parameters to the motion model. This process is repeated throughout a robot's mission. The algorithm was based on the framework proposed by Yap \cite{Yapp2008}. 
+
+The performance of static and adaptive motion model are shown in section ~\ref{ch-: results adapting motion model}. The experiment is conducted in a simulated world. The motion model parameters were externally changed at various timesteps to simulate changes motion model in real world. As expected localization accuracy was better in adaptive motion model as compared to static. The adaptive motion model quickly adapted its parameters to the change in motion model. The adaptive motion model performed well in both the cases when just the variance of the model was changed and when there was a constant drift in the system. The estimation of parameters in this framework is dependant upon the sensor noise. In the last experiment when we changed the sensor noise the estimated parameters was not even close the real parameters values but was able to better localize the robot as compared to static motion model.
+
+As the algorithm is meant to learn the parameters on the fly  we use dynamic landmarks as feedback to our algorithm. The dynamic landmarks for AUV is extracted through SIFT features on side sonar images. As we didn't have the IMU, DVL data of AUV we couldn't integrate the dynamic landmark algorithm in our simulator. To verify our algorithm we estimated motion by using these images and compared it to distance estimated by DVL in two dimension. The algorithm presented here is a simple on and a lot of work can be done to integrate the side sonar pose and estimate motion in all six degrees. The algorithm is run on real side sonar datasets collected during a mine hunting mission. The datasets are provided by DRDC. The results are shown in section ~\ref{ch-: results motion estimation} and the estimated distances are compared. It is difficult to judge the accuracy of the algorithm as ground truth data provided by DVL can be noisy.  The results show that visual motion estimation does a fair job in estimating distance moved by AUV. 
+
+Overall the work illustrated that adapting motion model can be extremely advantageous in decreasing the localization error which in turn helps a robot in better navigation and path planning. The estimated parameters accuracy depends upon the sensor noise and can be low but the goal of the thesis was to decrease the localization error over  time with changes in the environment. The method doesn't require any pre learning phase and helps in getting rid of the manual labour associated with the calibration process. The algorithm doesn't require the AUV to loop back in its path to learn the right parameters for the model. The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. There work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The algorithm to generate side sonar images presented by Andrew Vardy online needs to be tested. The algorithm requires work so that it can be ported for the on board processor of the AUV and performance of the algorithm for on board processor also needs to be tested. Overall the work presented here shows the importance of having an adaptive motion model for localization of robots.   
+
 
 \bibliographystyle{plain}
 \bibliography{mendeley.bib}
