@@ -29,8 +29,8 @@
 \author{Rohan Bhargava}
 \defenceday{1}
 \defencemonth{October}
-\defenceyear{2013}
-\convocation{January}{2014}
+\defenceyear{2014}
+\convocation{May}{2014}
 
 % Use multiple \supervisor commands for co-supervisors.
 % Use one \reader command for each reader.
@@ -1287,12 +1287,12 @@ The performance of the algorithm is evaluated on real side sonar data. The resul
 \chapter{Results}
 \label{ch-: results motion estimation}
 \section{Motion estimation using side sonar images}
-We validate our algorithm on datasets consisting of side sonar images
-and the total distance the AUV moves.
+We validate our algorithm on datasets consisting of side sonar images and the total distance the AUV moves. The datasets are provided by Defense Research and Development Canada(DRDC). The SIFT features that are applied to side sonar images are implemented using Opencv in python. The motion estimation algorithm  and feature matching is also implemented in python. The video datasets provided could only be read by a specific software called sonar data reader. To test our algorithm we extracted set of images from the video and used it as a input to our motion estimation algorithm.  
+Table ~\ref{} shows the results of motion estimation using side sonar images. The table also shows the estimated distance by AUV using a DVL. The distance estimated by DVL can be noisy but is treated as ground truth.    
 
 {working on plotting the results}
 
-
+The results presented shows the accuracy of our motion estimation algorithm. This helps is us determining the reliability and feasibility of our dynamic landmark algorithm.   
 \chapter{Conclusion}
 
 Did it!
