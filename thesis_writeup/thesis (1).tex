@@ -4,7 +4,7 @@
 % to prepare draft version use option draft:
 
 
-\documentclass[12pt,draft]{dalcsthesis}
+\documentclass[12pt]{dalcsthesis}
 
 \usepackage[pdftex]{graphicx}
 
@@ -25,7 +25,7 @@
 \begin{document}
 
 \mcs  % options are \mcs, \macs, \mec, \mhi, \phd, and \bcshon
-\title{Feature Based adaptive motion model}
+\title{Feature Based adaptive motion model for better localization}
 \author{Rohan Bhargava}
 \defenceday{1}
 \defencemonth{October}
@@ -37,7 +37,7 @@
 
 \supervisor{Dr. Thomas Trappenberg}
 \supervisor{Dr. Mae Sato}
-\reader{D. Odaprof}
+\reader{Dr. Evangelos E. Milios}
 \reader{A. External}
 \providecommand{\tabularnewline}{\\}
 \newcommand{\lyxdot}{.}
@@ -406,7 +406,6 @@ The objective of particle filters is to estimate the state of the system given t
 \begin{figure}
 \centering
 {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png}}
-
 \caption{\label{fig: particle representation} The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y. Figure taken from \cite{thrun2005probabilistic}}
 \end{figure}
 
@@ -449,7 +448,7 @@ Particle Filters is an integral part of my algorithm to learn the right paramete
 The particle filter algorithm as described before is the first step in the Expectation process. The next algorithm that completes the Expectation Step is the particle smoothing. Doucet \cite{doucet2009tutorial} in his paper stated that filtering based on observations received up to the current time is used to estimate the distribution of the current state of an Hidden Markov Model (HMM) whereas smoothing is used to estimate distribution of state at a particular time given all the observations up to some later time (Figure ~\ref{fig: particle smoothing}). Russel and Norving \cite{russell2003artificial} showed that the state of the system is better estimated by smoothing as it incorporates more information than just filtering. We use particle smoothing algorithm proposed by Teddy N Yap and Christian R. Shelton \cite{Yap2008} which was based on the technique presented by Docuet et al. \cite{doucet2000monte} and Godsill et al. \cite{Godsill2004}.
 \begin{figure}
 \centering
-{\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/smoothing.png}}
+{\includegraphics{/home/rohan/Documents/thesis/smoothing.png}}
 
 \caption{\label{fig: particle smoothing} Smoothing computes $P(X_{k}|e_{1:t})$, the posterior distribution of the state at some past time $k$ given a complete sequence of observations from 1 to $t$. Figure taken from \cite{russell2003artificial}}.
 \end{figure}
@@ -649,7 +648,9 @@ Using Jensen's Equality it can be show that,
 \begin{equation}
 \ln \sum_{i=1}^{n}\lambda_{i}x_{i} \geq \sum_{i=1}^{n}\lambda_{i}\ln(x_{i})
 \end{equation}
-for constants $\lambda_{i} \geq 0$ with $\sum_{i=1}^{n}\lambda_{i}=1$. This can be applied to equation ~\ref{eq-:derivation_em} and $\lambda=P(Z|X,\theta^{old})$. As $P(Z|X,\theta^{old})$ is a probability measure we have $P(Z|X,\theta^{old}) \geq 0$ and $\sum_{Z}P(Z|X,\theta^{old})=1$.
+for constants $\lambda_{i} \geq 0$ with $\sum_{i=1}^{n}\lambda_{i}=1$. 
+\\
+This can be applied to equation ~\ref{eq-:derivation_em} and $\lambda=P(Z|X,\theta^{old})$. As $P(Z|X,\theta^{old})$ is a probability measure we have $P(Z|X,\theta^{old}) \geq 0$ and $\sum_{Z}P(Z|X,\theta^{old})=1$.
 
 \begin{eqnarray}
 Q(\theta^{new})-Q(\theta^{old}) & = & \ln(\sum_{Z}P(X|Z,\theta^{new})P(Z|\theta))-\ln P(X|\theta^{old})\\
@@ -734,14 +735,15 @@ where, $u_{1:T}$ and $z_{1:T}$ are the history of control and sensor readings. T
 
 The first step in an EM algorithm is to initialize the set of parameters $\theta$ with some initial values. In the E step we calculate the expectation of $\log p(r,Z|\theta)$ with respect to distribution $p(r|Z,\theta)$. The distribution can be also be represented by the entire join smoothing density $p(x_{0:T}|u_{1:T},z_{1:T})$. To approximate the E step i.e. the joint smoothing density, particle filtering and smoothing is performed to calculate a set of robot trajectories as discussed in section ~\ref{ch-: particle smoothing}. In the M step we treat the set of trajectories as ground truth as use them to compute the maximum likelihood of parameters. The algorithm keeps on alternating between the E and M step until convergence. 
 
-For calculating the maximum likelihood values for parameters we need to calculate the motion errors $\epsilon_{T_{t}},\epsilon_{D_{t}}$ based on robot trajectory and the contribution of translational $v$ and rotational $t$ velocity to the errors.
+For calculating the maximum likelihood values for parameters we need to calculate the motion errors $\epsilon_{V_{t}},\epsilon_{W_{t}}$ based on robot trajectory and the contribution of translational $v$ and rotational $t$ velocity to the errors.
+\begin{comment}
 
 \begin{eqnarray}
 \epsilon_{T_{t}}^{[j]}&=&(\theta_{t_{+1}}^{'[j]}-\theta_{t}^{'[j]}-r_{t}^{''})mod2\pi\\
 \epsilon_{D_{t}}^{[j]}&=&(x_{t+1}^{'[j]}-x_{t}^{'[j]})cos(\theta_{t}^{'[j]}+\frac{r_{t}^{''}+\epsilon_{T_{t}}^{[j]}}{2}+(y_{t+1}^{'[j]}-y_{t}^{'[j]})sin(\theta_{t}^{'[j]}+\frac{r_{t}^{''}+\epsilon_{T_{t}}^{[j]}}{2})-d_{t}^{''}
 \end{eqnarray}
-
-The distribution that represents these errors are 
+\end{comment}
+The distribution that represents the errors are 
 \begin{eqnarray}
 \epsilon_{V_{t}}^{[j]}&\sim&\mathcal{{N}}(0,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{V_{1}}^{2})\\
 \epsilon_{W_{t}}^{[j]}&\sim&\mathcal{{N}}(0,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})
@@ -1038,7 +1040,7 @@ The results are described in Figure ~\ref{fig-drift_multiply} and in this case a
 
 In all the experiments above we assume that the sensor noise is constant through out the experiment. In practice we find that the quality of sensor readings varies with environment. For example in an AUV we won't get sonar readings throughout the mission. This could be because sometimes its difficult to find the bottom of the sea floor or sonar sensor could be switched off for some time periods to save power on the battery.
 
-In the next experiment there are two changes at time steps 60 and 100. At time step 60 we change the motion model noise $\sigma_{V_{v}}^2$ from 0.05 to 0.5. We change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model. After time step 100 we can see the error growing in adaptive and static motion model. The adaptive motion model quickly learns the sensor is high and starts relying on its motion model. This helps in decreasing the localization error and can be seen in Figure ~\ref{fig-different sensor noise}. In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model therfore we see an increasing estimate of the parameters (Figure ~\ref{fig-different sensor noise motion model trans}).
+In the next experiment there are two changes at time steps 60 and 100. At time step 60 we change the motion model noise $\sigma_{V_{v}}^2$ from 0.05 to 0.5. We change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model. After time step 100 we can see the error growing in adaptive and static motion model. The adaptive motion model quickly learns the sensor is high and starts relying on its motion model. This helps in decreasing the localization error and can be seen in Figure ~\ref{fig-different sensor noise}. In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model therefore we see an increasing estimate of the parameters (Figure ~\ref{fig-different sensor noise motion model trans}).
 
 
 \begin{figure}
@@ -1065,6 +1067,7 @@ In the next experiment there are two changes at time steps 60 and 100. At time s
 The sensor model $p(z_{t}|x_{t})$ is the probability of a measurement z given the robot is at position x. Thrun \cite{thrun2005probabilistic} divides the sensors for mobile robots in five classes such as contact sensors, internal sensors, proximity sensors, visual sensors and satellite-based sensors. Examples for various classes are shown in Table ~\ref{tab-: classes of sensors}.
 
 \begin {table}[tbh]
+\centering
 \begin{tabular}{|c|c|}
 \hline 
 Classes of Sensors & Examples of each class \\ 
@@ -1073,7 +1076,7 @@ Contact Sensors & Bumpers \\
 \hline 
 Internal Sensors & Accelerometers, Gyroscopes, Compasses \\ 
 \hline 
-Proximity Sensors & Sonar, Radar, Laser range-finders, Infrared \\ 
+Proximity Sensors & Sonar, Radar, Laser range-finders, Infra-red \\ 
 \hline 
 Visual Sensors  & Cameras \\ 
 \hline 
@@ -1104,11 +1107,11 @@ Side scan sonar is used to create pictures or an image of the sea floor. A side 
   \caption{\label{fig- side scan sonar image} Side scan sonar image of the wreck. Image taken from \cite{side_sonar_url}}
 \end{figure}
 
-Side-scan transmits sound energy and analyzes the echo that is bounced off from the sea floor or other objects. It typically consists of three basic components: towfish, transmission cable and topside porcessing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimensions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are received by transducers and are continuously recorded. Each pulse shows a narrow stip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequencies range from 100 to 500 Khz in side scan sonar; higher frequencies yield better resolution but less range. Currently in the market there are systems with dual frequency which allow the opeator to use high frequency to produce sharper images or lower frequencies to cover greater depths. Side scan 
+Side-scan transmits sound energy and analyses the echo that is bounced off from the sea floor or other objects. It typically consists of three basic components: towfish, transmission cable and topside processing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimensions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are received by transducers and are continuously recorded. Each pulse shows a narrow strip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequencies range from 100 to 500 Khz in side scan sonar; higher frequencies yield better resolution but less range. Currently in the market there are systems with dual frequency which allow the operator to use high frequency to produce sharper images or lower frequencies to cover greater depths. Side scan 
 systems can be characterized according to their operating frequency \cite{side_sonar_usgs_url}.
 
 \begin{table}
-
+\centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Sidescan Sonar Type & Frequency & Wavelenght & Range \\ 
@@ -1177,16 +1180,16 @@ After calculating the DOG images we can find the keypoints in two steps. Firstly
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-maxima-idea.jpg}}
-  \caption{\label{fig- maxima and minima sift octaves} Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbors. Image taken from \cite{sift_url}}
+  \caption{\label{fig- maxima and minima sift octaves} Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbours. Image taken from \cite{sift_url}}
 \end{figure}
 
-In the figure X is the current pixel and the green circles represent the neighbors. X is marked as a keypoint if it is the greatest or least of all neighbors. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calculate the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint. It can be mathematically represented by 
+In the figure X is the current pixel and the green circles represent the neighbors. X is marked as a keypoint if it is the greatest or least of all neighbours. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calculate the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint. It can be mathematically represented by 
 
 \begin{equation}
 D(x) = D + \tfrac{\partial D^{T}}{\partial x}x+\tfrac{1}{2}x^{T}\tfrac{\partial^{2} D}{\partial x^{2}}x
 \end{equation}
 
-After generating a set keypoints we need to get rid of points whihc have low contrast features and are present on an edge. The algorithm checks for intensity value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicular gradients are calculated at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are considered to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invariance. 
+After generating a set keypoints we need to get rid of points which have low contrast features and are present on an edge. The algorithm checks for intensity value at the pixel location of the keypoint and if it is less than a certain value if is rejected. To remove edges the perpendicular gradients are calculated at the keypoint. If both the gradients are small it is a flat region. If one gradient is big and other is small it is a edge. If both the gradients are big then it is a corner. The keypoints with both big gradients are considered to be a keypoint otherwise they are rejected. The SIFT algorithm can check a point is a corner or not by using a Hessian matrix. After completing this step we have a set of legitimate keypoints which are scale invariant. The next step is assign orientation to each keypoint so that they are rotation invariance. 
 
 In this step SIFT calculates gradient magnitudes and directions around each keypoint. To perform this a histogram is created with 36 bins (each 10 degrees) representing 360 degrees of orientation. Suppose the gradient direction at a certain point is 20.56 degrees then it will go in 20-29 degree bin. The amount that is added to the bin is proportional to the magnitude of the gradient of the point. This process is repeated for all the pixels around the keypoint and in the end histogram would peak at some point. In Figure ~\ref{fig- sift bin histogram} it peaks at 20-29 degrees therefore the keypoint is assigned to third bin. In the Figure we also see that there is another peak which is above 80\% of the highest peak. In this case the peak converted into a new keypoint. This new keypoint has the same location and scale as the original but has a different orientation. 
 
@@ -1290,7 +1293,8 @@ The performance of the algorithm is evaluated on real side sonar data. The resul
 We validate our algorithm on datasets consisting of side sonar images and the total distance the AUV moves. The datasets are provided by Defence Research and Development Canada(DRDC). The SIFT features that are applied to side sonar images are implemented using Opencv in python. The motion estimation algorithm  and feature matching is also implemented in python. The video datasets provided could only be read by a specific software called sonar data reader. To test our algorithm we extracted set of images from the video and used it as a input to our motion estimation algorithm.  
 Table ~\ref{tab-table_motion_estimation} shows the results of motion estimation using side sonar images. The table also shows the estimated distance by AUV using a DVL. The distance estimated by DVL can be noisy but is treated as ground truth because there is no practical noise free way to measure how much the AUV actually moved.      
 \begin{table}
-\begin{tabular}{|c|c|c|}
+\centering
+\begin{tabular}{|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|}
 \hline 
 Datasets & Distance estimated by DVL(m) & Distance estimated through Side sonar images(m)\tabularnewline
 \hline 
@@ -1312,20 +1316,20 @@ Datasets & Distance estimated by DVL(m) & Distance estimated through Side sonar 
 \end{tabular}
 \caption{\label{tab-table_motion_estimation}Results of motion estimation using side sonar images. The results are compared to estimated distance by DVL, which is treated as ground truth.}
 \end{table}
-The algorithm gives us a decent estimate of the movement. The results when compared to DVL data show that the algorithm to estimate motion from side sonar data was not extremely accurate. Its hard to judge whether the algorithm was at fault or the ground truth was noisy. Secondly the movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{} in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
+The algorithm gives us a decent estimate of the movement. The results when compared to DVL data show that the algorithm to estimate motion from side sonar data was not extremely accurate. Its hard to judge whether the algorithm was at fault or the ground truth was noisy. Secondly the movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{Hegrenæs2008}in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
 The results presented shows the accuracy of our motion estimation algorithm. This helps is us determining the reliability and feasibility of our dynamic landmark algorithm.   
 \chapter{Conclusion}
-The goal of the work presented in thesis was to present an algorithm that can adapt the parameters to a motion model of an AUV. The work was primarily focused on developing and comparing an adaptive motion model to a static motion model. The use of side sonar images as a feedback to the algorithm enabled the algorithm to learn on the fly. Expectation maximization was used to learn the parameters in an unsupervised manner. The second part of the thesis focussed on validating our dynamic landmark approach. This was done by estimating motion from side sonar images and comparing it to DVL. The results of the first section is illustrated in an experiment to produce pose estimates by integrating the motion and sensor models. The pose estimates are compared to static motion model and the localization error is plotted. The estimated distances on real side sonar datasets are presented in the results of the second section.
+The goal of the work presented in thesis was to present an algorithm that can adapt the parameters to a motion model of an AUV. The work was primarily focused on developing and comparing an adaptive motion model to a static motion model. The use of side sonar images as a feedback to the algorithm enabled the algorithm to learn on the fly. Expectation maximization was used to learn the parameters in an unsupervised manner. The second part of the thesis focussed on validating our dynamic landmark approach. This was done by estimating motion from side sonar images and comparing it to DVL. The results of the first section is illustrated in an experiment to produce pose estimates by integrating the motion and sensor models. The pose estimates of static and adaptive motion model are compared and the localization error is plotted. The estimated distances by the algorithm on real side sonar datasets are presented in the results of the second section.
 
 Probabilistic robotics has been the way to approach robotics for a long time. The motion and sensor model are key ingredients to any algorithms for navigation, localization and map building. These models are treated as Gaussian distribution with static parameters. The questions that arises is how these models react to changes in the environment and robots. Higher level task such as navigation and path planning are dependant upon the accuracy of these model. To adapt to these changes we need to change our parameters to a model with time.
 
-The work proposed here was to show that by changing parameters to a motion model with time, we can localize robots more accurately. The algorithm can be broken down into two step based on the learning process i.e. expectation maximization.  The first step consists of the Expectation step where particle filtering and smoothing is performed. A set of trajectories are calculated and are treated as ground truth. In the maximization step the movement given by the trajectories and reported movement is compared. The error in two dimensions is calculated and recorded over time. To estimate the parameters we use Newton conjugate gradient method on the error functions. The estimated parameters are replace the current parameters to the motion model. This process is repeated throughout a robot's mission. The algorithm was based on the framework proposed by Yap \cite{Yapp2008}. 
+The work proposed here was to show that by changing parameters to a motion model with time, we can localize robots more accurately. The algorithm can be broken down into two steps based on the learning process i.e. expectation maximization.  The first step consists of the Expectation step where particle filtering and smoothing is performed. A set of trajectories are calculated and are treated as ground truth. In the maximization step the movement given by the trajectories and reported movement is compared. The error in two dimensions is calculated and recorded over time. To estimate the parameters we use Newton conjugate gradient method on the error functions. The estimated parameters are replace the current parameters to the motion model. This process is repeated throughout a robot's mission. The algorithm was based on the framework proposed by Yap \cite{Yapp2008}. 
 
-The performance of static and adaptive motion model are shown in section ~\ref{ch-: results adapting motion model}. The experiment is conducted in a simulated world. The motion model parameters were externally changed at various time steps to simulate changes motion model in real world. As expected localization accuracy was better in adaptive motion model as compared to static. The adaptive motion model quickly adapted its parameters to the change in motion model. The adaptive motion model performed well in both the cases when just the variance of the model was changed and when there was a constant drift in the system. The estimation of parameters in this framework is dependant upon the sensor noise. In the last experiment when we changed the sensor noise the estimated parameters was not even close the real parameters values but was able to better localize the robot as compared to static motion model.
+The performance of static and adaptive motion model are shown in section ~\ref{ch-: results adapting motion model}. The experiment is conducted in a simulated world. The motion model parameters were externally changed at various time steps to simulate changes of a motion model in real world. As expected localization accuracy was better in adaptive motion model as compared to static. The adaptive motion model quickly adapted its parameters to the change in motion model. The adaptive motion model performed well in both the cases when just the variance of the model was changed and when there was a constant drift in the system. The estimation of parameters in this framework is dependant upon the sensor noise. In the last experiment when we changed the sensor noise the estimated parameters was not even close the real parameters values but was able to better localize the robot as compared to static motion model.
 
-As the algorithm is meant to learn the parameters on the fly  we use dynamic landmarks as feedback to our algorithm. The dynamic landmarks for AUV is extracted through SIFT features on side sonar images. As we didn't have the IMU, DVL data of AUV we couldn't integrate the dynamic landmark algorithm in our simulator. To verify our algorithm we estimated motion by using these images and compared it to distance estimated by DVL in two dimension. The algorithm presented here is a simple on and a lot of work can be done to integrate the side sonar pose and estimate motion in all six degrees. The algorithm is run on real side sonar datasets collected during a mine hunting mission. The datasets are provided by DRDC. The results are shown in section ~\ref{ch-: results motion estimation} and the estimated distances are compared. It is difficult to judge the accuracy of the algorithm as ground truth data provided by DVL can be noisy.  The results show that visual motion estimation does a fair job in estimating distance moved by AUV. 
+As the algorithm is meant to learn the parameters on the fly we use dynamic landmarks as feedback to our algorithm. The dynamic landmarks for AUV is extracted through SIFT features on side sonar images. As we didn't have the IMU, DVL data of AUV we couldn't integrate the dynamic landmark algorithm in our simulator. To verify our algorithm we estimated motion by using these images and compared it to distance estimated by DVL in two dimension. The algorithm presented here is a simple approach and a lot of work can be done to integrate the side sonar pose that can help in estimating motion in all six degrees. The algorithm is run on real side sonar datasets collected during a mine hunting mission. The datasets are provided by DRDC. The results are shown in section ~\ref{ch-: results motion estimation} and the estimated distances are compared. It is difficult to judge the accuracy of the algorithm as ground truth data provided by DVL can be noisy.  The results show that visual motion estimation does a fair job in estimating distance moved by AUV. 
 
-Overall the work illustrated that adapting motion model can be extremely advantageous in decreasing the localization error which in turn helps a robot in better navigation and path planning. The estimated parameters accuracy depends upon the sensor noise and can be low but the goal of the thesis was to decrease the localization error over  time with changes in the environment. The method doesn't require any pre learning phase and helps in getting rid of the manual labour associated with the calibration process. The algorithm doesn't require the AUV to loop back in its path to learn the right parameters for the model. The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. There work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The algorithm to generate side sonar images presented by Andrew Vardy \cite{vandrish2011side} online needs to be tested. The algorithm requires work so that it can be ported for the on board processor of the AUV and performance of the algorithm for on board processor also needs to be tested. Overall the work presented here shows the importance of having an adaptive motion model for localization of robots.   
+Overall the work illustrated that adapting motion model can be extremely advantageous in decreasing the localization error which in turn helps a robot in better navigation and path planning. The estimated parameters accuracy depends upon the sensor noise and can be low but the goal of the thesis was to decrease the localization error over time with changes in environment. The method doesn't require any pre learning phase and helps in getting rid of the manual labour associated with the calibration process. The algorithm doesn't require the AUV to loop back in its path to learn the right parameters for the model. The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. The work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The algorithm to generate side sonar images presented by Andrew Vardy \cite{vandrish2011side} online needs to be tested. The algorithm requires work so that it can be ported and performance can be tested for an on board processor of the AUV. Overall the work presented here shows the importance of having an adaptive motion model for better localization of robots.   
 
 
 \bibliographystyle{plain}
