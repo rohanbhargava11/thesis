@@ -46,7 +46,7 @@
 \contentsline {figure}{\numberline {Figure 5.9}{\ignorespaces A $16 X16$ window is taken around a keypoint. This window is broken into sixteen $4 X 4$ windows. Image taken from \cite {sift_url}}}{48}
 \contentsline {figure}{\numberline {Figure 5.10}{\ignorespaces The gradient orientation is assinged to 8 bin histogram. The value depends upon the magnitude of the orientation and distance from the keypoint. Image taken from \cite {sift_url}}}{49}
 \contentsline {figure}{\numberline {Figure 5.11}{\ignorespaces Image produced by Side scan sonar. Images produced from dataset provided by DRDC.}}{50}
-\contentsline {figure}{\numberline {Figure 5.12}{\ignorespaces Median filter applied to side sonar image.}}{50}
+\contentsline {figure}{\numberline {Figure 5.12}{\ignorespaces Median filter applied to side sonar image.}}{51}
 \contentsline {figure}{\numberline {Figure 5.13}{\ignorespaces Median filter with high size applied to side sonar image.}}{51}
 \contentsline {figure}{\numberline {Figure 5.14}{\ignorespaces SIFT features on a side sonar image.}}{52}
 \contentsline {figure}{\numberline {Figure 5.15}{\ignorespaces SIFT features on a side sonar image with low hessian threhold.}}{52}
