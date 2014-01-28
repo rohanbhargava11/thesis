@@ -1,4 +1,4 @@
-% simple.tex - simple Master's thesis sample
+	% simple.tex - simple Master's thesis sample
 % $Id: simple.tex 309 2011-01-28 14:46:48Z vlado $
 %\documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
@@ -71,9 +71,9 @@ I would like to thank my colleagues at Hallab for their encouragement and suppor
 
 
 \section{Motivation}
-The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating the robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}.  A common approach to determine the location of a robot is through the use of Global Positioning System (GPS), a series of satellites in low earth orbit that use differential positioning to determine a location for a receiver.  Another approach is to provide a prior map of the environment and with help of sensors a robot perceives the world and localizes itself in it. An additional challenge to localization is when sensing external environment is impossible or incomplete due to unreliability and inaccessibility of the sensors. In this case the localization estimate can be updated using self-generated cues such as acceleration and velocity.  
+The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating the robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}.  A common approach to determine the location of a robot is through the use of a Global Positioning System (GPS) which uses a series of satellites in low earth orbit that use differential positioning to determine a location for a receiver.  Another approach is to provide a prior map of the environment and with the help of sensors a robot perceives the world and localizes itself in it. The major challenge to localization is sensing  external environment can be impossible or incomplete due to unreliability and inaccessibility of the sensors. In this case the localization estimate can be updated using self-generated cues such as acceleration and velocity.
 
-An example for such a scenario from underwater robotics is maintaining a pose estimate of an Autonomous Underwater Vehicle(AUV), such as Hugin 4500 (Figure ~\ref{fig-Hugin 4500}). In AUV the pose estimation relies on Inertial Navigation Systems (INS) which gives an estimate of the velocity, position and orientation.  All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively larger error.  To compensate for drift systems such as Doppler Velocity Log (DVL), surface GPS etc. are used \cite{Lammas2004} \cite{leonard1998autonomous}. Hegrenaes et al \cite{Hegrenæs2008} pointed out that there are situations where these systems fail or readings from these sensors need to be discarded due to poor quality.  An example of such a situation is the non-feasibility of the vehicle to surface.  In such situations they proposed to use the self-generated velocity estimates to aid INS systems. 
+An example for such a scenario from underwater robotics is maintaining a pose estimate of an Autonomous Underwater Vehicle(AUV). In AUV the pose estimation relies on Inertial Navigation Systems (INS) which gives an estimate of the velocity, position and orientation. An example of such a vehicle is Hugin 4500 (Figure ~\ref{fig-Hugin 4500}). All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively larger error.  To compensate for drift systems such as Doppler Velocity Log (DVL), surface GPS etc. are used \cite{Lammas2004} \cite{leonard1998autonomous}. Hegrenaes et al \cite{Hegrenæs2008} pointed out that there are situations where these systems fail or readings from these sensors need to be discarded due to poor quality.  An example of such a situation is the non-feasibility of the vehicle to surface.  In such situations they proposed to use the self-generated velocity estimates to aid INS systems. 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{../hugin_4500.png}}
@@ -82,10 +82,12 @@ An example for such a scenario from underwater robotics is maintaining a pose es
 \end{figure}
 
 
-The estimates can be difficult to acquire and maintain due to uncertainties in way a robot interacts and senses its environment. These uncertainties can arise due to noisy and incomplete sensing of the environment, uncertain movements of a robot in the environment and changes in the environment itself.  To address these issues Sebastian Thrun \cite{thrun2005probabilistic} represented the motion and sensor models probabilistically. He defines it as, instead of relying on single ''best guess" as to what might be the case, probabilistic algorithms represent the information by probability distributions over a whole space of guesses.  To update the state of a robot probabilistically there are algorithms such as Kalman Filter \cite{kalman1960new}, Particle Filter \cite{gordon1993novel} etc. which are based on Bayes filter. 
+The estimates can be difficult to acquire and maintain due to uncertainties in way a robot interacts and senses its environment. These uncertainties can arise due to noisy and incomplete sensing of the environment, uncertain movements of a robot in the environment and changes in the environment itself.  To address these issues Sebastian Thrun \cite{thrun2005probabilistic} represented the motion and sensor models probabilistically. This helps in having a probability distribution over a space of guesses instead of relying on a single best guess. To update the state of a robot probabilistically there are algorithms such as Kalman Filter \cite{kalman1960new}, Particle Filter \cite{gordon1993novel} etc. which are based on Bayes filter. 
 
-In probabilistic robotics the motion and sensors models are represented by a distribution which is defined by its parameters.  The process of determining parameters to kinematic model is termed as calibration \cite{cox1990autonomous} \cite{vukobratovic1989introduction}. Generally the parameters to the models are hand tuned and are derived by conducting calibration experiments. Such calibration methods are impractical for two reasons. Firstly these processes are labour intensive and require prior information about the environment and robot. Secondly, changes in robot (e.g.-:  general wear and tear) and environment (e.g.-: moving from fresh water to sea water) leads to changes in the parameters. The changes in underwater environments can be due to change in density, temperature etc. of water. These changes require recalibration of a robot while it is in operation which in most cases is not possible to do. The inaccuracies in the models will effect results for higher level tasks such as path planning \cite{Lav06}, Simultaneous Localization and 
+In probabilistic robotics the motion and sensors models are represented by a distribution which is defined by its parameters.  The process of determining parameters to kinematic model is termed calibration \cite{cox1990autonomous} \cite{vukobratovic1989introduction}. Generally the parameters to the models are hand tuned and are derived by conducting calibration experiments. Such calibration methods are impractical for two reasons. Firstly these processes are labour intensive and require prior information about the environment and robot. Secondly, changes in robot (e.g.-:  general wear and tear) and environment (e.g.-: moving from fresh water to sea water) leads to changes in the parameters. The changes in underwater environments can be due to change in density, temperature etc. of water. These changes require recalibration of a robot while it is in operation which in most cases is not possible to do. The inaccuracies in the models will effect results for higher level tasks such as path planning \cite{Lav06}, Simultaneous Localization and 
 Mapping (SLAM) \cite{thrun2005probabilistic} \cite{grisettiyz2005improving} etc.
+
+\section{Previous Work}
 
 Roy and Thrun \cite{Roy} proposed an online calibration method for land robots which can be performed without human intervention.  They approached the calibration process as maximum likelihood estimation problem which gives an estimate of parameters for the given data. The calibration parameters are iteratively estimated by comparing pair of subsequent sensor readings. The algorithm proposed worked well for systematic drifts and the results showed the position error reduced by approximately by 83\%.
 
@@ -93,11 +95,13 @@ Alizar and Parr \cite{Eliazar2004} continued the work further by estimating non-
 
 Yapp \cite{Yap2008} took Alizar and Parr's \cite{Eliazar2004} work further and proposed an algorithm to learn the motion and sensor models for land robots. They used the same Expectation Maximization framework to learn the right parameters for the models. To calculate the likely trajectory of a robot both the algorithms implemented particle filtering \cite{ristic2004beyond} \cite{chen2003bayesian} and smoothing \cite{doucet2000monte}.  The algorithm started with an estimate of initial parameters and iteratively optimized the parameters based on the data collected during robot's operation. The algorithm assumed that a prior map of the environment is provided. 
 
+\section{Contribution}
+
 In my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic.  The algorithm proposed here is different from the work done before in two ways. Firstly the algorithm is meant to learn the right parameters for an AUV's motion model. Secondly, the algorithm can learn motion model for unknown environments by generating landmarks using side sonar images and therefore doesn't have to rely on static maps. Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for detecting objects underwater. Side scan sonar is a specific type of sonar used to image the topography of a sea floor.  The SONAR sensor is the only imaging tool that can work at high depth. 
 
-My algorithm uses EM algorithm to calculate the most likely parameters for a data set.  The trajectories are calculated by implementing particle filtering and smoothing.  Particle Filters are chosen because they can mode non-linear transformations as well as have no restrictions in model. Particle smoothing was performed because Russel and Norving ~\cite{russell2003artificial} pointed out that the state of the system is better estimated by smoothing as it incorporates more information that just filtering. 
+My algorithm uses EM algorithm to calculate the most likely parameters for a data set.  The trajectories are calculated by implementing particle filtering and smoothing.  Particle Filters are chosen because they can mode non-linear transformations as well as have no restrictions in model. Particle smoothing was performed because Russel and Norving ~\cite{russell2003artificial} pointed out that the state of the system is better estimated by smoothing as it incorporates information from all the past states of the system. 
 
-The remainder of the thesis is structured as follows. Chapter 2 will explain the motion model for AUV as well as give an insight on particle filtering and smoothing. Chapter 3 will give an overview of Expectation Maximization and show how this framework is used to adapt parameters for a motion model. Chapter 4 will give explain how landmarks are extracted from side sonar images. The reliability of the landmarks are shown by extracting motion information and the algorithm to do that is described in Chapter 4. Chapter 5 consist results of a simulated experiment to show the effectiveness of the algorithm. This chapter also includes the comparison of motion estimation using side sonar images to DVL.
+The remainder of the thesis is structured as follows. Chapter 2 will explain the motion model for AUV as well as give an insight on particle filtering and smoothing. Chapter 3 will give an overview of Expectation Maximization and show how this framework is used to adapt parameters for a motion model. Chapter 4 will give explain how landmarks are extracted from side sonar images. The reliability of the landmarks are shown by extracting motion information and the algorithm to do that is described in Chapter 4. Chapter 5 consist results of a simulated experiment to show the effectiveness of the algorithm. This chapter also includes the comparison of motion estimation using side sonar images to Doppler velocity log (DVL).
  
 \begin{comment}
  The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question ''Where am I?”. The current location of a robot can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic building blocks to various 
@@ -120,10 +124,10 @@ To summarize I am proposing an algorithm to learn the right parameters of a moti
 
 
  
-
-\section{Contributions}
+\begin{comment}
+%\section{Contributions}
 The main contribution of the work presented here is to provide an algorithm to adapt the motion model for AUV. The automated process of calibration of the robots gets rid of hand tuning of the models and gives us an online process which can be performed during the robot's mission. 
-  
+\end{comment}  
 \begin{comment}
 The main contributions of the algorithm are-:
 
@@ -139,10 +143,17 @@ In the chapter we start by discussing how motion models are probabilistically re
 A motion model is responsible for capturing the relationship between the control input and the change in robot's configuration. Thrun \cite{thrun2005probabilistic} models the motion of a robot probabilistically because the same
 control inputs will never reproduce the same motion. A good motion model will capture the errors such as drift that are encountered during the motion of a robot. The motion model is a necessary ingredient of many algorithms such as localization,mapping etc. 
 
-Let $X=(x,y,\theta)$ be the initial pose of the robot in x-y space. Mathematically the motion model can be described as $P(X^{'}|X,u)$, where $X^{'}$ is the pose after executing the motion command $u$. Based on the control input Thrun \cite{thrun2005probabilistic} divided the motion model in two classes 1) Odometry based motion model 2) Velocity based motion model.
+Let $X=(x,y,\theta)$ be the initial pose of the robot in x-y space. Mathematically the motion model can be described as $P(X^{'}|X,u)$, where $X^{'}$ is the pose after executing the motion command $u$. Based on the control input Thrun \cite{thrun2005probabilistic} divided the motion model in two classes
+\begin{enumerate}
+\item Odometry based motion model -: \\
+The class of motion models are used for robots equipped with wheel encoders. Odometry is generally obtained by integrating wheel encoders information and is more accurate than velocity.  
 
-The first class of motion models are used for robots equipped with wheel encoders. Odometry is generally obtained by integrating wheel encoders information and is more accurate than velocity.  
-Velocity based models calculate the new position based on velocities and time elapsed. These models are implemented for Autonomous Underwater Vehicle(AUV) and Unmanned Aerial Vehicles(UAV). Both odometry as well as velocity suffer from drift and slippage therefore the same control commands will not generally reproduce the same motion.
+\item Velocity based motion model -: \\
+These models calculate the new position based on velocities and time elapsed. These models are implemented for Autonomous Underwater Vehicle(AUV) and Unmanned Aerial Vehicles(UAV). Both odometry as well as velocity suffer from drift and slippage therefore the same control commands will not generally reproduce the same motion.
+\end{enumerate}
+
+
+
 
 The velocity motion model proposed by Thrun \cite{thrun2005probabilistic} assumes that robot can be controlled through two velocities a rotational and translational velocity. The translational velocity at time $t$ is denoted by $v_{t}$ and rotational velocity by $w_{t}$. Hence the control input $u_{t}$ can be represented by  
 \begin{center}
@@ -156,15 +167,15 @@ $u_{t}=\bigl(\begin{array}{c}
 The assumption is that positive rotational velocities $w_{t}$ induce a counterclockwise rotation whereas positive translational velocities $v_{t}$ correspond to forward motion. The set of equations to compute the next state of a robot for a velocity motion model are 
 
 \begin{equation}
-x_{t}=x_{t-1}+V_{t-1}/W_{t-1} \sin(\theta_{t-1})+ V_{t-1}/W_{t-1} \cos(\theta_{t-1} + W_{t-1} \delta t)
+x_{t}=x_{t-1}+v_{t-1}/w_{t-1} \sin(\theta_{t-1})+ v_{t-1}/w_{t-1} \cos(\theta_{t-1} + w_{t-1} \delta t)
 \end{equation}
 
 \begin{equation}
-y_{t}=y_{t-1}+V_{t-1}/W_{t-1} \cos(\theta_{t-1})- V_{t-1}/W_{t-1} \sin(\theta_{t-1} + W_{t-1} \delta t)
+y_{t}=y_{t-1}+v_{t-1}/w_{t-1} \cos(\theta_{t-1})- v_{t-1}/w_{t-1} \sin(\theta_{t-1} + w_{t-1} \delta t)
 \end{equation}
 
 \begin{equation}
-\theta_{t}=\theta_{t-1}+ W_{t-1} \delta t
+\theta_{t}=\theta_{t-1}+ w_{t-1} \delta t
 \end{equation}
  
 
@@ -201,9 +212,9 @@ DOF &  & forces and moments & linear and angular vel. & positions and Euler angl
 
 
 
-The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation. Fossen \cite{Thor} in his book describes the motion of a marine vehicle in 6 DOF using two coordinate systems as shown in Figure ~\ref{fig-Coordinate System}. $X_0$, $Y_0$, $Z_0$ represent the moving coordinate frame and is called as body-fixed reference frame. The earth-fixed reference frame is denoted by $X$, $Y$, $Z$. The origin of the body-reference frame is denoted by $O$ and is chosen to coincide with the center of gravity denoted by $CG$.  
+The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first three coordinates correspond to the position along the x,y,z axes while the last three coordinates describe the orientation commonly termed as roll, pitch yaw. Fossen \cite{Thor} in his book describes the motion of a marine vehicle in 6 DOF using two coordinate systems as shown in Figure ~\ref{fig-Coordinate System}. $X_0$, $Y_0$, $Z_0$ represent the moving coordinate frame and is called as body-fixed reference frame. The earth-fixed reference frame is denoted by $X$, $Y$, $Z$. The origin of the body-reference frame is denoted by $O$ and is chosen to coincide with the center of gravity denoted by $CG$.  
 
-To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: 1) Static Motion model 2) Dynamic Motion model
+To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: a) Static Motion model b) Dynamic Motion model
 
 Hegrenaes \cite{Hallingstad2007} points that a way to implement a simple static motion model as table look-up based on experimental data. 
 \begin{equation}
