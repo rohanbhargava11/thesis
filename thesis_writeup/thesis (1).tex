@@ -6,7 +6,7 @@
 
 \documentclass[12pt]{dalcsthesis}
 
-\usepackage[pdftex]{graphicx}
+\usepackage[demo]{graphicx} %pdftex
 
 \usepackage{epstopdf}
 \usepackage{epsfig}
@@ -216,6 +216,8 @@ The pose of AUV can be represented as $s=(x,y,z,\theta,\phi,\psi)$. The first th
 
 To estimate the position of an AUV we need to calculate the velocity at which the AUV is currently moving. The velocity can be computed in two ways-: a) Static Motion model b) Dynamic Motion model
 
+In the static model the velocity is calculated from a lookup table. In the dynamic model we are computing forces and moments on the fly but the parameters to these forces are considered to be static. The parameters such as density, temperature etc. of water can change with time and lead to an inaccurate estimate of velocity in both the models. Hence the velocity needs to be adapted and Chapter ~\ref{adapting the motion model} explains how it is done in my algorithm. A detailed description on how the velocity is calculated in both the models is explained in rest of the chapter.
+
 Hegrenaes \cite{Hallingstad2007} points that a way to implement a simple static motion model as table look-up based on experimental data. 
 \begin{equation}
 \label{eq:static AUV model}
@@ -225,30 +227,32 @@ u_{r}=f(n_{s})
 
 $u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and control system set point respectively. In a similar manner an expression can be established for $v_{r}$.
 
-Another way to implement the motion model is through dynamics. The 6 Degrees of Freedom (DOF) rigid body equations of motion described by Fossen \cite{Thor} are \\
-\begin{equation}
-X=m[u^{.}-vr+wq-x_{G}(q^{2}+r^{2})+y_{G}(pq-r^{.})+z_{G}(pr+q^{.})]
-\end{equation}
+Another way to implement the motion model is through dynamics. The 6 Degrees of Freedom (DOF) rigid body equations of motion described by Fossen \cite{Thor} are 
 
-\begin{equation}
-Y=m[v^{.}-wp+ur-y_{G}(r^{2}+p^{2})+z_{G}(qr-p^{.})+x_{G}(qp+r^{.})]
-\end{equation}
 
-\begin{equation}
-Z=m[w^{.}-uq+vp-z_{G}(p^{2}+q^{2})+x_{G}(rp-q^{.})+y_{G}(rq+p^{.})]
-\end{equation}
+\begin{align}
+X {}&= m[u^{.}-vr+wq-x_{G}(q^{2}+r^{2})+y_{G}(pq-r^{.})+z_{G}(pr+q^{.})]
+\\
+Y {}&= m[v^{.}-wp+ur-y_{G}(r^{2}+p^{2})+z_{G}(qr-p^{.})+x_{G}(qp+r^{.})]
+\\
+Z {}&= m[w^{.}-uq+vp-z_{G}(p^{2}+q^{2})+x_{G}(rp-q^{.})+y_{G}(rq+p^{.})]
+\\
+\begin{split}
+K {}&= I_{x}p^{.}+(I_{z}-I_{y})qr-(r^{.}+pq)I_{xz}+(r^{2}-q^{2})I_{yz}+(pr-q^{.})I_{xy}\\
+&+m[y_{G}(w^{.}-uq+vp)-Z_{g}(v^{.}-wp+ur)]
+\end{split}\\
+\begin{split}
+M {}&= I_{y}q^{.}+(I_{x}-I_{z})rp-(p^{.}+qr)I_{xy}+(p^{2}-r^{2})I_{zx}+(qp-r^{.})I_{yz}\\
+&+m[y_{G}(u^{.}-vr+wq)-z_{g}(w^{.}-uq+vp)]
+\end{split}\\
+\begin{split}
+N {}&= I_{z}r^{.}+(I_{y}-I_{x})pq-(q^{.}+rp)I_{yz}+(q^{2}-p^{2})I_{xy}+(rq-p^{.})I_{zx}\\
+&+m[x_{G}(v^{.}-wp+ur)-y_{g}(u^{.}-vr+wq)]
+\end{split}
+\end{align}
 
-\begin{equation}
-K=I_{x}p^{.}+(I_{z}-I_{y})qr-(r^{.}+pq)I_{xz}+(r^{2}-q^{2})I_{yz}+(pr-q^{.})I_{xy}+m[y_{G}(w^{.}-uq+vp)-Z_{g}(v^{.}-wp+ur)]
-\end{equation}
 
-\begin{equation}
-M=I_{y}q^{.}+(I_{x}-I_{z})rp-(p^{.}+qr)I_{xy}+(p^{2}-r^{2})I_{zx}+(qp-r^{.})I_{yz}+m[y_{G}(u^{.}-vr+wq)-z_{g}(w^{.}-uq+vp)]
-\end{equation}
 
-\begin{equation}
- N=I_{z}r^{.}+(I_{y}-I_{x})pq-(q^{.}+rp)I_{yz}+(q^{2}-p^{2})I_{xy}+(rq-p^{.})I_{zx}+m[x_{G}(v^{.}-wp+ur)-y_{g}(u^{.}-vr+wq)]
-\end{equation}
 
 
 % need to find the best way to write these equations
@@ -305,19 +309,13 @@ where
 $M \triangleq M_{RB} + M_{A}$ ; $C(\mathcal{V}) \triangleq C_{RB}(\mathcal{V} + C_{A}(\mathcal{V})$
 
 $M_A$ is the added inertia  matrix $C_{A}(\mathcal{V})$ is the matrix of hydrodynamic Coriolis and centripetal terms. $g(\eta)$ is the restoring force.
+Equation ~\ref{eq -: navigation equation for AUV} can ne used to calculate acceleration from the set of dynamic motion equations. Lammas \cite{Lammas2004} terms it as a navigation equation of the underwater vehicle.   
 
-Lammas \cite{Lammas2004} pointed out that navigation equation of an underwater vehicle is-:
 
 \begin{equation}
 \label{eq-: navigation equation for AUV}
 \mathcal{V}^{.} = M^{-1}(\tau-C(\mathcal{V})\mathcal{V}-D(\mathcal{V})\mathcal{V}-g(\eta))
 \end{equation}
-
-
-$\mathcal{V}^{.}$ can be integrated with time to get velocity.
-
-In the static model the velocity is calculated from a lookup table. In the dynamic model we are computing forces and moments on the fly but the parameters to these forces are considered to be static. The parameters such as density, temperature etc of water can change with time and lead to an inaccurate estimate of velocity in both the models. Hence the velocity needs to be adapted and Chapter ~\ref{adapting the motion model} explains how it is done in my algorithm.    
-
 
 \begin{comment}
 The 6-DOF rigid body equations of motions are 
@@ -391,7 +389,7 @@ are the motion parameters that our algorithm intends to learn.
 \end{comment}
 
 \section{Particle Filter}
-Particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. Thrun \cite{thrun2005probabilistic} defines particle fitler as an alternative non-parametric implementation of the Bayes filter. It also can be called as a Sequential Monte Carlo(SMC) algorithm. The first attempt to use SMC was seen in simulations of growing polymers by M.N Rosenbluth and A.W. Rosenbluth \cite{rosenbluth1955monte}. Gordon et al. \cite{gordon1993novel} provided the first true implementation of sequential Monte Carlo algorithm. 
+Particle filters is an integral part of my algorithm to learn the right parameters of a motion model and the way it is used is explained in rest of the section. A particle Filter is a state estimation algorithm based on a sampling method for approximating a distribution. Thrun \cite{thrun2005probabilistic} defines particle fitler as an alternative non-parametric implementation of the Bayes filter. It also can be called as a Sequential Monte Carlo(SMC) algorithm. The first attempt to use SMC was seen in simulations of growing polymers by M.N Rosenbluth and A.W. Rosenbluth \cite{rosenbluth1955monte}. Gordon et al. \cite{gordon1993novel} provided the first true implementation of sequential Monte Carlo algorithm. 
 \begin{comment}
 Advantages write  after all introduction of particle filter
 
@@ -451,8 +449,6 @@ return $X_{t}$
 In algorithm ~\ref{alg:ParticleFilter} each particle $x_{t}^{m}$ is instantiation of the state at time $t$.  The first step is to generate a hypothetical state $x_{t}^{m}$ for time $t$ based on previous state $x_{t-1}^{m}$ and control $u_{t}$. The particles are samples from the state transition distribution $p(x_{t}|u_{t},x_{t-1})$. The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance factor is defined as the probability of measurement $z_{t}$ under the particle $x_{t}^{m}$. This probability is defined by a sensor model $p(z_{t}|x_{t})$ Thus importance factor are used to incorporate the measurements into the particle set. In practice, the number of particles used are a large number(e.g.-:1000).
 
 The key part of the algorithm is the re-sampling step in particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor. The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
-
-Particle Filters is an integral part of my algorithm to learn the right parameters of the motion model and the way it is used is explained in ~\ref{ch:adapting the motion model}.
 
 \section{Particle smoothing}
 \label{ch-: particle smoothing}
