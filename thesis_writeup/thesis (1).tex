@@ -407,17 +407,20 @@ Particle Filters have no restrictions in model i.e. it can be applied to non-Gau
 %\centering
 %\includegraphics[scale=0.5]{../../thesis_work/markov_chain.png}
 %\end{figure}
-Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. In Figure ~\ref{fig: particle representation} the belief is represented by a set of particles. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussian and can model non linear transformations of random variables. In Figure ~\ref{fig: particle representation} particle filters are shown to model non-linear transformations. 
-
+Thrun \cite{thrun2005probabilistic} stated that the key idea behind particle filter is to represent the posterior bel$(x_{t})$ by a set of random state samples drawn from this posterior. Instead of representing the distribution by a parametric form particle filter represents a distribution by a set of samples drawn from this distribution. In Figure ~\ref{fig: particle representation} the belief is represented by a set of particles. The representation is a approximation but it is nonparametric and therefore there are advantages of using particle filters as an alternative to Extended Kalman Filter and Unscented Kalman Filter. Particle Filters can represent a broader space of distributions for example non-Gaussian and can model non linear transformations of random variables. 
+\begin{comment}
+In Figure ~\ref{fig: particle representation} particle filters are shown to model non-linear transformations. Explain the figure here.
+\end{comment}  
+	
 The objective of particle filters is to estimate the state of the system given the observation variables. They are designed for Hidden Markov Models(Fig ~\ref{fig-Markov Chain}), where the system consists of hidden and observed variables. In this model the state $x_{t}$ is the hidden random variable as it is not directly observed. The state at time $t$ is only dependent upon the state at time $t-1$ and external influences such as control $u_{t}$. The measurement $z_{t}$ depends on the state at time $t$. The knowledge about the influence of the control on the system can be used to calculate a new expected location and the measurement can be combined in a Bayesian way.
 
-
+\begin{comment}
 \begin{figure}
 \centering
 {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis_work/particle_filter_non_gaussian_thrun.png}}
 \caption{\label{fig: particle representation} The ``particle'' representation used by particle filters. The lower upper right graphs shows samples drawn from a Gaussian random variable, X. These samples are passed through the nonlinear function shown in the upper right graph. The resulting samples are distributed according to the random variable Y. Figure taken from \cite{thrun2005probabilistic}}
 \end{figure}
-
+\end{comment}
 The algorithm for particle filters is described below-:
 
 \begin{algorithm}[H]
@@ -446,7 +449,7 @@ return $X_{t}$
 \caption{Particle Filter Algorithm. Algorithm taken from \cite{thrun2005probabilistic}}
 \end{algorithm}
 
-In algorithm ~\ref{alg:ParticleFilter} each particle $x_{t}^{m}$ is instantiation of the state at time $t$.  The first step is to generate a hypothetical state $x_{t}^{m}$ for time $t$ based on previous state $x_{t-1}^{m}$ and control $u_{t}$. The particles are samples from the state transition distribution $p(x_{t}|u_{t},x_{t-1})$. The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance factor is defined as the probability of measurement $z_{t}$ under the particle $x_{t}^{m}$. This probability is defined by a sensor model $p(z_{t}|x_{t})$ Thus importance factor are used to incorporate the measurements into the particle set. In practice, the number of particles used are a large number(e.g.-:1000).
+In Algorithm ~\ref{alg:ParticleFilter} each particle $x_{t}^{m}$ is instantiation of the state at time $t$.  The first step is to generate a hypothetical state $x_{t}^{m}$ for time $t$ based on previous state $x_{t-1}^{m}$ and control $u_{t}$. The particles are samples from the state transition distribution $p(x_{t}|u_{t},x_{t-1})$. The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance factor is defined as the probability of measurement $z_{t}$ under the particle $x_{t}^{m}$. This probability is defined by a sensor model $p(z_{t}|x_{t})$ Thus importance factor are used to incorporate the measurements into the particle set. In practice, the number of particles used are a large number(e.g.-:1000).
 
 The key part of the algorithm is the re-sampling step in particle filter algorithm. The algorithm draws M particles with replacement from a temporary particle set $X_{t}^{-}$. The probability of drawing the particles is given by the importance factor. The re-sampling step is a probabilistic implementation of the Darwinian idea of survival of the fittest. It refocuses the particle set to regions in state space with high posterior probability. 
 
@@ -506,8 +509,7 @@ In the first step of the algorithm a particle is drawn with probability proporti
 \chapter{Learning the motion model}
 \label{learning the motion model}
 \section{Introduction}
-\subsection{Work done so far on learning motion model}
-The process of calibration has been discussed right from when robotics was introduced and the literature is full of different methods to calibrate a robot (eg-: \cite{cox1990autonomous} \cite{vukobratovic1989introduction}). Virtually all the methods discussed before Roy's work \cite{Roy} required human intervention and assumed the world to be static. These methods required a human to have experience and a device to measure the exact movement of a robot to calibrate. The most important assumption that these methods made was that the physics of a robot never changed and operated in a static environment. 
+The literature is full of different methods to calibrate a robot (eg-: \cite{cox1990autonomous} \cite{vukobratovic1989introduction}). Virtually all the methods discussed before Roy's work \cite{Roy} required human intervention and assumed the world to be static. These methods required a human to have experience and a device to measure the exact movement of a robot to calibrate. The most important assumption that these methods made was that the physics of a robot never changed and operated in a static environment. 
 
 Roy and Thrun first proposed an online self-calibration method \cite{Roy} in 1999 that adapted to changes that occurred during the lifetime of a robot. The algorithm was designed for land robots where the final pose was given by equations described below
 
@@ -533,7 +535,7 @@ D= d+ \sigma_{trans}d+\epsilon_{trans}
   T= t+ \sigma_{rot}d+\epsilon_{rot}
 \end{equation}
 
-$\epsilon_{trans}$ and $\epsilon_{rot}$ are the random variables with zero mean. $\sigma_{trans}$ and $\sigma_{rot}$ are the systematic error, drift.  The algorithm they propose is used to estimate $\sigma_{trans}$ and $\sigma_{rot}$ using sensor data collected throughout robot's motion. They treat the problem as maximum likelihood estimation problem where the parameters are estimated under a dataset $z$ (equations ~\ref{eq-:max_likelihood_thrun}) .
+$\epsilon_{trans}$ and $\epsilon_{rot}$ are the random variables with zero mean. $\sigma_{trans}$ and $\sigma_{rot}$ denote the systematic errors in the system. An example of such an error is drift. The systematic errors referred here stay almost constant over a prolonged period of time. The algorithm they propose is used to estimate $\sigma_{trans}$ and $\sigma_{rot}$ using sensor data collected throughout robot's motion. They treat the problem as maximum likelihood estimation problem where the parameters are estimated under a dataset $z$ as described in equation ~\ref{eq-:max_likelihood_thrun}.
 
 \begin{equation}
 \label{eq-:max_likelihood_thrun}
@@ -541,7 +543,7 @@ $\epsilon_{trans}$ and $\epsilon_{rot}$ are the random variables with zero mean.
 \end{equation}
 
 Austin and Eliazar \cite{Eliazar2004} proposed a different method to achieve the same goals proposed by Roy and Thrun. Their algorithm was different from Roy and Thrun for two reasons. Firstly, Austin ad Eliazar used a more general model which incorporated independence of motion terms. Secondly, the method was able to estimate parameters for non systematic errors as well. 
-The motion model proposed by them to account is described below.
+The motion model proposed by them to account is -:
 \begin{equation}
 	\begin{aligned}
 	x^{'}&=&x+Dcos(\theta+T/2) \\
@@ -549,7 +551,7 @@ The motion model proposed by them to account is described below.
 	\theta^{'}&=&(\theta+T/2)mod2\pi
 	\end{aligned}
 \end{equation}
-As the turn and drive commands are performed independently therefore to not violate this assumption this model makes T reasonably small and it is absorbed as part of noise. To estimate non-systematic errors the true translational($D$ and rotation($T$) are represented by normal distribution with mean $d$ and $t$ and the variance will scale with $d^2$ and $t^2$ as shown in equation ~\ref{eq-:noise_model_eliazar}
+As the turn and drive commands are performed independently therefore to not violate this assumption this model makes T reasonably small and it is absorbed as part of noise. To estimate non-systematic errors the true translational($D$) and rotation($T$) are represented by normal distribution with mean $d$ and $t$ and the variance will scale with $d^2$ and $t^2$ as shown in equation ~\ref{eq-:noise_model_eliazar}
 \begin{equation}
 \label{eq-:noise_model_eliazar}
 \begin{aligned}
@@ -558,9 +560,9 @@ T &\sim& \mathcal{{N}}(d\mu_{T_{d}}+t\mu_{T_{t}},d^2\sigma_{T_{d}}^2+t^2\sigma_{
 \end{aligned}
 \end{equation}
 
-where $\mu_{A_{b}}$ is the coefficient for the contribution of odometry term b to the mean of the distribution over A. The algorithm is used to learn these set of mean and variances.
+where need to find a way see what they had written in the previous papers.$\mu_{A_{b}}$ is the coefficient for the contribution of odometry term b to the mean of the distribution over A. The algorithm is used to learn these set of mean and variances.
 
-The method by Austin an Eliazar used Expectation Maximization framework to learn the parameters of the motion model for land robots. In the E step particle filtering and smoothing were performed to get a set of trajectories. In M step the maximum likelihood values of parameters given the trajectories was calculated. Teddy Yapp \cite{Yap2008} used the same framework and learned parameters for motion as well as sensor model of land robots (Figure ~\ref{fig-parameter_estimation Yapp}). They adopted the same motion model but with slightly different noise model as shown in equation ~\ref{eq-:noise_model_yapp}.
+The method by Austin an Eliazar used EM framework to learn the parameters of the motion model for land robots. In the E step particle filtering and smoothing were performed to get a set of trajectories. In M step the maximum likelihood values of parameters given the trajectories was calculated. Teddy Yapp \cite{Yap2008} used the same framework and learned parameters for motion as well as sensor model of land robots (Figure ~\ref{fig-parameter_estimation Yapp}). They adopted the same motion model but with slightly different noise model as shown in equation ~\ref{eq-:noise_model_yapp}.
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis_work/parameter_estimation_yapp.png}}
@@ -577,11 +579,11 @@ T &\sim& \mathcal{{N}}(t,t^2\sigma_{T_{d}}^2+t^2\sigma_{T_{t}}^2+\sigma_{T_{1}}^
 
 The extra constant terms $\sigma_{D_{1}}$ and $\sigma_{T_{1}}$ are added to account for the errors that are not proportional to the translation or rotation of a robot. 
 
-All the work above was done to calibrate our models and Hegrenaes \cite{Hegrenæs2008} in his work showed the importance of motion model for navigation in underwater vehicle. They proposed a novel approach for navigation systems in which knowledge about the vehicle dynamics was used to aid the Inertial Navigation System(INS). The new navigation system was tested on real dataset collected by an AUV.
+Hegrenaes \cite{Hegrenæs2008} in his work showed the importance of motion model for navigation in underwater vehicle. They proposed a novel approach for navigation systems in which knowledge about the vehicle dynamics was used to aid the Inertial Navigation System(INS). The new navigation system was tested on real dataset collected by an AUV.
 
 For navigation in AUV velocity of the vehicle needs to be estimated and sensors such as IMU, DVL etc. are used. In a traditional INS system the key component is an IMU and a set of navigation equations. The reading from accelerometer and gyroscope are integrated to get an estimate of velocity, position and orientation. The reading from such sensors consist of inherent errors and leads to drift in the INS system. Generally sensors such as surface GPS, DVL etc. are an aiding system to the INS (Figure ~\ref{fig-INS systems}(a)). Combination of such systems leads to better estimate of velocity, position and orientation \cite{leonard1998autonomous}. 
 
-Hergreanaes points out an alternative velocity information such as velocity estimate through vehicle dynamics is required because there are situations where it is not possible for the AUV to surface and get a GPS reading or DVL measurement needs to be discarded due to poor quality. The high level system outline for such a model is shown in Figure ~\ref{fig-INS systems}(b).
+Hergreanaes \cite{Hegrenæs2008} points out an alternative velocity information such as velocity estimate through vehicle dynamics is required because there are situations where it is not possible for the AUV to surface and get a GPS reading or DVL measurement needs to be discarded due to poor quality. The high level system outline for such a model is shown in Figure ~\ref{fig-INS systems}(b).
 
 The system is very similar to traditional INS except that the vehicle model output in also integrated to the system. The vehcile model output doesn't require any extra instruments therefore can be easily applied to any vehicle. An alternative velocity estimate aids the INS where DVL readings are lacking as well as gives redundancy to the system. 
 
