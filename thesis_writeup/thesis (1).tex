@@ -435,8 +435,8 @@ The algorithm for particle filters is described below-:
  \KwOut{ $X_{t}$:particle set }
 \Begin{
 \For { m=1 to M do} 
-{sample $x_{t}^{m}~p(x_{t}|u_{t},x_{t-1}^m)$
-$w_{t}^{m}=p(z_{t}|x_{t}^{m})$
+{sample $x_{t}^{m} \sim p(x_{t}|u_{t},x_{t-1}^m)$ \\
+$w_{t}^{m}=p(z_{t}|x_{t}^{m})$ \\
 $X_{t}^{-}=X_{t}^{-}+(x_{t}^{m},w_{t}^m)$}
 
 \For{m=1 to M do}
@@ -446,7 +446,7 @@ draw $i$ with probability $\propto$ $w_{t}^{[i]}$
 add $x_{t}^{[i]}$ to $X_{t}$}
 return $X_{t}$
 }
-\caption{Particle Filter Algorithm. Algorithm taken from \cite{thrun2005probabilistic}}
+\caption{Particle Filter Algorithm. $x_{t}^{m}$ is instatiation of the state at time $t$. $X_{t}^{-}$ is a temporary particle set. M is the number of particles. Algorithm taken from \cite{thrun2005probabilistic}}
 \end{algorithm}
 
 In Algorithm ~\ref{alg:ParticleFilter} each particle $x_{t}^{m}$ is instantiation of the state at time $t$.  The first step is to generate a hypothetical state $x_{t}^{m}$ for time $t$ based on previous state $x_{t-1}^{m}$ and control $u_{t}$. The particles are samples from the state transition distribution $p(x_{t}|u_{t},x_{t-1})$. The importance factor for each particle $x_{t}^{m}$ is calculated and denoted by $w_{t}^{m}$. Importance factor is defined as the probability of measurement $z_{t}$ under the particle $x_{t}^{m}$. This probability is defined by a sensor model $p(z_{t}|x_{t})$ Thus importance factor are used to incorporate the measurements into the particle set. In practice, the number of particles used are a large number(e.g.-:1000).
@@ -560,9 +560,11 @@ T &\sim& \mathcal{{N}}(d\mu_{T_{d}}+t\mu_{T_{t}},d^2\sigma_{T_{d}}^2+t^2\sigma_{
 \end{aligned}
 \end{equation}
 
-where need to find a way see what they had written in the previous papers.$\mu_{A_{b}}$ is the coefficient for the contribution of odometry term b to the mean of the distribution over A. The algorithm is used to learn these set of mean and variances.
+where $\mu_{A_{b}}$ is the coefficient for the contribution of odometry term b to the mean of the distribution over A. The algorithm is used to learn these set of mean and variances.
 
-The method by Austin an Eliazar used EM framework to learn the parameters of the motion model for land robots. In the E step particle filtering and smoothing were performed to get a set of trajectories. In M step the maximum likelihood values of parameters given the trajectories was calculated. Teddy Yapp \cite{Yap2008} used the same framework and learned parameters for motion as well as sensor model of land robots (Figure ~\ref{fig-parameter_estimation Yapp}). They adopted the same motion model but with slightly different noise model as shown in equation ~\ref{eq-:noise_model_yapp}.
+The method by Austin an Eliazar used EM framework to learn the parameters of the motion model for land robots. In the E step particle filtering and smoothing were performed to get a set of trajectories. In M step the maximum likelihood values of parameters given the trajectories was calculated.
+
+Teddy Yapp \cite{Yap2008} used the same framework and learned parameters for motion as well as sensor model of land robots (Figure ~\ref{fig-parameter_estimation Yapp}). They adopted the same motion model but with slightly different noise model as shown in equation ~\ref{eq-:noise_model_yapp}.
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis_work/parameter_estimation_yapp.png}}
@@ -601,27 +603,27 @@ The system is very similar to traditional INS except that the vehicle model outp
 All the above calibration methods are designed for odometric based motion models and for land robots. The use of vehicle model to aid the INS for navigation purposes shows us the importance of an adaptive motion model. The algorithm that I propose is for underwater vehicles and velocity based motion model. The process to adapt the motion model is similar to the previous work by Yapp and Eliazar and our approach is described in rest of the chapters.
 
 \subsection{General Architecture}
-In this section we give an overview of the system and point out the differences in my system(Figure ~\ref{fig-General Architecture}) as compared to the existing system proposed by Yapp \cite{Yap2008}. 
+In this section we give an overview of the system and point out the differences in my system as compared to the existing system proposed by Yapp \cite{Yap2008}. 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{Diagram1.jpeg}}
   \caption{\label{fig-General Architecture} Block diagram for the algorithm proposed to adapt motion model.}
 \end{figure}
-Figure ~\ref{fig-General Architecture} is an outline of the proposed system. The motion and sensor models are initialized with a set of parameters. Given the motion model $p(x_{t}|x_{t-1},u_{t})$, sensor model $p(z_{t}|x_{t})$ and the pose $p(x_{t-1})$ of a robot we can perform particle filtering using Algorithm ~\ref{alg:ParticleFilter}. It is performed to estimate the pose $p(x_{t})$ of a robot at next time step. 
+Figure ~\ref{fig-General Architecture} is an outline of the proposed system. The motion and sensor models are initialized with a set of parameters. Given the motion model $p(x_{t}|x_{t-1},u_{t})$, sensor model $p(z_{t}|x_{t})$ and the pose $p(x_{t-1})$ of a robot we can perform particle filtering using Algorithm ~\ref{alg:ParticleFilter}. It is performed to estimate the pose $p(x_{t})$ of a robot at the next time step. 
 
-The key ingredient to learn the motion model is to have an estimate of ground truth. To get an idea of ground truth particle smoothing (algorithm ~\ref{alg:Particle Smoothing}) is performed on the particle set produced by particle filtering. The algorithm can be repeated several times to get a set of trajectories. Particle filtering and smoothing are the key algorithm for the Expectation Step. 
+The key ingredient to learn the motion model is to have an estimate of the ground truth. Particle smoothing (algorithm ~\ref{alg:Particle Smoothing}) is performed on the particle set produced by particle filtering to get an idea of ground truth. The algorithm can be repeated several times to get a set of trajectories. Particle filtering and smoothing are the key algorithm for the Expectation Step. 
 
-The reported translational and rotational movement of a robot is recorded for every time step. Based on the trajectories and reported movements the errors are calculated at each time step. After we have a set of errors we perform Newton Conjugate gradient on the error function to estimate parameters. This completes the Maximization Step.
+The reported translational and rotational movement of a robot is recorded for every time step. Based on the trajectories and reported movements the errors are calculated at each time step. After we have a set of errors, we perform Newton Conjugate gradient on the error function to estimate parameters. Conjugate gradient is an iterative method to solve large systems of linear equations \cite{shewchuk1994introduction}. This completes the Maximization Step.
 
 The learned parameters are reassigned to the motion model and helps in adapting our model to changes in robot and the environment. The whole algorithm is repeated at every time step so that we can dynamically learn the right parameters.
 
-The system proposed for parameter estimation is similar to the system by Yapp \cite{Yap2008}. I use the same EM framework and conjugate gradient to learn the right parameters for the model. The difference lies that the motion model learned is a velocity based motion model as compared to odometry based model. Secondly we focus on underwater environments and therefore use side sonar images to calculate landmarks on the fly for our sensor model as compared to a static map.
+The system proposed for parameter estimation is similar to the system by Yapp \cite{Yap2008}. I use the same EM framework and conjugate gradient to learn the right parameters for the model. The difference lies that the motion model learned is a velocity based motion model as compared to odometry based model. Secondly we use side sonar images to calculate landmarks on the fly for underwater environments. Therefore the algorithm doesn't rely on static maps for reference points.
 
 \section{Adapting Motion Model}
 \label{adapting the motion model}
 \subsection{Expectation Maximization}
 
-Expectation Maximization is an iterative process of finding maximum likelihood of parameters of a model which depend upon hidden variables. It is used to estimate unknown parameters $\theta$ given the observed data $X$. A complete dataset can be represented by ${X,Z}$ where $Z$ is a non-observed (hidden, latent) variable. In practice a complete dataset is not given and only a set of observations or incomplete dataset $X$ is found. The hidden variables are important to a problem but complicate the learning process \cite{russell2003artificial}. In order to learn with hidden variables Dempster et al. \cite{dempster1977maximum} proposed a method to maximize the probability of the parameters $\theta$ give the dataset $X$ with hidden variables $Z$ called as EM.
+EM is an iterative process of finding maximum likelihood of parameters of a model which depend upon hidden variables. It is used to estimate unknown parameters $\theta$ given the observed data $X$. $Z$ is the non-observed (hidden, latent) variable. In practice a complete dataset is not given and only a set of observations or incomplete dataset $X$ is found. The hidden variables are important to a problem but complicate the learning process \cite{russell2003artificial}. In order to learn with hidden variables Dempster et al. \cite{dempster1977maximum} proposed a method to maximize the probability of the parameters $\theta$ give the dataset $X$ with hidden variables $Z$ that he called as EM.
 
 \begin{equation}
 \label{eq-:em_description}
@@ -629,14 +631,17 @@ Expectation Maximization is an iterative process of finding maximum likelihood o
 \end{equation}
 
 The key idea behind the EM algorithm is to alternate between estimating parameters $\theta$ and hidden variable $Z$.
-The E step consists of finding the posterior distribution of hidden variables $p(Z|X,\theta^{old})$ given the current estimate of parameters $\theta^{old}$. The posterior distribution it used to find a expectation of the likelihood of the data for some parameter $\theta$ as shown in equation ~\ref{eq-:maximization}. 
+The E step consists of finding the posterior distribution of hidden variables $p(Z|X,\theta^{old})$ given the current estimate of parameters $\theta^{old}$.
+\begin{comment}
+ The posterior distribution it used to find a expectation of the likelihood of the data for some parameter $\theta$ as shown in equation ~\ref{eq-:maximization}. 
 \begin{equation}
 \label{eq-:maximization}
 \mathcal{Q}(\theta,\theta^{old})=\sum_{Z}p(Z,X|\theta^{old}) \ln p(X,Z|\theta)
 \end{equation}
+\end{comment}
 In the M step we maximize the function as shown in  to estimate the new parameters $\theta^{new}$.
 \begin{equation}
-\theta^{new}=arg max_{theta} \mathcal{Q}(\theta,theta^{old})
+\theta^{new}=arg max_{theta} \mathcal{Q}(\theta,\theta^{old})
 \end{equation}
 
 The objective as described by Minka \cite{minka1998expectation} is to maximize $\mathcal{Q}(\theta,\theta^{old})$ and we want an updated estimate of $\theta^{new}$ such that 
@@ -705,14 +710,14 @@ $L(\theta,\theta^{old})=\Sigma _{Z} p(Z|X,\theta_{old}) \log p(X,Z|\theta)$
 \\
 and return to step 2
 \\
-There are various convergence techniques that can be applied in step 4. In our algorithm we use Newton Conjugate Gradient to estimate the right parameters. It is important to point that EM algorithm is local optimization technique and there are situations where it can get stuck in local optimum. 		
+In our algorithm we use Newton Conjugate Gradient to check for convergence and estimating	 the right parameters. It is important to point that EM algorithm is local optimization technique and there are situations where it can get stuck in local optimum. 		
 
 
 \subsection{Parameter Estimation}
 \label{ch:adapting the motion model}
-In this section we give a detailed explanation of the method proposed to learn motion model. As stated in Chapter ~\ref{chap-:Motion Model} to calculate the position of AUV we need to estimate velocity and feed it to the navigation equation ~\ref{eq-: navigation equation for AUV}. As we are operating in a dynamic environment there are various factors that can lead to changes in our motion model. To adapt the motion model we represent the velocity as a Gaussian distribution. We assume the distribution to be Gaussian as sum of several random noises leads to a such a distribution.   The algorithm described here is used to estimate parameters of the distribution. Another assumption for the algorithm that we represent the pose of an AUV in two dimension as compared to six. 
+In this section we give a detailed explanation of the method proposed to learn the motion model of a robot. As stated in Chapter ~\ref{chap-:Motion Model} to calculate the position of an AUV we need to estimate velocity and feed it to the navigation equation ~\ref{eq-: navigation equation for AUV}. As we are operating in a dynamic environment various factors can lead to changes in our motion model. To adapt the motion model we assume a Gaussian distribution to represent velocity. We assume it to be Gaussian as sum of several random noises leads to a such a distribution.   The algorithm described here is used to estimate parameters of the distribution. Another assumption for the algorithm that we represent the pose of an AUV in two dimension as compared to six. 
 
-The velocity based motion model equations used in the algorithm are 
+The velocity based motion model equations used are the following
 
 \begin{equation}
  x_{t}=x_{t-1}+V_{t-1}/W_{t-1} \sin(\theta_{t-1})+ V_{t-1}/W_{t-1} \cos(\theta_{t-1} + W_{t-1} \delta t)
