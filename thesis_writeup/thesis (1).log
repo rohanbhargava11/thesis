@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  4 FEB 2014 13:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.2.3)  11 FEB 2014 17:22
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **"thesis (1).tex"
 (./thesis (1).tex
@@ -193,7 +193,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen118
+\extrarowheight=\dimen119
+\NC@list=\toks23
+\extratabsurround=\skip48
+\backup@length=\skip49
+)
+\TX@col@width=\dimen120
+\TX@old@table=\dimen121
+\TX@old@col=\dimen122
+\TX@target=\dimen123
+\TX@delta=\dimen124
+\TX@cols=\count104
+\TX@ftn=\toks24
+) (./subfigure.sty
+Package: subfigure 1995/03/06 v2.0 subfigure package
+
+Package: subfigure 1995/03/06 v2.0
+\c@subfigure=\count105
+\c@lofdepth=\count106
+\c@subtable=\count107
+\c@lotdepth=\count108
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -203,85 +229,10 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
-Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
-
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks23
-\XKV@tempa@toks=\toks24
-\XKV@depth=\count104
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
-Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
-
-(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
-Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box30
-)
-\tc@llx=\dimen118
-\tc@lly=\dimen119
-\tc@urx=\dimen120
-\tc@ury=\dimen121
-Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
-File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
-))
-\adjbox@Width=\dimen122
-\adjbox@Height=\dimen123
-\adjbox@Depth=\dimen124
-\adjbox@Totalheight=\dimen125
-
-(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count105
-)
-(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box31
-\sift@deathcycles=\count106
-\@vwid@loff=\dimen126
-\@vwid@roff=\dimen127
-))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen128
-\extrarowheight=\dimen129
-\NC@list=\toks25
-\extratabsurround=\skip48
-\backup@length=\skip49
-)
-\TX@col@width=\dimen130
-\TX@old@table=\dimen131
-\TX@old@col=\dimen132
-\TX@target=\dimen133
-\TX@delta=\dimen134
-\TX@cols=\count107
-\TX@ftn=\toks26
-) (./subfigure.sty
-Package: subfigure 1995/03/06 v2.0 subfigure package
-
-Package: subfigure 1995/03/06 v2.0
-\c@subfigure=\count108
-\c@lofdepth=\count109
-\c@subtable=\count110
-\c@lotdepth=\count111
-) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count112
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+(./algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count109
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
@@ -301,11 +252,11 @@ Examine \tiny starts \@setfontsize size may be \@vipt.
 Examine \huge starts \@setfontsize size may be \@xxvpt. 
 Examine \Huge starts \@setfontsize size may be \@xxvpt. )
 ********************************************************
-Package `algorithm2e' Release 4.01 -- december 14 2009 --
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
 - algorithm2e-discussion@lirmm.fr mailing list for discussion about package
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (fiorio@lirmm.fr)
+- Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
 \skiptotal=\skip50
 \skiplinenumber=\skip51
@@ -315,52 +266,103 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \skiplength=\skip55
 \algomargin=\skip56
 \skipalgocfslide=\skip57
-\algowidth=\dimen135
-\inoutsize=\dimen136
-\inoutline=\dimen137
-\interspacetitleruled=\dimen138
-\interspacealgoruled=\dimen139
-\interspacetitleboxruled=\dimen140
-\algocf@inoutbox=\box32
-\algocf@inputbox=\box33
+\algowidth=\dimen125
+\inoutsize=\dimen126
+\inoutindent=\dimen127
+\interspacetitleruled=\dimen128
+\interspacealgoruled=\dimen129
+\interspacetitleboxruled=\dimen130
+\algocf@inoutbox=\box30
+\algocf@inputbox=\box31
 \AlCapSkip=\skip58
 \AlCapHSkip=\skip59
-\algocf@nlbox=\box34
-\algocf@hangingbox=\box35
-\algocf@capbox=\box36
-\algoheightruledefault=\skip60
-\algoheightrule=\skip61
-\algotitleheightruledefault=\skip62
-\algotitleheightrule=\skip63
-\c@algocfline=\count113
-\c@algocfproc=\count114
-\c@algocf=\count115
-\algocf@algoframe=\box37
-\algocf@algobox=\box38
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\algoskipindent=\skip60
+\algocf@nlbox=\box32
+\algocf@hangingbox=\box33
+\algocf@untilbox=\box34
+\algocf@skipuntil=\skip61
+\algocf@capbox=\box35
+\algoheightruledefault=\skip62
+\algoheightrule=\skip63
+\algotitleheightruledefault=\skip64
+\algotitleheightrule=\skip65
+\c@algocfline=\count110
+\c@algocfproc=\count111
+\c@algocf=\count112
+\algocf@algoframe=\box36
+\algocf@algobox=\box37
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+\XKV@depth=\count113
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box38
+)
+\tc@llx=\dimen131
+\tc@lly=\dimen132
+\tc@urx=\dimen133
+\tc@ury=\dimen134
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen135
+\adjbox@Height=\dimen136
+\adjbox@Depth=\dimen137
+\adjbox@Totalheight=\dimen138
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box39
+\sift@deathcycles=\count115
+\@vwid@loff=\dimen139
+\@vwid@roff=\dimen140
+))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 ) (./thesis (1).aux)
 \openout1 = `"thesis (1).aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen141
-\scratchbox=\box39
+\scratchbox=\box40
 \nofMPsegments=\count117
 \nofMParguments=\count118
 \everyMPshowfont=\toks27
@@ -373,23 +375,23 @@ LaTeX Font Info:    ... okay on input line 25.
 Unavoidable over/underfulls may occur in the first
 few pages of dalcsthesis. These can usually be ignored.
 However, if uncorrectable errors occur, notify staff.
-LaTeX Info: Redefining \\ on input line 47.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
+LaTeX Info: Redefining \\ on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Info: Redefining \\ on input line 47.
-LaTeX Info: Redefining \\ on input line 47.
+LaTeX Info: Redefining \\ on input line 46.
+LaTeX Info: Redefining \\ on input line 46.
 \c@dal@loopindex=\count122
  [2
 
 ]
-LaTeX Info: Redefining \\ on input line 47.
+LaTeX Info: Redefining \\ on input line 46.
  [3
 
 ] (./thesis (1).toc
@@ -436,12 +438,12 @@ ub-merged,
 \tf@lof=\write5
 \openout5 = `"thesis (1).lof"'.
 
- [9] [10]
+ [9]
 \ab@page=\count123
- [11
+ [10
 
 
-] [12
+] [11
 
 ]
 Dalthesis preface pages completed.
@@ -457,18 +459,18 @@ Chapter 2.
 [5
 
 ] [6] [7] [8]
-Overfull \hbox (10.6812pt too wide) in paragraph at lines 280--289
+Overfull \hbox (10.6812pt too wide) in paragraph at lines 279--288
  [][] 
  []
 
 
 LaTeX Warning: Reference `eq -: navigation equation for AUV' on page 9 undefine
-d on input line 312.
+d on input line 311.
 
 [9]
 
 LaTeX Warning: Reference `fig: particle representation' on page 10 undefined on
- input line 410.
+ input line 409.
 
 [10] [11] [12] [13] [14]
 Chapter 3.
@@ -479,30 +481,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
 [19] [20] [21] [22]
-Overfull \hbox (31.43094pt too wide) in paragraph at lines 744--748
+Overfull \hbox (31.43094pt too wide) in paragraph at lines 742--745
 \OT1/cmr/m/n/12 the pa-ram-e-ters of the mo-tion model that we want to learn ar
 e $\OML/cmm/m/it/12 ^^R \OT1/cmr/m/n/12 = []$
  []
 
 [23]
-Overfull \hbox (7.62697pt too wide) in alignment at lines 768--771
+Overfull \hbox (26.83185pt too wide) in alignment at lines 765--768
  [][][] []
  []
 
 
-Overfull \hbox (38.67104pt too wide) in alignment at lines 775--778
+Overfull \hbox (54.88971pt too wide) in alignment at lines 772--775
  [][][] []
  []
 
 
-Overfull \hbox (59.36633pt too wide) in alignment at lines 790--793
+Overfull \hbox (59.36633pt too wide) in alignment at lines 787--790
  [][][] []
  []
 
 [24] [25]
 Chapter 4.
 
-Overfull \hbox (3.04907pt too wide) in paragraph at lines 831--851
+Overfull \hbox (3.04907pt too wide) in paragraph at lines 828--848
 \OT1/cmr/m/n/12 To test our al-go-rithm for learn-ing the mo-tion model we cre-
 ate a sim-u-lated world(Figure
  []
@@ -510,53 +512,79 @@ ate a sim-u-lated world(Figure
 [26
 
 ]
-Overfull \hbox (3.86748pt too wide) in paragraph at lines 893--894
+Overfull \hbox (3.86748pt too wide) in paragraph at lines 890--891
  []|\OT1/cmr/m/n/12 Trajectories| 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [27] [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1226) has occurred while \output is active []
 
  [29]
-[30] [31] [32] [33]
-Overfull \hbox (3.86748pt too wide) in paragraph at lines 1017--1017
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[30]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [31]
+Underfull \vbox (badness 6461) has occurred while \output is active []
+
+ [32]
+[33] [34]
+Overfull \hbox (3.86748pt too wide) in paragraph at lines 1009--1009
  []|\OT1/cmr/m/n/12 Trajectories| 
  []
 
-[34] [35] [36] [37] [38] [39]
+[35] [36] [37] [38]
 Chapter 5.
-[40
+[39
 
-] [41] [42] [43] [44] [45] [46]
+] [40] [41] [42] [43] [44] [45]
 Underfull \vbox (badness 3826) has occurred while \output is active []
 
- [47]
+ [46]
 Underfull \vbox (badness 1953) has occurred while \output is active []
 
- [48]
-[49]
+ [47]
+[48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
-[51] [52] [53] [54]
+ [49]
+[50] [51] [52] [53]
 Chapter 6.
-[55
+[54
 
-] [56]
+] [55]
 Chapter 7.
 
-LaTeX Warning: Citation `Yapp2008' on page 57 undefined on input line 1339.
+LaTeX Warning: Citation `Yapp2008' on page 56 undefined on input line 1331.
 
 
 Underfull \vbox (badness 4713) has occurred while \output is active []
 
- [57
+ [56
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
-(./thesis (1).bbl [59] [60
+ [57]
+(./thesis (1).bbl [58] [59
 
 
 ]
@@ -576,7 +604,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--136
 []\OT1/cmr/m/n/12 Office of Coast Sur-vey.  Side Scan Sonar.
  []
 
-[61]
+[60]
 Overfull \hbox (151.60019pt too wide) in paragraph at lines 192--196
 []\OT1/cmr/m/n/12 USGS.  WHSC Sides-can Sonar Sys-tems.  $\OMS/cmsy/m/n/12 n$\O
 T1/cmr/m/n/12 url\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 http://woodshole.er.usgs.gov
@@ -588,22 +616,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--203
 []\OT1/cmr/m/n/12 Utkarsh.  SIFT: Scale In-vari-ant Fea-ture Trans-form.
  []
 
-) [62] (./thesis (1).aux)
+) [61] (./thesis (1).aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 4946 strings out of 495059
- 68566 string characters out of 3182030
- 157197 words of memory out of 3000000
- 8018 multiletter control sequences out of 15000+200000
+ 5194 strings out of 495059
+ 72889 string characters out of 3182031
+ 165271 words of memory out of 3000000
+ 8267 multiletter control sequences out of 15000+200000
  10196 words of font info for 38 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,18n,35p,1348b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,35p,1287b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -617,10 +642,10 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (74 pages, 292973 bytes).
+Output written on "thesis (1).pdf" (72 pages, 292458 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
+ 293 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

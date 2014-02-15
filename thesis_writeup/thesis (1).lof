@@ -12,45 +12,46 @@
 \contentsline {subfigure}{\string \numberline {3.2(b)}{\ignorespaces Model-aided INS}}{18}
 \contentsline {figure}{\numberline {Figure 3.3}{\ignorespaces Block diagram for the algorithm proposed to adapt motion model.}}{19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figure 4.1}{\ignorespaces The simulation environment consisting of the robot(triangle) and the particle estimate of the location(star). The blue dots represent the landmarks.}}{27}
+\contentsline {figure}{\numberline {Figure 4.1}{\ignorespaces The simulation environment consisting of the robot(triangle) and the particle estimate of the location($\ast $). The blue dots represent the landmarks.}}{27}
 \contentsline {figure}{\numberline {Figure 4.2}{\ignorespaces Particle Filters estimating the position of the robot. The robot is moved at a constant velocity of 5 units/timestep in each case. The particle filters estimate the location of the robot (star) by integrating the motion and sensor models.}}{28}
 \contentsline {subfigure}{\string \numberline {4.2(a)}{\ignorespaces }}{28}
 \contentsline {subfigure}{\string \numberline {4.2(b)}{\ignorespaces }}{28}
 \contentsline {subfigure}{\string \numberline {4.2(c)}{\ignorespaces }}{28}
 \contentsline {subfigure}{\string \numberline {4.2(d)}{\ignorespaces }}{28}
-\contentsline {figure}{\numberline {Figure 4.3}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}}{30}
-\contentsline {figure}{\numberline {Figure 4.4}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}}{31}
-\contentsline {figure}{\numberline {Figure 4.5}{\ignorespaces Estimate of parameter values $\sigma _{W_{v}}^{2}$, $\sigma _{W_{w}}^{2}$, $\sigma _{W_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}}{31}
-\contentsline {figure}{\numberline {Figure 4.6}{\ignorespaces Difference between the maximum weight and average weight of the particle set. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0 }}{32}
-\contentsline {figure}{\numberline {Figure 4.7}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}}{32}
-\contentsline {figure}{\numberline {Figure 4.8}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0.}}{33}
-\contentsline {figure}{\numberline {Figure 4.9}{\ignorespaces Estimate of parameter values $\sigma _{W_{v}}^{2}$, $\sigma _{W_{w}}^{2}$, $\sigma _{W_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0 }}{33}
-\contentsline {figure}{\numberline {Figure 4.10}{\ignorespaces Difference between the maximum weight and average weight of the particles. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}}{34}
-\contentsline {figure}{\numberline {Figure 4.11}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation \nobreakspace {}4.1\hbox {} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}}{35}
+\contentsline {figure}{\numberline {Figure 4.3}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}}{29}
+\contentsline {figure}{\numberline {Figure 4.4}{\ignorespaces Difference between the maximum weight and average weight of the particle set. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0 }}{30}
+\contentsline {figure}{\numberline {Figure 4.5}{\ignorespaces Estimate of parameter values a) $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ b) $\sigma _{W_{v}}^{2}$, $\sigma _{W_{w}}^{2}$, $\sigma _{W_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 0.5 at timestep 60. The sensor noise is 1.0}}{31}
+\contentsline {subfigure}{\string \numberline {4.5(a)}{\ignorespaces }}{31}
+\contentsline {subfigure}{\string \numberline {4.5(b)}{\ignorespaces }}{31}
+\contentsline {figure}{\numberline {Figure 4.6}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}}{32}
+\contentsline {figure}{\numberline {Figure 4.7}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0.}}{32}
+\contentsline {figure}{\numberline {Figure 4.8}{\ignorespaces Estimate of parameter values $\sigma _{W_{v}}^{2}$, $\sigma _{W_{w}}^{2}$, $\sigma _{W_{1}}^{2}$ at every time step. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0 }}{33}
+\contentsline {figure}{\numberline {Figure 4.9}{\ignorespaces Difference between the maximum weight and average weight of the particles. The motion model noise $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}}{33}
+\contentsline {figure}{\numberline {Figure 4.10}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation \nobreakspace {}4.1\hbox {} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}}{34}
+\contentsline {figure}{\numberline {Figure 4.11}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The drift is present throughout the experiment described by equation \nobreakspace {}4.1\hbox {} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}}{34}
 \contentsline {figure}{\numberline {Figure 4.12}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The drift is present throughout the experiment described by equation \nobreakspace {}4.1\hbox {} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}}{35}
-\contentsline {figure}{\numberline {Figure 4.13}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The drift is present throughout the experiment described by equation \nobreakspace {}4.1\hbox {} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}}{36}
-\contentsline {figure}{\numberline {Figure 4.14}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation \nobreakspace {}4.3\hbox {} with a=2. The rest of the parameters remain same and the sensor noise is 1.0. }}{37}
-\contentsline {figure}{\numberline {Figure 4.15}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100. }}{38}
-\contentsline {figure}{\numberline {Figure 4.16}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}}{38}
-\contentsline {figure}{\numberline {Figure 4.17}{\ignorespaces Estimate of parameter values $\sigma _{W_{v}}^{2}$, $\sigma _{W_{w}}^{2}$, $\sigma _{W_{1}}^{2}$ at every time step. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}}{39}
+\contentsline {figure}{\numberline {Figure 4.13}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation \nobreakspace {}4.3\hbox {} with a=2. The rest of the parameters remain same and the sensor noise is 1.0. }}{36}
+\contentsline {figure}{\numberline {Figure 4.14}{\ignorespaces Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100. }}{37}
+\contentsline {figure}{\numberline {Figure 4.15}{\ignorespaces Estimate of parameter values $\sigma _{V_{v}}^{2}$, $\sigma _{V_{w}}^{2}$, $\sigma _{V_{1}}^{2}$ at every time step. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}}{38}
+\contentsline {figure}{\numberline {Figure 4.16}{\ignorespaces Estimate of parameter values $\sigma _{W_{v}}^{2}$, $\sigma _{W_{w}}^{2}$, $\sigma _{W_{1}}^{2}$ at every time step. The $\sigma _{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}}{38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figure 5.1}{\ignorespaces Side scan sonar sensor using dual frequency made by JW Fishers . Image taken from \cite {side_sonar_fisheries_url}}}{42}
-\contentsline {figure}{\numberline {Figure 5.2}{\ignorespaces Side scan sonar image of the wreck. Image taken from \cite {side_sonar_url}}}{42}
-\contentsline {figure}{\numberline {Figure 5.3}{\ignorespaces Working of a side scan sonar. Image taken from \cite {side_sonar_url}}}{43}
-\contentsline {figure}{\numberline {Figure 5.4}{\ignorespaces Representation of what Octaves look like in SIFT. Image taken from \cite {sift_url}}}{44}
-\contentsline {figure}{\numberline {Figure 5.5}{\ignorespaces Difference of Gaussian done to caluclate keypoints in the image. Image taken from \cite {sift_url}}}{45}
-\contentsline {figure}{\numberline {Figure 5.6}{\ignorespaces Applying DOG on a set of images present in a single octave. Image taken from \cite {sift_url}}}{45}
-\contentsline {figure}{\numberline {Figure 5.7}{\ignorespaces Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbours. Image taken from \cite {sift_url}}}{46}
-\contentsline {figure}{\numberline {Figure 5.8}{\ignorespaces Histogram describing the bins for assigning orientation to the keypoint. Image taken from \cite {sift_url}}}{47}
-\contentsline {figure}{\numberline {Figure 5.9}{\ignorespaces A $16 X16$ window is taken around a keypoint. This window is broken into sixteen $4 X 4$ windows. Image taken from \cite {sift_url}}}{48}
-\contentsline {figure}{\numberline {Figure 5.10}{\ignorespaces The gradient orientation is assinged to 8 bin histogram. The value depends upon the magnitude of the orientation and distance from the keypoint. Image taken from \cite {sift_url}}}{49}
-\contentsline {figure}{\numberline {Figure 5.11}{\ignorespaces Image produced by Side scan sonar. Images produced from dataset provided by DRDC.}}{50}
-\contentsline {figure}{\numberline {Figure 5.12}{\ignorespaces Median filter applied to side sonar image.}}{51}
-\contentsline {figure}{\numberline {Figure 5.13}{\ignorespaces Median filter with high size applied to side sonar image.}}{51}
-\contentsline {figure}{\numberline {Figure 5.14}{\ignorespaces SIFT features on a side sonar image.}}{52}
-\contentsline {figure}{\numberline {Figure 5.15}{\ignorespaces SIFT features on a side sonar image with low hessian threhold.}}{52}
-\contentsline {figure}{\numberline {Figure 5.16}{\ignorespaces Two consecutive side sonar images. The white circles represent the landmarks and the black circle in next image shows the matched keypoints.}}{54}
-\contentsline {subfigure}{\string \numberline {5.16(a)}{\ignorespaces a}}{54}
-\contentsline {subfigure}{\string \numberline {5.16(b)}{\ignorespaces b}}{54}
+\contentsline {figure}{\numberline {Figure 5.1}{\ignorespaces Side scan sonar sensor using dual frequency made by JW Fishers . Image taken from \cite {side_sonar_fisheries_url}}}{41}
+\contentsline {figure}{\numberline {Figure 5.2}{\ignorespaces Side scan sonar image of the wreck. Image taken from \cite {side_sonar_url}}}{41}
+\contentsline {figure}{\numberline {Figure 5.3}{\ignorespaces Working of a side scan sonar. Image taken from \cite {side_sonar_url}}}{42}
+\contentsline {figure}{\numberline {Figure 5.4}{\ignorespaces Representation of what Octaves look like in SIFT. Image taken from \cite {sift_url}}}{43}
+\contentsline {figure}{\numberline {Figure 5.5}{\ignorespaces Difference of Gaussian done to caluclate keypoints in the image. Image taken from \cite {sift_url}}}{44}
+\contentsline {figure}{\numberline {Figure 5.6}{\ignorespaces Applying DOG on a set of images present in a single octave. Image taken from \cite {sift_url}}}{44}
+\contentsline {figure}{\numberline {Figure 5.7}{\ignorespaces Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbours. Image taken from \cite {sift_url}}}{45}
+\contentsline {figure}{\numberline {Figure 5.8}{\ignorespaces Histogram describing the bins for assigning orientation to the keypoint. Image taken from \cite {sift_url}}}{46}
+\contentsline {figure}{\numberline {Figure 5.9}{\ignorespaces A $16 X16$ window is taken around a keypoint. This window is broken into sixteen $4 X 4$ windows. Image taken from \cite {sift_url}}}{47}
+\contentsline {figure}{\numberline {Figure 5.10}{\ignorespaces The gradient orientation is assinged to 8 bin histogram. The value depends upon the magnitude of the orientation and distance from the keypoint. Image taken from \cite {sift_url}}}{48}
+\contentsline {figure}{\numberline {Figure 5.11}{\ignorespaces Image produced by Side scan sonar. Images produced from dataset provided by DRDC.}}{49}
+\contentsline {figure}{\numberline {Figure 5.12}{\ignorespaces Median filter applied to side sonar image.}}{50}
+\contentsline {figure}{\numberline {Figure 5.13}{\ignorespaces Median filter with high size applied to side sonar image.}}{50}
+\contentsline {figure}{\numberline {Figure 5.14}{\ignorespaces SIFT features on a side sonar image.}}{51}
+\contentsline {figure}{\numberline {Figure 5.15}{\ignorespaces SIFT features on a side sonar image with low hessian threhold.}}{51}
+\contentsline {figure}{\numberline {Figure 5.16}{\ignorespaces Two consecutive side sonar images. The white circles represent the landmarks and the black circle in next image shows the matched keypoints.}}{53}
+\contentsline {subfigure}{\string \numberline {5.16(a)}{\ignorespaces a}}{53}
+\contentsline {subfigure}{\string \numberline {5.16(b)}{\ignorespaces b}}{53}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
