@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.2.3)  11 FEB 2014 17:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  17 FEB 2014 17:07
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **"thesis (1).tex"
 (./thesis (1).tex
@@ -342,7 +342,11 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-) (./thesis (1).aux)
+) (./thesis (1).aux
+
+LaTeX Warning: Label `fig-varying_sensor_noise_motion_model' multiply defined.
+
+)
 \openout1 = `"thesis (1).aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -357,8 +361,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen141
@@ -434,11 +437,15 @@ ub-merged,
 [7
 
 
-] [8])
+]
+Underfull \vbox (badness 1867) has occurred while \output is active []
+
+ [8])
 \tf@lof=\write5
 \openout5 = `"thesis (1).lof"'.
 
- [9]
+
+[9]
 \ab@page=\count123
  [10
 
@@ -523,9 +530,6 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 1226) has occurred while \output is active []
 
  [29]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [30]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -537,54 +541,77 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `fig-varying_sensor_noise_motion_model_1.0' on page 31
+ undefined on input line 956.
+
+[31]
+
+LaTeX Warning: Text page 32 contains only floats.
 
 
-Underfull \vbox (badness 5105) has occurred while \output is active []
-
- [31]
-Underfull \vbox (badness 6461) has occurred while \output is active []
+Underfull \vbox (badness 4621) has occurred while \output is active []
 
  [32]
-[33] [34]
-Overfull \hbox (3.86748pt too wide) in paragraph at lines 1009--1009
+Overfull \hbox (3.86748pt too wide) in paragraph at lines 980--980
  []|\OT1/cmr/m/n/12 Trajectories| 
  []
 
-[35] [36] [37] [38]
-Chapter 5.
-[39
+[33]
 
-] [40] [41] [42] [43] [44] [45]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34]
+
+LaTeX Warning: Text page 35 contains only floats.
+
+[35]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36] [37]
+Chapter 5.
+[38
+
+]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[39]
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [40]
+[41] [42] [43] [44]
 Underfull \vbox (badness 3826) has occurred while \output is active []
 
- [46]
-Underfull \vbox (badness 1953) has occurred while \output is active []
-
- [47]
-[48]
+ [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
-[50] [51] [52] [53]
+ [46]
+[47] [48] [49] [50] [51] [52]
 Chapter 6.
-[54
+[53
 
-] [55]
+] [54]
 Chapter 7.
 
-LaTeX Warning: Citation `Yapp2008' on page 56 undefined on input line 1331.
+LaTeX Warning: Citation `Yapp2008' on page 55 undefined on input line 1322.
 
 
 Underfull \vbox (badness 4713) has occurred while \output is active []
 
- [56
+ [55
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
-(./thesis (1).bbl [58] [59
+ [56]
+(./thesis (1).bbl [57] [58
 
 
 ]
@@ -604,7 +631,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--136
 []\OT1/cmr/m/n/12 Office of Coast Sur-vey.  Side Scan Sonar.
  []
 
-[60]
+[59]
 Overfull \hbox (151.60019pt too wide) in paragraph at lines 192--196
 []\OT1/cmr/m/n/12 USGS.  WHSC Sides-can Sonar Sys-tems.  $\OMS/cmsy/m/n/12 n$\O
 T1/cmr/m/n/12 url\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 http://woodshole.er.usgs.gov
@@ -616,16 +643,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--203
 []\OT1/cmr/m/n/12 Utkarsh.  SIFT: Scale In-vari-ant Fea-ture Trans-form.
  []
 
-) [61] (./thesis (1).aux)
+) [60] (./thesis (1).aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 5194 strings out of 495059
- 72889 string characters out of 3182031
- 165271 words of memory out of 3000000
- 8267 multiletter control sequences out of 15000+200000
+ 5191 strings out of 495059
+ 72750 string characters out of 3182030
+ 165262 words of memory out of 3000000
+ 8264 multiletter control sequences out of 15000+200000
  10196 words of font info for 38 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,18n,35p,1287b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -642,10 +672,10 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "thesis (1).pdf" (72 pages, 292458 bytes).
+Output written on "thesis (1).pdf" (71 pages, 292040 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
+ 289 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

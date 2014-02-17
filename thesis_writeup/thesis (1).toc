@@ -34,20 +34,20 @@
 \contentsline {section}{\numberline {4.1}Experimental Setup}{26}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {4.2}Results}{27}
-\contentsline {chapter}{\numberline {Chapter 5}Landmarks extraction using Side Sonar Images}{39}
+\contentsline {chapter}{\numberline {Chapter 5}Landmarks extraction using Side Sonar Images}{38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.1}Introduction}{39}
-\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{40}
-\contentsline {subsection}{\numberline {5.1.2}Scale Invariant Feature Transform}{42}
+\contentsline {section}{\numberline {5.1}Introduction}{38}
+\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{39}
+\contentsline {subsection}{\numberline {5.1.2}SIFT}{41}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.2}Dynamic Landmarks}{48}
+\contentsline {section}{\numberline {5.2}Dynamic Landmarks}{47}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{52}
-\contentsline {chapter}{\numberline {Chapter 6}Results}{54}
+\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{49}
+\contentsline {chapter}{\numberline {Chapter 6}Results}{53}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{54}
-\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{56}
+\contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{53}
+\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{55}
 \addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{59}
+\contentsline {chapter}{Bibliography}{58}
