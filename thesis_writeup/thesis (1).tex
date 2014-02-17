@@ -1,4 +1,4 @@
-% simple.tex - simple Master's thesis sample
+ % simple.tex - simple Master's thesis sample
 % $Id: simple.tex 309 2011-01-28 14:46:48Z vlado $
 %\documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
@@ -1050,7 +1050,11 @@ In all the experiments above we assume that the sensor noise is constant through
   \caption{\label{fig-different sensor noise motion model trans} Estimate of parameter values a) $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ b) $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100.}
 \end{figure}
 
-In the next experiment there are two changes at time steps 60 and 100. At time step 60 we change the motion model noise $\sigma_{V_{v}}^2$ from 0.05 to 0.5. We change the sensor noise  at time step 100 and compare the behavior of static and adaptive motion model. After time step 100 we can see the error growing in adaptive and static motion model. The adaptive motion model quickly learns the sensor noise is high and starts relying on its motion model. This helps in decreasing the localization error and can be seen in Figure ~\ref{fig-different sensor noise}. In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model therefore we see an increasing estimate of the parameters (Figure ~\ref{fig-different sensor noise motion model trans}).
+In the next experiment there are two changes at time steps 60 and 100. At time step 60 we change the motion model noise $\sigma_{V_{v}}^2$ from 0.05 to 0.5. We change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model. After time step 100 we can see the error growing in adaptive and static motion model. The adaptive motion model quickly learns the sensor noise is high and starts relying on its motion model. This helps in decreasing the localization error and can be seen in Figure ~\ref{fig-different sensor noise}. In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model therefore we see an increasing estimate of the parameters (Figure ~\ref{fig-different sensor noise motion model trans}).
+
+
+You have to write a conclusion 
+
 
 \chapter{Landmarks extraction using Side Sonar Images}
 \section{Introduction}
