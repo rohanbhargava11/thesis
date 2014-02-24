@@ -23,7 +23,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {3.1}Introduction}{15}
-\contentsline {subsection}{\numberline {3.1.1}General Architecture}{19}
+\contentsline {subsection}{\numberline {3.1.1}General Architecture}{18}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {3.2}Adapting Motion Model}{20}
 \contentsline {subsection}{\numberline {3.2.1}Expectation Maximization}{20}
