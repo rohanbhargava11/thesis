@@ -1,4 +1,4 @@
- % simple.tex - simple Master's thesis sample
+% simple.tex - simple Master's thesis sample
 % $Id: simple.tex 309 2011-01-28 14:46:48Z vlado $
 %\documentclass[12pt]{dalcsthesis}
 % to prepare draft version use option draft:
@@ -70,9 +70,9 @@ I would like to thank my colleagues at Hallab for their encouragement and suppor
 
 
 \section{Motivation}
-The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating the robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}.  A common approach to determine the location of a robot is through the use of a Global Positioning System (GPS) which uses a series of satellites in low earth orbit that use differential positioning to determine a location for a receiver.  Another approach is to provide a prior map of the environment and with the help of sensors a robot perceives the world and localizes itself in it. The major challenge to localization is sensing  external environment can be impossible or incomplete due to unreliability and inaccessibility of the sensors. In this case the localization estimate can be updated using self-generated cues such as acceleration and velocity.
+The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating the robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}.  A common approach to determine the location of a robot is through the use of a Global Positioning System (GPS), which uses a series of satellites in low earth orbit that use differential positioning to determine a location for a receiver.  Another approach is to provide a prior map of the environment and with the help of sensors a robot perceives the world and localizes itself in it. The major challenge to localization is sensing  external environment can be impossible or incomplete due to unreliability and inaccessibility of the sensors. In this case the localization estimate can be updated using self-generated cues such as acceleration and velocity.
 
-An example for such a scenario from underwater robotics is maintaining a pose estimate of an Autonomous Underwater Vehicle(AUV). In AUV the pose estimation relies on Inertial Navigation Systems (INS) which gives an estimate of the velocity, position and orientation. An example of such a vehicle is Hugin 4500 (Figure ~\ref{fig-Hugin 4500}). All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively larger error.  To compensate for drift systems such as Doppler Velocity Log (DVL), surface GPS etc. are used \cite{Lammas2004} \cite{leonard1998autonomous}. Hegrenaes et al \cite{Hegrenæs2008} pointed out that there are situations where these systems fail or readings from these sensors need to be discarded due to poor quality.  An example of such a situation is the non-feasibility of the vehicle to surface.  In such situations they proposed to use the self-generated velocity estimates to aid INS systems. 
+An example for such a scenario from underwater robotics is maintaining a pose estimate of an Autonomous Underwater Vehicle(AUV). In AUV the pose estimation relies on Inertial Navigation Systems (INS) which gives an estimate of the velocity, position and orientation. An example of such a vehicle is Hugin 4500 (Figure ~\ref{fig-Hugin 4500}). All INS systems suffer from drift i.e. small errors in measurement of acceleration and angular velocity are integrated into progressively larger error.  To compensate for drift, systems such as Doppler Velocity Log (DVL), surface GPS etc. are used \cite{Lammas2004} \cite{leonard1998autonomous}. Hegrenaes et al \cite{Hegrenæs2008} pointed out that there are situations where these systems fail or readings from these sensors need to be discarded due to poor quality.  An example of such a situation is the non-feasibility of the vehicle to surface.  In such situations they proposed to use the self-generated velocity estimates to aid INS systems. 
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{../hugin_4500.png}}
@@ -83,154 +83,23 @@ An example for such a scenario from underwater robotics is maintaining a pose es
 
 The estimates can be difficult to acquire and maintain due to uncertainties in way a robot interacts and senses its environment. These uncertainties can arise due to noisy and incomplete sensing of the environment, uncertain movements of a robot in the environment and changes in the environment itself.  To address these issues Sebastian Thrun \cite{thrun2005probabilistic} represented the motion and sensor models probabilistically. This helps in having a probability distribution over a space of guesses instead of relying on a single best guess. To update the state of a robot probabilistically there are algorithms such as Kalman Filter \cite{kalman1960new}, Particle Filter \cite{gordon1993novel} etc. which are based on Bayes filter. 
 
-In probabilistic robotics the motion and sensors models are represented by a distribution which is defined by its parameters.  The process of determining parameters to kinematic model is termed calibration \cite{cox1990autonomous} \cite{vukobratovic1989introduction}. Generally the parameters to the models are hand tuned and are derived by conducting calibration experiments. Such calibration methods are impractical for two reasons. Firstly these processes are labour intensive and require prior information about the environment and robot. Secondly, changes in robot (e.g.-:  general wear and tear) and environment (e.g.-: moving from fresh water to sea water) leads to changes in the parameters. The changes in underwater environments can be due to change in density, temperature etc. of water. These changes require recalibration of a robot while it is in operation which in most cases is not possible to do. The inaccuracies in the models will effect results for higher level tasks such as path planning \cite{Lav06}, Simultaneous Localization and 
+In probabilistic robotics the motion and sensors models are represented by a distribution which is defined by its parameters.  The process of determining parameters to kinematic model is termed calibration \cite{cox1990autonomous} \cite{vukobratovic1989introduction}. Generally the parameters to the models are hand tuned and are derived by conducting calibration experiments. Such calibration methods are impractical for two reasons. Firstly these processes are labour intensive and require prior information about the environment and robot. Secondly, changes in robot (e.g.-:  general wear and tear) and environment (e.g.-: moving from fresh water to sea water) leads to changes in the parameters. The changes in underwater environments can be due to change in density, temperature etc. of water. These changes require recalibration of a robot while it is in operation. In such cases manual recalibration is not possible. The inaccuracies in the models will effect results for higher level tasks such as path planning \cite{Lav06}, Simultaneous Localization and 
 Mapping (SLAM) \cite{thrun2005probabilistic} \cite{grisettiyz2005improving} etc.
 
 \section{Previous Work}
-Home News by technology Ubuntu derivatives: 5 of the best Ubuntu-based distros
-Ubuntu derivatives: 5 of the best Ubuntu-based distros
-ROUNDUP Our pick of the best Ubuntu re-spins
-By Mayank Sharma from Linux Format Issue 173  August 4th 2013 4 COMMENTS
+Roy and Thrun \cite{Roy} proposed an online calibration method for land robots which can be performed without human intervention.  They approached the calibration process as maximum likelihood estimation problem which gives an estimate of parameters for the given data. The calibration parameters are iteratively estimated by comparing pair of subsequent sensor readings. The algorithm proposed worked well for systematic drifts and the results showed the position error reduced approximately by 83\%.
 
+Alizar and Parr \cite{Eliazar2004} continued the work further by estimating non-systematic drifts.  They proposed an algorithm to learn the right parameters of a motion model for a land robot using Expectation Maximization(EM) Framework \cite{dempster1977maximum}. It is an unsupervised machine learning technique that alternates between the expectation and maximization step. In the Expectation Step it creates an expectation of the log-likelihood using the current estimate of the parameters. In Maximization step the parameters are computed by maximizing the expected log-likelihood found in the Expectation Step. They were able to learn accurate motion models with very little user input.
 
-The best re-spins for Ubuntu for those who don't like Unity
-Related stories
-Expect an influx of Ubuntu phones in 2014
-CompuLab readies MintBox 2 with fresh internals
-50 best Linux distros: find the best one for you
-Are you a Linux desktop user who loves Ubuntu but is wary of Unity? You're in luck. There are lots of Ubuntu spins, both from Canonical and independent developers, which preserve the basic infrastructure and essence of Ubuntu but replace the default Unity desktop.
-Canonical has been producing official spins since its second release, but they have been getting more attention since Ubuntu switched to Unity. The oldest, and one of the most popular, is Kubuntu, which offers the KDE desktop; if you want Ubuntu goodness on an underpowered computer, there's the lightweight Lubuntu; and starting with the 13.04 Raring Ringtail release, users will also be able to use the Gnome desktop thanks to the new Ubuntu Gnome spin.
-As well as these official spins, many independent developers use Ubuntu as the base for their own distros. While most of these are just the stock Ubuntu release with a few added applications, some developers put in the extra effort.
-You might also like...
-
-8 of the best tiny Linux distros
-How to dual-boot Linux and Windows
-24 things we'd change about Linux
-Beginner's guide to Linux
-Bodhi Linux is a semi-rolling distro that's based on the stable Ubuntu Long Term Support (LTS) releases. It installs an elegant-looking, minimal system that can be customised easily to suit a regular desktop or a dated machine. Also featured is Zorin OS, designed to appease users moving from Windows.
-How we tested...
-
-Comparing the distros was tricky. As they're all underpinned by Ubuntu, the usual parameters for comparison, such as installation, were very similar. The main reason for this roundup is to help you select a distro that gives you a better desktop experience than Unity.
-Another important point of comparison is system requirements. Unity requires accelerated graphics, which makes the standard Ubuntu unsuitable for older computers. We also paid attention to the custom tools shipped with some distros that have their own package manager. Some replace the default tools with their particular desktop environment to increase usability.
-No distro comparison is complete without a look at bundled apps and configuration options, and even more so, since both of these factors depend on the desktop environment.
-Default apps
-
-
-For most distros in this roundup, the choice of default software depends on the desktop. So you'll find Gnome-apps such as Evolution, Shotwell, Rhythmbox and Totem in Ubuntu Gnome, and KDE-apps such as Kmail, Amarok and Dragon Player in Kubuntu.
-Although both of these distros try to remain true to their desktops, there are some exceptions. Most notable is LibreOffice, the default suite in Ubuntu Gnome, Kubuntu and Zorin. The lightweight Lubuntu uses AbiWord and Gnumeric instead, and Bodhi ships with only a basic text editor. In fact, the only real app in Bodhi is the Midori web browser, which you can use to access Bodhi's online app store and download new apps. Interestingly, Google Docs thinks of Midori as an outdated version of Google Chrome.
-Zorin ships with the real proprietary Google Chrome, while Lubuntu includes its open source sister, Chromium. Instead of Gnome's Epiphany browser (now rechristened simply Web), Ubuntu Gnome includes Firefox. Kubuntu ships with its own Reconq browser, although it does have a shortcut to install Firefox.
-In stark contrast to Bodhi, the other lightweight distro, Lubuntu is chock full of apps. It's got some GTK apps such as the document viewer Evince, Archive Manager and image editor mtPaint, along with feature-weight apps that go with its LXDE desktop, such as the Leafpad text editor and PCManFM. Lubuntu also has the Sylpheed email client and the Chromium web browser. It's also got Audacious and Gnome Mplayer so you can play most popular formats: MP3s, AVIs and MP4s etc.
-Ubuntu Gnome also lets you play MP3s out of the box with Rhythmbox. You won't find any plugins under Kubuntu but its multimedia apps are designed to fetch codecs as and when they are needed. The best thing about the Ubuntu derivatives is that you can install proprietary plugins and codecs to play restricted formats while installing the distro.
-Zorin is the only distro in this roundup that lets you view content in proprietary formats from within the live environment. At 1.5GB, Zorin is the heaviest distro. Besides the apps already mentioned, it includes Gimp, Shotwell, Google Chrome, Gwibber, Thunderbird, Empathy, Totem, Rhythmbox, VLC and even the OpenShot video editor. It also includes Wine to install Windows-only apps.
-Unless you are using Zorin, you'll need to pay a visit to the distro's package management app soon after installing. In Bodhi, it's the first thing you'll need to do, while Lubuntu, Ubuntu Gnome and Kubuntu can give you a fair amount of mileage with their default selection.
-Verdict 
-Ubuntu Gnome - 3/5
-Kubuntu - 3/5
-Lubuntu - 4/5
-Bodhi Linux - 1/5
-Zorin - 5/5
-Intended purpose
-
-
-The distros we've chosen provide a different GUI to Unity, but they each ensure the distro works well for its intended audience.
-The aim of the Ubuntu Gnome spin is to provide a relatively pure Gnome desktop. Since the main Ubuntu distro still uses libraries from Gnome 3.6, Ubuntu Gnome 13.04 ships with an older Gnome release, and users will have to manually install the latest Gnome from the Person Package Archive (PPA). Users will also miss out on new Gnome apps, such as Boxes and Web, which depend on libraries from the latest release.
-Kubuntu does for KDE what Ubuntu Gnome does for Gnome Shell. But Kubuntu nicely integrates the KDE desktop. That said, it doesn't include all apps developed by the KDE project, most notably the Calligra Office Suite.
-The Lubuntu developers wanted to create a less resource-hungry distro and LXDE fits the bill. Lubuntu also includes software like Mplayer, which makes it more usable than its peers.
-Bodhi Linux is also a lightweight distro, but encourage users to customise the system, handled nicely by its package management system.
-Lastly, Zorin OS is designed for Windows users, and pulls this off brilliantly thanks to its default interface and the custom Look Changer app.
-Verdict 
-Ubuntu Gnome - 2/5
-Kubuntu - 4/5
-Lubuntu - 5/5
-Bodhi Linux - 5/5
-Zorin - 5/5
-Desktop Experience
-
-
-Before Unity, Ubuntu was the most popular Linux distro for desktop users - and for good reason. It has the best-in-class Ubiquity distro installer, as well as an easy-to-use package management system that allows users to upgrade with a single click. All distros in this roundup share the same lineage. While some need more resources to run comfortably, what sets them apart from Ubuntu and each other is how they look, and how you operate them. This is also the main reason why you would want to use an Ubuntu derivative instead of the real thing.
-The questions were asking are: do the spins appeal to new Linux users coming in from other OSes, such as Windows and Mac OS? And if you're an existing Linux user, who had Ubuntu in the past, which spin returns to the pre-Unity days?
-Ubuntu Gnome - 2/5
-
-If you were disappointed by Unity, then the desktop environment Ubuntu Gnome offers is unlikely to make you happy either. There are a number of similarities between Gnome 3 and Unity, although they each go about implementing them differently. If you dislike Unity's vertical launcher, you probably won't be that keen on the similar launcher in Gnome. And while the launcher in Unity is always visible, in Gnome you have to bring up the Activities View before you can even see it.
-Gnome's other low points are minimal window furniture and the inability to create desktop icons, which make it a distro that's only likely to please existing Gnome users. In fact, even existing Gnome users won't like this spin, because it ships with the older Gnome 3.6.
-Kubuntu - 3/5
-
-At first glance KDE looks very much like Windows: it's got a Taskbar-like panel at the bottom of the screen, a launch menu in the corner, quicklaunch icons, and a notification area with tray icons. But to pitch KDE to new users as simply 'looking like Windows' is doing the desktop environment a disservice.
-Its real power lies in the vast configuration options and features like Activities, which, sadly, users will find confusing or, at worst, totally ignore. Activities are, in fact, custom workspaces or virtual desktops that you can setup and switch between for a given activity, for example a desktop ready with all the apps open for some web development. Kubuntu is the oldest Ubuntu spin, it has an active community of users and it's the go-to distro for users burnt by Unity, but it's missing some of Ubuntu's best features, such as the Software Center.
-Lubuntu - 3/5
-
-Like KDE, Lubuntu's LXDE desktop is similar to Windows, with a panel at the bottom. The menu, though, is reminiscent of Windows 98. When you think about it, a Windows 98 look-a-like won't really lure Windows 7/XP users, especially when you consider the fact that LXDE doesn't have other Windows features, such as live thumbnail previews.
-Additionally, Lubuntu lacks Ubuntu One, and integration with PCManFM and Sylpheed is still on the developers' to-do list. But then Lubuntu is aimed at a different set of users: those who want to run an Ubuntu-like desktop on an old, underpowered machine. This is something Lubuntu does remarkably well.
-The fact it also supplies a pleasant desktop environment is an added bonus.
-Bodhi Linux - 2/5
-
-Another minimalist distro, Bodhi Linux is based on the elegant Enlightenment Window Manager and has its own file manager, several gadgets and compositing effects. With Bodhi you can bring an old machine back to life in style.
-The distro also offers several different desktop layout styles: Desktop is a traditional layout with a menu, Taskbar and System Tray at the bottom; Laptop/Netbook puts the System Tray, menu and Taskbar on the top, along with some gadgets, and moves the application launcher to the bottom; while Fancy places the application launcher on the left of the screen. There's also a style for small/touchscreen devices, which uses an application menu like Unity's Dash or Gnome 3's Activities.
-Zorin OS - 5/5
-
-This is hands-down the best distro, offering the ultimate desktop experience for existing Linux users, as well as those coming from other operating systems. Not only is the default Zorin desktop styled to resemble Windows 7, for added familiarity, its custom application launcher also mimics the Windows 7 Start menu. Existing Linux users can use the Zorin Look Changer app to make the desktop act and look like Gnome 2.
-If you can spare €10, you can download the Ultimate edition, which has additional Mac OS X and Windows 2000 styles. Zorin also includes all of the Ubuntu goodies, such as Ubuntu One, which is well integrated into the distro. It also instills good desktop practices by regularly reminding users to setup the backup app.
-System requirements
-
-
-Due to the different system requirements of their desktop environments, some of the spins might not run on all kinds of hardware. The most demanding distro in our roundup is Ubuntu Gnome thanks to the desktop's insistence on using accelerated graphics. On the other hand, you can run KDE, and therefore Kubuntu, on a computer that doesn't have a discrete graphics card installed. The desktop will, instead, default to having only the most basic compositing effects, but it will remain fully functional.
-If you need a distro for an older box, neither Ubuntu Gnome nor Kubuntu will work as well as Lubuntu or Bodhi Linux. To productively use the LXDE-based Lubuntu you'll need at least 512MB of RAM. The project also produces special installation ISOs for computers with less than 700MB RAM.
-Bodhi Linux goes down even further. You can install it on a system with 128MB of RAM and it only takes up 2.5GB of hard disk space. The good thing about Bodhi is that it can scale up just as easily on a more recent, well-endowed machine. Just use its package manager to fetch the application suite of full-featured software instead of the lighter-weight packages.
-Zorin OS gives you the best of both worlds. While the normal version is based on Gnome and requires the same amount of resources as Kubuntu, there's also a LXDE-based Lite edition for older computers.
-Verdict 
-Ubuntu Gnome - 1/5
-Kubuntu - 3/5
-Lubuntu - 4/5
-Bodhi Linux - 5/5
-Zorin - 4/5
-Documentation and support
-
-One of the reasons Ubuntu is so popular is the support infrastructure and its active community of users. But how do the derivatives fair? Ubuntu Gnome has a growing community with its own IRC channel and a mailing list, and while it doesn't have forum boards it regularly dispenses help to users on its official Google+ Community page.
-The oldest Ubuntu spin, Kubuntu, has a very active community that hosts KDE-specific forums, mailing lists and an IRC channel. The distro also has information on getting help in languages other than English, and there's a comprehensive ebook guide available on ubuntuguide.org.
-Lubuntu hosts its documentation and support on Ubuntu infrastructure. There's documentation about the various applications and how to set up different components. The link to the forums shows all posts with the tag 'lubuntu' on ubuntuforums.org. You can interact with Lubuntu developers on its mailing lists and IRC.
-Zorin OS has a very rudimentary installation guide, though they have forum boards with a tutorial section. Shelling out €5 will get you premium technical support for three issues.
-Bodhi Linux has the most organised support and documentation. There's a quick start guide, and detailed guides on Enlightenment and customising Bodhi. It's forum boards even dispense advice on ARM-powered devices.
-Verdict
-Ubuntu Gnome - 2/5
-Kubuntu - 3/5
-Lubuntu - 2/5
-Bodhi Linux - 5/5 
-Zorin - 2/5
-Custom Tools
-
-
-As we've already said, what sets our contenders apart from the myriad of Ubuntu-based distros is the developer effort that's gone into fitting the distro to its user base.
-Consider Zorin, for example. It's designed specifically for Windows users who want easy and smooth access to Linux, so it includes a custom Look Changer application that lets you change the interface at the touch of a button. In the freely downloadable edition of the OS, the application offers a choice of Windows 7, XP or Gnome 2. Donate €10 for the Ultimate edition and you also get support for Mac OS X, Unity and Windows 2000. Zorin's Web Browser Manager makes it easy to install different browsers and the distro also includes a redesigned Ubuntu Software Center.
-Bodhi Linux is all about custom tools. It ships with the Eccess System Tool for basic system administration tasks, such as managing users and time. There's a board on the Bodhi Linux forum dedicated to custom apps written in Elementary and Python that are available in the official repositories. Another highlight is its online App Center, which makes installing apps easier by grouping them into software bundles and creating custom packages of similar tools. For example, if you want to install a selection of different educational apps, you can install the Educational Pack, which includes TuxPaint, TuxTyping, Gcompris etc.
-The developers of Lubuntu dealt with package management by creating a lightweight version of Ubuntu Software Center called - you guessed it! - Lubuntu Software Center. This arranges software in different categories, you mark apps that you want to install, add them to the apps basket and install them all in one go. The tool also has an Expert mode for installing individual libraries.
-Kubuntu also includes its own package manager, Moun, and the HomeRun launcher, which runs full screen and is similar to Unity's Dash and Gnome's Activities.
-The one spin that doesn't have any custom tools is Ubuntu Gnome. The distro includes the stock Ubuntu Software Center and is, in fact, missing some Gnome tools like the web browser and the Boxes virtualisation app. This is further confused by the fact that the distro includes two User Accounts apps, one from Gnome and from Ubuntu.
-Verdict 
-Ubuntu Gnome - 1/5
-Kubuntu - 2/5
-Lubuntu - 3/5
-Bodhi Linux - 5/5
-Zorin - 5/5
-Configuration options
-
-
-Most distros delegate the task of customising the desktop to the GUI. This is quite a disadvantage for Ubuntu Gnome as its default customisation settings will work for the average user but the more advanced Linux user will need to get additional tools to tweak their desktops. On the other end of the spectrum is KDE and its endless configuration options, which can be overwhelming.
-Lubuntu also has lots of configuration options. There's an Openbox configuration manager and a customiser from the LXDE project. There are also different apps for modifying keyboard, mouse, monitor and power management etc.
-Kubuntu, in contrast, doesn't have its own set of configuration tools like OpenSUSE's Yast or Mageia's Control Center.
-
-Roy and Thrun \cite{Roy} proposed an online calibration method for land robots which can be performed without human intervention.  They approached the calibration process as maximum likelihood estimation problem which gives an estimate of parameters for the given data. The calibration parameters are iteratively estimated by comparing pair of subsequent sensor readings. The algorithm proposed worked well for systematic drifts and the results showed the position error reduced by approximately by 83\%.
-
-Alizar and Parr \cite{Eliazar2004} continued the work further by estimating non-systematic drifts.  They proposed an algorithm to learn the right parameters of a motion model for a land robot using Expectation Maximization Framework \cite{dempster1977maximum}. It is an unsupervised machine learning technique that alternates between the expectation and maximization step. In the Expectation Step it creates an expectation of the log-likelihood using the current estimate of the parameters and the Maximization step which computes parameters maximizing the expected log-likelihood found in the Expectation Step. They were able to learn accurate motion models with very little user input.
-
-Yapp \cite{Yap2008} took Alizar and Parr's \cite{Eliazar2004} work further and proposed an algorithm to learn the motion and sensor models for land robots. They used the same Expectation Maximization framework to learn the right parameters for the models. To calculate the likely trajectory of a robot both the algorithms implemented particle filtering \cite{ristic2004beyond} \cite{chen2003bayesian} and smoothing \cite{doucet2000monte}.  The algorithm started with an estimate of initial parameters and iteratively optimized the parameters based on the data collected during robot's operation. The algorithm assumed that a prior map of the environment is provided. 
+Yapp \cite{Yap2008} took Alizar and Parr's \cite{Eliazar2004} work further and proposed an algorithm to learn the motion and sensor models for land robots. They used the same EM framework to learn the right parameters for the models. To calculate the likely trajectory of a robot both the algorithms implemented particle filtering \cite{ristic2004beyond} \cite{chen2003bayesian} and smoothing \cite{doucet2000monte}.  The algorithm started with an estimate of initial parameters and iteratively optimized the parameters based on the data collected during robot's operation. The algorithm assumed that a prior map of the environment is provided. 
 
 \section{Contribution}
 
 In my thesis I specifically deal with water environments such as oceans, rivers etc. which are highly dynamic.  The algorithm proposed here is different from the work done before in two ways. Firstly the algorithm is meant to learn the right parameters for an AUV's motion model. Secondly, the algorithm can learn motion model for unknown environments by generating landmarks using side sonar images and therefore doesn't have to rely on static maps. Sound Navigation and Ranging (SONAR) is a technique based on sound propagation used for detecting objects underwater. Side scan sonar is a specific type of sonar used to image the topography of a sea floor.  The SONAR sensor is the only imaging tool that can work at high depth. 
 
-My algorithm uses EM algorithm to calculate the most likely parameters for a data set.  The trajectories are calculated by implementing particle filtering and smoothing.  Particle Filters are chosen because they can mode non-linear transformations as well as have no restrictions in model. Particle smoothing was performed because Russel and Norving ~\cite{russell2003artificial} pointed out that the state of the system is better estimated by smoothing as it incorporates information from all the past states of the system. 
+My algorithm uses EM algorithm to calculate the most likely parameters for a data set.  The trajectories are calculated by implementing particle filtering and smoothing.  Particle Filters are chosen because they can model non-linear transformations as well as have no restrictions in model. Particle smoothing was performed because Russel and Norving ~\cite{russell2003artificial} pointed out that the state of the system is better estimated by smoothing as it incorporates information from all the past states of the system. 
 
-The remainder of the thesis is structured as follows. Chapter 2 will explain the motion model for AUV as well as give an insight on particle filtering and smoothing. Chapter 3 will give an overview of Expectation Maximization and show how this framework is used to adapt parameters for a motion model. Chapter 4 will give explain how landmarks are extracted from side sonar images. The reliability of the landmarks are shown by extracting motion information and the algorithm to do that is described in Chapter 4. Chapter 5 consist results of a simulated experiment to show the effectiveness of the algorithm. This chapter also includes the comparison of motion estimation using side sonar images to Doppler velocity log (DVL).
+The remainder of the thesis is structured as follows. Chapter 2 will explain the motion model for AUV as well as give an insight on particle filtering and smoothing. Chapter 3 will give an overview of EM and show how this framework is used to adapt parameters for a motion model. Chapter 4 consists results of a simulated experiment to show the effectiveness of the algorithm. Chapter 5 explains how landmarks are extracted from side sonar images. The reliability of the landmarks are shown by extracting motion information. The algorithm to perform that is described in the same chapter. The results of comparing motion estimation using side sonar images to Doppler velocity log (DVL) is shown in Chapter 6.
  
 \begin{comment}
  The core of human environment interaction is the ability of a person to know its position in surrounding environment. The process of estimating robot's position and orientation in the world is termed as Localization \cite{thrun2005probabilistic}. It is the answer to the question ''Where am I?”. The current location of a robot can be determined by Global Positioning Systems, landmarks, maps etc. A common approach is to provide a prior map of the environment and a robot with help of sensors perceives the world and localizes itself in it. Another way to estimate the position of a robot is by knowing how a robot moves in the world . For example by knowing at what velocity a robot is moving we can predict its future location. There are various algorithms such as Particle Filter \cite{gordon1993novel},Kalman Fitler \cite{kalman1960new} etc. to estimate the state of a robot. The way the robot moves and senses the world are captured in motion and sensor models. These models are basic building blocks to various 
@@ -1064,20 +933,20 @@ In Figure ~\ref{fig-varying_sensor_noise_sensor_model_max_weight} we plot the di
 
 In Figure ~\ref{fig-varying_sensor_noise_motion_model} we don't see a jump in the red line or green line at time step 60 and this due to the fact that the estimate of parameters before the change was greater than the change after time step 60. 
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{./plots/200_005_10_s_10.pdf}}
   \caption{\label{fig-varying_sensor_noise_1.0} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      \subfigure[]{\includegraphics[height = 3.0 in]{./plots/200_005_10_s_10_motion_model_trans.pdf}}\qquad
      \subfigure[]{\includegraphics[height = 3.0 in]{./plots/200_005_10_s_10_motion_model_rotation.pdf}}
-  \caption{\label{fig-varying_sensor_noise_motion_model} Estimate of parameter values a) $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ b)  $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}
+  \caption{\label{fig-varying_sensor_noise_motion_model_1.0} Estimate of parameter values a) $\sigma_{V_{v}}^{2}$, $\sigma_{V_{w}}^{2}$,  $\sigma_{V_{1}}^{2}$ b)  $\sigma_{W_{v}}^{2}$, $\sigma_{W_{w}}^{2}$, $\sigma_{W_{1}}^{2}$ at every time step. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}
 \end{figure}  
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{./plots/200_005_10_s_10_max_weight.pdf}}
   \caption{\label{fig-varying_sensor_noise_sensor_model_1.0_max_weight} Difference between the maximum weight and average weight of the particles. The motion model noise $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is 1.0}
@@ -1129,14 +998,14 @@ $\sigma_{W_{1}}^{2}$ & 0.05 & 0.05 & 0.206 & 2.0 & 3 & 1.0\tabularnewline
 
 Table ~\ref{tab-:drift} gives a summary of the experiments performed to demonstrate the effectiveness of the algorithm to account for drift. To account for the drift we don't include an extra parameter in the motion model as the variances $\sigma_{V_{v}^{2}}$, $\sigma_{V_{v}^{1}}$  should account for drift and we see that in Table ~\ref{tab-:drift}. The rest of the parameters remain unchanged. 
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{./plots/200_005_005_s_10_traj_3_drift_20.pdf}}
   \caption{\label{fig-drift_2.0} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation ~\ref{eq- drift subtract} with a=2 . The rest of the parameters remain same and the sensor noise is 1.0.}
 \end{figure}
    
    
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      \subfigure[]{\includegraphics[height = 3.0 in]{./plots/200_005_005_s_10_traj_3_drift_20_motion_model_trans.pdf}}
 	 \subfigure[]{\includegraphics[height = 3.0 in]{./plots/200_005_005_s_10_traj_3_drift_20_motion_model_rotation.pdf}}	  
@@ -1156,7 +1025,7 @@ V_{t}\sim\mathcal{{N}}(v_{t}*a,v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w
 W_{t}\sim\mathcal{{N}}(w_{t}*b,v_{t}^{2}\sigma_{w_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{2}+\sigma_{W_{1}}^{2})
 \end{equation}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{./plots/200_005_005_s_10_traj_3_drift_20_multiply.pdf}}
   \caption{\label{fig-drift_multiply} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The drift is present throughout the experiment described by equation ~\ref{eq- drift multiply} with a=2. The rest of the parameters remain same and the sensor noise is 1.0. }
@@ -1167,13 +1036,13 @@ The results are described in Figure ~\ref{fig-drift_multiply} and in this case a
 
 In all the experiments above we assume that the sensor noise is constant through out the experiment. In real world experiments we find that the quality of sensor readings varies with environment. For example, in an AUV we won't get sonar readings throughout the mission. This could be because sometimes its difficult to find the bottom of the sea floor or sonar sensor could be switched off for some time periods to save power on the battery.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{./plots/200_005_05_s_10_100_100_traj_3_trial_1.pdf}}
   \caption{\label{fig-different sensor noise} Plot showing the localization error between robot and the estimate of the robot's location by particle filters. The $\sigma_{V_{v}}^{2}$ is changed from 0.05 to 1.0 at timestep 60. The sensor noise is changed from 1.0 to 10.0 at timestep 100. }
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      \subfigure[]{\includegraphics[height = 3.0 in]{./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_trans.pdf}}
      \subfigure[]{\includegraphics[height = 3.0 in]{./plots/200_005_05_s_10_100_100_traj_3_trial_1_motion_model_rotation.pdf}}
@@ -1217,20 +1086,20 @@ The dynamic landmarks algorithm for side sonar images is not integrated in the s
 
 
 \subsection{Side Scan Sonar} 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg}}
   \caption{\label{fig- side scan sonar sensor} Side scan sonar sensor using dual frequency made by JW Fishers . Image taken from \cite{side_sonar_fisheries_url}}
 \end{figure}
 Side scan sonar is used to create pictures or an image of the sea floor. Sound waves travel very effectively in water as compared to light therefore at lower depths sonar is used to image the sea floor instead of cameras. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures how "loud" the return echo is and computes a picture ~\ref{fig- side scan sonar image}. In the sea floor there are hard areas such as rock and soft areas such as sand. The hard areas are represented by darker areas in the image as they return a stronger signal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adapting the motion model. 
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar.jpg}}
   \caption{\label{fig- side scan sonar image} Side scan sonar image of the wreck. Image taken from \cite{side_sonar_url}}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/work_side_scan.jpg}}
   \caption{\label{fig- side scan sonar working} Working of a side scan sonar. Image taken from \cite{side_sonar_url}}

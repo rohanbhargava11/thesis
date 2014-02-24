@@ -10,44 +10,44 @@
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {1.2}Previous Work}{3}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {1.3}Contribution}{10}
-\contentsline {chapter}{\numberline {Chapter 2}Background}{12}
+\contentsline {section}{\numberline {1.3}Contribution}{3}
+\contentsline {chapter}{\numberline {Chapter 2}Background}{5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.1}Motion Model}{12}
+\contentsline {section}{\numberline {2.1}Motion Model}{5}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.2}Particle Filter}{17}
+\contentsline {section}{\numberline {2.2}Particle Filter}{10}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.3}Particle smoothing}{19}
-\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{22}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {3.1}Introduction}{22}
-\contentsline {subsection}{\numberline {3.1.1}General Architecture}{26}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {3.2}Adapting Motion Model}{27}
-\contentsline {subsection}{\numberline {3.2.1}Expectation Maximization}{27}
-\contentsline {subsection}{\numberline {3.2.2}Parameter Estimation}{29}
-\contentsline {chapter}{\numberline {Chapter 4}Experimental Setup and Results}{33}
+\contentsline {section}{\numberline {2.3}Particle smoothing}{12}
+\contentsline {chapter}{\numberline {Chapter 3}Learning the motion model}{15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {4.1}Experimental Setup}{33}
+\contentsline {section}{\numberline {3.1}Introduction}{15}
+\contentsline {subsection}{\numberline {3.1.1}General Architecture}{19}
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {4.2}Results}{34}
-\contentsline {chapter}{\numberline {Chapter 5}Landmarks extraction using Side Sonar Images}{45}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {5.1}Introduction}{45}
-\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{46}
-\contentsline {subsection}{\numberline {5.1.2}SIFT}{48}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {5.2}Dynamic Landmarks}{54}
-\addvspace {10\p@ }
-\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{56}
-\contentsline {chapter}{\numberline {Chapter 6}Results}{60}
+\contentsline {section}{\numberline {3.2}Adapting Motion Model}{20}
+\contentsline {subsection}{\numberline {3.2.1}Expectation Maximization}{20}
+\contentsline {subsection}{\numberline {3.2.2}Parameter Estimation}{22}
+\contentsline {chapter}{\numberline {Chapter 4}Experimental Setup and Results}{26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{60}
-\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{62}
+\contentsline {section}{\numberline {4.1}Experimental Setup}{26}
 \addvspace {10\p@ }
-\contentsline {chapter}{Bibliography}{64}
+\contentsline {section}{\numberline {4.2}Results}{27}
+\contentsline {chapter}{\numberline {Chapter 5}Landmarks extraction using Side Sonar Images}{38}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.1}Introduction}{38}
+\contentsline {subsection}{\numberline {5.1.1}Side Scan Sonar}{39}
+\contentsline {subsection}{\numberline {5.1.2}SIFT}{41}
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.2}Dynamic Landmarks}{47}
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {5.3}Motion Estimation using side sonar images}{49}
+\contentsline {chapter}{\numberline {Chapter 6}Results}{53}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {section}{\numberline {6.1}Motion estimation using side sonar images}{53}
+\contentsline {chapter}{\numberline {Chapter 7}Conclusion}{55}
+\addvspace {10\p@ }
+\contentsline {chapter}{Bibliography}{57}
