@@ -48,7 +48,7 @@
 
 \begin{abstract}
 \begin{comment}
-We present a method to learn and adapt the motion model. The motion model can be influenced by environmental properties and is a crucial part of the navigation system.Examples are the drift that is accounted in the motion model can be different for carpets and tiles. The AUV can have a change in their motion model when they are moving from fresh water to sea water. Our algorithm is based on the Expectation Maximization Framework which help us to learn the right parameters for the model.
+We present a method to learn and adapt the motion model. The motion model can be influenced by environmental properties and is a crucial part of the navigation system. Examples are the drift that is accounted in the motion model can be different for carpets and tiles. The AUV can have a change in their motion model when they are moving from fresh water to sea water. Our algorithm is based on the Expectation Maximization Framework which help us to learn the right parameters for the model.
 The Expectation Step is completed by particle filtering and smoothing. The Maximization step involves finding the parameters for the model.We use side sonar images to extract landmarks which can gives us position estimates to help us evolve our motion model.This leads to a better position estimate of the robot. 
 We found that the our learning motion model adapted well to the change in parameters and had low localization error compared to static motion model. 
 This algorithm eliminates the need for laborious and hand-tuning calibration process. The main significance of learning the motion model is to have better navigation algorithms and also its a step towards robots being able to adapt to environment without human intervention.
@@ -224,7 +224,9 @@ u_{r}=f(n_{s})
 
 $u_{r}$, $n_{s}$ are the water relative linear velocity in x direction and control system set point respectively. In a similar manner an expression can be established for $v_{r}$.
 
-Another way to implement the motion model is through dynamics. The 6 Degrees of Freedom (DOF) rigid body equations of motion described by Fossen \cite{Thor} are 
+Another way to implement the motion model is through dynamics. The equation to implement the motion model is described by Fossen \cite{Thor} in equation ~\ref{eq:motion model AUV}.
+\begin{comment}
+describing the motion model  The 6 Degrees of Freedom (DOF) rigid body equations of motion described by Fossen \cite{Thor} are 
 
 
 \begin{align}
@@ -253,21 +255,24 @@ N {}&= I_{z}r^{.}+(I_{y}-I_{x})pq-(q^{.}+rp)I_{yz}+(q^{2}-p^{2})I_{xy}+(rq-p^{.}
 
 
 % need to find the best way to write these equations
+
+
+
+The equations described above can be expressed in a more compact form: 
+% what is RB
+
+\end{comment}
+
+\begin{equation}
+\label{eq:motion model AUV}
+M_{RB}\mathcal{{V}}^{.}+C_{RB}(\mathcal{V})\mathcal{V}=\tau_{RB}
+\end{equation}
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/coordinate_system.png}}
   \caption{\label{fig-Coordinate System} Body-fixed and earth-fixed reference frames to describe the coordinate system of an AUV. Figure from \cite{Thor}
 }
 \end{figure}
-
-
-The equations described above can be expressed in a more compact form: 
-% what is RB
-\begin{equation}
-\label{eq:motion model AUV}
-M_{RB}\mathcal{{V}}^{.}+C_{RB}(\mathcal{V})\mathcal{V}=\tau_{RB}
-\end{equation}
-
 Here $\mathcal{V}=[u,v,w,p,q,r]^{T}$ is the body fixed linear and angular velocity and $\tau_{RB}=[X,Y,Z,K,M,N]$ is generalized vector of external forces and moments. $M_{RB}$ is the rigid body inertia matrix and $C_{RB}$ is Coriolis and centripetal matrix. 
 
 The right hand side of the vector \ref{eq:motion model AUV} represents the external forces and moments acting on the vehicle. Fossen \cite{Thor} classifies the forces into 1) Radiation-induced forces 2) Environmental Forces 3) Propulsion Forces. Table ~\ref{forces auv examples} shows the examples of various forces acting on an AUV.
@@ -829,7 +834,7 @@ At the start of the experiment  the initial location of the robot and particle f
   \subfigure[]{\includegraphics[width = 2.75 in]{2.png}}\qquad
   \subfigure[]{\includegraphics[width = 2.75 in]{3.png}}\qquad
   \subfigure[]{\includegraphics[width = 2.75 in]{4.png}}
-  \caption{\label{fig-: movement simulation world}Particle Filters estimating the position of the robot. The robot is moved at a constant velocity of 5 units/timestep in each case. The particle filters estimate the location of the robot (star) by integrating the motion and sensor models.}
+  \caption{\label{fig-: movement simulation world}Particle Filters estimating the position of the robot. The robot is moved at a constant velocity of 3 units/timestep in each case. The particle filters estimate the location of the robot (star) by integrating the motion and sensor models.}
 \end{figure}
 
 
@@ -1018,7 +1023,7 @@ In all the experiments above we assume that the sensor noise is constant through
 
 In the next experiment there are two changes at time steps 60 and 100. At time step 60 we change the motion model noise $\sigma_{V_{v}}^2$ from 0.05 to 0.5. We change the sensor noise  at time step 100 and compare the behaviour of static and adaptive motion model. After time step 100 we can see the error growing in adaptive and static motion model. The adaptive motion model quickly learns the sensor noise is high and starts relying on its motion model. This helps in decreasing the localization error and can be seen in Figure ~\ref{fig-different sensor noise}. In learning with a high sensor noise we are adjusting our motion model to compensate for the noise in the sensor model therefore we see an increasing estimate of the parameters (Figure ~\ref{fig-different sensor noise motion model trans}).
 
-In this chapter we have shown results for both static and adaptive motion model. In all the cases tested in my thesis the adaptive motion has performed better. The localization error was less in adaptive as compared to static motion model. In the adaptive motion model the estimates of motion model parameters were bad. The parameters estimates take into account the noise in sensor model. Therefore we don't see the estimated parameters being highly accurate. At the same time this helps in small localization error even with high sensor noise. 
+In this chapter we have shown results for both static and adaptive motion model. In all the cases tested in my thesis the adaptive motion has performed better. The localization error was less in adaptive as compared to static motion model. In the adaptive motion model the estimates of motion model parameters were bad. The parameters estimates take into account the noise in sensor model. Therefore we don't see the estimated parameters being highly accurate. At the same time this helps in decreasing localization error even with high sensor noise. 
 
 
 \chapter{Landmarks extraction using Side Sonar Images}
@@ -1048,7 +1053,7 @@ The measurements from these sensors in a particle filter algorithm are used to a
 
 In our simulated experiment the sensor model assumes to have four static landmarks and at all times we can measure the distance from them. For our algorithm to work on AUV we need some sort of reference points to measure the actual movement of the vehicle. These reference points need to be computed on the fly as we don't have the luxury of having static maps for underwater environments. As my algorithm targets cases in which AUV doesn't loop back and we have limited field of view we need dynamic landmarks for our sensor model. To extract dynamic landmarks we used side sonar images and run feature extraction techniques such as SIFT on the images. These extracted landmarks can be used as reference points for our algorithm to adapt motion model for AUV.
 
-The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavailability of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two section I describe side scan sonar and SIFT. In section ~\ref{ch-: dynamic landmarks} the algorithm to compute landmarks is presented. Chapter ~\ref{ch-: results motion estimation} contains the results of the algorithm.  
+The dynamic landmarks algorithm for side sonar images is not integrated in the simulated experiment described in Chapter ~\ref{ch-: results adapting motion model}. This is because of the unavailability of the motion data such as recording of IMU, DVL etc for AUV. To validate our algorithm for dynamic landmarks we extract motion information from real side sonar data and compare it to the total distance moved by the AUV. In the next two sections I describe side scan sonar and SIFT. In section ~\ref{ch-: dynamic landmarks} the algorithm to compute landmarks is presented. Chapter~\ref{ch-: results motion estimation} contains the results of the algorithm.  
 
 
 
@@ -1058,7 +1063,7 @@ The dynamic landmarks algorithm for side sonar images is not integrated in the s
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/side_scan_sonar_sensor.jpg}}
   \caption{\label{fig- side scan sonar sensor} Side scan sonar sensor using dual frequency made by JW Fishers . Image taken from \cite{side_sonar_fisheries_url}}
 \end{figure}
-Side scan sonar is used to create pictures or an image of the sea floor. Sound waves travel very effectively in water as compared to light therefore at lower depths sonar is used to image the sea floor instead of cameras. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures how "loud" the return echo is and computes a picture ~\ref{fig- side scan sonar image}. In the sea floor there are hard areas such as rock and soft areas such as sand. The hard areas are represented by darker areas in the image as they return a stronger signal as compared to a soft area. A typical side sonar image is shown in Figure ~\ref{fig- side scan sonar image}. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adapting the motion model. 
+Side scan sonar is used to create pictures or an image of the sea floor. Sound waves travel very effectively in water as compared to light therefore at lower depths sonar is used to image the sea floor instead of cameras. A side scan sonar sensor is shown in Figure ~\ref{fig- side scan sonar sensor}. It measures how "loud" the return echo is and computes a picture as shown in Figure~\ref{fig- side scan sonar image}. In the sea floor there are hard areas such as rock and soft areas such as sand. The hard areas are represented by darker areas in the image as they return a stronger signal as compared to a soft area. Side scan sonar is the only imaging tool that works at low depth therefore we use it to extract landmarks for adapting the motion model. 
 
 \begin{figure}[!ht]
   \centering
@@ -1072,7 +1077,7 @@ Side scan sonar is used to create pictures or an image of the sea floor. Sound w
   \caption{\label{fig- side scan sonar working} Working of a side scan sonar. Image taken from \cite{side_sonar_url}}
 \end{figure}
 
-Side-scan transmits sound energy and analyses the echo that is bounced off from the sea floor or other objects. It typically consists of three basic components: towfish, transmission cable and topside processing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimensions of these beams are designed to be narrow along-tack and wide across track to cover as much seabed range as possible.  The echoed sound waves are received by transducers and are continuously recorded. Each pulse shows a narrow strip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequencies range from 100 to 500 Khz in side scan sonar; higher frequencies yield better resolution but less range. Currently in the market there are systems with dual frequency which allow the operator to use high frequency to produce sharper images or lower frequencies to cover greater depths. Side scan 
+Side-scan transmits sound energy and analyses the echo that is bounced off from the sea floor or other objects. It typically consists of three basic components: towfish, transmission cable and topside processing unit. It emits pulses in the shape of cone or fan to either sides of the towfish, typically to a distance of 100 meters. The angular dimensions of these beams are designed to be narrow along-track and wide across track to cover as much seabed range as possible.  The echoed sound waves are received by transducers and are continuously recorded. Each pulse shows a narrow strip below and to the sides.  The recorded echos are put together along the direction of motion to form images of the seafloor. The sound frequencies range from 100 to 500 Khz in side scan sonar; higher frequencies yield better resolution but less range. Currently in the market there are systems with dual frequency which allow the operator to use high frequency to produce sharper images or lower frequencies to cover greater depths. Side scan 
 systems can be characterized according to their operating frequency \cite{side_sonar_usgs_url}.
 
 \begin{table}
@@ -1105,7 +1110,7 @@ Sonar are useful instruments in fisheries research, environmental studies and mi
 
 
 \subsection{SIFT}
-SIFT is a popular algorithm in computer vision to detect and describe local feature of an image that are not affected by scaling and rotation. It was proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stitching, video tracking and others. The various steps for extracting SIFT feature as described by David Lowe are explained in this section.
+SIFT is a popular algorithm in computer vision to detect and describe local features of an image that are not affected by scaling and rotation. It was proposed by David Lowe in 1999 \cite{lowe1999object} and has been used for object recognition, robotic mapping and navigation, image stitching, video tracking and others. The various steps for extracting SIFT feature as described by David Lowe are explained in this section.
 
 The first step in SIFT algorithm is to construct scale space i.e. create internal representations of the original image to ensure scale variance. In SIFT, progressively blurred out images are generated using the original image. In next step you the original image is resized to half of its size and again blurred out images are generated. 
 
@@ -1121,7 +1126,7 @@ Images of same size are grouped together and belong to an octave. In Figure ~\re
 L(x,y,\sigma) = G(x,y,\sigma) * I(x,y)
 \end{equation}
 where L is the blurred image, G is the Gaussian blur operator, I is an image, x,y are the location coordinates and $\sigma$ is the scale parameter. The symbol $*$ represents the convolution operator.
-The next step is to find another set of images by Difference of Gaussian (DOG) which finds out interesting keypoints in the image. In this step the difference between two consecutive scales is calculated as shown in Figure ~\ref{fig- sift dog}. This process is done at every octave. 
+The next step is to find another set of images by Difference of Gaussian (DOG) which finds out interesting keypoints in the image. In this step the difference between two consecutive scales is calculated as shown in Figure ~\ref{fig- sift dog}. This process is done at every octave. As an example the DOG is applied to cat images and the output is shown in Figure ~\ref{fig- sift dog images}. 
 
 \begin{figure}
   \centering
@@ -1129,7 +1134,7 @@ The next step is to find another set of images by Difference of Gaussian (DOG) w
   \caption{\label{fig- sift dog} Difference of Gaussian done to caluclate keypoints in the image. Image taken from \cite{sift_url}}
 \end{figure}
 
-As an example the DOG is applied to cat images and the output is shown in Figure ~\ref{fig- sift dog images}. 
+
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/thesis_writeup/sift-dog-images.jpg}}
@@ -1144,7 +1149,7 @@ After calculating the DOG images we can find the keypoints in two steps. We firs
   \caption{\label{fig- maxima and minima sift octaves} Locate maxima/minima in DOG images. X marks the current pixel and it is compared with its 26 neighbours. Image taken from \cite{sift_url}}
 \end{figure}
 
-In Figure ~\ref{fig- maxima and minima sift octaves} X is the current pixel and the green circles represent the neighbors. X is marked as a keypoint if it is the greatest or least of all neighbours. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calculate the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint.
+In Figure ~\ref{fig- maxima and minima sift octaves}, X is the current pixel and the green circles represent the neighbors. X is marked as a keypoint if it is the greatest or least of all neighbours. These are approximate as mostly the maxima/minima never lies on a pixel. To access the data "between" pixels we need to calculate the subpixel location. This can be done by Taylor expansion of the image around the approximate keypoint.
 
 \begin{comment}
  It can be mathematically represented by 
@@ -1191,7 +1196,7 @@ SIFT has been compared to self-organized features from restricted Boltzmann mach
 \section{Dynamic Landmarks}
 \label{ch-: dynamic landmarks}
 
-As stated above we need reference points to adapt our motion model. These reference points need to be dynamic as we are learning online and we don't loop back on AUV`s route. To generate landmarks on side sonar images a preprocessing step is required to get rid of horizontal lines produced spurious electrical noise in the transducers. The noisy side sonar images is shown in Figure ~\ref{fig- side sonar image original}.
+As stated above we need reference points to adapt our motion model. These reference points need to be dynamic as the learning algorithm is online. Secondly, we also assume that can't loop back on AUV`s route. To generate landmarks on side sonar images a preprocessing step is required to get rid of horizontal lines produced spurious electrical noise in the transducers. The noisy side sonar images is shown in Figure ~\ref{fig- side sonar image original}.
 
 \begin{figure}
   \centering
@@ -1255,7 +1260,6 @@ The performance of the algorithm is evaluated on real side sonar data. The resul
 \label{ch-: results motion estimation}
 \section{Motion estimation using side sonar images}
 We validate our algorithm on datasets consisting of side sonar images and the total distance the AUV moves. The datasets are provided by Defence Research and Development Canada(DRDC). The SIFT features that are applied to side sonar images are implemented using popular vision library(Opencv) in python. The motion estimation algorithm  and feature matching is also implemented in python. The video datasets provided could only be read by a specific software called sonar data reader. To test our algorithm we extracted a set of images from the video and used it as an input to our motion estimation algorithm.  
-Table ~\ref{tab-table_motion_estimation} shows the results of motion estimation using side sonar images. The distance is compared to DVL. DVL is used to estimate the speed of the vehicle. This can be combined with a position fix, compass heading, and data from the acceleration sensors the position of the vehicle can be determined. These estimates can be noisy but at the same time there is no practical noise free way to measure how much the AUV actually moved.      
 \begin{table}
 \centering
 \begin{tabular}{|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|}
@@ -1280,12 +1284,14 @@ Datasets & Distance estimated by DVL(m) & Distance estimated through Side sonar 
 \end{tabular}
 \caption{\label{tab-table_motion_estimation}Results of motion estimation using side sonar images. The results are compared to estimated distance by DVL, which is treated as ground truth.}
 \end{table}
-The algorithm gives us a decent estimate of the movement. The results when compared to DVL data show that the algorithm to estimate motion from side sonar data was not extremely accurate. Its hard to judge whether the algorithm was at fault or the ground truth was noisy. Secondly the movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{Hegrenæs2008} in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
+Table ~\ref{tab-table_motion_estimation} shows the results of motion estimation using side sonar images. The distance is compared to DVL. DVL is used to estimate the speed of the vehicle. This can be combined with a position fix, compass heading, and data from the acceleration sensors the position of the vehicle can be determined. These estimates can be noisy but at the same time there is no practical noise free way to measure how much the AUV actually moved.      
+
+The algorithm gives us a decent estimate of the movement. The results when compared to DVL data show that the algorithm to estimate motion from side sonar data was not extremely accurate. Its hard to judge whether the algorithm was at fault or the ground truth was noisy. The movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{Hegrenæs2008} in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
 The results presented shows the accuracy of our motion estimation algorithm.
 \chapter{Conclusion}
-The work presented here is a step towards building adaptive systems, and this for example where humans are much better. In 21st century as we move towards the goal of making robots a ubiquitous part of our life, the need to adapt to changing environment is of utmost importance. 
+The work presented here is a step towards building adaptive systems. Humans are much better in buildig such systems. In 21st century as we move towards the goal of making robots a ubiquitous part of our life, the need to adapt to changing environment is of utmost importance. 
 
-Probabilistic robotics has been the way to approach robotics for a long time. The motion and sensor model are key ingredients to any algorithms for navigation, localization and map building. These models are treated as Gaussian distribution with static parameters. The questions that arises is how these models react to changes in the environment and robots. Higher level task such as navigation and path planning are dependant upon the accuracy of these model. To adapt to these changes we need to change our parameters to a model with time.
+Probabilistic robotics has been the way to approach robotics for a long time. The motion and sensor model are key ingredients to any algorithms for navigation, localization and map building. These models are treated as Gaussian distribution with static parameters. The questions that arises is how these models react to changes in the environment and robots. Higher level task such as navigation and path planning are dependant upon the accuracy of these models. To adapt to these changes we need to change our parameters to a model with time.
 
 The goal of the work presented in this thesis was to present an algorithm that can adapt the parameters of an AUV's motion model. The work was primarily focused on developing and comparing an adaptive motion model to a static motion model. The use of side sonar images as a feedback to the algorithm enabled the algorithm to learn on the fly. Expectation maximization was used to learn the parameters in an unsupervised manner. The second part of the thesis focussed on validating our dynamic landmark approach. This was done by estimating motion from side sonar images and comparing it to DVL. The results of the first section is illustrated in an experiment to produce pose estimates by integrating the motion and sensor models. The pose estimates of static and adaptive motion model are compared and the localization error is plotted. The estimated distances by the algorithm on real side sonar datasets are presented in the results of the second section.
 
@@ -1300,9 +1306,9 @@ As the algorithm is meant to learn the parameters on the fly we use dynamic land
 
 \end{comment}
 
-Overall the work illustrated that adapting motion model can be extremely advantageous in decreasing the localization error which in turn helps a robot in better navigation and path planning. The estimated parameters accuracy depends upon the sensor noise and can be low but the goal of the thesis was to decrease the localization error over time with changes in environment. The method doesn't require any pre learning phase and helps in getting rid of the manual labour associated with the calibration process. The algorithm doesn't require the AUV to loop back in its path to learn the right parameters for the model.
+Overall the work illustrated that adapting motion model can be extremely advantageous in decreasing the localization error which can in turn help a robot in better navigation and path planning. The estimated parameters accuracy depends upon the sensor noise. It can be low but the goal of the thesis was to decrease the localization error over time with changes in environment. The method doesn't require any pre learning phase and helps in getting rid of the manual labour associated with the calibration process. The algorithm doesn't require the AUV to loop back in its path to learn the right parameters for the model.
 
-The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. The work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The algorithm to generate side sonar images presented by Andrew Vardy \cite{vandrish2011side} online needs to be tested. The algorithm requires work so that it can be ported and performance can be tested for an on board processor of the AUV. Overall the work presented here shows the importance of having an adaptive motion model for better localization of robots.   
+The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. The work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The compatibility of my algorithm with Andrew Vardy's \cite{vandrish2011side} algorithm to generate side sonar images needs to be tested. The learning algorithm assumes the noise to be Gaussian. In the future, I would experiment with various noise distributions that are more suited for underwater noise. Overall the work presented here shows the importance of having an adaptive motion model for better localization of robots.   
 
 
 \bibliographystyle{plain}
