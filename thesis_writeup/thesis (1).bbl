@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{side_sonar_url}
+{Side Scan Sonar}.
+\newblock \url{http://www.nauticalcharts.noaa.gov/hsd/SSS.html}.
+
 \bibitem{barfoot2005online}
 Timothy~D Barfoot.
 \newblock {Online visual motion estimation using fastslam with sift features}.
@@ -50,7 +54,7 @@ Austin~I Eliazar, Parr Cs, and Duke Edu.
 \bibitem{side_sonar_fisheries_url}
 J~W Fishers.
 \newblock {Side Scan Sonar}.
-\newblock $\backslash$url\{http://www.jwfishers.com/sss.htm\}.
+\newblock \url{http://www.jwfishers.com/sss.htm}.
 
 \bibitem{Godsill2004}
 Simon~J Godsill, Arnaud Doucet, and Mike West.
@@ -89,6 +93,13 @@ Oyvind Hegrenaes, Einar Berglund, and Oddvar Hallingstad.
 \newblock In {\em Robotics and Automation, 2008. ICRA 2008. IEEE International
   Conference on}, pages 1069--1076. IEEE, 2008.
 
+\bibitem{hollesen2011comparison}
+Paul Hollesen, Warren~A Connors, and Thomas Trappenberg.
+\newblock {Comparison of learned versus engineered features for classification
+  of mine like objects from raw sonar images}.
+\newblock In {\em Advances in Artificial Intelligence}, pages 174--185.
+  Springer, 2011.
+
 \bibitem{kalman1960new}
 Rudolph~Emil Kalman and Others.
 \newblock {A new approach to linear filtering and prediction problems}.
@@ -106,33 +117,17 @@ Andrew Lammas, Karl Sammut, and Fangpo He.
 \newblock {6-DoF Navigation Systems for Autonomous Underwater Vehicles}.
 \newblock 2004.
 
-\bibitem{Lav06}
-S~M LaValle.
-\newblock {\em {Planning Algorithms}}.
-\newblock Cambridge University Press, Cambridge, U.K., 2006.
-
 \bibitem{leonard1998autonomous}
 John~J Leonard, Andrew~A Bennett, Christopher~M Smith, and H~Feder.
 \newblock {Autonomous underwater vehicle navigation}.
 \newblock In {\em IEEE ICRA Workshop on Navigation of Outdoor Autonomous
   Vehicles}, 1998.
 
-\bibitem{lowe1999object}
-David~G Lowe.
-\newblock {Object recognition from local scale-invariant features}.
-\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
-  international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
-
 \bibitem{minka1998expectation}
 Thomas Minka.
 \newblock {Expectation-Maximization as lower bound maximization}.
-\newblock {\em Tutorial published on the web at http://www-white. media. mit.
-  edu/tpminka/papers/em. html}, 1998.
-
-\bibitem{side_sonar_url}
-Office {of Coast Survey}.
-\newblock {Side Scan Sonar}.
-\newblock $\backslash$url\{http://www.nauticalcharts.noaa.gov/hsd/SSS.html\}.
+\newblock {\em Tutorial published on the web at
+  http://www-white.media.mit.edu/tpminka/papers/em html}, 1998.
 
 \bibitem{ristic2004beyond}
 Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
@@ -191,15 +186,13 @@ Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.
 \bibitem{side_sonar_usgs_url}
 USGS.
 \newblock {WHSC Sidescan Sonar Systems}.
-\newblock
-  $\backslash$url\{http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm\}.
+\newblock \url{http://woodshole.er.usgs.gov/operations/sfmapping/sonar.htm}.
 
 \bibitem{sift_url}
 Utkarsh.
 \newblock {SIFT: Scale Invariant Feature Transform}.
 \newblock
-  $\backslash$url\{http://aishack.in/2010/05/sift-scale-invariant-feature-transform/\},
-  2010.
+  \url{http://aishack.in/2010/05/sift-scale-invariant-feature-transform}, 2010.
 
 \bibitem{vandrish2011side}
 Peter Vandrish, Andrew Vardy, Dan Walker, and O~A Dobre.
