@@ -14,7 +14,7 @@
 \contentsline {chapter}{\numberline {Chapter 2}Background}{6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {section}{\numberline {2.1}Motion Model}{6}
+\contentsline {section}{\numberline {2.1}Motion Models}{6}
 \addvspace {10\p@ }
 \contentsline {section}{\numberline {2.2}Particle Filter}{10}
 \addvspace {10\p@ }
