@@ -281,7 +281,7 @@ M_{RB}\mathcal{{V}}^{.}+C_{RB}(\mathcal{V})\mathcal{V}=\tau_{RB}
 \begin{figure}
   \centering
      {\includegraphics[height = 3.0 in]{/home/rohan/Documents/thesis/coordinate_system.png}}
-  \caption{\label{fig-Coordinate System} Body-fixed and earth-fixed reference frames to describe the coordinate system of an AUV. Figure from \cite{Thor}
+  \caption{\label{fig-Coordinate System} The coordinate system of an AUV described in Body-fixed and earth-fixed reference frames. Figure from \cite{Thor}
 }
 \end{figure}
 Here $\mathcal{V}=[u,v,w,p,q,r]^{T}$ is the body fixed linear and angular velocity and $\tau_{RB}=[X,Y,Z,K,M,N]$ is the vector of external forces and moments. $M_{RB}$ is the rigid body inertia matrix and $C_{RB}$ is Coriolis and centripetal matrix. 
@@ -299,7 +299,7 @@ Environmental Forces & Ocean currents, Waves, Wind \\
 Propulsion Force & Thruster/ Propeller Force, Control surface/ rudder force \\ 
 \hline 
 \end{tabular} 
-\caption{\label{forces auv examples}Examples of Forces acting on an AUV. Table taken from \cite{Thor}}
+\caption{\label{forces auv examples}Examples of forces acting on an AUV. Table taken from \cite{Thor}}
 \end{table}
 
 
@@ -747,7 +747,7 @@ V &\sim& \mathcal{N}(v_{t},v_{t}^{2}\sigma_{V_{v}}^{2}+w_{t}^{2}\sigma_{V_{w}}^{
 W &\sim& \mathcal{N}(w_{t},v_{t}^{2}\sigma_{W_{v}}^{2}+w_{t}^{2}\sigma_{W_{w}}^{2}+\sigma_{W_{1}}^{2})
 \end{eqnarray}
 
-The translational(V) and rotational(W) velocity are represented by a Gaussian distribution. The mean of the distributions are the reported translational $v$ and rotational $w$ velocity respectively. $\sigma_{V_{1}} $ and $\sigma_{w_{1}}$ are added to the motion model to account for errors that are not directly proportional to the translation and rotation of a robot.
+The translational(V) and rotational(W) velocity are represented by a Gaussian distribution. The mean of the distributions are the reported translational $v$ and rotational $w$ velocity respectively. $\sigma_{V_{1}} $ and $\sigma_{w_{1}}$ are added to the motion model to account for errors that are not directly proportional to the translation and rotation of a robot. The noise model is similar to the one proposed by Yapp \cite{Yap2008}.
 
 Putting the whole problem of estimating parameters in EM framework, we define the parameters of the motion model that we want to learn are $\theta={\sigma_{V_{v}}^{2},\sigma_{V_{w}}^{2},\sigma_{V_{1}}^{2},\sigma_{W_{v}}^{2},\sigma_{W_{t}}^{2},\sigma_{W_{1}}^{2}}$
 The data X from which the parameters can be learned is defined as $X={u_{1:T},z_{1:T}}$
