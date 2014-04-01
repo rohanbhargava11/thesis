@@ -128,6 +128,12 @@ John~J Leonard, Andrew~A Bennett, Christopher~M Smith, and H~Feder.
 \newblock In {\em IEEE ICRA Workshop on Navigation of Outdoor Autonomous
   Vehicles}, 1998.
 
+\bibitem{lowe1999object}
+David~G Lowe.
+\newblock {Object recognition from local scale-invariant features}.
+\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
+
 \bibitem{minka1998expectation}
 Thomas Minka.
 \newblock {Expectation-Maximization as lower bound maximization}.

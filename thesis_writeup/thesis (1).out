@@ -1,0 +1,31 @@
+\BOOKMARK [0][-]{chapter*.1}{List of Tables}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{Abstract}{}% 3
+\BOOKMARK [0][-]{chapter*.5}{Acknowledgements}{}% 4
+\BOOKMARK [0][-]{chapter.6}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.7}{Motivation}{chapter.6}% 6
+\BOOKMARK [1][-]{section.9}{Previous Work}{chapter.6}% 7
+\BOOKMARK [1][-]{section.10}{Contribution}{chapter.6}% 8
+\BOOKMARK [0][-]{chapter.11}{Background}{}% 9
+\BOOKMARK [1][-]{section.12}{Motion Models}{chapter.11}% 10
+\BOOKMARK [1][-]{section.26}{Particle Filter}{chapter.11}% 11
+\BOOKMARK [1][-]{section.30}{Particle smoothing}{chapter.11}% 12
+\BOOKMARK [0][-]{chapter.36}{Learning the motion model}{}% 13
+\BOOKMARK [1][-]{section.37}{Previous Work}{chapter.36}% 14
+\BOOKMARK [1][-]{section.51}{General Architecture of new system}{chapter.36}% 15
+\BOOKMARK [1][-]{section.53}{Adapting Motion Model in proposed system}{chapter.36}% 16
+\BOOKMARK [2][-]{subsection.54}{Expectation Maximization}{section.53}% 17
+\BOOKMARK [2][-]{subsection.64}{Parameter Estimation}{section.53}% 18
+\BOOKMARK [0][-]{chapter.73}{Experimental Setup and Results}{}% 19
+\BOOKMARK [1][-]{section.74}{Experimental Setup}{chapter.73}% 20
+\BOOKMARK [1][-]{section.78}{Results}{chapter.73}% 21
+\BOOKMARK [0][-]{chapter.103}{Landmarks extraction using Side Sonar Images}{}% 22
+\BOOKMARK [1][-]{section.104}{Introduction}{chapter.103}% 23
+\BOOKMARK [2][-]{subsection.106}{Side Scan Sonar}{section.104}% 24
+\BOOKMARK [2][-]{subsection.111}{SIFT}{section.104}% 25
+\BOOKMARK [1][-]{section.120}{Dynamic Landmarks}{chapter.103}% 26
+\BOOKMARK [1][-]{section.126}{Motion Estimation using side sonar images}{chapter.103}% 27
+\BOOKMARK [0][-]{chapter.130}{Results}{}% 28
+\BOOKMARK [1][-]{section.131}{Motion estimation using side sonar images}{chapter.130}% 29
+\BOOKMARK [0][-]{chapter.134}{Conclusion}{}% 30
+\BOOKMARK [0][-]{chapter.134}{Bibliography}{}% 31

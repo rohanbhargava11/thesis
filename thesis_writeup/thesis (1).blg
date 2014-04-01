@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis (1).aux
 The style file: plain.bst
 Database file #1: mendeley.bib.bib
-Warning--I didn't find a database entry for "lowe1999object"
+Warning--I didn't find a database entry for "Jalvinga"
 Warning--to sort, need author or key in side_sonar_url
 Warning--empty journal in Eliazar2004
 Warning--can't use both volume and number fields in gordon1993novel
@@ -16,45 +16,45 @@ Warning--empty journal in Silva
 Warning--empty year in Silva
 Warning--empty journal in Thor
 Warning--empty year in Thor
-You've used 38 entries,
+You've used 39 entries,
             2118 wiz_defined-function locations,
-            710 strings with 10626 characters,
-and the built_in function-call counts, 12587 in all, are:
-= -- 1258
-> -- 526
-< -- 17
-+ -- 208
-- -- 170
-* -- 775
-:= -- 2006
-add.period$ -- 119
-call.type$ -- 38
-change.case$ -- 192
+            717 strings with 10811 characters,
+and the built_in function-call counts, 13065 in all, are:
+= -- 1313
+> -- 533
+< -- 19
++ -- 211
+- -- 172
+* -- 801
+:= -- 2068
+add.period$ -- 123
+call.type$ -- 39
+change.case$ -- 196
 chr.to.int$ -- 0
-cite$ -- 50
-duplicate$ -- 529
-empty$ -- 1036
-format.name$ -- 170
-if$ -- 2721
+cite$ -- 51
+duplicate$ -- 554
+empty$ -- 1080
+format.name$ -- 172
+if$ -- 2837
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 40
-newline$ -- 189
-num.names$ -- 74
-pop$ -- 275
+int.to.str$ -- 39
+missing$ -- 41
+newline$ -- 194
+num.names$ -- 76
+pop$ -- 281
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 164
 quote$ -- 0
-skip$ -- 395
+skip$ -- 417
 stack$ -- 0
-substring$ -- 724
-swap$ -- 147
-text.length$ -- 17
+substring$ -- 769
+swap$ -- 161
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
+type$ -- 142
 warning$ -- 12
-while$ -- 122
-width$ -- 40
-write$ -- 399
+while$ -- 127
+width$ -- 41
+write$ -- 412
 (There were 13 warnings)
