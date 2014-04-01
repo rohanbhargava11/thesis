@@ -1198,7 +1198,7 @@ SIFT has been compared to self-organized features from restricted Boltzmann mach
 \section{Dynamic Landmarks}
 \label{ch-: dynamic landmarks}
 
-As stated above we need reference points to adapt our motion model. These reference points need to be dynamic as the learning algorithm is online. Secondly, we also assume that can't loop back on AUV`s route. To generate landmarks on side sonar images a preprocessing step is required to get rid of horizontal lines produced spurious electrical noise in the transducers. The noisy side sonar images is shown in Figure ~\ref{fig- side sonar image original}.
+As stated above we need reference points to adapt our motion model. These reference points need to be dynamic as the learning algorithm is online. Secondly, we also assume that the AUV can't loop back on its route. To generate landmarks on side sonar images, a preprocessing step is required to get rid of horizontal lines produced by spurious electrical noise in the transducers. The noisy side sonar images is shown in Figure ~\ref{fig- side sonar image original}.
 
 \begin{figure}
   \centering
@@ -1214,7 +1214,7 @@ The preprocessing step involves using a median filter on the image to get rid of
   \caption{\label{fig- side sonar median} Median filter applied to side sonar image.}
 \end{figure}
 
-The disadvantage of this step is that we loose information because the image is blurred. The blurred image won't give us meaningful keypoints therefore in the preprocessed image we see some horizontal lines due to restricted use of the filter. In order to get rid of all the lines we can increase the size of filter but the image will be very blurred as shown in Figure ~\ref{fig- side sonar median high}.
+The disadvantage of filtering is that we loose information because the image is blurred. The blurred image won't give us meaningful keypoints therefore in the preprocessed image we see some horizontal lines due to restricted use of the filter. In order to get rid of all the lines we can increase the size of filter but the image will be very blurred as shown in Figure ~\ref{fig- side sonar median high}.
 \begin{figure}
   \centering
      {\includegraphics[height = 2.5 in]{/home/rohan/Documents/thesis/thesis_writeup/median_filter_sonar_high.jpg}}
@@ -1241,9 +1241,9 @@ Using dynamic landmarks allows our adaptive motion model algorithm independence 
 
 \section{Motion Estimation using side sonar images}
 
-In many advanced land-based robots the position and orientation is determined through wheel encoders and velocity estimates. These techniques do not generalize well as they cannot be applied every robot as well as the estimates drift over time. Motion estimation using visual sensors such as camera are not restricted to particular locomotion and doesn't suffer from drift. There has been a lot of work done in estimating motion using camera images on land robots \cite{barfoot2005online} \cite{scaramuzza2008appearance}. Silvia \cite{Silva} proposed an algorithm for AUV which used camera images and SIFT to estimate motion. 
+In many advanced land-based robots the position and orientation is determined through wheel encoders and velocity estimates. These techniques do not generalize well for marine environments \cite{Silva}. Motion estimation using visual sensors such as camera are not restricted to particular locomotion and doesn't suffer from drift. There has been a lot of work done in estimating motion using camera images on land robots \cite{barfoot2005online} \cite{scaramuzza2008appearance}. Silvia \cite{Silva} proposed an algorithm for AUV which used camera images and SIFT to estimate motion. 
 
-Hegreneas \cite{hegrenaes2008model} combined the knowledge of vehicle dynamics to aid INS systems. In a similar manner visual motion information can be used to aid INS systems. The visual input to the dead reckoning algorithm has its pros and cons. The main advantage of using a visual estimate is that it doesn't suffer from drift which is prime concern for underwater vehicles. The disadvantage lies in the fact that we don't have side sonar images available every time. The second disadvantage is the computation power available on AUV. To specifically deal with the problems we use a high Hessian threshold to extract maximum of 4 landmarks so that feature matching is not computationally expensive.    
+Hegreneas \cite{hegrenaes2008model} combined the knowledge of vehicle dynamics to aid INS systems. In a similar manner visual motion information can be used to aid INS systems. The visual input to the dead reckoning algorithm has its pros and cons. The main advantage of using a visual estimate is that it doesn't suffer from drift which is prime concern for underwater vehicles. The disadvantage lies in the fact that we don't have side sonar images available every time. The second disadvantage is the computational power available on AUV. To specifically deal with the problems we use a high Hessian threshold to extract maximum of 4 landmarks so that feature matching is not computationally expensive.    
 
 We verify our dynamic landmark approach by estimating motion information from side sonar images and compare it to reported movement by DVL. To generate keypoints we run SIFT on the side sonar images. We use a high Hessian threshold so that we can restrict the amount of keypoints. These keypoints are matched with keypoints of the next consecutive image using a KNN based matcher. This matcher is based on k-nearest neighbour based algorithm. As the name suggest the object is classified according to its k-nearest neighbours.  Figure ~\ref{fig- matched images} shows two consecutive images that are used to estimate motion of the AUV. In the first image the keypoints are marked in white circles. These keypoints are matched with the second image and the matched keypoints are marked in black circles. The $x$ and $y$ position of the matched keypoints is compared to the original keypoints. This gives us motion estimate of the AUV. 
 
@@ -1287,12 +1287,31 @@ Datasets & Distance estimated by DVL(m) & Distance estimated through Side sonar 
 \caption{\label{tab-table_motion_estimation}Results of motion estimation using side sonar images. The results are compared to estimated distance by DVL, which is treated as ground truth.}
 \end{table}
 
-Table ~\ref{tab-table_motion_estimation} shows the results of motion estimation using side sonar images. The distance is compared to DVL. DVL is used to estimate the speed of the vehicle. This can be combined with a position fix, compass heading, and data from the acceleration sensors the position of the vehicle can be determined. These estimates can be noisy but at the same time there is no practical noise free way to measure how much the AUV actually moved.      
+Table ~\ref{tab-table_motion_estimation} shows the results of motion estimation using side sonar images. The distance is compared to DVL. It is used to estimate the speed of the vehicle. This can be combined with a position fix, compass heading, and data from the acceleration sensors the position of the vehicle can be determined. These estimates can be noisy but at the same time there is no practical noise free way to measure how much the AUV actually moved. 
 
-The algorithm gives us a decent estimate of the movement. The results when compared to DVL data show that the algorithm to estimate motion from side sonar data was not extremely accurate. Its hard to judge whether the algorithm was at fault or the ground truth was noisy. The movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{Hegrenæs2008} in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
+The accuracy of DVL is dependent upon the frequency at which it operates. Higher frequency leads to better accuracy as shown in Table ~\ref{tab-: DVL accuracy}.
+\begin{table}
+\label{tab-: DVL accuracy}
+\begin{tabular}{|c|c|c|}
+      \hline 
+      Frequency  & Long term accuracy & Range \\ 
+      \hline 
+      150 kHz & \pm0.5\% o.s. \pm 2 mm/s & 425-500 m \\ 
+      \hline 
+      300 kHz & \pm0.4\% o.s. \pm 2 mm/s & 200 m \\ 
+      \hline 
+      600 kHz & \pm0.2\% o.s. \pm 1mm/s & 90 m \\ 
+      \hline 
+      1200 kHz & \pm 0.2\% o.s. \pm 1 mm/s & 30 m \\ 
+      \hline 
+\end{tabular}
+\caption{RDI Workhorse Navigator Doppler Velocity Log and range specifications. o.s. - of speed. Table taken from \cite{Jalvinga}. This DVL is used in Hugin 1000.
+\end{table}       
+
+The algorithm gives us a decent estimate of the movement. The results are within 5\% of the ground truth estimated by DVL. The movement from side sonar images can be coupled with DVL through a Kalman filter to give a better estimation of the movement. Hegeranes \cite{Hegrenæs2008} in his paper pointed out the use of external sensors to aid INS and estimation of movement from side sonar images can be used to contain the drift inherent in INS systems. 
 The results presented shows the accuracy of our motion estimation algorithm.
 \chapter{Conclusion}
-The work presented here is a step towards building adaptive systems for AUV. 
+The work presented here is a step towards building adaptive systems for AUV. As these systems take into account changes in the robot and the environment they are particularly useful for robotic missions over long duration. Adaptive systems can get rid of the need for labor intensive calibration process. They can also reduce the frequency of recalibration of a robot while on a mission. 
 
 Probabilistic robotics has been the way to approach robotics for a long time. The motion and sensor model are key ingredients to any algorithms for navigation, localization and map building. These models are treated as Gaussian distribution with static parameters. The questions that arises is how these models react to changes in the environment and robots. Higher level task such as navigation and path planning are dependent upon the accuracy of these models. To adapt to these changes we need to change our parameters to a model with time.
 
@@ -1312,7 +1331,7 @@ in estimating distance moved by AUV.
 
 Overall the work illustrated that adapting motion model can be extremely advantageous in decreasing the localization error which can in turn help a robot in better navigation and path planning. The estimated parameters accuracy depends upon the sensor noise. It can be low but the goal of the thesis was to decrease the localization error over time with changes in environment. The method doesn't require any pre learning phase and helps in getting rid of the manual labour associated with the calibration process. The algorithm doesn't require the AUV to loop back in its path to learn the right parameters for the model.
 
-The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. The work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The compatibility of my algorithm with Andrew Vardy's \cite{vandrish2011side} algorithm to generate side sonar images needs to be tested. The learning algorithm assumes the noise to be Gaussian. In the future, I would like to experiment with various noise distributions that are more suited for underwater noise. Overall the work presented here shows the importance of having an adaptive motion model for better localization of robots.   
+Adaptive systems suffer from stability-plasticity dilemma. Plasticity helps in learning new information whereas stability prevents forgetting previous knowledge. To perfectly adapt the systems there needs to equilibrium between the two. My algorithm gives equal importance to every dataset acquired at any timestep. In the future, I would like to have a time decay function applied on the side sonar dataset. This would help up in adapting our model to most current changes. The algorithm as per now is limited to two dimensions and work needs to be done to get it working for six degrees of freedom. The work presented here is in a simulator and I feel there needs to be some extra work done in terms of testing and porting the algorithm. The compatibility of my algorithm with Andrew Vardy's \cite{vandrish2011side} algorithm to generate side sonar images needs to be tested. The learning algorithm assumes the noise to be Gaussian. In the future, I would like to experiment with various noise distributions that are more suited for underwater noise. Overall the work presented here shows the importance of having an adaptive motion model for better localization of robots.   
 
 
 \bibliographystyle{plain}

@@ -16,45 +16,45 @@ Warning--empty journal in Silva
 Warning--empty year in Silva
 Warning--empty journal in Thor
 Warning--empty year in Thor
-You've used 37 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            704 strings with 10485 characters,
-and the built_in function-call counts, 12368 in all, are:
-= -- 1238
-> -- 519
+            710 strings with 10626 characters,
+and the built_in function-call counts, 12587 in all, are:
+= -- 1258
+> -- 526
 < -- 17
-+ -- 205
-- -- 168
-* -- 766
-:= -- 1967
-add.period$ -- 116
-call.type$ -- 37
-change.case$ -- 189
++ -- 208
+- -- 170
+* -- 775
+:= -- 2006
+add.period$ -- 119
+call.type$ -- 38
+change.case$ -- 192
 chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 517
-empty$ -- 1014
-format.name$ -- 168
-if$ -- 2674
+cite$ -- 50
+duplicate$ -- 529
+empty$ -- 1036
+format.name$ -- 170
+if$ -- 2721
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 38
-newline$ -- 184
-num.names$ -- 72
-pop$ -- 268
+int.to.str$ -- 38
+missing$ -- 40
+newline$ -- 189
+num.names$ -- 74
+pop$ -- 275
 preamble$ -- 1
-purify$ -- 158
+purify$ -- 161
 quote$ -- 0
-skip$ -- 389
+skip$ -- 395
 stack$ -- 0
-substring$ -- 719
-swap$ -- 146
+substring$ -- 724
+swap$ -- 147
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
+type$ -- 138
 warning$ -- 12
-while$ -- 120
-width$ -- 39
-write$ -- 388
+while$ -- 122
+width$ -- 40
+write$ -- 399
 (There were 13 warnings)

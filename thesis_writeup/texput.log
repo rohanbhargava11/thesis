@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.11)  26 FEB 2014 13:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.2.3)  24 MAR 2014 21:40
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **mendeley.tex
 
@@ -12,7 +12,7 @@ entering extended mode
  
 Here is how much of TeX's memory you used:
  3 strings out of 495059
- 109 string characters out of 3182030
+ 109 string characters out of 3182031
  45057 words of memory out of 3000000
  3288 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
