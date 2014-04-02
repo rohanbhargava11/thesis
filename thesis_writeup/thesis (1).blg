@@ -3,13 +3,16 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis (1).aux
 The style file: plain.bst
 Database file #1: mendeley.bib.bib
-Warning--I didn't find a database entry for "Jalvinga"
+Warning--I didn't find a database entry for "barfoot2005online"
 Warning--to sort, need author or key in side_sonar_url
 Warning--empty journal in Eliazar2004
 Warning--can't use both volume and number fields in gordon1993novel
 Warning--empty journal in Hallingstad2007
 Warning--there's a number but no volume in Hallingstad2007
 Warning--empty journal in Hegrenæs2008
+Warning--empty journal in Jalvinga
+Warning--there's a number but no volume in Jalvinga
+Warning--empty year in Jalvinga
 Warning--empty journal in Lammas2004
 Warning--empty year in Roy
 Warning--empty journal in Silva
@@ -18,43 +21,43 @@ Warning--empty journal in Thor
 Warning--empty year in Thor
 You've used 39 entries,
             2118 wiz_defined-function locations,
-            717 strings with 10811 characters,
-and the built_in function-call counts, 13065 in all, are:
-= -- 1313
-> -- 533
-< -- 19
-+ -- 211
-- -- 172
-* -- 801
-:= -- 2068
-add.period$ -- 123
+            716 strings with 10776 characters,
+and the built_in function-call counts, 12949 in all, are:
+= -- 1290
+> -- 549
+< -- 18
++ -- 217
+- -- 178
+* -- 808
+:= -- 2066
+add.period$ -- 122
 call.type$ -- 39
-change.case$ -- 196
+change.case$ -- 199
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 554
-empty$ -- 1080
-format.name$ -- 172
-if$ -- 2837
+cite$ -- 54
+duplicate$ -- 541
+empty$ -- 1057
+format.name$ -- 178
+if$ -- 2791
 int.to.chr$ -- 0
 int.to.str$ -- 39
 missing$ -- 41
 newline$ -- 194
 num.names$ -- 76
-pop$ -- 281
+pop$ -- 284
 preamble$ -- 1
-purify$ -- 164
+purify$ -- 167
 quote$ -- 0
-skip$ -- 417
+skip$ -- 404
 stack$ -- 0
-substring$ -- 769
-swap$ -- 161
-text.length$ -- 19
+substring$ -- 737
+swap$ -- 150
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 142
-warning$ -- 12
-while$ -- 127
+warning$ -- 15
+while$ -- 124
 width$ -- 41
-write$ -- 412
-(There were 13 warnings)
+write$ -- 409
+(There were 16 warnings)

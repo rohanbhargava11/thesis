@@ -15,17 +15,17 @@
 \BOOKMARK [1][-]{section.51}{General Architecture of new system}{chapter.36}% 15
 \BOOKMARK [1][-]{section.53}{Adapting Motion Model in proposed system}{chapter.36}% 16
 \BOOKMARK [2][-]{subsection.54}{Expectation Maximization}{section.53}% 17
-\BOOKMARK [2][-]{subsection.64}{Parameter Estimation}{section.53}% 18
-\BOOKMARK [0][-]{chapter.73}{Experimental Setup and Results}{}% 19
-\BOOKMARK [1][-]{section.74}{Experimental Setup}{chapter.73}% 20
-\BOOKMARK [1][-]{section.78}{Results}{chapter.73}% 21
-\BOOKMARK [0][-]{chapter.103}{Landmarks extraction using Side Sonar Images}{}% 22
-\BOOKMARK [1][-]{section.104}{Introduction}{chapter.103}% 23
-\BOOKMARK [2][-]{subsection.106}{Side Scan Sonar}{section.104}% 24
-\BOOKMARK [2][-]{subsection.111}{SIFT}{section.104}% 25
-\BOOKMARK [1][-]{section.120}{Dynamic Landmarks}{chapter.103}% 26
-\BOOKMARK [1][-]{section.126}{Motion Estimation using side sonar images}{chapter.103}% 27
-\BOOKMARK [0][-]{chapter.130}{Results}{}% 28
-\BOOKMARK [1][-]{section.131}{Motion estimation using side sonar images}{chapter.130}% 29
-\BOOKMARK [0][-]{chapter.134}{Conclusion}{}% 30
-\BOOKMARK [0][-]{chapter.134}{Bibliography}{}% 31
+\BOOKMARK [2][-]{subsection.73}{Parameter Estimation}{section.53}% 18
+\BOOKMARK [0][-]{chapter.84}{Experimental Setup and Results}{}% 19
+\BOOKMARK [1][-]{section.85}{Experimental Setup}{chapter.84}% 20
+\BOOKMARK [1][-]{section.89}{Results}{chapter.84}% 21
+\BOOKMARK [0][-]{chapter.114}{Landmarks extraction using Side Sonar Images}{}% 22
+\BOOKMARK [1][-]{section.115}{Introduction}{chapter.114}% 23
+\BOOKMARK [2][-]{subsection.117}{Side Scan Sonar}{section.115}% 24
+\BOOKMARK [2][-]{subsection.122}{SIFT}{section.115}% 25
+\BOOKMARK [1][-]{section.131}{Dynamic Landmarks}{chapter.114}% 26
+\BOOKMARK [1][-]{section.137}{Motion Estimation using side sonar images}{chapter.114}% 27
+\BOOKMARK [0][-]{chapter.141}{Results}{}% 28
+\BOOKMARK [1][-]{section.142}{Motion estimation using side sonar images}{chapter.141}% 29
+\BOOKMARK [0][-]{chapter.145}{Conclusion}{}% 30
+\BOOKMARK [0][-]{chapter.145}{Bibliography}{}% 31

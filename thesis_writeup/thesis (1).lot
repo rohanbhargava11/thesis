@@ -5,13 +5,13 @@
 \contentsline {table}{\numberline {2.2}{\ignorespaces Examples of forces acting on an AUV. Table taken from \cite {Thor}}}{9}{table.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the experiments performed to adapt motion model.}}{26}{table.75}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Initial and estimated values of parameters with constant sensor noise and trajectories}}{28}{table.80}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Initial and estimated values of parameters with drift}}{33}{table.92}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the experiments performed to adapt motion model.}}{26}{table.86}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Initial and estimated values of parameters with constant sensor noise and trajectories}}{28}{table.91}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Initial and estimated values of parameters with drift}}{33}{table.103}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Sensors for Mobile robots. Table taken from \cite {thrun2005probabilistic}}}{37}{table.105}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Characterization of Sidescan system according to their operating frequency. Table taken form \cite {side_sonar_usgs_url}}}{40}{table.110}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Sensors for Mobile robots. Table taken from \cite {thrun2005probabilistic}}}{37}{table.116}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Characterization of Sidescan system according to their operating frequency. Table taken form \cite {side_sonar_usgs_url}}}{40}{table.121}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Results of motion estimation using side sonar images. The results are compared to estimated distance by DVL, which is treated as ground truth.}}{51}{table.132}
-\contentsline {table}{\numberline {6.2}{\ignorespaces RDI Workhorse Navigator Doppler Velocity Log and range specifications. o.s. - of speed. Table taken from \cite {Jalvinga}. This DVL is used in Hugin 1000.}}{52}{table.133}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Results of motion estimation using side sonar images. The results are compared to estimated distance by DVL, which is treated as ground truth.}}{51}{table.143}
+\contentsline {table}{\numberline {6.2}{\ignorespaces RDI Workhorse Navigator Doppler Velocity Log and range specifications. o.s. - of speed. Table taken from \cite {Jalvinga}. This DVL is used in Hugin 1000.}}{52}{table.144}
 \addvspace {10\p@ }
