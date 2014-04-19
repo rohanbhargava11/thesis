@@ -4,6 +4,12 @@
 {Side Scan Sonar}.
 \newblock \url{http://www.nauticalcharts.noaa.gov/hsd/SSS.html/}.
 
+\bibitem{barfoot2005online}
+Timothy~D Barfoot.
+\newblock {Online visual motion estimation using fastslam with sift features}.
+\newblock In {\em Intelligent Robots and Systems, 2005.(IROS 2005). 2005
+  IEEE/RSJ International Conference on}, pages 579--585. IEEE, 2005.
+
 \bibitem{bishop2006pattern}
 Christopher~M Bishop and Nasser~M Nasrabadi.
 \newblock {\em {Pattern recognition and machine learning}}, volume~1.
@@ -19,6 +25,13 @@ Zhe Chen.
 Ingemar~J Cox and Gordon~Thomas Wilfong.
 \newblock {\em {Autonomous robot vehicles}}, volume 447.
 \newblock Springer-Verlag New York, 1990.
+
+\bibitem{Silva}
+Silvia~Silva da~Costa~Botelho, P~Drews, Gabriel~Leivas Oliveira, and
+  da~Silva~Figueiredo.
+\newblock Visual odometry and mapping for underwater autonomous vehicles.
+\newblock In {\em Robotics Symposium (LARS), 2009 6th Latin American}, pages
+  1--6. IEEE, 2009.
 
 \bibitem{dempster1977maximum}
 Arthur~P Dempster, Nan~M Laird, and Donald~B Rubin.
@@ -41,14 +54,20 @@ Arnaud Doucet and Adam~M Johansen.
 \newblock {\em Handbook of Nonlinear Filtering}, 12:656--704, 2009.
 
 \bibitem{Eliazar2004}
-Austin~I Eliazar, Parr Cs, and Duke Edu.
-\newblock {Learning Probabilistic Motion Models for Mobile Robots}.
-\newblock 2004.
+Austin~I Eliazar and Ronald Parr.
+\newblock Learning probabilistic motion models for mobile robots.
+\newblock In {\em Proceedings of the twenty-first international conference on
+  Machine learning}, page~32. ACM, 2004.
 
 \bibitem{side_sonar_fisheries_url}
 J~W Fishers.
 \newblock {Side Scan Sonar}.
 \newblock \url{http://www.jwfishers.com/sss.htm/}.
+
+\bibitem{Thor}
+Thor~I Fossen.
+\newblock {\em Guidance and control of ocean vehicles}, volume 199.
+\newblock Wiley New York, 1994.
 
 \bibitem{Godsill2004}
 Simon~J Godsill, Arnaud Doucet, and Mike West.
@@ -59,8 +78,8 @@ Simon~J Godsill, Arnaud Doucet, and Mike West.
 \bibitem{gordon1993novel}
 Neil~J Gordon, David~J Salmond, and Adrian F~M Smith.
 \newblock {Novel approach to nonlinear/non-Gaussian Bayesian state estimation}.
-\newblock In {\em IEE Proceedings F (Radar and Signal Processing)}, volume 140,
-  pages 107--113. IET, 1993.
+\newblock In {\em IEEE Proceedings F (Radar and Signal Processing)}, volume
+  140, pages 107--113. IET, 1993.
 
 \bibitem{grisettiyz2005improving}
 G~Grisettiyz, Cyrill Stachniss, and Wolfram Burgard.
@@ -69,23 +88,19 @@ G~Grisettiyz, Cyrill Stachniss, and Wolfram Burgard.
 \newblock In {\em Robotics and Automation, 2005. ICRA 2005. Proceedings of the
   2005 IEEE International Conference on}, pages 2432--2437. IEEE, 2005.
 
-\bibitem{Hallingstad2007}
-Oddvar Hallingstad and Kongsberg Maritime.
-\newblock {Comparison of Mathematical Models for the HUGIN 4500 AUV Based on
-  Experimental Data Commonsfor dervabiov menfotionetepenotations hed so-led
-  hdodmnamice depries . ntheionseis are oces andimomets . os the}.
-\newblock (7491):17--20, 2007.
-
-\bibitem{Hegrenæs2008}
-\O~yvind Hegren\ae~s, Einar Berglund, and Oddvar Hallingstad.
-\newblock {Model-Aided Inertial Navigation for Underwater Vehicles}.
-\newblock 2008.
-
 \bibitem{hegrenaes2008model}
 Oyvind Hegrenaes, Einar Berglund, and Oddvar Hallingstad.
-\newblock {Model-aided inertial navigation for underwater vehicles}.
+\newblock Model-aided inertial navigation for underwater vehicles.
 \newblock In {\em Robotics and Automation, 2008. ICRA 2008. IEEE International
   Conference on}, pages 1069--1076. IEEE, 2008.
+
+\bibitem{Hallingstad2007}
+O~Hegrenses, Oddvar Hallingstad, and Bj{\o}rn Jalving.
+\newblock Comparison of mathematical models for the hugin 4500 auv based on
+  experimental data.
+\newblock In {\em Underwater Technology and Workshop on Scientific Use of
+  Submarine Cables and Related Technologies, 2007. Symposium on}, pages
+  558--567. IEEE, 2007.
 
 \bibitem{hollesen2011comparison}
 Paul Hollesen, Warren~A Connors, and Thomas Trappenberg.
@@ -101,14 +116,14 @@ Bjorn Jalving, Kenneth Gade, Kristian Svartveit, and Robert Sorhagen.
 \newblock (2027).
 
 \bibitem{kalman1960new}
-Rudolph~Emil Kalman and Others.
-\newblock {A new approach to linear filtering and prediction problems}.
+Rudolph~Emil Kalman.
+\newblock A new approach to linear filtering and prediction problems.
 \newblock {\em Journal of basic Engineering}, 82(1):35--45, 1960.
 
 \bibitem{king2012real}
 Peter King, Andrew Vardy, Peter Vandrish, and Benjamin Anstey.
-\newblock {Real-time side scan image generation and registration framework for
-  AUV route following}.
+\newblock Real-time side scan image generation and registration framework for
+  auv route following.
 \newblock In {\em Autonomous Underwater Vehicles (AUV), 2012 IEEE/OES}, pages
   1--6. IEEE, 2012.
 
@@ -118,9 +133,9 @@ Andrew Lammas, Karl Sammut, and Fangpo He.
 \newblock 2004.
 
 \bibitem{Lav06}
-S~M LaValle.
-\newblock {\em {Planning Algorithms}}.
-\newblock Cambridge University Press, Cambridge, U.K., 2006.
+Steven~Michael LaValle.
+\newblock {\em Planning algorithms}.
+\newblock Cambridge university press, 2006.
 
 \bibitem{leonard1998autonomous}
 John~J Leonard, Andrew~A Bennett, Christopher~M Smith, and H~Feder.
@@ -130,15 +145,15 @@ John~J Leonard, Andrew~A Bennett, Christopher~M Smith, and H~Feder.
 
 \bibitem{lowe1999object}
 David~G Lowe.
-\newblock {Object recognition from local scale-invariant features}.
+\newblock Object recognition from local scale-invariant features.
 \newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
-  international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
+  international conference on}, volume~2, pages 1150--1157. IEEE, 1999.
 
 \bibitem{minka1998expectation}
 Thomas Minka.
-\newblock {Expectation-Maximization as lower bound maximization}.
-\newblock {\em Tutorial published on the web at http://www-white. media. mit.
-  edu/tpminka/papers/em. html}, 1998.
+\newblock Expectation-maximization as lower bound maximization.
+\newblock {\em Tutorial published on the web at
+  http://www-white.media.mit.edu/tpminka/papers/em.html}, 1998.
 
 \bibitem{ristic2004beyond}
 Branko Ristic, Sanjeev Arulampalm, and Neil~James Gordon.
@@ -153,15 +168,16 @@ Marshall~N Rosenbluth and Arianna~W Rosenbluth.
 \newblock {\em The Journal of Chemical Physics}, 23:356, 1955.
 
 \bibitem{Roy}
-N.~Roy and S.~Thrun.
-\newblock {Online self-calibration for mobile robots}.
-\newblock {\em Proceedings 1999 IEEE International Conference on Robotics and
-  Automation (Cat. No.99CH36288C)}, 3:2292--2297.
+Nicholas Roy and Sebastian Thrun.
+\newblock Online self-calibration for mobile robots.
+\newblock In {\em Robotics and Automation, 1999}, volume~3, pages 2292--2297.
+  IEEE, 1999.
 
 \bibitem{russell2003artificial}
-Stuart Russell.
-\newblock {\em {Artificial intelligence: A modern approach, 2/E}}.
-\newblock Pearson Education India, 2003.
+Stuart~Jonathan Russell, Peter Norvig, John~F Canny, Jitendra~M Malik, and
+  Douglas~D Edwards.
+\newblock {\em Artificial intelligence: a modern approach}, volume~2.
+\newblock Prentice hall Englewood Cliffs, 1995.
 
 \bibitem{scaramuzza2008appearance}
 Davide Scaramuzza and Roland Siegwart.
@@ -178,16 +194,8 @@ Stephen Se, David Lowe, and Jim Little.
 
 \bibitem{shewchuk1994introduction}
 Jonathan~Richard Shewchuk.
-\newblock {An introduction to the conjugate gradient method without the
-  agonizing pain}, 1994.
-
-\bibitem{Silva}
-Silvia Silva, Paulo~Drews Jr, Gabriel~Leivas Oliveira, and Silva Figueiredo.
-\newblock {Visual Odometry and Mapping for Underwater Autonomous Vehicles}.
-
-\bibitem{Thor}
-Fossen Thor.
-\newblock {Guidance and Control Of Ocean Vechiles}.
+\newblock An introduction to the conjugate gradient method without the
+  agonizing pain, 1994.
 
 \bibitem{thrun2005probabilistic}
 Sebastian Thrun, Wolfram Burgard, Dieter Fox, and Others.
@@ -212,11 +220,6 @@ Peter Vandrish, Andrew Vardy, Dan Walker, and O~A Dobre.
 \newblock In {\em Underwater Technology (UT), 2011 IEEE Symposium on and 2011
   Workshop on Scientific Use of Submarine Cables and Related Technologies
   (SSC)}, pages 1--7. IEEE, 2011.
-
-\bibitem{vukobratovic1989introduction}
-Miomir Vukobratovic.
-\newblock {\em {Introduction to robotics}}.
-\newblock Springer-Verlag Berlin, Germany, 1989.
 
 \bibitem{Yap2008}
 Teddy~N. Yap and Christian~R. Shelton.

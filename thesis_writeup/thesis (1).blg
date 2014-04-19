@@ -3,61 +3,54 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis (1).aux
 The style file: plain.bst
 Database file #1: mendeley.bib.bib
-Warning--I didn't find a database entry for "barfoot2005online"
+Warning--I didn't find a database entry for "Hegrenæs2008"
+Warning--I didn't find a database entry for "vukobratovic1989introduction"
 Warning--to sort, need author or key in side_sonar_url
-Warning--empty journal in Eliazar2004
+Warning--can't use both volume and number fields in Thor
 Warning--can't use both volume and number fields in gordon1993novel
-Warning--empty journal in Hallingstad2007
-Warning--there's a number but no volume in Hallingstad2007
-Warning--empty journal in Hegrenæs2008
 Warning--empty journal in Jalvinga
 Warning--there's a number but no volume in Jalvinga
 Warning--empty year in Jalvinga
 Warning--empty journal in Lammas2004
-Warning--empty year in Roy
-Warning--empty journal in Silva
-Warning--empty year in Silva
-Warning--empty journal in Thor
-Warning--empty year in Thor
-You've used 39 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            716 strings with 10776 characters,
-and the built_in function-call counts, 12949 in all, are:
-= -- 1290
-> -- 549
-< -- 18
-+ -- 217
+            721 strings with 10960 characters,
+and the built_in function-call counts, 13606 in all, are:
+= -- 1382
+> -- 546
+< -- 26
++ -- 218
 - -- 178
-* -- 808
-:= -- 2066
-add.period$ -- 122
-call.type$ -- 39
-change.case$ -- 199
+* -- 836
+:= -- 2106
+add.period$ -- 126
+call.type$ -- 38
+change.case$ -- 196
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 541
-empty$ -- 1057
+cite$ -- 45
+duplicate$ -- 588
+empty$ -- 1128
 format.name$ -- 178
-if$ -- 2791
+if$ -- 3005
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 41
-newline$ -- 194
-num.names$ -- 76
-pop$ -- 284
+int.to.str$ -- 38
+missing$ -- 40
+newline$ -- 191
+num.names$ -- 74
+pop$ -- 281
 preamble$ -- 1
-purify$ -- 167
+purify$ -- 165
 quote$ -- 0
-skip$ -- 404
+skip$ -- 449
 stack$ -- 0
-substring$ -- 737
-swap$ -- 150
-text.length$ -- 18
+substring$ -- 808
+swap$ -- 202
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
-warning$ -- 15
-while$ -- 124
-width$ -- 41
-write$ -- 409
-(There were 16 warnings)
+type$ -- 138
+warning$ -- 7
+while$ -- 131
+width$ -- 40
+write$ -- 419
+(There were 9 warnings)
