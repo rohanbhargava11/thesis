@@ -1047,8 +1047,8 @@
       \else
          \dal@signaturepage
       \fi
-   \else
-      \addtocounter{page}{1}
+%   \else
+%      \addtocounter{page}{1}
    \fi
    \ifdal@permission@page
       \ifdal@fac@engineering
@@ -1056,15 +1056,15 @@
       \else
          \dal@permissionpage
       \fi
-   \else
-      \addtocounter{page}{1}
+%   \else
+%      \addtocounter{page}{1}
    \fi
    \ifdal@dedication
       \ifdal@dedication@page
          \dedication@text
          \clearpage
-      \else
-         \addtocounter{page}{1}
+%      \else
+%         \addtocounter{page}{1}
       \fi
    \fi
    \ifdal@contents@page

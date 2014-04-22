@@ -7,7 +7,6 @@
 \documentclass[12pt]{dalcsthesis}
 
 \usepackage{graphicx} %pdftex % for black figure [demo]
-
 \usepackage{epstopdf}
 \usepackage{epsfig}
 \usepackage{verbatim}
@@ -26,8 +25,8 @@
 \mcs  % options are \mcs, \macs, \mec, \mhi, \phd, and \bcshon
 \title{Feature Based adaptive motion model for better localization}
 \author{Rohan Bhargava}
-\defenceday{1}
-\defencemonth{October}
+\defenceday{10}
+\defencemonth{April}
 \defenceyear{2014}
 \convocation{October}{2014}
 
@@ -42,8 +41,10 @@
 \newcommand{\lyxdot}{.}
 %\nolistoftables
 %\nolistoffigures
-
+\nosignaturepage
+\nopermissionpage
 \frontmatter
+
 
 \begin{abstract}
 In the 21st century, we are moving ahead in making robots a ubiquitous part of our everyday life. The need for a robot to interact with the environment has become a necessity. The interaction with the world requires a sense of it's pose. Humans clearly are very good in having a sense of their location in the world around them. The same task for robots is very difficult due to the uncertainties in the movement, limitation in sensing of the environment and complexities in the environment itself. When we close our eyes and walk we have a good estimate of our location but the same can't be said for robots. Without the help of external sensors the problem of localization becomes difficult. Humans use their vestibular system to generate cues about their movement and update their position. The same can be done for robots by using acceleration, velocity or odometry as cues to a motion model. 
@@ -114,7 +115,9 @@ In my thesis I specifically deal with water environments such as oceans, rivers 
 
 My algorithm uses the EM algorithm to calculate the most likely parameters for a data set.  The trajectories are calculated by implementing particle filtering and smoothing.  Particle Filters are chosen because they can model non-linear transformations. Particle smoothing was performed because Russell and Norvig ~\cite{russell2003artificial} pointed out that the state of the system is better estimated by smoothing as it incorporates information from all the past states of the system. 
 \end{comment}
-In my thesis I use the same framework proposed by Yap for adaptive motion model. The expectation maximization framework is used to learn a velocity based motion model. We provide a detailed study of the adaptive motion model. The changes in the environment are simulated by changing the parameters to the motion model. The performance of adaptive and static are compared with change in parameters as well as when drift is present in the system. The estimated parameter values are also compared to ground truth parameter values which were not done in any of the work before. In the second section of the thesis I propose an algorithm to estimate motion using side sonar images. This is the first step towards building adaptive motion model for AUV. 
+Yap proposed a framework based on expectation maximization to learn a motion model. Their proposed method was based for land based robots. The method that I propose is based on the same framework but for velocity based motion models instead of odometry based. I also add a drift term to the system to simulate water currents. I perform simulations in which the parameters to the motion model are changed to simulate changes in the environment. In these simulations the performance of adaptive motion model is compared to static motion model in terms of localization error. The estimated parameter values are also compared to ground truth parameter values which were not done in any of the work before. The relationship of estimated parameter values with sensor noise is also studied.  
+
+In the second section of the thesis I propose an algorithm to estimate motion using side sonar images. I use keypoint based algorithm to detect features in a side scan sonar image. These keypoints are matched in consecutive images and used to detect motion of an AUV. The motion estimation works as feedback to the adaptive motion model algorithm. The results of motion estimation are compared with distance estimated by DVL. The work presented in this section is the first step towards building adaptive motion model for underwater vehicles.  
 
 The remainder of the thesis is structured as follows. Chapter 2 will explain the motion model for AUV as well as give an insight on particle filtering and smoothing. Chapter 3 will give an overview of EM and show how this framework is used to adapt parameters for a motion model. Chapter 4 consists results of a simulated experiment to show the effectiveness of the algorithm. Chapter 5 explains how landmarks are extracted from side sonar images. The reliability of the landmarks are shown by extracting motion information. The algorithm to perform that is described in the same chapter. The results of comparing motion estimation using side sonar images to Doppler velocity log (DVL) is shown in Chapter 6.
  

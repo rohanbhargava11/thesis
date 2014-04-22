@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis_final.aux
+The style file: plain.bst
+Database file #1: mendeley.bib.bib
+Warning--to sort, need author or key in side_sonar_url
+Warning--can't use both volume and number fields in Thor
+Warning--can't use both volume and number fields in gordon1993novel
+Warning--empty journal in Jalvinga
+Warning--there's a number but no volume in Jalvinga
+Warning--empty year in Jalvinga
+Warning--empty journal in Lammas2004
+You've used 39 entries,
+            2118 wiz_defined-function locations,
+            723 strings with 11016 characters,
+and the built_in function-call counts, 13821 in all, are:
+= -- 1401
+> -- 553
+< -- 26
++ -- 221
+- -- 180
+* -- 844
+:= -- 2144
+add.period$ -- 129
+call.type$ -- 39
+change.case$ -- 199
+chr.to.int$ -- 0
+cite$ -- 46
+duplicate$ -- 600
+empty$ -- 1150
+format.name$ -- 180
+if$ -- 3051
+int.to.chr$ -- 0
+int.to.str$ -- 39
+missing$ -- 42
+newline$ -- 196
+num.names$ -- 76
+pop$ -- 289
+preamble$ -- 1
+purify$ -- 168
+quote$ -- 0
+skip$ -- 455
+stack$ -- 0
+substring$ -- 813
+swap$ -- 203
+text.length$ -- 26
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 140
+warning$ -- 7
+while$ -- 133
+width$ -- 41
+write$ -- 429
+(There were 7 warnings)
